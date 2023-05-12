@@ -1,5 +1,31 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f2773f585e762480c835ac718b82b87cb111e500"
+    },
+    "com.focus-creative-games.hybridclr_unity": {
+      "version": "https://gitee.com/focus-creative-games/hybridclr_unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "fbeeb3d9595cc7f745fb0cdc4551d751f56e1dd1"
+    },
+    "com.tuyoogame.yooasset": {
+      "version": "1.4.12",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.scriptablebuildpipeline": "1.20.2",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
+      },
+      "url": "https://package.openupm.cn"
+    },
     "com.unity.burst": {
       "version": "1.7.3",
       "depth": 1,
@@ -84,6 +110,13 @@
         "com.unity.render-pipelines.core": "12.1.7",
         "com.unity.shadergraph": "12.1.7"
       }
+    },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "1.20.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.cn"
     },
     "com.unity.searcher": {
       "version": "4.9.1",

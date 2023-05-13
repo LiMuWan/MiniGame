@@ -7,22 +7,22 @@ using UniFramework.Singleton;
 using UnityEngine;
 using YooAsset;
 
-public class PatchManager : SingletonInstance<PatchManager>,ISingleton
+public class PatchManager : SingletonInstance<PatchManager>, ISingleton
 {
     /// <summary>
     /// 运行模式
     /// </summary>
-    public EPlayMode PlayMode{private set;get;}
+    public EPlayMode PlayMode { private set; get; }
 
     /// <summary>
     /// 包裹的版本信息
     /// </summary>
-    public string PackageVersion{set;get;}
+    public string PackageVersion { set; get; }
 
     /// <summary>
     /// 下载器
     /// </summary>
-    public ResourceDownloaderOperation Downloader{set;get;}
+    public ResourceDownloaderOperation Downloader { set; get; }
 
     private bool _isRun = false;
     private EventGroup _eventGroup = new EventGroup();
@@ -30,7 +30,7 @@ public class PatchManager : SingletonInstance<PatchManager>,ISingleton
 
     public void OnCreate(object createParam)
     {
-       
+
     }
 
     public void OnDestroy()
@@ -40,7 +40,7 @@ public class PatchManager : SingletonInstance<PatchManager>,ISingleton
 
     public void OnUpdate()
     {
-        if(_machine != null)
+        if (_machine != null)
         {
             _machine.Update();
         }
@@ -48,7 +48,7 @@ public class PatchManager : SingletonInstance<PatchManager>,ISingleton
 
     public void Run(EPlayMode playMode)
     {
-        if(_isRun == false)
+        if (_isRun == false)
         {
             _isRun = true;
             PlayMode = playMode;
@@ -61,6 +61,17 @@ public class PatchManager : SingletonInstance<PatchManager>,ISingleton
             _eventGroup.AddListener<UserEventDefine.UserTryDownloadWebFiles>(OnHandleEventMessage);
 
             Debug.Log("开启补丁更新流程...");
+            _machine = new StateMachine(this);
+            _machine.AddNode<FsmPatchPrepare>();
+            _machine.AddNode<FsmInitialize>();
+            _machine.AddNode<FsmUpdateVersion>();
+            _machine.AddNode<FsmUpdateManifest>();
+            _machine.AddNode<FsmCreateDownloader>();
+            _machine.AddNode<FsmDownloadFiles>();
+            _machine.AddNode<FsmDownloadOver>();
+            _machine.AddNode<FsmClearCache>();
+            _machine.AddNode<FsmPatchDone>();
+            _machine.Run<FsmPatchPrepare>();
         }
         else
         {

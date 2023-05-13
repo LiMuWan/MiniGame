@@ -1,17 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniFramework.Machine;
 
-public class FsmPatchPrepare : MonoBehaviour
+internal class FsmPatchPrepare : IStateNode
 {
-    // Start is called before the first frame update
-    void Start()
+    private StateMachine _machine;
+    public void OnCreate(StateMachine machine)
+    {
+       _machine = machine;
+    }
+
+    public void OnEnter()
+    {
+        //加载更新面板
+        var go = Resources.Load<GameObject>("PatchWindow");
+        GameObject.Instantiate(go);
+
+        _machine.ChangeState<FsmInitialize>();
+    }
+
+    public void OnExit()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnUpdate()
     {
         
     }

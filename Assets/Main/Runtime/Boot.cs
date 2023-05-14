@@ -27,8 +27,9 @@ public class Boot : MonoBehaviour
         YooAssets.SetOperationSystemMaxTimeSlice(30);
 
         //创建补丁管理器
-        
+        UniSingleton.CreateSingleton<PatchManager>();
+
         //开始补丁更新流程
-    
+        PatchManager.Instance.Run(PlayMode);
     }
 }

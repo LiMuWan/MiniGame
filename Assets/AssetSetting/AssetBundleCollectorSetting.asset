@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowPackageView: 0
   EnableAddressable: 1
-  UniqueBundleName: 0
+  UniqueBundleName: 1
   ShowEditorAlias: 0
   Packages:
   - PackageName: DefaultPackage
@@ -33,29 +33,13 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-  - PackageName: DefaultPackage
-    PackageDesc: 
-    Groups:
-    - GroupName: Codes
-      GroupDesc: "C#\u70ED\u66F4\u65B0dll"
-      AssetTags: 
-      ActiveRuleName: EnableGroup
-      Collectors:
-      - CollectPath: Assets/HotfixAssets/Codes
-        CollectorGUID: 5be242e4063cb394e8d07141fe87850f
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackRawFile
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-    - GroupName: Test
+    - GroupName: prefabs
       GroupDesc: prefab
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/HotfixAssets/Entity/Cube.prefab
-        CollectorGUID: ab0c645463418f4458aa15500d72fea9
+      - CollectPath: Assets/HotfixAssets/Entity
+        CollectorGUID: b44b636b9a5da28409f8f64276cf8be4
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory

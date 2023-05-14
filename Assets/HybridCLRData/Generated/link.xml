@@ -13,8 +13,10 @@
   <assembly fullname="UniFramework.Singleton">
     <type fullname="UniFramework.Singleton.ISingleton" preserve="all" />
     <type fullname="UniFramework.Singleton.SingletonInstance`1" preserve="all" />
+    <type fullname="UniFramework.Singleton.UniSingleton" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.CoreModule">
     <type fullname="UnityEngine.Debug" preserve="all" />
+    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
   </assembly>
 </linker>

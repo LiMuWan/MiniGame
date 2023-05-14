@@ -5,8 +5,9 @@ using UniFramework.Singleton;
 
 public class Main 
 {
-    public void Run()
+    public static void Run()
     {
+       UniSingleton.CreateSingleton<GameManager>();
        GameManager.Instance.Run();
     }
 }

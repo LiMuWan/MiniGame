@@ -22,6 +22,7 @@ internal class FsmPatchDone : IStateNode
 
        //开启游戏流程
        //加载热更程序集
+       UniSingleton.CreateSingleton<LoadDll>();
        UniSingleton.StartCoroutine(LoadDll.Instance.LoadDllAsset());
     //    GameManager.Instance.Run();
     }

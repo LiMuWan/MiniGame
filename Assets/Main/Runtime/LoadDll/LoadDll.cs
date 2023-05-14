@@ -60,7 +60,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             Debug.Log($"dll:{asset} size : {fileData.Length}");
         }
 
-        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix"));
+        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
         Type type = hotUpdateAss.GetType("Main");
         type.GetMethod("Run").Invoke(null, null);
     }

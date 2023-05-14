@@ -47,17 +47,16 @@ namespace HybridCLR.Editor
             Directory.CreateDirectory(outputDir);
             
             List<AssetBundleBuild> abs = new List<AssetBundleBuild>();
-
             {
                 var prefabAssets = new List<string>();
-                string testPrefab = $"{Application.dataPath}/Prefabs/Cube.prefab";
-                prefabAssets.Add(testPrefab);
+                // string testPrefab = $"{Application.dataPath}/Prefabs/Cube.prefab";
+                // prefabAssets.Add(testPrefab);
                 AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
-                abs.Add(new AssetBundleBuild
-                {
-                    assetBundleName = "prefabs",
-                    assetNames = prefabAssets.Select(s => ToRelativeAssetPath(s)).ToArray(),
-                });
+                // abs.Add(new AssetBundleBuild
+                // {
+                //     assetBundleName = "prefabs",
+                //     assetNames = prefabAssets.Select(s => ToRelativeAssetPath(s)).ToArray(),
+                // });
             }
 
             BuildPipeline.BuildAssetBundles(outputDir, abs.ToArray(), BuildAssetBundleOptions.None, target);
@@ -82,7 +81,7 @@ namespace HybridCLR.Editor
         public static void BuildAndCopyABAOTHotUpdateDllsToHotfixAssets()
         {
             BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
-            BuildAssetBundleByTarget(target);
+            // BuildAssetBundleByTarget(target);
             CompileDllCommand.CompileDll(target);
             CopyABAOTHotUpdateDllsToHotfixAssets(target);
             AssetDatabase.Refresh();

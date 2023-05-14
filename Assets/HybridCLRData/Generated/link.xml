@@ -7,6 +7,13 @@
     <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
   </assembly>
+  <assembly fullname="UniFramework.Event">
+    <type fullname="UniFramework.Event.EventGroup" preserve="all" />
+  </assembly>
+  <assembly fullname="UniFramework.Singleton">
+    <type fullname="UniFramework.Singleton.ISingleton" preserve="all" />
+    <type fullname="UniFramework.Singleton.SingletonInstance`1" preserve="all" />
+  </assembly>
   <assembly fullname="UnityEngine.CoreModule">
     <type fullname="UnityEngine.Debug" preserve="all" />
   </assembly>

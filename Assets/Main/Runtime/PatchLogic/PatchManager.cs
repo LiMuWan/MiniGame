@@ -79,8 +79,35 @@ public class PatchManager : SingletonInstance<PatchManager>, ISingleton
         }
     }
 
+    /// <summary>
+    /// 接收事件
+    /// </summary>
+    /// <param name="message"></param>
     private void OnHandleEventMessage(IEventMessage message)
     {
-        throw new NotImplementedException();
+        if(message is UserEventDefine.UserTryInitalize)
+        {
+            _machine.ChangeState<FsmInitialize>();
+        }
+        else if(message is UserEventDefine.UserBeginDownloadWebFiles)
+        {
+            _machine.ChangeState<FsmDownloadFiles>();
+        }
+        else if(message is UserEventDefine.UserTryUpdatePackageVersion)
+        {
+            _machine.ChangeState<FsmUpdateVersion>();
+        }
+        else if(message is UserEventDefine.UserTryUpdatePatchManifest)
+        {
+            _machine.ChangeState<FsmUpdateManifest>();
+        }
+        else if(message is UserEventDefine.UserTryDownloadWebFiles)
+        {
+            _machine.ChangeState<FsmCreateDownloader>();
+        }
+        else
+        {
+            throw new System.NotImplementedException($"{message.GetType()}");
+        }
     }
 }

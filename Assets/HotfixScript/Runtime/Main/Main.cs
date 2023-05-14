@@ -1,17 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniFramework.Singleton;
 
-public class Main : MonoBehaviour
+public class Main 
 {
-    private void Awake()
+    public void Run()
     {
-
-    }
-
-    private void Start()
-    {
-        Debug.Log("Hello,Friends");
+       GameManager.Instance.Run();
     }
 }
 

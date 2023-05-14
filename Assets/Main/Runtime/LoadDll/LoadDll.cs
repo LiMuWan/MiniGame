@@ -4,6 +4,8 @@ using UnityEngine;
 using UniFramework.Singleton;
 using System.Linq;
 using YooAsset;
+using System.Reflection;
+using System;
 
 public class LoadDll : SingletonInstance<LoadDll>, ISingleton
 {
@@ -12,10 +14,9 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
     // TODO 可以用配置文件
     public static List<string> AOTMetaAssemblyNames {get;} = new List<string>()
     {
-        "mscorlib",
-        "System",
-        "System.Core",
-        "UniFramework.Machine",
+        "mscorlib.dll",
+        "System.dll",
+        "System.Core.dll",
     };
 
     private static Dictionary<string,byte[]> assetDatas = new Dictionary<string, byte[]>();
@@ -46,8 +47,8 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
 
         var assets = new List<string>
         {
-            "Assembly-CSharp",
-            "Hotfix",
+            "Assembly-CSharp.dll",
+            "Hotfix.dll",
         }.Concat(AOTMetaAssemblyNames);
 
         foreach(var asset in assets)
@@ -59,7 +60,8 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             Debug.Log($"dll:{asset} size : {fileData.Length}");
         }
 
-        // GameObject main = new GameObject("HotFix.Main");
-        // main.AddComponent<Main>();
+        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix"));
+        Type type = hotUpdateAss.GetType("Main");
+        type.GetMethod("Run").Invoke(null, null);
     }
 }

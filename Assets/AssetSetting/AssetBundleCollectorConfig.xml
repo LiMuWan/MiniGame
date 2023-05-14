@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root Version="2.4">
+  <Common AutoAddressable="False" UniqueBundleName="False" ShowPackageView="True" ShowEditorAlias="False" />
+  <Package PackageName="DefaultPackage" PackageDesc="">
+    <Group GroupActiveRule="EnableGroup" GroupName="Codes" GroupDesc="C#热更新dll" AssetTags="">
+      <Collector CollectPath="Assets/HotfixAssets/Codes" CollectGUID="5be242e4063cb394e8d07141fe87850f" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackRawFile" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+  </Package>
+</root>

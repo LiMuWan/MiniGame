@@ -1266,14 +1266,6 @@
           }
         }
       },
-      "Bee.TinyProfiler2/0.0.0.0": {
-        "runtime": {
-          "Bee.TinyProfiler2.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "Bee.Stevedore.Program/0.0.0.0": {
         "runtime": {
           "Bee.Stevedore.Program.exe": {
@@ -1551,11 +1543,6 @@
       "sha512": ""
     },
     "Bee.DotNet/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Bee.TinyProfiler2/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

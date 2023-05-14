@@ -2678,7 +2678,7 @@ buffer_add_assemblyid (Buffer *buf, MonoDomain *domain, MonoAssembly *assembly)
 
 	id = buffer_add_ptr_id (buf, domain, ID_ASSEMBLY, assembly);
 	if (G_UNLIKELY (log_level >= 2) && assembly)
-		DEBUG_PRINTF (2, "[dbg]   send assembly [%s][%s][%d]\n", assembly->aname.name, VM_DOMAIN_GET_FRIENDLY_NAME(domain), id);
+		DEBUG_PRINTF (2, "[dbg]   send assembly [%s][%s][%d]\n", assembly->aname.name, domain->friendly_name, id);
 }
 
 static inline void
@@ -9523,7 +9523,7 @@ domain_commands (int command, guint8 *p, guint8 *end, Buffer *buf)
 		domain = decode_domainid (p, &p, end, NULL, &err);
 		if (err != ERR_NONE)
 			return err;
-		buffer_add_string (buf, VM_DOMAIN_GET_FRIENDLY_NAME(domain));
+		buffer_add_string (buf, domain->friendly_name);
 		break;
 	}
 	case CMD_APPDOMAIN_GET_ASSEMBLIES: {
@@ -9556,9 +9556,6 @@ domain_commands (int command, guint8 *p, guint8 *end, Buffer *buf)
 		break;
 	}
 	case CMD_APPDOMAIN_GET_ENTRY_ASSEMBLY: {
-#ifndef RUNTIME_IL2CPP
-		return ERR_NOT_IMPLEMENTED;
-#else
 		domain = decode_domainid (p, &p, end, NULL, &err);
 		if (err != ERR_NONE)
 			return err;
@@ -9568,7 +9565,6 @@ domain_commands (int command, guint8 *p, guint8 *end, Buffer *buf)
 		buffer_add_assemblyid (buf, domain, domain->entry_assembly);
 #endif // RUNTIME_IL2CPP
 		break;
-#endif
 	}
 	case CMD_APPDOMAIN_GET_CORLIB: {
 		domain = decode_domainid (p, &p, end, NULL, &err);

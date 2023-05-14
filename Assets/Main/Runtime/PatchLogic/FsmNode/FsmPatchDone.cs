@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Machine;
+using UniFramework.Singleton;
 
 /// <summary>
 /// 流程更新完毕
@@ -20,6 +21,9 @@ internal class FsmPatchDone : IStateNode
        //创建游戏管理器
 
        //开启游戏流程
+       //加载热更程序集
+       UniSingleton.StartCoroutine(LoadDll.Instance.LoadDllAsset());
+    //    GameManager.Instance.Run();
     }
 
     public void OnExit()

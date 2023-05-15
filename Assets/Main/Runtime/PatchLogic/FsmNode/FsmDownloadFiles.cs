@@ -33,7 +33,7 @@ internal class FsmDownloadFiles : IStateNode
     private IEnumerator BeginDownload()
     {
         var downloader = PatchManager.Instance.Downloader;
-
+        UnityEngine.Debug.Log("BeginDownload()");
         //注册下载回调
         downloader.OnDownloadErrorCallback = PatchEventDefine.WebFileDownloadFailed.SendEventMessage;
         downloader.OnDownloadProgressCallback = PatchEventDefine.DownloadProgressUpdate.SendEventMessage;

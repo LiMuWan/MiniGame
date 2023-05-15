@@ -88,8 +88,8 @@ internal class FsmInitialize : IStateNode
     
     private string GetHostServerURL()
     {
-        string hostServerIP = "http://192.168.0.111";
-        string gameVersion = "v1.0";
+        string hostServerIP = "http://192.168.1.15";
+        string gameVersion = "v2.0";
 
 #if UNITY_EDITOR
         if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.Android)

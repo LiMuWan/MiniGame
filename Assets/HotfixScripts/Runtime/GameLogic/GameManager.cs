@@ -26,6 +26,6 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
 
     public void Run()
     {
-        Debug.Log("Hello,everyone!!!");
+        Debug.Log("Hello,everyone 大家好 啊!!!");
     }
 }

@@ -3,7 +3,7 @@ CRC: 402574144
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fad8a807f732adae4fa31307f23cabdd
+    Hash: 6cb1a65e97b3227f7eb7cf54525c0d84
   TypeTreeHash:
     serializedVersion: 2
     Hash: a3954d9da6324b836c32a89fa85d00a9
@@ -29,4 +29,4 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/HotfixAssets/Entity/Cube.prefab
 Dependencies:
-- D:/MyProject/WXMiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

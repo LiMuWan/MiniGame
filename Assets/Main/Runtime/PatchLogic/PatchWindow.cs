@@ -117,6 +117,7 @@ public class PatchWindow : MonoBehaviour
             string currentSizeMB = (msg.CurrentDownloadSizeBytes / 1048576f).ToString("f1");
             string totalSizeMB = (msg.TotalDownloadSizeBytes / 1048576f).ToString("f1");
             _tips.text = $"{msg.CurrentDownloadCount}/{msg.TotalDownloadCount} {currentSizeMB}MB/{totalSizeMB}MB";
+             Debug.LogWarning($"DownloadProgressUpdate {_tips.text}");
         }
         else if (message is PatchEventDefine.PackageVersionUpdateFailed)
         {

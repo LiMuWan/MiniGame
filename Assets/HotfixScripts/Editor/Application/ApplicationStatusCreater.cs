@@ -14,7 +14,7 @@ public class ApplicationStatusCreater
             ScriptableObject.CreateInstance<CreateScriptAssetAction>(),
             GetSelectedPathOrFallback() + "/New Application Status.cs",
             null,
-            "Assets/Script/Core/Editor/res/ApplicationStatusTemplate.txt");
+            "Assets/HotfixScripts/Editor/Res/ApplicationStatusTemplate.txt");
     }
     public static string GetSelectedPathOrFallback()
     {

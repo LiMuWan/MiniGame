@@ -114,8 +114,8 @@ public class ApplicationStatusManager
                 // UIManager.SetEventSystemEnable(false);
                 CameraFade.FadeInToOut(s_fadeInTime, s_afterInDelayTime, s_fadeOutTime, () =>
                 {
-                    UIManager.SetEventSystemEnable(true);
-                    s_currentAppStatus.CloseAllUI(false);
+                    // UIManager.SetEventSystemEnable(true);
+                    // s_currentAppStatus.CloseAllUI(false);
 
                     try
                     {
@@ -125,8 +125,8 @@ public class ApplicationStatusManager
                         Debug.LogError("OnExitStatus Exception " + statusName + " " + e.ToString());
                     }
                     
-                    if (MemoryManager.NeedReleaseMemory())
-                        MemoryManager.FreeMemory();
+                    // if (MemoryManager.NeedReleaseMemory())
+                    //     MemoryManager.FreeMemory();
 
                     s_currentAppStatusName = statusName;
                     ApplicationManager.Instance.currentStatus = statusName;

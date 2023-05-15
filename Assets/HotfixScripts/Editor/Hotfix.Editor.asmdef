@@ -1,12 +1,8 @@
 {
-    "name": "Hotfix",
+    "name": "Hotfix.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:f22fac247a56d2d41b687bb0d900e54e",
-        "GUID:c55575a9f1747c240822f4b7e0400716",
-        "GUID:b35e33884f6755d43b7e0511e88956d0",
-        "GUID:e62322788ba70c5428b168602000a586",
-        "GUID:e34a5702dd353724aa315fb8011f08c3"
+        "GUID:eb6a625e674d0594f9d74d95f2f13f4b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

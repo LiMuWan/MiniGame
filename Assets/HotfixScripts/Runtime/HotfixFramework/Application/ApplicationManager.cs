@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniFramework.Singleton;
 
 public class ApplicationManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class ApplicationManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        AppLaunch();
     }
 
     /// <summary>
@@ -43,8 +45,18 @@ public class ApplicationManager : MonoBehaviour
         Timer.Init();  //计时器启动
         //输入管理器启动
         //UIManager启动
-        UIManager.Init();
-        
+        UniSingleton.CreateSingleton<UIManager>();
+
+        ApplicationStatusManager.Init();     //游戏流程状态机初始化
+        GlobalLogicManager.Init();           //初始化全局逻辑
+
+        InitGlobalLogic();                             //全局逻辑
+        ApplicationStatusManager.EnterStatus(m_Status);//游戏流程状态机，开始第一个状态
+
+        if (s_OnApplicationModuleInitEnd != null)
+        {
+            s_OnApplicationModuleInitEnd();
+        }
     }
 
      #region 程序生命周期事件派发
@@ -156,10 +168,10 @@ public class ApplicationManager : MonoBehaviour
     /// </summary>
     void InitGlobalLogic()
     {
-        // for (int i = 0; i < m_globalLogic.Count; i++)
-        // {
-        //     GlobalLogicManager.InitLogic(m_globalLogic[i]);
-        // }
+        for (int i = 0; i < m_globalLogic.Count; i++)
+        {
+            GlobalLogicManager.InitLogic(m_globalLogic[i]);
+        }
     }
   
     #endregion

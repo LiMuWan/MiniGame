@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.feif.uiframe": {
+      "version": "https://github.com/feifeid47/Unity-Async-UIFrame.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e38736df5b392d5cdef1492a8a7b62d2deecd3af"
+    },
     "com.focus-creative-games.hybridclr_unity": {
       "version": "https://gitee.com/focus-creative-games/hybridclr_unity.git",
       "depth": 0,

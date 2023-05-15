@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.feif.uiframe": "https://github.com/feifeid47/Unity-Async-UIFrame.git",
     "com.focus-creative-games.hybridclr_unity": "https://gitee.com/focus-creative-games/hybridclr_unity.git",
     "com.tuyoogame.yooasset": "1.4.13",
     "com.unity.collab-proxy": "2.0.3",

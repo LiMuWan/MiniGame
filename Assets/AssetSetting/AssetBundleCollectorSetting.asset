@@ -33,16 +33,42 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-    - GroupName: prefabs
-      GroupDesc: prefab
+    - GroupName: UIFont
+      GroupDesc: "UI\u5B57\u4F53"
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/HotfixAssets/Entity
-        CollectorGUID: b44b636b9a5da28409f8f64276cf8be4
+      - CollectPath: Assets/HotfixAssets/UIFont
+        CollectorGUID: f6437fe3e63d75449b9764bd87b35d2f
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: UIPanel
+      GroupDesc: "UI\u9762\u677F"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/HotfixAssets/UIPanel
+        CollectorGUID: 807f4d0cf6b3c9943ac4e5a4c52708cf
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Scene
+      GroupDesc: "\u573A\u666F\u6587\u4EF6"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/HotfixAssets/Scene
+        CollectorGUID: f1f2ebdaeb34376469a50770aad65b02
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 

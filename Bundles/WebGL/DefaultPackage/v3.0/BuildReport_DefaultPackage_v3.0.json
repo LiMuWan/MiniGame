@@ -1,0 +1,309 @@
+{
+    "Summary": {
+        "YooVersion": "1.4.13",
+        "UnityVersion": "2021.3.23f1c1",
+        "BuildDate": "2023/5/16 16:32:53",
+        "BuildSeconds": 22,
+        "BuildTarget": 20,
+        "BuildPipeline": 0,
+        "BuildMode": 0,
+        "BuildPackageName": "DefaultPackage",
+        "BuildPackageVersion": "v3.0",
+        "EnableAddressable": true,
+        "UniqueBundleName": true,
+        "EncryptionServicesClassName": "YooAsset.Editor.EncryptionNone",
+        "OutputNameStyle": 1,
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "AssetFileTotalCount": 16,
+        "MainAssetTotalCount": 12,
+        "AllBundleTotalCount": 9,
+        "AllBundleTotalSize": 4921674,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0,
+        "RawBundleTotalCount": 5,
+        "RawBundleTotalSize": 2107904
+    },
+    "AssetInfos": [
+        {
+            "Address": "Assembly-CSharp.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/Assembly-CSharp.dll.bytes",
+            "AssetGUID": "fe00c090b5b5f6e468ffb5492815127f",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_codes_assembly-csharp_dll_bytes.rawfile",
+            "MainBundleSize": 3584,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Hotfix.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/Hotfix.dll.bytes",
+            "AssetGUID": "dbaf8e4b6e95a7c41a53964321b36f0f",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
+            "MainBundleSize": 43520,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "mscorlib.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/mscorlib.dll.bytes",
+            "AssetGUID": "075e5085ce1a3a04594878b51a713e4f",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
+            "MainBundleSize": 1775104,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "System.Core.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/System.Core.dll.bytes",
+            "AssetGUID": "c4e1c000cfcc9c54b99a2fe094cc75a7",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
+            "MainBundleSize": 33280,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "System.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/System.dll.bytes",
+            "AssetGUID": "ce7459ab075412c4f9c0fad992ce7825",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_codes_system_dll_bytes.rawfile",
+            "MainBundleSize": 252416,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "zhuyanbosong_en",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosong_en.asset",
+            "AssetGUID": "fcd446c9a9e30d94182abc16813bc677",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2695039,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle"
+            ],
+            "DependAssets": [
+                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosong_punctuation",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosong_punctuation.asset",
+            "AssetGUID": "c405f329f7f644a419623048817e9484",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2695039,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle"
+            ],
+            "DependAssets": [
+                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosong_zh_dy",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosong_zh_dy.asset",
+            "AssetGUID": "cec9669be60f6954db7aed845e5ae9d7",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2695039,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle"
+            ],
+            "DependAssets": [
+                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong_punctuation.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong_en.asset"
+            ]
+        },
+        {
+            "Address": "UIConfirmBox",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIConfirmBox.prefab",
+            "AssetGUID": "d0b10ca6c9dcea545b24033f1af76df7",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uipanel.bundle",
+            "MainBundleSize": 23302,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "UIFrame",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIFrame.prefab",
+            "AssetGUID": "b550fa9bef9fb9c498eb5ce9217efeaf",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uipanel.bundle",
+            "MainBundleSize": 23302,
+            "DependBundles": [],
+            "DependAssets": [
+                "Assets/HotfixAssets/Sprites/loading.png"
+            ]
+        },
+        {
+            "Address": "UIStarred",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIStarred.prefab",
+            "AssetGUID": "dfaa81dca9391044f8e57ad7ecc2b9dd",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uipanel.bundle",
+            "MainBundleSize": 23302,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "Main",
+            "AssetPath": "Assets/HotfixAssets/Scene/Main.unity",
+            "AssetGUID": "b4134db608bd77047ae641cfc0d3b576",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_scene_main.bundle",
+            "MainBundleSize": 69493,
+            "DependBundles": [],
+            "DependAssets": []
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_assembly-csharp_dll_bytes.rawfile",
+            "FileName": "7da769065b1b9c31442c6da37d529678.rawfile",
+            "FileHash": "7da769065b1b9c31442c6da37d529678",
+            "FileCRC": "3599e987",
+            "FileSize": 3584,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Codes/Assembly-CSharp.dll.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
+            "FileName": "c310093330c213b37cf3d3d5ab08f58f.rawfile",
+            "FileHash": "c310093330c213b37cf3d3d5ab08f58f",
+            "FileCRC": "7f202f7c",
+            "FileSize": 43520,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Codes/Hotfix.dll.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
+            "FileName": "e5499f94b5aa913a2f80198c5a716d16.rawfile",
+            "FileHash": "e5499f94b5aa913a2f80198c5a716d16",
+            "FileCRC": "b938986a",
+            "FileSize": 1775104,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Codes/mscorlib.dll.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
+            "FileName": "431adb5b7e069aa41272d009f1b0c58e.rawfile",
+            "FileHash": "431adb5b7e069aa41272d009f1b0c58e",
+            "FileCRC": "0328aaab",
+            "FileSize": 33280,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Codes/System.Core.dll.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_system_dll_bytes.rawfile",
+            "FileName": "881d9267862697355342565ecf72c1bc.rawfile",
+            "FileHash": "881d9267862697355342565ecf72c1bc",
+            "FileCRC": "c896574f",
+            "FileSize": 252416,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Codes/System.dll.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "FileName": "77c0e1060ed22799d7819520bbbb934f.bundle",
+            "FileHash": "77c0e1060ed22799d7819520bbbb934f",
+            "FileCRC": "04687036",
+            "FileSize": 2695039,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosong_en.asset",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong_punctuation.asset",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong_zh_dy.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_uipanel.bundle",
+            "FileName": "0c33d6e0a738a4b5f3833b437fe702ae.bundle",
+            "FileHash": "0c33d6e0a738a4b5f3833b437fe702ae",
+            "FileCRC": "eba55ef0",
+            "FileSize": 23302,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/UIPanel/UIConfirmBox.prefab",
+                "Assets/HotfixAssets/UIPanel/UIFrame.prefab",
+                "Assets/HotfixAssets/UIPanel/UIStarred.prefab",
+                "Assets/HotfixAssets/Sprites/loading.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_scene_main.bundle",
+            "FileName": "f101fcae803f524699a212db216f6a8e.bundle",
+            "FileHash": "f101fcae803f524699a212db216f6a8e",
+            "FileCRC": "02c301b4",
+            "FileSize": 69493,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Scene/Main.unity"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_unityshaders.bundle",
+            "FileName": "4aec3cef32b81359ecf44653ff645731.bundle",
+            "FileHash": "4aec3cef32b81359ecf44653ff645731",
+            "FileCRC": "f062d8f6",
+            "FileSize": 25936,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                5
+            ],
+            "AllBuiltinAssets": [
+                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader"
+            ]
+        }
+    ]
+}

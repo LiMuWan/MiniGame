@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor.ProjectWindowCallback;
 using System.IO;
 using UnityEditor;
@@ -69,3 +69,4 @@ public class ApplicationStatusCreater
         }
     }
 }
+#endif

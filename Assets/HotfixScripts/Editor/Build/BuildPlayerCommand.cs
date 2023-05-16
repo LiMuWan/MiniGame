@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using HybridCLR.Editor.Commands;
 using HybridCLR.Editor.Installer;
 using System.Collections;
@@ -83,3 +84,4 @@ namespace HybridCLR.Editor
         }
     }
 }
+#endif

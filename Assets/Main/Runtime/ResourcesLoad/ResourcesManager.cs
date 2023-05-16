@@ -10,6 +10,7 @@ using UniFramework.Utility;
 using UnityEngine.SceneManagement;
 using System.IO;
 using UnityGameFramework.Runtime;
+using UnityEngine.Networking;
 
 namespace GameFramework.Resource
 {
@@ -179,7 +180,7 @@ namespace GameFramework.Resource
         private string GetHostServerURL()
         {
             string hostServerIP = "http://192.168.1.15";
-            string gameVersion = "v2.0";
+            string gameVersion = "v3.0";
 
 #if UNITY_EDITOR
             if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.Android)
@@ -694,7 +695,7 @@ namespace GameFramework.Resource
              * These platforms return a URL. 
              * Use the UnityWebRequest class to access the Assets.
              */
-#if (UNITY_ANDROID || UNITY_WEBGL) && !UNITY_EDITOR
+#if (UNITY_ANDROID || UNITY_WEBGL) &&UNITY_EDITOR
         bool isInStreamingAssets = fullpath.Contains(Application.streamingAssetsPath);
         if (isInStreamingAssets)
         {

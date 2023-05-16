@@ -1,10 +1,7 @@
-﻿using HybridCLR.Editor.Commands;
-using System;
+﻿#if UNITY_EDITOR
+using HybridCLR.Editor.Commands;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
@@ -193,3 +190,4 @@ namespace HybridCLR.Editor
         }
     }
 }
+#endif

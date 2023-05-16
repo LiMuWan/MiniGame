@@ -1,3 +1,4 @@
+using GameFramework.Resource;
 using UniFramework.Event;
 using UniFramework.Singleton;
 using UnityEngine;
@@ -23,9 +24,9 @@ public class Boot : MonoBehaviour
         UniSingleton.Initialize();
 
         //初始化资源系统
-        YooAssets.Initialize();
-        YooAssets.SetOperationSystemMaxTimeSlice(30);
-
+        UniSingleton.CreateSingleton<ResourcesManager>();
+        ResourcesManager.Instance.PlayMode = PlayMode;
+        
         //创建补丁管理器
         UniSingleton.CreateSingleton<PatchManager>();
 

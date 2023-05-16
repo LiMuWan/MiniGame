@@ -1,6 +1,7 @@
 using System.Collections;
 using UniFramework.Machine;
 using UniFramework.Singleton;
+using UnityEngine;
 using YooAsset;
 
 /// <summary>
@@ -16,6 +17,7 @@ internal class FsmDownloadFiles : IStateNode
 
     public void OnEnter()
     {
+        Debug.Log("开始下载补丁文件！");
         PatchEventDefine.PatchStatesChange.SendEventMessage("开始下载补丁文件！");
         UniSingleton.StartCoroutine(BeginDownload());
     }
@@ -33,7 +35,7 @@ internal class FsmDownloadFiles : IStateNode
     private IEnumerator BeginDownload()
     {
         var downloader = PatchManager.Instance.Downloader;
-        UnityEngine.Debug.Log("BeginDownload()");
+
         //注册下载回调
         downloader.OnDownloadErrorCallback = PatchEventDefine.WebFileDownloadFailed.SendEventMessage;
         downloader.OnDownloadProgressCallback = PatchEventDefine.DownloadProgressUpdate.SendEventMessage;
@@ -44,6 +46,6 @@ internal class FsmDownloadFiles : IStateNode
         if (downloader.Status != EOperationStatus.Succeed)
             yield break;
 
-        _machine.ChangeState<FsmPatchDone>();
+        _machine.ChangeState<FsmDownloadOver>();
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 using UniFramework.Machine;
 using UniFramework.Singleton;
 using YooAsset;
+using GameFramework.Resource;
 
 /// <summary>
 /// 更新资源清单
@@ -38,7 +39,7 @@ internal class FsmUpdateManifest : IStateNode
 
         bool savePackageVersion = true;
         var package = YooAssets.GetPackage("DefaultPackage");
-        var operation = package.UpdatePackageManifestAsync(PatchManager.Instance.PackageVersion,savePackageVersion);
+        var operation = ResourcesManager.Instance.UpdatePackageManifestAsync(ResourcesManager.Instance.PackageVersion,savePackageVersion);
         yield return operation;
 
         if(operation.Status == EOperationStatus.Succeed)

@@ -4,6 +4,7 @@ using UnityEngine;
 using UniFramework.Machine;
 using UniFramework.Singleton;
 using YooAsset;
+using GameFramework.Resource;
 
 /// <summary>
 /// 更新资源版本号
@@ -19,6 +20,15 @@ internal class FsmUpdateVersion : IStateNode
     public void OnEnter()
     {
         PatchEventDefine.PatchStatesChange.SendEventMessage("获取最新的资源版本！");
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Debug.LogWarning("The device is not connected to the network");
+            // UILoadMgr.Show(UIDefine.UILoadUpdate, LoadText.Instance.Label_Net_UnReachable);
+            // UILoadTip.ShowMessageBox(LoadText.Instance.Label_Net_UnReachable, MessageShowType.TwoButton,
+            //     LoadStyle.StyleEnum.Style_Retry,
+            //     GetStaticVersion().Forget,
+            //     () => { ChangeState<ProcedureInitResources>(procedureOwner); });
+        }
         UniSingleton.StartCoroutine(GetStaticVersion());
     }
 
@@ -36,13 +46,13 @@ internal class FsmUpdateVersion : IStateNode
     {
         yield return new WaitForSecondsRealtime(0.5f);
 
-        var package = YooAssets.GetPackage("DefaultPackage");
-        var operation = package.UpdatePackageVersionAsync();
+        var operation = ResourcesManager.Instance.UpdatePackageVersionAsync();
         yield return operation;
 
         if(operation.Status == EOperationStatus.Succeed)
         {
-            PatchManager.Instance.PackageVersion = operation.PackageVersion;
+            //线上最新版本operation.PackageVersion
+            ResourcesManager.Instance.PackageVersion = operation.PackageVersion;
             _machine.ChangeState<FsmUpdateManifest>();
         }
         else

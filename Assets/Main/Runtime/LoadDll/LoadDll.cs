@@ -6,6 +6,7 @@ using System.Linq;
 using YooAsset;
 using System.Reflection;
 using System;
+using GameFramework.Resource;
 
 public class LoadDll : SingletonInstance<LoadDll>, ISingleton
 {
@@ -53,7 +54,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
 
         foreach(var asset in assets)
         {
-            RawFileOperationHandle handle = package.LoadRawFileAsync(asset);
+            RawFileOperationHandle handle = ResourcesManager.Instance.LoadRawFileAsync(asset);
             yield return handle;
             byte[] fileData = handle.GetRawFileData();
             assetDatas[asset] = fileData;

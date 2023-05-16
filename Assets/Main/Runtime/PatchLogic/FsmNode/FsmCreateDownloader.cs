@@ -4,6 +4,7 @@ using UnityEngine;
 using UniFramework.Machine;
 using UniFramework.Singleton;
 using YooAsset;
+using GameFramework.Resource;
 
 /// <summary>
 /// 创建文件下载器
@@ -18,18 +19,19 @@ internal class FsmCreateDownloader : IStateNode
 
     public void OnEnter()
     {
-       PatchEventDefine.PatchStatesChange.SendEventMessage("创建补丁下载器");
-       UniSingleton.StartCoroutine(CreateDownLoader());
+        Debug.Log("创建补丁下载器");
+        PatchEventDefine.PatchStatesChange.SendEventMessage("创建补丁下载器");
+        UniSingleton.StartCoroutine(CreateDownLoader());
     }
 
     public void OnExit()
     {
-        
+
     }
 
     public void OnUpdate()
     {
-        
+
     }
 
     IEnumerator CreateDownLoader()
@@ -38,10 +40,10 @@ internal class FsmCreateDownloader : IStateNode
 
         int downloadingMaxNum = 10;
         int failedTryAgain = 3;
-        var downloader = YooAssets.CreateResourceDownloader(downloadingMaxNum,failedTryAgain);
+        var downloader = ResourcesManager.Instance.CreateResourceDownloader(downloadingMaxNum, failedTryAgain);
         PatchManager.Instance.Downloader = downloader;
 
-        if(downloader.TotalDownloadCount == 0)
+        if (downloader.TotalDownloadCount == 0)
         {
             Debug.Log("Not found any download files !");
             _machine.ChangeState<FsmDownloadOver>();
@@ -54,7 +56,7 @@ internal class FsmCreateDownloader : IStateNode
             //注意：开发者需要在下载前检测磁盘空间不足
             int totalDownloadCount = downloader.TotalDownloadCount;
             long totalDownloadBytes = downloader.TotalDownloadBytes;
-            PatchEventDefine.FoundUpdateFiles.SendEventMessage(totalDownloadCount,totalDownloadBytes);
+            PatchEventDefine.FoundUpdateFiles.SendEventMessage(totalDownloadCount, totalDownloadBytes);
         }
     }
 }

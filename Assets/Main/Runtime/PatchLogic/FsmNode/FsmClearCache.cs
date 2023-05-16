@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Machine;
 using YooAsset;
+using GameFramework.Resource;
 
 /// <summary>
 /// 清理未使用的缓存文件
@@ -18,8 +19,7 @@ internal class FsmClearCache : IStateNode
     public void OnEnter()
     {
         PatchEventDefine.PatchStatesChange.SendEventMessage("清理未使用的缓存文件！");
-        var package = YooAssets.GetPackage("DefaultPackage");
-        var operation = package.ClearUnusedCacheFilesAsync();
+        var operation = ResourcesManager.Instance.ClearUnusedCacheFilesAsync();
         operation.Completed += Operation_Completed;
     }
 

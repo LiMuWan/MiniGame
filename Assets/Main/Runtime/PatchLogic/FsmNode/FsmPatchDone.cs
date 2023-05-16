@@ -9,18 +9,19 @@ using UniFramework.Singleton;
 /// </summary>
 internal class FsmPatchDone : IStateNode
 {
+    private StateMachine _machine;
     public void OnCreate(StateMachine machine)
     {
-        
+        _machine = machine;
     }
 
     public void OnEnter()
     {
-       PatchEventDefine.PatchStatesChange.SendEventMessage("开始游戏!");
+        PatchEventDefine.PatchStatesChange.SendEventMessage("开始游戏!");
 
-       //加载热更程序集
-       UniSingleton.CreateSingleton<LoadDll>();
-       UniSingleton.StartCoroutine(LoadDll.Instance.LoadDllAsset());
+        //加载热更程序集
+        UniSingleton.CreateSingleton<LoadDll>();
+        UniSingleton.StartCoroutine(LoadDll.Instance.LoadDllAsset());
     }
 
     public void OnExit()
@@ -30,6 +31,6 @@ internal class FsmPatchDone : IStateNode
 
     public void OnUpdate()
     {
-        
+
     }
 }

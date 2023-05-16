@@ -1,4 +1,5 @@
 using UniFramework.Machine;
+using UnityEngine;
 
 /// <summary>
 /// 下载完毕
@@ -14,6 +15,7 @@ internal class FsmDownloadOver : IStateNode
 
     public void OnEnter()
     {
+        Debug.Log("下载完成!!!");
        _machine.ChangeState<FsmClearCache>();
     }
 

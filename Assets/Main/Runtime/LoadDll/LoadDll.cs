@@ -49,6 +49,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
         var assets = new List<string>
         {
             "Assembly-CSharp.dll",
+            "UIFrame.dll",
             "Hotfix.dll",
         }.Concat(AOTMetaAssemblyNames);
 

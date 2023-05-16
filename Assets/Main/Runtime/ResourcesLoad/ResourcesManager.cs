@@ -1,0 +1,631 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniFramework.Singleton;
+using YooAsset;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using System;
+using UniFramework.Utility;
+using UnityEngine.SceneManagement;
+using System.IO;
+
+namespace GameFramework.Resource
+{
+    public partial class ResourcesManager : SingletonInstance<ResourcesManager>, ISingleton
+    {
+        #region Propreties
+        /// <summary>
+        /// 资源包名称。
+        /// </summary>
+        public string PackageName = "DefaultPackage";
+
+        /// <summary>
+        /// 资源系统运行模式。
+        /// </summary>
+        public EPlayMode PlayMode = EPlayMode.EditorSimulateMode;
+
+        /// <summary>
+        /// 下载文件校验等级。
+        /// </summary>
+        public EVerifyLevel VerifyLevel { get; set; }
+
+        /// <summary>
+        /// 实例化的根节点。
+        /// </summary>
+        public Transform InstanceRoot { get; set; }
+
+        /// <summary>
+        /// Propagates notification that operations should be canceled.
+        /// </summary>
+        public CancellationToken CancellationToken { get; private set; }
+
+        /// <summary>
+        /// 资源生命周期服务器。
+        /// </summary>
+        public ResourceHelper ResourceHelper { get; private set; }
+
+        /// <summary>
+        /// 资源服务器地址。
+        /// </summary>
+        public string HostServerURL { get; set; }
+
+
+        /// <summary>
+        /// 设置异步系统参数，每帧执行消耗的最大时间切片（单位：毫秒）
+        /// </summary>
+        public long Milliseconds { get; set; }
+
+        /// <summary>
+        /// The total number of frames since the start of the game (Read Only).
+        /// </summary>
+        private static int _lastUpdateFrame = 0;
+
+        private string m_ApplicableGameVersion;
+
+        private int m_InternalResourceVersion;
+
+        private string m_ReadOnlyPath;
+        private string m_ReadWritePath;
+
+        /// <summary>
+        /// 获取资源读写区路径。
+        /// </summary>
+        public string ReadWritePath
+        {
+            get
+            {
+                return m_ReadWritePath;
+            }
+        }
+
+        /// <summary>
+        /// 获取当前资源适用的游戏版本号。
+        /// </summary>
+        public string ApplicableGameVersion
+        {
+            get
+            {
+                return m_ApplicableGameVersion;
+            }
+        }
+
+        /// <summary>
+        /// 获取当前内部资源版本号。
+        /// </summary>
+        public int InternalResourceVersion
+        {
+            get
+            {
+                return m_InternalResourceVersion;
+            }
+        }
+
+        public int DownloadingMaxNum { get; set; }
+        public int FailedTryAgain { get; set; }
+        #endregion
+
+        #region 设置接口
+        /// <summary>
+        /// 设置资源只读区路径。
+        /// </summary>
+        /// <param name="readOnlyPath">资源只读区路径。</param>
+        public void SetReadOnlyPath(string readOnlyPath)
+        {
+            if (string.IsNullOrEmpty(readOnlyPath))
+            {
+                throw new Exception("Read-only path is invalid.");
+            }
+
+            m_ReadOnlyPath = readOnlyPath;
+        }
+
+        /// <summary>
+        /// 设置资源读写区路径。
+        /// </summary>
+        /// <param name="readWritePath">资源读写区路径。</param>
+        public void SetReadWritePath(string readWritePath)
+        {
+            if (string.IsNullOrEmpty(readWritePath))
+            {
+                throw new Exception("Read-write path is invalid.");
+            }
+
+            m_ReadWritePath = readWritePath;
+        }
+
+
+        #endregion
+        public delegate void CallBackDele<T>(T res);
+
+        public delegate void
+            CallBackAsyncOperation<in TAsyncOperationHandle, in T>(TAsyncOperationHandle handle, T res);
+        void ISingleton.OnCreate(object createParam)
+        {
+            if (PlayMode == EPlayMode.EditorSimulateMode)
+            {
+                Debug.Log("During this run, Game Framework will use editor resource files, which you should validate first.");
+#if !UNITY_EDITOR
+            PlayMode = EPlayMode.OfflinePlayMode;
+#endif
+            }
+        }
+
+        void ISingleton.OnDestroy()
+        {
+            YooAssets.Destroy();
+        }
+
+        void ISingleton.OnUpdate()
+        {
+
+        }
+
+        public InitializationOperation InitPackage()
+        {
+            // 创建默认的资源包
+            string packageName = PackageName;
+            var package = YooAssets.TryGetPackage(packageName);
+            if (package == null)
+            {
+                package = YooAssets.CreatePackage(packageName);
+                YooAssets.SetDefaultPackage(package);
+            }
+
+            // 编辑器下的模拟模式
+            InitializationOperation initializationOperation = null;
+            if (PlayMode == EPlayMode.EditorSimulateMode)
+            {
+                var createParameters = new EditorSimulateModeParameters();
+                createParameters.SimulateManifestFilePath = EditorSimulateModeHelper.SimulateBuild(packageName);
+                initializationOperation = package.InitializeAsync(createParameters);
+            }
+
+            // 单机运行模式
+            if (PlayMode == EPlayMode.OfflinePlayMode)
+            {
+                var createParameters = new OfflinePlayModeParameters();
+                createParameters.DecryptionServices = new GameDecryptionServices();
+                initializationOperation = package.InitializeAsync(createParameters);
+            }
+
+            // 联机运行模式
+            if (PlayMode == EPlayMode.HostPlayMode)
+            {
+                var createParameters = new HostPlayModeParameters();
+                createParameters.DecryptionServices = new GameDecryptionServices();
+                createParameters.QueryServices = new GameQueryServices();
+                createParameters.DefaultHostServer = HostServerURL;
+                createParameters.FallbackHostServer = HostServerURL;
+                initializationOperation = package.InitializeAsync(createParameters);
+            }
+
+            return initializationOperation;
+        }
+
+        public void Initialize()
+        {
+            // 初始化资源系统
+            YooAssets.Initialize();
+            YooAssets.SetOperationSystemMaxTimeSlice(Milliseconds);
+            YooAssets.SetCacheSystemCachedFileVerifyLevel(VerifyLevel);
+
+            // 创建默认的资源包
+            string packageName = PackageName;
+            var defaultPackage = YooAssets.TryGetPackage(packageName);
+            if (defaultPackage == null)
+            {
+                defaultPackage = YooAssets.CreatePackage(packageName);
+                YooAssets.SetDefaultPackage(defaultPackage);
+            }
+            ResourceHelper = InstanceRoot.gameObject.AddComponent<ResourceHelper>();
+            CancellationToken = ResourceHelper.GetCancellationTokenOnDestroy();
+        }
+
+        #region 资源信息
+
+        /// <summary>
+        /// 是否需要从远端更新下载。
+        /// </summary>
+        /// <param name="location">资源的定位地址</param>
+        public bool IsNeedDownloadFromRemote(string location)
+        {
+            return YooAssets.IsNeedDownloadFromRemote(location);
+        }
+
+        /// <summary>
+        /// 是否需要从远端更新下载。
+        /// </summary>
+        /// <param name="assetInfo">资源信息。</param>
+        public bool IsNeedDownloadFromRemote(AssetInfo assetInfo)
+        {
+            return YooAssets.IsNeedDownloadFromRemote(assetInfo);
+        }
+
+        /// <summary>
+        /// 获取资源信息列表。
+        /// </summary>
+        /// <param name="tag">资源标签。</param>
+        /// <returns>资源信息列表。</returns>
+        public AssetInfo[] GetAssetInfos(string tag)
+        {
+            return YooAssets.GetAssetInfos(tag);
+        }
+
+        /// <summary>
+        /// 获取资源信息列表。
+        /// </summary>
+        /// <param name="tags">资源标签列表。</param>
+        /// <returns>资源信息列表。</returns>
+        public AssetInfo[] GetAssetInfos(string[] tags)
+        {
+            return YooAssets.GetAssetInfos(tags);
+        }
+
+        /// <summary>
+        /// 获取资源信息。
+        /// </summary>
+        /// <param name="location">资源的定位地址。</param>
+        /// <returns>资源信息。</returns>
+        public AssetInfo GetAssetInfo(string location)
+        {
+            return YooAssets.GetAssetInfo(location);
+        }
+
+        /// <summary>
+        /// 检查资源定位地址是否有效。
+        /// </summary>
+        /// <param name="location">资源的定位地址</param>
+        public bool CheckLocationValid(string location)
+        {
+            return YooAssets.CheckLocationValid(location);
+        }
+
+        #endregion
+
+        #region 资源加载
+
+        /// <summary>
+        /// 同步加载资源对象
+        /// </summary>
+        /// <param name="assetInfo">资源信息</param>
+        public AssetOperationHandle LoadAssetSync(AssetInfo assetInfo)
+        {
+            return YooAssets.LoadAssetSync(assetInfo);
+        }
+
+        /// <summary>
+        /// 同步加载资源对象
+        /// </summary>
+        /// <typeparam name="TObject">资源类型</typeparam>
+        /// <param name="location">资源的定位地址</param>
+        public AssetOperationHandle LoadAssetSync<TObject>(string location) where TObject : UnityEngine.Object
+        {
+            return YooAssets.LoadAssetSync<TObject>(location);
+        }
+
+        /// <summary>
+        /// 同步加载资源对象
+        /// </summary>
+        /// <param name="location">资源的定位地址</param>
+        /// <param name="type">资源类型</param>
+        public AssetOperationHandle LoadAssetSync(string location, System.Type type)
+        {
+            return YooAssets.LoadAssetSync(location, type);
+        }
+
+
+        /// <summary>
+        /// 异步加载资源对象
+        /// </summary>
+        /// <param name="assetInfo">资源信息</param>
+        public AssetOperationHandle LoadAssetAsync(AssetInfo assetInfo)
+        {
+            return YooAssets.LoadAssetAsync(assetInfo);
+        }
+
+        /// <summary>
+        /// 异步加载资源对象
+        /// </summary>
+        /// <typeparam name="TObject">资源类型</typeparam>
+        /// <param name="location">资源的定位地址</param>
+        public AssetOperationHandle LoadAssetAsync<TObject>(string location) where TObject : UnityEngine.Object
+        {
+            return YooAssets.LoadAssetAsync<TObject>(location);
+        }
+
+        /// <summary>
+        /// 异步加载资源对象
+        /// </summary>
+        /// <param name="location">资源的定位地址</param>
+        /// <param name="type">资源类型</param>
+        public AssetOperationHandle LoadAssetAsync(string location, System.Type type)
+        {
+            return YooAssets.LoadAssetAsync(location, type);
+        }
+
+        /// <summary>
+        /// 同步加载资源并获取句柄。
+        /// </summary>
+        /// <param name="location">要加载资源的名称。</param>
+        /// <typeparam name="T">要加载资源的类型。</typeparam>
+        /// <returns>同步加载资源句柄。</returns>
+        public AssetOperationHandle LoadAssetGetOperation<T>(string location) where T : UnityEngine.Object
+        {
+            var handle = LoadAssetSync<T>(location);
+
+            return handle;
+        }
+
+        /// <summary>
+        /// 同步加载资源对象。
+        /// </summary>
+        /// <param name="location">资源的定位地址。</param>
+        /// <typeparam name="T">资源类型。</typeparam>
+        /// <returns>资源实例。</returns>
+        public T LoadAsset<T>(string location) where T : UnityEngine.Object
+        {
+            var assetPackage = YooAssets.TryGetPackage(PackageName);
+
+            AssetInfo assetInfo = assetPackage.GetAssetInfo(location);
+
+            if (assetInfo == null)
+            {
+                string errorMessage = StringFormat.Format("Can not load asset '{0}'.", location);
+
+                throw new Exception(errorMessage);
+            }
+
+            var handle = LoadAssetSync<T>(location);
+
+            if (typeof(T) == typeof(UnityEngine.GameObject))
+            {
+                return handle.InstantiateSync() as T;
+            }
+
+            return handle.AssetObject as T;
+        }
+
+        /// <summary>
+        /// 同步加载资源对象。
+        /// </summary>
+        /// <param name="location">资源的定位地址。</param>
+        /// <param name="parent">父节点。</param>
+        /// <typeparam name="TObject">资源类型。</typeparam>
+        /// <returns>资源实例。</returns>
+        public TObject LoadAsset<TObject>(string location, Transform parent) where TObject : UnityEngine.Object
+        {
+            var handle = LoadAssetSync<TObject>(location);
+
+            if (typeof(TObject) == typeof(UnityEngine.GameObject))
+            {
+                return handle.InstantiateSync(parent) as TObject;
+            }
+
+            return handle.AssetObject as TObject;
+        }
+
+        public async UniTask<TObject> LoadAsync<TObject>(string location) where TObject : UnityEngine.Object
+        {
+            var assetPackage = YooAssets.TryGetPackage(PackageName);
+
+            var handle = assetPackage.LoadAssetAsync<TObject>(location);
+
+            await handle.ToUniTask(ResourceHelper);
+
+            return handle.AssetObject as TObject;
+        }
+        #endregion
+
+        public void UnloadAsset(object asset)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GCCleanUpMemory()
+        {
+            Debug.Log("ResourceManager GCCleanUpMemory");
+            GC.Collect();
+        }
+
+        /// <summary>
+        /// 检查资源是否存在。
+        /// </summary>
+        /// <param name="assetName">要检查资源的名称。</param>
+        /// <returns>检查资源是否存在的结果。</returns>
+        public HasAssetResult HasAsset(string assetName)
+        {
+            if (string.IsNullOrEmpty(assetName))
+            {
+                throw new Exception("Asset name is invalid.");
+            }
+
+#if false
+            UnityEngine.Object obj = UnityEditor.AssetDatabase.LoadMainAssetAtPath(assetName);
+            if (obj == null)
+            {
+                return HasAssetResult.NotExist;
+            }
+
+            HasAssetResult result = obj.GetType() == typeof(UnityEditor.DefaultAsset) ? HasAssetResult.BinaryOnDisk : HasAssetResult.AssetOnDisk;
+            obj = null;
+            UnityEditor.EditorUtility.UnloadUnusedAssetsImmediate();
+            return result;
+#else
+            AssetInfo assetInfo = YooAssets.GetAssetInfo(assetName);
+
+            if (assetInfo == null)
+            {
+                return HasAssetResult.NotExist;
+            }
+
+            return HasAssetResult.AssetOnDisk;
+#endif
+        }
+
+        /// <summary>
+        /// 异步加载场景。
+        /// </summary>
+        /// <param name="sceneAssetName">要加载场景资源的名称。</param>
+        /// <param name="priority">加载场景资源的优先级。</param>
+        /// <param name="loadSceneCallbacks">加载场景回调函数集。</param>
+        /// <param name="userData">用户自定义数据。</param>
+        public async void LoadScene(string sceneAssetName, int priority,LoadSceneMode loadSceneMode, LoadSceneCallbacks loadSceneCallbacks, object userData = null)
+        {
+            if (string.IsNullOrEmpty(sceneAssetName))
+            {
+                throw new Exception("Scene asset name is invalid.");
+            }
+
+            if (loadSceneCallbacks == null)
+            {
+                throw new Exception("Load scene callbacks is invalid.");
+            }
+
+            float duration = Time.time;
+
+            SceneOperationHandle handle = YooAssets.LoadSceneAsync(sceneAssetName, loadSceneMode, activateOnLoad: true, priority: priority);
+
+            await handle.ToUniTask(ResourceHelper);
+
+            if (loadSceneCallbacks.LoadSceneSuccessCallback != null)
+            {
+                duration = Time.time - duration;
+
+                loadSceneCallbacks.LoadSceneSuccessCallback(sceneAssetName, handle.SceneObject, duration, userData);
+            }
+        }
+
+        /// <summary>
+        /// 异步卸载场景。
+        /// </summary>
+        /// <param name="sceneAssetName">要卸载场景资源的名称</param>
+        /// <param name="unloadSceneCallbacks">卸载场景回调函数集。</param>
+        /// <param name="userData">用户自定义数据。</param>
+        /// <exception cref="GameFrameworkException">游戏框架异常。</exception>
+        public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData = null)
+        {
+            if (string.IsNullOrEmpty(sceneAssetName))
+            {
+                throw new Exception("Scene asset name is invalid.");
+            }
+
+            if (unloadSceneCallbacks == null)
+            {
+                throw new Exception("Unload scene callbacks is invalid.");
+            }
+
+            UniSingleton.StartCoroutine(UnloadSceneCo(sceneAssetName, unloadSceneCallbacks, userData));
+        }
+
+        private IEnumerator UnloadSceneCo(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
+        {
+            AsyncOperation asyncOperation = UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneAssetName);
+            if (asyncOperation == null)
+            {
+                yield break;
+            }
+
+            yield return asyncOperation;
+
+            if (asyncOperation.allowSceneActivation)
+            {
+                if (unloadSceneCallbacks.UnloadSceneSuccessCallback != null)
+                {
+                    unloadSceneCallbacks.UnloadSceneSuccessCallback(sceneAssetName, userData);
+                }
+            }
+            else
+            {
+                if (unloadSceneCallbacks.UnloadSceneFailureCallback != null)
+                {
+                    unloadSceneCallbacks.UnloadSceneFailureCallback(sceneAssetName, userData);
+                }
+            }
+        }
+
+        public string ReadStreamingFile(string name)
+        {
+            var path = Path.Combine(Application.streamingAssetsPath, name);
+            Debug.Log($"Streaming->{path}");
+            return ReadLocalText(path);
+        }
+
+        public byte[] ReadStreamingBytes(string name)
+        {
+            var path = Path.Combine(Application.streamingAssetsPath, name);
+            Debug.Log($"Streaming->{path}");
+            return ReadLocalBytes(path);
+        }
+
+        /// <summary>
+        /// 读取本地文件返回字节
+        /// </summary>
+        /// <param name="fullpath">文件的绝对路径</param>
+        /// <returns></returns>
+        public byte[] ReadLocalBytes(string fullpath)
+        {
+            /*
+             * It is not possible to access the StreamingAssets folder on WebGL and Android platforms. 
+             * No file access is available on WebGL. Android uses a compressed .apk file. 
+             * These platforms return a URL. 
+             * Use the UnityWebRequest class to access the Assets.
+             */
+#if (UNITY_ANDROID || UNITY_WEBGL) && !UNITY_EDITOR
+        bool isInStreamingAssets = fullpath.Contains(Application.streamingAssetsPath);
+        if (isInStreamingAssets)
+        {
+            UnityWebRequest a = UnityWebRequest.Get(fullpath);
+            a.SendWebRequest();
+            while (!a.isDone) { }
+
+            if (!string.IsNullOrEmpty(a.error))
+            {
+                throw new FileNotFoundException(fullpath);
+            }
+            return a.downloadHandler.data;
+        } else
+        {
+            return File.ReadAllBytes(fullpath);
+        }
+#else
+            return File.ReadAllBytes(fullpath);
+#endif
+        }
+
+        /// <summary>
+        /// 读取本地文件
+        /// </summary>
+        /// <param name="fullpath">文件的绝对路径</param>
+        /// <returns></returns>
+        public string ReadLocalText(string fullpath)
+        {
+            /*
+             * It is not possible to access the StreamingAssets folder on WebGL and Android platforms. 
+             * No file access is available on WebGL. Android uses a compressed .apk file. 
+             * These platforms return a URL. 
+             * Use the UnityWebRequest class to access the Assets.
+             */
+#if (UNITY_ANDROID || UNITY_WEBGL) && !UNITY_EDITOR
+        bool isInStreamingAssets = fullpath.Contains(Application.streamingAssetsPath);
+        if (isInStreamingAssets)
+        {
+            UnityWebRequest a = UnityWebRequest.Get(fullpath);
+            a.SendWebRequest();
+            while (!a.isDone) { }
+
+            if (!string.IsNullOrEmpty(a.error))
+            {
+                throw new FileNotFoundException(fullpath);
+            }
+            return a.downloadHandler.text;
+        } else
+        {
+            return File.ReadAllText(fullpath);
+        }
+#else
+            return File.ReadAllText(fullpath);
+#endif
+        }
+    }
+}

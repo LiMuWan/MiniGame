@@ -43,6 +43,8 @@ public class ApplicationManager : MonoBehaviour
         
         //管理类初始化
         Timer.Init();  //计时器启动
+        //配置管理器c创建
+        UniSingleton.CreateSingleton<ConfigLoader>();
         //输入管理器启动
         //UIManager启动
         UniSingleton.CreateSingleton<UIManager>();

@@ -17,6 +17,7 @@ namespace GameFramework.Resource
     public partial class ResourcesManager : SingletonInstance<ResourcesManager>, ISingleton
     {
         #region Propreties
+        private const int DefaultPriority = 0;
         /// <summary>
         /// 当前最新的包裹版本。
         /// </summary>
@@ -374,6 +375,49 @@ namespace GameFramework.Resource
         }
 
         /// <summary>
+        /// 异步加载资源。
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称。</param>
+        /// <typeparam name="T">要加载的资源类型。</typeparam>
+        /// <returns>UniTask资源实例。</returns>
+        public async UniTask<T> LoadAssetAsync<T>(string assetName) where T : UnityEngine.Object
+        {
+            if (string.IsNullOrEmpty(assetName))
+            {
+                Debug.LogError("Asset name is invalid.");
+                return default;
+            }
+
+            AssetOperationHandle operationHandle = YooAssets.LoadAssetSync<T>(assetName);
+
+            await operationHandle.ToUniTask(UniSingleton.Behaviour);
+
+            return operationHandle.AssetObject as T;
+        }
+
+        /// <summary>
+        /// 异步加载资源。
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称。</param>
+        /// <param name="cancellationToken">取消操作Token。</param>
+        /// <typeparam name="T">要加载的资源类型。</typeparam>
+        /// <returns>UniTask资源实例。</returns>
+        public async UniTask<T> LoadAssetAsync<T>(string assetName, CancellationToken cancellationToken) where T : UnityEngine.Object
+        {
+            if (string.IsNullOrEmpty(assetName))
+            {
+                Debug.LogError("Asset name is invalid.");
+                return default;
+            }
+
+            AssetOperationHandle operationHandle = YooAssets.LoadAssetSync<T>(assetName);
+
+            await operationHandle.ToUniTask(cancellationToken: cancellationToken).SuppressCancellationThrow();
+
+            return operationHandle.AssetObject as T;
+        }
+        
+        /// <summary>
         /// 同步加载资源对象
         /// </summary>
         /// <typeparam name="TObject">资源类型</typeparam>
@@ -437,21 +481,28 @@ namespace GameFramework.Resource
         /// <summary>
         /// 异步加载资源对象
         /// </summary>
-        /// <typeparam name="TObject">资源类型</typeparam>
-        /// <param name="location">资源的定位地址</param>
-        public AssetOperationHandle LoadAssetAsync<TObject>(string location) where TObject : UnityEngine.Object
-        {
-            return YooAssets.LoadAssetAsync<TObject>(location);
-        }
-
-        /// <summary>
-        /// 异步加载资源对象
-        /// </summary>
         /// <param name="location">资源的定位地址</param>
         /// <param name="type">资源类型</param>
         public AssetOperationHandle LoadAssetAsync(string location, System.Type type)
         {
             return YooAssets.LoadAssetAsync(location, type);
+        }
+
+        /// <summary>
+        /// 异步加载资源。
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称。</param>
+        /// <param name="assetType">要加载资源的类型。</param>
+        /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+        /// <param name="userData">用户自定义数据。</param>
+        public void LoadAssetAsync(string assetName, Type assetType, LoadAssetCallbacks loadAssetCallbacks, object userData = null)
+        {
+            if (string.IsNullOrEmpty(assetName))
+            {
+                Debug.LogError("Asset name is invalid.");
+                return;
+            }
+            LoadAssetAsync(assetName, assetType, DefaultPriority, loadAssetCallbacks, userData);
         }
 
         /// <summary>
@@ -475,6 +526,11 @@ namespace GameFramework.Resource
         /// <returns>资源实例。</returns>
         public T LoadAsset<T>(string location) where T : UnityEngine.Object
         {
+            if (string.IsNullOrEmpty(location))
+            {
+                Debug.LogError("Asset name is invalid.");
+                return default;
+            }
             var assetPackage = YooAssets.TryGetPackage(PackageName);
 
             AssetInfo assetInfo = assetPackage.GetAssetInfo(location);
@@ -527,6 +583,212 @@ namespace GameFramework.Resource
         }
 
 
+        /// <summary>
+        /// 异步加载资源。
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称。</param>
+        /// <param name="assetType">要加载资源的类型。</param>
+        /// <param name="priority">加载资源的优先级。</param>
+        /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+        /// <param name="userData">用户自定义数据。</param>
+        public async void LoadAssetAsync(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
+        {
+            float duration = Time.time;
+            
+            if (string.IsNullOrEmpty(assetName))
+            {
+                throw new Exception("Asset name is invalid.");
+            }
+
+            if (loadAssetCallbacks == null)
+            {
+                throw new Exception("Load asset callbacks is invalid.");
+            }
+            
+            var assetPackage =  YooAssets.TryGetPackage(PackageName);
+            
+            AssetInfo assetInfo = assetPackage.GetAssetInfo(assetName);
+
+            if (assetInfo == null)
+            {
+                string errorMessage = StringFormat.Format("Can not load asset '{0}'.", assetName);
+                if (loadAssetCallbacks.LoadAssetFailureCallback != null)
+                {
+                    loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotExist, errorMessage, userData);
+                    return;
+                }
+
+                throw new Exception(errorMessage);
+            }
+
+            OperationHandleBase handleBase;
+
+            bool isRawResource = assetInfo.Address == string.Empty;
+            
+            if (isRawResource)
+            {
+                handleBase = assetPackage.LoadRawFileAsync(assetInfo);
+            }
+            else
+            {
+                handleBase = assetPackage.LoadAssetAsync(assetName, assetType);
+            }
+            
+            await handleBase.ToUniTask(ResourceHelper);
+
+            if (isRawResource)
+            {
+                RawFileOperationHandle handle = (RawFileOperationHandle)handleBase;
+                if (handle == null || handle.Status == EOperationStatus.Failed)
+                {
+                    string errorMessage = StringFormat.Format("Can not load asset '{0}'.", assetName);
+                    if (loadAssetCallbacks.LoadAssetFailureCallback != null)
+                    {
+                        loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotReady, errorMessage, userData);
+                        return;
+                    }
+
+                    throw new Exception(errorMessage);
+                }
+                else
+                {
+                    if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
+                    {
+                        duration = Time.time - duration;
+                    
+                        loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle, duration, userData);
+                    }
+                }
+            }
+            else
+            {
+                AssetOperationHandle handle = (AssetOperationHandle)handleBase;
+                if (handle == null || handle.AssetObject == null || handle.Status == EOperationStatus.Failed)
+                {
+                    string errorMessage = StringFormat.Format("Can not load asset '{0}'.", assetName);
+                    if (loadAssetCallbacks.LoadAssetFailureCallback != null)
+                    {
+                        loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotReady, errorMessage, userData);
+                        return;
+                    }
+
+                    throw new Exception(errorMessage);
+                }
+                else
+                {
+                    if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
+                    {
+                        duration = Time.time - duration;
+                    
+                        loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle.AssetObject, duration, userData);
+                    }
+                }
+            }
+        }
+
+        
+        /// <summary>
+        /// 异步加载资源。
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称。</param>
+        /// <param name="priority">加载资源的优先级。</param>
+        /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+        /// <param name="userData">用户自定义数据。</param>
+        public async void LoadAssetAsync(string assetName, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
+        {
+            float duration = Time.time;
+            
+            if (string.IsNullOrEmpty(assetName))
+            {
+                throw new Exception("Asset name is invalid.");
+            }
+
+            if (loadAssetCallbacks == null)
+            {
+                throw new Exception("Load asset callbacks is invalid.");
+            }
+            
+            var assetPackage =  YooAssets.TryGetPackage(PackageName);
+            
+            AssetInfo assetInfo = assetPackage.GetAssetInfo(assetName);
+
+            if (assetInfo == null)
+            {
+                string errorMessage = StringFormat.Format("Can not load asset '{0}'.", assetName);
+                if (loadAssetCallbacks.LoadAssetFailureCallback != null)
+                {
+                    loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotExist, errorMessage, userData);
+                    return;
+                }
+
+                throw new Exception(errorMessage);
+            }
+
+            OperationHandleBase handleBase;
+
+            bool isRawResource = assetInfo.Address == string.Empty;
+            
+            if (isRawResource)
+            {
+                handleBase = assetPackage.LoadRawFileAsync(assetInfo);
+            }
+            else
+            {
+                handleBase = assetPackage.LoadAssetAsync(assetInfo);
+            }
+            
+            await handleBase.ToUniTask(ResourceHelper);
+
+            if (isRawResource)
+            {
+                RawFileOperationHandle handle = (RawFileOperationHandle)handleBase;
+                if (handle == null || handle.Status == EOperationStatus.Failed)
+                {
+                    string errorMessage = StringFormat.Format("Can not load asset '{0}'.", assetName);
+                    if (loadAssetCallbacks.LoadAssetFailureCallback != null)
+                    {
+                        loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotReady, errorMessage, userData);
+                        return;
+                    }
+
+                    throw new Exception(errorMessage);
+                }
+                else
+                {
+                    if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
+                    {
+                        duration = Time.time - duration;
+                    
+                        loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle, duration, userData);
+                    }
+                }
+            }
+            else
+            {
+                AssetOperationHandle handle = (AssetOperationHandle)handleBase;
+                if (handle == null || handle.AssetObject == null || handle.Status == EOperationStatus.Failed)
+                {
+                    string errorMessage = StringFormat.Format("Can not load asset '{0}'.", assetName);
+                    if (loadAssetCallbacks.LoadAssetFailureCallback != null)
+                    {
+                        loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotReady, errorMessage, userData);
+                        return;
+                    }
+
+                    throw new Exception(errorMessage);
+                }
+                else
+                {
+                    if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
+                    {
+                        duration = Time.time - duration;
+                    
+                        loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle.AssetObject, duration, userData);
+                    }
+                }
+            }
+        }
+
         #endregion
 
         public void UnloadUnusedAssets()
@@ -543,7 +805,10 @@ namespace GameFramework.Resource
 
         public void UnloadAsset(object asset)
         {
-
+            if (asset == null)
+            {
+                throw new Exception("Asset is invalid.");
+            }
         }
 
         public void GCCleanUpMemory()

@@ -38,7 +38,6 @@ internal class FsmUpdateManifest : IStateNode
         yield return new WaitForSecondsRealtime(0.5f);
 
         bool savePackageVersion = true;
-        var package = YooAssets.GetPackage("DefaultPackage");
         var operation = ResourcesManager.Instance.UpdatePackageManifestAsync(ResourcesManager.Instance.PackageVersion,savePackageVersion);
         yield return operation;
 

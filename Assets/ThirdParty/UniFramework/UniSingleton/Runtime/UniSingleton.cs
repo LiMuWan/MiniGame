@@ -24,7 +24,11 @@ namespace UniFramework.Singleton
 		private static readonly List<Wrapper> _wrappers = new List<Wrapper>(100);
 		private static MonoBehaviour _behaviour;
 		private static bool _isDirty = false;
-
+        
+		public static MonoBehaviour Behaviour
+		{
+			get{return _behaviour;} private set{};
+		}
 		/// <summary>
 		/// 初始化单例系统
 		/// </summary>

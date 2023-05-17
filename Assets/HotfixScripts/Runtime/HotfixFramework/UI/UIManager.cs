@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System;
 using Feif.UIFramework;
 using UIModule.UI;
+using GameFramework.Resource;
 
 public class UIManager : SingletonInstance<UIManager>, ISingleton
 {
@@ -36,22 +37,29 @@ public class UIManager : SingletonInstance<UIManager>, ISingleton
 
     // 资源请求事件，type为UI脚本的类型
     // 可以使用Addressables，YooAssets等第三方资源管理系统
-    private Task<GameObject> OnAssetRequest(Type type)
+    private async Task<GameObject> OnAssetRequest(Type type)
     {
         if (UIFrame.IsPanel(type))
         {
-            return Task.FromResult(Resources.Load<GameObject>($"Demo2/Panel/{type.Name}"));
+            return await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"Assets/HotfixAssets/UIPanel{type.Name}");
         }
         else
         {
-            return Task.FromResult(Resources.Load<GameObject>($"Demo2/Window/{type.Name}"));
+            return await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"Assets/HotfixAssets/UIWindow{type.Name}");
         }
     }
 
     // 资源释放事件
     private void OnAssetRelease(Type type)
     {
-        // TODO
+        // if (UIFrame.IsPanel(type))
+        // {
+        //     ResourcesManager.Instance.UnloadAsset<GameObject>($"Assets/HotfixAssets/UIPanel{type.Name}");
+        // }
+        // else
+        // {
+        //     ResourcesManager.Instance.LoadAssetAsync<GameObject>($"Assets/HotfixAssets/UIWindow{type.Name}");
+        // }
     }
 
     private void OnStuckStart()
@@ -82,4 +90,86 @@ public class UIManager : SingletonInstance<UIManager>, ISingleton
         UIFrame.OnStuckEnd -= OnStuckEnd;
         stuckPanel = null;
     }
+
+     #region 显示
+
+        /// <summary>
+        /// 显示UI
+        /// </summary>
+        public static async Task Show(UIBase ui, UIData data = null)
+        {
+            await UIFrame.Show(ui, data);
+        }
+
+        /// <summary>
+        /// 显示Panel或Window
+        /// </summary>
+        public static async Task Show<T>(UIData data = null)
+        {
+           await UIFrame.Show(typeof(T), data);
+        }
+
+        /// <summary>
+        /// 显示Panel或Window
+        /// </summary>
+        public static async Task Show(Type type, UIData data = null)
+        {
+            await UIFrame.Show(type, data);
+        }
+
+        #endregion
+
+        #region 隐藏
+
+        /// <summary>
+        /// 隐藏Panel或Window
+        /// </summary>
+        public static Task Hide<T>()
+        {
+            return UIFrame.Hide(typeof(T));
+        }
+        #endregion
+
+        #region 刷新
+        /// <summary>
+        /// 刷新UI。data为null时，将用之前的data刷新
+        /// </summary>
+        public static Task Refresh<T>(UIData data = null)
+        {
+            return UIFrame.Refresh(typeof(T), data);
+        }
+        #endregion
+
+        /// <summary>
+        /// 创建UI GameObject
+        /// </summary>
+        public static Task<GameObject> Instantiate(GameObject prefab, Transform parent = null, UIData data = null)
+        {
+            return UIFrame.Instantiate(prefab, parent, data);
+        }
+
+        /// <summary>
+        /// 销毁UI GameObject
+        /// </summary>
+        public static void Destroy(GameObject instance)
+        {
+            UIFrame.Destroy(instance);
+        }
+
+        /// <summary>
+        /// 立即销毁UI GameObject
+        /// </summary>
+        public static void DestroyImmediate(GameObject instance)
+        {
+            UIFrame.DestroyImmediate(instance);
+        }
+
+        /// <summary>
+        /// 强制释放已经关闭的UI，即使UI的AutoDestroy为false，仍然释放该资源
+        /// </summary>
+        public static void Release()
+        {
+            UIFrame.Release();
+        }
+
 }

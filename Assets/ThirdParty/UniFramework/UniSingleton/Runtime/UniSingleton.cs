@@ -27,7 +27,7 @@ namespace UniFramework.Singleton
         
 		public static MonoBehaviour Behaviour
 		{
-			get{return _behaviour;} private set{};
+			get{return _behaviour;} private set{}
 		}
 		/// <summary>
 		/// 初始化单例系统

@@ -181,7 +181,7 @@ namespace GameFramework.Resource
         private string GetHostServerURL()
         {
             string hostServerIP = "http://192.168.1.15";
-            string gameVersion = "v3.0";
+            string gameVersion = "";
 
 #if UNITY_EDITOR
             if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.Android)
@@ -298,8 +298,10 @@ namespace GameFramework.Resource
                 defaultPackage = YooAssets.CreatePackage(packageName);
                 YooAssets.SetDefaultPackage(defaultPackage);
             }
-            // ResourceHelper = InstanceRoot.gameObject.AddComponent<ResourceHelper>();
-            // CancellationToken = ResourceHelper.GetCancellationTokenOnDestroy();
+            
+            InstanceRoot = UniSingleton.Behaviour.transform;
+            ResourceHelper = InstanceRoot.gameObject.AddComponent<ResourceHelper>();
+            CancellationToken = ResourceHelper.GetCancellationTokenOnDestroy();
         }
 
         #region 资源信息
@@ -859,7 +861,7 @@ namespace GameFramework.Resource
         /// <param name="priority">加载场景资源的优先级。</param>
         /// <param name="loadSceneCallbacks">加载场景回调函数集。</param>
         /// <param name="userData">用户自定义数据。</param>
-        public async void LoadScene(string sceneAssetName, int priority, LoadSceneMode loadSceneMode, LoadSceneCallbacks loadSceneCallbacks, object userData = null)
+        public async void LoadScene(string sceneAssetName, int priority,  LoadSceneCallbacks loadSceneCallbacks,LoadSceneMode loadSceneMode = LoadSceneMode.Single, object userData = null)
         {
             if (string.IsNullOrEmpty(sceneAssetName))
             {

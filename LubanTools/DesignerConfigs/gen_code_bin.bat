@@ -1,3 +1,4 @@
+cd /d %~dp0
 set WORKSPACE=..
 
 set GEN_CLIENT=%WORKSPACE%\Tools\Luban.ClientServer\Luban.ClientServer.exe
@@ -11,7 +12,6 @@ set OUTPUT_DATA_PATH=%WORKSPACE%\..\Assets\HotfixAssets\Config
  --output_code_dir %OUTPUT_CODE_PATH% ^
  --output_data_dir %OUTPUT_DATA_PATH% ^
  --gen_types code_cs_unity_bin,data_bin ^
- --cs:use_unity_vector ^
  -s all 
 
 pause

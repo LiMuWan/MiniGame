@@ -181,7 +181,7 @@ namespace GameFramework.Resource
         private string GetHostServerURL()
         {
             string hostServerIP = "http://192.168.1.15";
-            string gameVersion = "";
+            string gameVersion = "version";
 
 #if UNITY_EDITOR
             if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.Android)
@@ -206,6 +206,7 @@ namespace GameFramework.Resource
 
         void ISingleton.OnDestroy()
         {
+            InstanceRoot = null;
             YooAssets.Destroy();
         }
 
@@ -298,7 +299,7 @@ namespace GameFramework.Resource
                 defaultPackage = YooAssets.CreatePackage(packageName);
                 YooAssets.SetDefaultPackage(defaultPackage);
             }
-            
+
             InstanceRoot = UniSingleton.Behaviour.transform;
             ResourceHelper = InstanceRoot.gameObject.AddComponent<ResourceHelper>();
             CancellationToken = ResourceHelper.GetCancellationTokenOnDestroy();
@@ -418,7 +419,7 @@ namespace GameFramework.Resource
 
             return operationHandle.AssetObject as T;
         }
-        
+
         /// <summary>
         /// 同步加载资源对象
         /// </summary>
@@ -596,7 +597,7 @@ namespace GameFramework.Resource
         public async void LoadAssetAsync(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
         {
             float duration = Time.time;
-            
+
             if (string.IsNullOrEmpty(assetName))
             {
                 throw new Exception("Asset name is invalid.");
@@ -606,9 +607,9 @@ namespace GameFramework.Resource
             {
                 throw new Exception("Load asset callbacks is invalid.");
             }
-            
-            var assetPackage =  YooAssets.TryGetPackage(PackageName);
-            
+
+            var assetPackage = YooAssets.TryGetPackage(PackageName);
+
             AssetInfo assetInfo = assetPackage.GetAssetInfo(assetName);
 
             if (assetInfo == null)
@@ -626,7 +627,7 @@ namespace GameFramework.Resource
             OperationHandleBase handleBase;
 
             bool isRawResource = assetInfo.Address == string.Empty;
-            
+
             if (isRawResource)
             {
                 handleBase = assetPackage.LoadRawFileAsync(assetInfo);
@@ -635,7 +636,7 @@ namespace GameFramework.Resource
             {
                 handleBase = assetPackage.LoadAssetAsync(assetName, assetType);
             }
-            
+
             await handleBase.ToUniTask(ResourceHelper);
 
             if (isRawResource)
@@ -657,7 +658,7 @@ namespace GameFramework.Resource
                     if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
                     {
                         duration = Time.time - duration;
-                    
+
                         loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle, duration, userData);
                     }
                 }
@@ -681,14 +682,14 @@ namespace GameFramework.Resource
                     if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
                     {
                         duration = Time.time - duration;
-                    
+
                         loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle.AssetObject, duration, userData);
                     }
                 }
             }
         }
 
-        
+
         /// <summary>
         /// 异步加载资源。
         /// </summary>
@@ -699,7 +700,7 @@ namespace GameFramework.Resource
         public async void LoadAssetAsync(string assetName, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
         {
             float duration = Time.time;
-            
+
             if (string.IsNullOrEmpty(assetName))
             {
                 throw new Exception("Asset name is invalid.");
@@ -709,9 +710,9 @@ namespace GameFramework.Resource
             {
                 throw new Exception("Load asset callbacks is invalid.");
             }
-            
-            var assetPackage =  YooAssets.TryGetPackage(PackageName);
-            
+
+            var assetPackage = YooAssets.TryGetPackage(PackageName);
+
             AssetInfo assetInfo = assetPackage.GetAssetInfo(assetName);
 
             if (assetInfo == null)
@@ -729,7 +730,7 @@ namespace GameFramework.Resource
             OperationHandleBase handleBase;
 
             bool isRawResource = assetInfo.Address == string.Empty;
-            
+
             if (isRawResource)
             {
                 handleBase = assetPackage.LoadRawFileAsync(assetInfo);
@@ -738,7 +739,7 @@ namespace GameFramework.Resource
             {
                 handleBase = assetPackage.LoadAssetAsync(assetInfo);
             }
-            
+
             await handleBase.ToUniTask(ResourceHelper);
 
             if (isRawResource)
@@ -760,7 +761,7 @@ namespace GameFramework.Resource
                     if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
                     {
                         duration = Time.time - duration;
-                    
+
                         loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle, duration, userData);
                     }
                 }
@@ -784,7 +785,7 @@ namespace GameFramework.Resource
                     if (loadAssetCallbacks.LoadAssetSuccessCallback != null)
                     {
                         duration = Time.time - duration;
-                    
+
                         loadAssetCallbacks.LoadAssetSuccessCallback(assetName, handle.AssetObject, duration, userData);
                     }
                 }
@@ -861,7 +862,7 @@ namespace GameFramework.Resource
         /// <param name="priority">加载场景资源的优先级。</param>
         /// <param name="loadSceneCallbacks">加载场景回调函数集。</param>
         /// <param name="userData">用户自定义数据。</param>
-        public async void LoadScene(string sceneAssetName, int priority,  LoadSceneCallbacks loadSceneCallbacks,LoadSceneMode loadSceneMode = LoadSceneMode.Single, object userData = null)
+        public async void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks, LoadSceneMode loadSceneMode = LoadSceneMode.Single, object userData = null)
         {
             if (string.IsNullOrEmpty(sceneAssetName))
             {
@@ -962,23 +963,24 @@ namespace GameFramework.Resource
              * These platforms return a URL. 
              * Use the UnityWebRequest class to access the Assets.
              */
-#if (UNITY_ANDROID || UNITY_WEBGL) &&UNITY_EDITOR
-        bool isInStreamingAssets = fullpath.Contains(Application.streamingAssetsPath);
-        if (isInStreamingAssets)
-        {
-            UnityWebRequest a = UnityWebRequest.Get(fullpath);
-            a.SendWebRequest();
-            while (!a.isDone) { }
-
-            if (!string.IsNullOrEmpty(a.error))
+#if (UNITY_ANDROID || UNITY_WEBGL) && UNITY_EDITOR
+            bool isInStreamingAssets = fullpath.Contains(Application.streamingAssetsPath);
+            if (isInStreamingAssets)
             {
-                throw new FileNotFoundException(fullpath);
+                UnityWebRequest a = UnityWebRequest.Get(fullpath);
+                a.SendWebRequest();
+                while (!a.isDone) { }
+
+                if (!string.IsNullOrEmpty(a.error))
+                {
+                    throw new FileNotFoundException(fullpath);
+                }
+                return a.downloadHandler.data;
             }
-            return a.downloadHandler.data;
-        } else
-        {
-            return File.ReadAllBytes(fullpath);
-        }
+            else
+            {
+                return File.ReadAllBytes(fullpath);
+            }
 #else
             return File.ReadAllBytes(fullpath);
 #endif

@@ -60,5 +60,10 @@ namespace Hotfix.UI
             await effect.PlayClose();
             await UIFrame.Hide(this);
         }
+
+        public void SetContent(string content)
+        {
+            txtContent.text = content;
+        }
     }
 }

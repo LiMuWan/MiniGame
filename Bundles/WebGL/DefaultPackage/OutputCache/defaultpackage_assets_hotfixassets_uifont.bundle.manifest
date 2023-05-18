@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1874788528
+CRC: 2481510212
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d22fbf286ecca01c57ee0d28aceeff3b
+    Hash: 33f6b8ecc12e52345171cc4cd18d08c6
   TypeTreeHash:
     serializedVersion: 2
     Hash: c92f7b27467cac68f8fffb0c54e86b07
@@ -41,8 +41,7 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.TextCoreFontEngineModule
   ClassName: UnityEngine.TextCore.GlyphRect
 Assets:
-- Assets/HotfixAssets/UIFont/zhuyanbosong_punctuation.asset
-- Assets/HotfixAssets/UIFont/zhuyanbosong_en.asset
-- Assets/HotfixAssets/UIFont/zhuyanbosong_zh_dy.asset
+- Assets/HotfixAssets/UIFont/zhuyanbosong.asset
 Dependencies:
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle
 - D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

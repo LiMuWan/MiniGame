@@ -22,6 +22,14 @@ public static class UIManager
         }
     }
 
+    public static UIBase CurrentPanel
+    {
+        get
+        {
+            return UIFrame.CurrentPanel;
+        }
+    }
+    
     public static async Task Init()
     {
         var go = await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"{UIPath}UIPanel/UIFrame.prefab");

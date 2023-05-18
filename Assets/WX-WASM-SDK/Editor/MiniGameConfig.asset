@@ -16,7 +16,7 @@ MonoBehaviour:
     projectName: "\u8709\u8763\u5316\u8776\u4F20"
     Appid: wxa9dda4f571fc2b80
     CDN: 
-    assetLoadType: 0
+    assetLoadType: 1
     VideoUrl: 
     DST: D:/WxMiniGamework/WxMiniGameDevelopment
     StreamCDN: 
@@ -43,14 +43,14 @@ MonoBehaviour:
     UseFriendRelation: 0
     UseCompressedTexture: 0
   CompileOptions:
-    DevelopBuild: 0
-    AutoProfile: 0
+    DevelopBuild: 1
+    AutoProfile: 1
     ScriptOnly: 0
     profilingFuncs: 0
     Webgl2: 0
     DeleteStreamingAssets: 1
-    ProfilingMemory: 0
-    CleanBuild: 0
+    ProfilingMemory: 1
+    CleanBuild: 1
     CustomNodePath: 
   CompressTexture:
     halfSize: 0

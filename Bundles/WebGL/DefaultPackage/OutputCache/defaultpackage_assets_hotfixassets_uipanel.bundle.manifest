@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 788938303
+CRC: 3948512048
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3dc073b4fcba08e92f4c23600177233d
+    Hash: c455d68f6b47f7d59c72f04b02d46a8e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e989da80646599d28c68b0cc5eef2829
+    Hash: 2b0d7c160d196982e93053c6db9bd165
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -22,15 +22,11 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
@@ -38,9 +34,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 33f8d82f1373829438d8140e0766cd24, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 64e5882f24bd2484c94dd16c8e8f5957, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
 - Class: 114
@@ -48,19 +44,11 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2fbc336e20c213f42a799903a351a4ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 52efd6d93e466654cb1269cbc50fbb15, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 83c1778f3ff1cad4b85f5bab559c6dfc, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 64e5882f24bd2484c94dd16c8e8f5957, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -87,17 +75,9 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.TMP_FontWeightPair
 - AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_GlyphAdjustmentRecord
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_GlyphPairAdjustmentRecord
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_GlyphValueRecord
-- AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.VertexGradient
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
-- AssemblyName: UnityEngine.CoreModule
-  ClassName: UnityEngine.RectOffset
 - AssemblyName: UnityEngine.TextCoreFontEngineModule
   ClassName: UnityEngine.TextCore.FaceInfo
 - AssemblyName: UnityEngine.TextCoreFontEngineModule
@@ -119,13 +99,10 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Navigation
 - AssemblyName: UnityEngine.UI
-  ClassName: UnityEngine.UI.ScrollRect/ScrollRectEvent
-- AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.SpriteState
 Assets:
 - Assets/HotfixAssets/UIPanel/UIConfirmBox.prefab
-- Assets/HotfixAssets/UIPanel/UIStarred.prefab
 - Assets/HotfixAssets/UIPanel/UIFrame.prefab
 - Assets/HotfixAssets/UIPanel/UIMain.prefab
 Dependencies:
-- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_uifont.bundle

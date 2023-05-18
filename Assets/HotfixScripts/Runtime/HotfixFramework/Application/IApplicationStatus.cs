@@ -88,9 +88,9 @@ public abstract class IApplicationStatus
         return default(T);
     }
 
-    public async Task<T> OpenUI<T>() where T: UIBase
+    public async Task<T> OpenUI<T>(UIData uiData = null) where T: UIBase
     {
-        await UIManager.Show<T>();
+        await UIManager.Show<T>(uiData);
  
         m_uiList.Add(UIFrame.CurrentPanel);
 

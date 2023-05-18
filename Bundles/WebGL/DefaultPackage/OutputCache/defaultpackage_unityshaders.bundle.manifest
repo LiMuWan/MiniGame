@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 342308732
+CRC: 3112526515
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c71466e439c589d74d908a95211c6a4b
+    Hash: 1e299bb6fd223d6f13188dba33b8e297
   TypeTreeHash:
     serializedVersion: 2
     Hash: 87b0bba9d18ffc75f60c50b410bd4a4e
@@ -26,7 +26,6 @@ Assets:
 - Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/StopNaN.shader
 - Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader
 - Packages/com.unity.render-pipelines.universal/Shaders/Debug/DebugReplacement.shader
-- Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
 - Packages/com.unity.render-pipelines.universal/Shaders/XR/XROcclusionMesh.shader
 - Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDeferred.shader
 - Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/EdgeAdaptiveSpatialUpsampling.shader

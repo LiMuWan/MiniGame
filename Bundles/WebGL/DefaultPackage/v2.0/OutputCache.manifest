@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 236842179
+CRC: 228259512
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -8,7 +8,8 @@ AssetBundleManifest:
         Dependency_0: defaultpackage_unityshaders.bundle
     Info_1:
       Name: defaultpackage_assets_hotfixassets_uipanel.bundle
-      Dependencies: {}
+      Dependencies:
+        Dependency_0: defaultpackage_unityshaders.bundle
     Info_2:
       Name: defaultpackage_assets_hotfixassets_scene_main.bundle
       Dependencies: {}
@@ -18,4 +19,7 @@ AssetBundleManifest:
         Dependency_0: defaultpackage_unityshaders.bundle
     Info_4:
       Name: defaultpackage_unityshaders.bundle
+      Dependencies: {}
+    Info_5:
+      Name: defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle
       Dependencies: {}

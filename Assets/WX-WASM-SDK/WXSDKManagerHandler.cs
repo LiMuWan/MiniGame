@@ -1352,17 +1352,63 @@ namespace WeChatWASM
     
         #if UNITY_WEBGL && !UNITY_EDITOR
         [DllImport("__Internal")]
-        private static extern string WXCameraCreateCamera(string option);
+        private static extern void WXCameraCreateCamera(string option, string id);
         #else
-        private static string WXCameraCreateCamera(string option) { Debug.Log("需要在真机环境创建"); return ""; }
+        private static void WXCameraCreateCamera(string option, string id) { Debug.Log("需要在真机环境创建"); }
         #endif
         private Dictionary<string, WXCamera> CameraList = new Dictionary<string, WXCamera>();
         public WXCamera CreateCamera(CreateCameraOption option)
         {
-            var id = WXCameraCreateCamera(JsonMapper.ToJson(option));
+            string id = GetCallbackId(WXCamera.OnCreateActionList);
+            var callback = new CreateCameraOption() {
+                success = option.success,
+                fail = option.fail,
+                complete = option.complete
+            };
+            WXCamera.OnCreateActionList.Add( id, callback );
+            var succ = option.success;
+            var fail = option.fail;
+            var comp = option.complete;
+            option.success = null;
+            option.fail = null;
+            option.complete = null;
+            var conf = JsonMapper.ToJson(option);
+            option.success = succ;
+            option.fail = fail;
+            option.complete = comp;
+            WXCameraCreateCamera(conf, id);
             var obj = new WXCamera(id);
-            CameraList.Add(id,obj);
+            CameraList.Add(id, obj);
             return obj; 
+        }
+
+        public void CameraCreateCallback(string msg) {
+            if (!string.IsNullOrEmpty(msg))
+            {
+                var jsCallback = JsonUtility.FromJson<WXJSCallback>(msg);
+                var id = jsCallback.callbackId;
+                var type = jsCallback.type;
+                var res = jsCallback.res;
+                if (WXCamera.OnCreateActionList.ContainsKey(id)){
+                    var item = WXCamera.OnCreateActionList[id];
+                    if (type == "complete"){
+                        item.complete?.Invoke(JsonMapper.ToObject<GeneralCallbackResult>(res));
+                        item.complete = null;
+                    } else {
+                        if (type == "success") {
+                            item.success?.Invoke(JsonMapper.ToObject<GeneralCallbackResult>(res));
+                        }
+                        else if (type == "fail") {
+                            item.fail?.Invoke(JsonMapper.ToObject<GeneralCallbackResult>(res));
+                        }
+                        item.success = null;
+                        item.fail = null;
+                    }
+                    if (item.complete == null && item.success == null && item.fail == null) {
+                        WXCamera.OnCreateActionList.Remove(id);
+                    }
+                }
+            }
         }
     
         public void CameraOnAuthCancelCallback(string msg){

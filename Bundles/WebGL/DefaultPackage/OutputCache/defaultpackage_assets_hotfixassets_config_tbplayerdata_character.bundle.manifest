@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2721824378
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 856c9a386db5cea490052fbe715b35af
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Config/tbplayerdata_character.bytes
+Dependencies: []

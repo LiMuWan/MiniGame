@@ -20,7 +20,7 @@ function compareVersion(v1, v2) {
       .join('')
   );
 }
-const isPc = platform === 'windows';
+export const isPc = platform === 'windows';
 export const isIOS = platform === 'ios';
 export const isAndroid = platform === 'android';
 const isDevtools = platform === 'devtools';

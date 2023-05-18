@@ -1,0 +1,408 @@
+{
+    "FileVersion": "1.4.6",
+    "EnableAddressable": true,
+    "OutputNameStyle": 1,
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "version",
+    "AssetList": [
+        {
+            "Address": "Assembly-CSharp.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/Assembly-CSharp.dll.bytes",
+            "AssetTags": [],
+            "BundleID": 0,
+            "DependIDs": []
+        },
+        {
+            "Address": "Hotfix.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/Hotfix.dll.bytes",
+            "AssetTags": [],
+            "BundleID": 1,
+            "DependIDs": []
+        },
+        {
+            "Address": "mscorlib.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/mscorlib.dll.bytes",
+            "AssetTags": [],
+            "BundleID": 2,
+            "DependIDs": []
+        },
+        {
+            "Address": "System.Core.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/System.Core.dll.bytes",
+            "AssetTags": [],
+            "BundleID": 3,
+            "DependIDs": []
+        },
+        {
+            "Address": "System.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/System.dll.bytes",
+            "AssetTags": [],
+            "BundleID": 4,
+            "DependIDs": []
+        },
+        {
+            "Address": "UIFrame.dll",
+            "AssetPath": "Assets/HotfixAssets/Codes/UIFrame.dll.bytes",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependIDs": []
+        },
+        {
+            "Address": "zhuyanbosong_en",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosong_en.asset",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependIDs": [
+                16,
+                17
+            ]
+        },
+        {
+            "Address": "zhuyanbosong_punctuation",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosong_punctuation.asset",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependIDs": [
+                16,
+                17
+            ]
+        },
+        {
+            "Address": "zhuyanbosong_zh_dy",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosong_zh_dy.asset",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependIDs": [
+                16,
+                17
+            ]
+        },
+        {
+            "Address": "UIConfirmBox",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIConfirmBox.prefab",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependIDs": []
+        },
+        {
+            "Address": "UIFrame",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIFrame.prefab",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependIDs": []
+        },
+        {
+            "Address": "UIMain",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIMain.prefab",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependIDs": [
+                17,
+                16
+            ]
+        },
+        {
+            "Address": "UIStarred",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIStarred.prefab",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependIDs": []
+        },
+        {
+            "Address": "Main",
+            "AssetPath": "Assets/HotfixAssets/Scene/Main.unity",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependIDs": []
+        },
+        {
+            "Address": "SampleSceneProfile",
+            "AssetPath": "Assets/Settings/SampleSceneProfile.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": []
+        },
+        {
+            "Address": "URP-Balanced-Renderer",
+            "AssetPath": "Assets/Settings/URP-Balanced-Renderer.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": [
+                16
+            ]
+        },
+        {
+            "Address": "URP-Balanced",
+            "AssetPath": "Assets/Settings/URP-Balanced.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": [
+                16
+            ]
+        },
+        {
+            "Address": "URP-HighFidelity-Renderer",
+            "AssetPath": "Assets/Settings/URP-HighFidelity-Renderer.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": [
+                16
+            ]
+        },
+        {
+            "Address": "URP-HighFidelity",
+            "AssetPath": "Assets/Settings/URP-HighFidelity.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": [
+                16
+            ]
+        },
+        {
+            "Address": "URP-Performant-Renderer",
+            "AssetPath": "Assets/Settings/URP-Performant-Renderer.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": [
+                16
+            ]
+        },
+        {
+            "Address": "URP-Performant",
+            "AssetPath": "Assets/Settings/URP-Performant.asset",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": [
+                16
+            ]
+        },
+        {
+            "Address": "tbentitydata",
+            "AssetPath": "Assets/HotfixAssets/Config/tbentitydata.bytes",
+            "AssetTags": [],
+            "BundleID": 10,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbleveldata",
+            "AssetPath": "Assets/HotfixAssets/Config/tbleveldata.bytes",
+            "AssetTags": [],
+            "BundleID": 11,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbplayerdata_character",
+            "AssetPath": "Assets/HotfixAssets/Config/tbplayerdata_character.bytes",
+            "AssetTags": [],
+            "BundleID": 12,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbuidata_character",
+            "AssetPath": "Assets/HotfixAssets/Config/tbuidata_character.bytes",
+            "AssetTags": [],
+            "BundleID": 13,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbuidata_gamemode",
+            "AssetPath": "Assets/HotfixAssets/Config/tbuidata_gamemode.bytes",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbuidata_race",
+            "AssetPath": "Assets/HotfixAssets/Config/tbuidata_race.bytes",
+            "AssetTags": [],
+            "BundleID": 15,
+            "DependIDs": []
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_assembly-csharp_dll_bytes.rawfile",
+            "FileHash": "72db046285ad44936f20961dcfcf22fc",
+            "FileCRC": "23b7605b",
+            "FileSize": 281600,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
+            "FileHash": "633e9286dedced65bed54f41ba0587ce",
+            "FileCRC": "ea350d45",
+            "FileSize": 72704,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
+            "FileHash": "e40746dea2500a46a81ef3438fab65d0",
+            "FileCRC": "5fa2a9cd",
+            "FileSize": 2428416,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
+            "FileHash": "80de1b1bc36cb2e400d6c502558d71c2",
+            "FileCRC": "b92c56b5",
+            "FileSize": 112128,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_system_dll_bytes.rawfile",
+            "FileHash": "d1d2c1c7d892c36c8d0b48da87ebc8ee",
+            "FileCRC": "3914e53f",
+            "FileSize": 268288,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_codes_uiframe_dll_bytes.rawfile",
+            "FileHash": "fb3672a4477da21caecccc1b4e3fe218",
+            "FileCRC": "3e87bd4a",
+            "FileSize": 27648,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "FileHash": "77c0e1060ed22799d7819520bbbb934f",
+            "FileCRC": "04687036",
+            "FileSize": 2695039,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_uipanel.bundle",
+            "FileHash": "26655c0ee2e95c0289d83af687765ace",
+            "FileCRC": "09b02c7e",
+            "FileSize": 623326,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_scene_main.bundle",
+            "FileHash": "d2a7aadfd6103dfc1238dcde58025902",
+            "FileCRC": "bb514cf8",
+            "FileSize": 68398,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_settings.bundle",
+            "FileHash": "aac99f8afce5ec667c6b47b0ae4dca50",
+            "FileCRC": "f22178bd",
+            "FileSize": 1753797,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbentitydata.bundle",
+            "FileHash": "8157a67e08d2efd5a931a1f7807a753e",
+            "FileCRC": "de2c450a",
+            "FileSize": 1339,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbleveldata.bundle",
+            "FileHash": "1ee2837a856905d6bb568b20199493b5",
+            "FileCRC": "a4f064ab",
+            "FileSize": 1417,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbplayerdata_character.bundle",
+            "FileHash": "a6475f7eabc03df46d146804da1f262f",
+            "FileCRC": "cbad019e",
+            "FileSize": 1357,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbuidata_character.bundle",
+            "FileHash": "3126352cdbb142acb151e3197613a1fd",
+            "FileCRC": "e5302d6d",
+            "FileSize": 1357,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbuidata_gamemode.bundle",
+            "FileHash": "c6e7ccf78945079ac92de3441b3cab01",
+            "FileCRC": "9e4ec0a8",
+            "FileSize": 1344,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbuidata_race.bundle",
+            "FileHash": "754d3040c609a4b6f49f7ee4bb0620c9",
+            "FileCRC": "2d3e4e9d",
+            "FileSize": 1382,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_unityshaders.bundle",
+            "FileHash": "09186e4cd0a394cf64f10944568eb5ee",
+            "FileCRC": "e8223fb3",
+            "FileSize": 53888,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                6,
+                7,
+                9
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+            "FileHash": "9bdbf79c835285e3f7279e2e028c22b3",
+            "FileCRC": "d741490b",
+            "FileSize": 3996,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        }
+    ]
+}

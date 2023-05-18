@@ -44,6 +44,14 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
 
     public IEnumerator LoadDllAsset()
     {
+        yield return LoadMetadataForAOTAssemblies();
+        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
+        Type type = hotUpdateAss.GetType("Main");
+        type.GetMethod("Run").Invoke(null, null);
+    }
+
+    private IEnumerator LoadMetadataForAOTAssemblies()
+    {
         var package = YooAssets.GetPackage("DefaultPackage");
 
         var assets = new List<string>
@@ -53,7 +61,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             "Hotfix.dll",
         }.Concat(AOTMetaAssemblyNames);
 
-        foreach(var asset in assets)
+        foreach (var asset in assets)
         {
             RawFileOperationHandle handle = ResourcesManager.Instance.LoadRawFileAsync(asset);
             yield return handle;
@@ -61,9 +69,5 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             assetDatas[asset] = fileData;
             Debug.Log($"dll:{asset} size : {fileData.Length}");
         }
-
-        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
-        Type type = hotUpdateAss.GetType("Main");
-        type.GetMethod("Run").Invoke(null, null);
     }
 }

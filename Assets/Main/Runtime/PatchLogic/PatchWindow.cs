@@ -68,7 +68,7 @@ public class PatchWindow : MonoBehaviour
         _tips.text = "Initializing the game world !";
         _messageBoxObj = transform.Find("UIWindow/MessageBox").gameObject;
         _messageBoxObj.SetActive(false);
-
+        
         _eventGroup.AddListener<PatchEventDefine.InitializeFailed>(OnHandleEventMessage);
         _eventGroup.AddListener<PatchEventDefine.PatchStatesChange>(OnHandleEventMessage);
         _eventGroup.AddListener<PatchEventDefine.FoundUpdateFiles>(OnHandleEventMessage);

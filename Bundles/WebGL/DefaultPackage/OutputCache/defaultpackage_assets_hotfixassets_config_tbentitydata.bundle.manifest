@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3886496417
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b0b972a03c58996078be91eec4f959e9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Config/tbentitydata.bytes
+Dependencies: []

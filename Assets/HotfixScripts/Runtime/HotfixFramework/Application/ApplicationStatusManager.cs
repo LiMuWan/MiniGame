@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using GameFramework.Resource;
 
 public class ApplicationStatusManager 
 {
@@ -70,10 +71,11 @@ public class ApplicationStatusManager
         {
             if (s_currentAppStatus != null)
             {
-                // s_currentAppStatus.CloseAllUI();
+                s_currentAppStatus.CloseAllUI();
                 try
                 {
                     s_currentAppStatus.OnExitStatus();
+                    ResourcesManager.Instance.ForceUnloadUnusedAssets(true);
                     // if (MemoryManager.NeedReleaseMemory())
                     //     MemoryManager.FreeMemory();
                 }
@@ -111,11 +113,11 @@ public class ApplicationStatusManager
         {
             if (s_currentAppStatus != null)
             {
-                // UIManager.SetEventSystemEnable(false);
+                UIManager.SetEventSystemEnable(false);
                 CameraFade.FadeInToOut(s_fadeInTime, s_afterInDelayTime, s_fadeOutTime, () =>
                 {
-                    // UIManager.SetEventSystemEnable(true);
-                    // s_currentAppStatus.CloseAllUI(false);
+                    UIManager.SetEventSystemEnable(true);
+                    s_currentAppStatus.CloseAllUI(false);
 
                     try
                     {
@@ -125,6 +127,7 @@ public class ApplicationStatusManager
                         Debug.LogError("OnExitStatus Exception " + statusName + " " + e.ToString());
                     }
                     
+                    ResourcesManager.Instance.ForceUnloadUnusedAssets(true);
                     // if (MemoryManager.NeedReleaseMemory())
                     //     MemoryManager.FreeMemory();
 

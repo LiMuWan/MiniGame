@@ -8,7 +8,7 @@
 import moduleHelper from './module-helper';
 import { uid } from './utils';
 import {
-  isAndroid, webAudioNeedResume, isSupportBufferURL, isSupportPlayBackRate, isSupportCacheAudio,
+  isAndroid, webAudioNeedResume, isSupportBufferURL, isSupportPlayBackRate, isSupportCacheAudio, isPc,
 } from '../check-version';
 
 // UnityAudio对象池
@@ -421,8 +421,9 @@ export default {
         } else {
           audios[id][key]((e) => {
             if (key === 'onError') {
-              console.error(e);
-              // 忽略安卓重复播放报错
+              console.warn('innerAudio onError:');
+              err(e);
+              // 忽略安卓一些告警报错
               if (e.errMsg && e.errMsg.indexOf(ignoreErrorMsg) > -1) {
                 return;
               }
@@ -566,17 +567,24 @@ export default {
             }
           });
           this.source.mediaElement.onError((e) => {
-            console.error(e);
-            if (e.errMsg && e.errMsg.indexOf(ignoreErrorMsg) > -1) {
+            console.warn('innerAudio onError:');
+            err(e);
+            const { errMsg } = e;
+            if (!errMsg) {
               return;
             }
-            if (typeof this.source !== 'undefined' && this.source.mediaElement) {
+            // 忽略安卓一些告警报错
+            if (errMsg.indexOf(ignoreErrorMsg) > -1) {
+              return;
+            }
+            // 播放失败
+            if (errMsg.indexOf('play audio fail') > -1 && typeof this.source !== 'undefined' && this.source.mediaElement) {
               this.source._reset();
               this.source.mediaElement.stop();
             }
           });
           this.source.mediaElement.onCanplay(() => {
-            if (typeof this.source !== 'undefined') {
+            if (typeof this.source !== 'undefined' && this.source.mediaElement) {
               const { duration } = this.source.mediaElement;
               setTimeout(() => {
                 if (soundClip && this.source && this.source.mediaElement) {
@@ -678,6 +686,7 @@ export default {
           setPitch(v) {
             this.playbackRate = v;
           },
+          _reset() {},
         };
         this.stop(0);
         this.disconnectSource();
@@ -1112,6 +1121,10 @@ export default {
     if (length > 131072) {
       decompress = 0;
     } else {
+      decompress = 1;
+    }
+    // 安卓和PC端强制用webAudio
+    if (isAndroid || isPc) {
       decompress = 1;
     }
 

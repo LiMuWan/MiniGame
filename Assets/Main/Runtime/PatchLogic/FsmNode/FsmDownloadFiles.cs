@@ -1,4 +1,5 @@
 using System.Collections;
+using GameFramework.Resource;
 using UniFramework.Machine;
 using UniFramework.Singleton;
 using UnityEngine;
@@ -34,7 +35,7 @@ internal class FsmDownloadFiles : IStateNode
 
     private IEnumerator BeginDownload()
     {
-        var downloader = PatchManager.Instance.Downloader;
+        var downloader = ResourcesManager.Instance.Downloader;
 
         //注册下载回调
         downloader.OnDownloadErrorCallback = PatchEventDefine.WebFileDownloadFailed.SendEventMessage;

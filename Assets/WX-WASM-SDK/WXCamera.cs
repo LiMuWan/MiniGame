@@ -17,6 +17,7 @@ namespace WeChatWASM
         {
             instanceId = id;
         }
+        public static Dictionary<string, CreateCameraOption> OnCreateActionList = new Dictionary<string, CreateCameraOption>();   
 
         /// <summary>
         /// [Camera.closeFrameChange()](https://developers.weixin.qq.com/minigame/dev/api/media/camera/Camera.closeFrameChange.html)

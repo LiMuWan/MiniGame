@@ -98,7 +98,14 @@ namespace WeChatWASM
                         {
                             OnReplaced(debug, outDir);
                             EditorUtility.ClearProgressBar();
-                            complete?.Invoke(true, "Done!");
+                            if(res2 == "All Asset Textures have been converted! (Failed count: 0)")
+                            {
+                                complete?.Invoke(true, res2);
+                            }
+                            else
+                            {
+                                complete?.Invoke(false, res2);
+                            }
                         }, (current, total, msg) =>
                         {
                             EditorUtility.DisplayProgressBar($"微信压缩纹理工具处理中「阶段2/2」，{current}/{total}", $"Handling:{msg}", (current * 1.0f / total) * 0.6f + 0.4f);

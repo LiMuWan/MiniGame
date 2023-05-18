@@ -54,7 +54,7 @@ MonoBehaviour:
       - CollectPath: Assets/HotfixAssets/UIPanel
         CollectorGUID: 807f4d0cf6b3c9943ac4e5a4c52708cf
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFilePath
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 
@@ -82,6 +82,19 @@ MonoBehaviour:
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Configs
+      GroupDesc: "\u914D\u7F6E\u8868\u6570\u636E"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/HotfixAssets/Config
+        CollectorGUID: 228cbc20b48484147b2f5fcf88f4aa85
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackRawFile
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 

@@ -47,7 +47,7 @@ public class ApplicationManagerComponentEditor : Editor
     {
         List<string> listTmp = new List<string>();
 
-        Type[] types = Assembly.Load("Assembly-CSharp").GetTypes();
+        Type[] types = Assembly.Load("Hotfix").GetTypes();
 
         for (int i = 0; i < types.Length; i++)
         {
@@ -69,7 +69,7 @@ public class ApplicationManagerComponentEditor : Editor
     {
         List<string> listTmp = new List<string>();
 
-        Type[] types = Assembly.Load("Assembly-CSharp").GetTypes();
+        Type[] types = Assembly.Load("Hotfix").GetTypes();
 
         for (int i = 0; i < types.Length; i++)
         {

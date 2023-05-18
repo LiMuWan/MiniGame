@@ -665,12 +665,8 @@ mergeInto(LibraryManager.library, {
         return buffer;
     },
 
-    WXCameraCreateCamera: function (option) {
-        var res = window.WXWASMSDK.WXCameraCreateCamera(_WXPointer_stringify_adaptor(option));
-        var bufferSize = lengthBytesUTF8(res) + 1;
-        var buffer = _malloc(bufferSize);
-        stringToUTF8(res, buffer, bufferSize);
-        return buffer;
+    WXCameraCreateCamera: function (option, callbackId) {
+        window.WXWASMSDK.WXCameraCreateCamera(_WXPointer_stringify_adaptor(option), _WXPointer_stringify_adaptor(callbackId));
     },
 
     WXCameraCloseFrameChange: function (id) {

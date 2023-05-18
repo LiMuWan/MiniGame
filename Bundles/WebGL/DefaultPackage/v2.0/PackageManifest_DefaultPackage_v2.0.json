@@ -53,7 +53,8 @@
             "AssetTags": [],
             "BundleID": 6,
             "DependIDs": [
-                10
+                16,
+                17
             ]
         },
         {
@@ -62,7 +63,8 @@
             "AssetTags": [],
             "BundleID": 6,
             "DependIDs": [
-                10
+                16,
+                17
             ]
         },
         {
@@ -71,25 +73,36 @@
             "AssetTags": [],
             "BundleID": 6,
             "DependIDs": [
-                10
+                16,
+                17
             ]
         },
         {
-            "Address": "UIConfirmBox",
+            "Address": "Assets/HotfixAssets/UIPanel/UIConfirmBox.prefab",
             "AssetPath": "Assets/HotfixAssets/UIPanel/UIConfirmBox.prefab",
             "AssetTags": [],
             "BundleID": 7,
             "DependIDs": []
         },
         {
-            "Address": "UIFrame",
+            "Address": "Assets/HotfixAssets/UIPanel/UIFrame.prefab",
             "AssetPath": "Assets/HotfixAssets/UIPanel/UIFrame.prefab",
             "AssetTags": [],
             "BundleID": 7,
             "DependIDs": []
         },
         {
-            "Address": "UIStarred",
+            "Address": "Assets/HotfixAssets/UIPanel/UIMain.prefab",
+            "AssetPath": "Assets/HotfixAssets/UIPanel/UIMain.prefab",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependIDs": [
+                17,
+                16
+            ]
+        },
+        {
+            "Address": "Assets/HotfixAssets/UIPanel/UIStarred.prefab",
             "AssetPath": "Assets/HotfixAssets/UIPanel/UIStarred.prefab",
             "AssetTags": [],
             "BundleID": 7,
@@ -115,7 +128,7 @@
             "AssetTags": [],
             "BundleID": 9,
             "DependIDs": [
-                10
+                16
             ]
         },
         {
@@ -124,7 +137,7 @@
             "AssetTags": [],
             "BundleID": 9,
             "DependIDs": [
-                10
+                16
             ]
         },
         {
@@ -133,7 +146,7 @@
             "AssetTags": [],
             "BundleID": 9,
             "DependIDs": [
-                10
+                16
             ]
         },
         {
@@ -142,7 +155,7 @@
             "AssetTags": [],
             "BundleID": 9,
             "DependIDs": [
-                10
+                16
             ]
         },
         {
@@ -151,7 +164,7 @@
             "AssetTags": [],
             "BundleID": 9,
             "DependIDs": [
-                10
+                16
             ]
         },
         {
@@ -160,15 +173,57 @@
             "AssetTags": [],
             "BundleID": 9,
             "DependIDs": [
-                10
+                16
             ]
+        },
+        {
+            "Address": "tbentitydata",
+            "AssetPath": "Assets/HotfixAssets/Config/tbentitydata.bytes",
+            "AssetTags": [],
+            "BundleID": 10,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbleveldata",
+            "AssetPath": "Assets/HotfixAssets/Config/tbleveldata.bytes",
+            "AssetTags": [],
+            "BundleID": 11,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbplayerdata_character",
+            "AssetPath": "Assets/HotfixAssets/Config/tbplayerdata_character.bytes",
+            "AssetTags": [],
+            "BundleID": 12,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbuidata_character",
+            "AssetPath": "Assets/HotfixAssets/Config/tbuidata_character.bytes",
+            "AssetTags": [],
+            "BundleID": 13,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbuidata_gamemode",
+            "AssetPath": "Assets/HotfixAssets/Config/tbuidata_gamemode.bytes",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependIDs": []
+        },
+        {
+            "Address": "tbuidata_race",
+            "AssetPath": "Assets/HotfixAssets/Config/tbuidata_race.bytes",
+            "AssetTags": [],
+            "BundleID": 15,
+            "DependIDs": []
         }
     ],
     "BundleList": [
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_assembly-csharp_dll_bytes.rawfile",
-            "FileHash": "3d85eab0fede12c48eb06c6f0e6f1b8c",
-            "FileCRC": "fd2916c2",
+            "FileHash": "b1656104b5b38999ccc919f361b8fe25",
+            "FileCRC": "809fbe0e",
             "FileSize": 281600,
             "IsRawFile": true,
             "LoadMethod": 0,
@@ -177,9 +232,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
-            "FileHash": "abb1d3cefc0dbb6f99694be31abfa28d",
-            "FileCRC": "8aada960",
-            "FileSize": 44032,
+            "FileHash": "04b995a2ae7a4817028c05ae8771261f",
+            "FileCRC": "9dde4250",
+            "FileSize": 73216,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -237,9 +292,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uipanel.bundle",
-            "FileHash": "0c33d6e0a738a4b5f3833b437fe702ae",
-            "FileCRC": "eba55ef0",
-            "FileSize": 23302,
+            "FileHash": "3eafe497a7192afe5f1ac6ed5678d4d8",
+            "FileCRC": "204cb76a",
+            "FileSize": 623644,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
@@ -247,9 +302,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_scene_main.bundle",
-            "FileHash": "7303db0716cb361610021dce883b7183",
-            "FileCRC": "771f8c4e",
-            "FileSize": 68151,
+            "FileHash": "5edb48341c2fba5b635d2fba48207c87",
+            "FileCRC": "642a1bd8",
+            "FileSize": 68404,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
@@ -266,17 +321,88 @@
             "ReferenceIDs": []
         },
         {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbentitydata_bytes.rawfile",
+            "FileHash": "fccec67c5ad766b3027241de3d0a90fb",
+            "FileCRC": "f1c63fbf",
+            "FileSize": 228,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbleveldata_bytes.rawfile",
+            "FileHash": "48ed2dbf3f000777f23864b83cb4e185",
+            "FileCRC": "e512c2c9",
+            "FileSize": 667,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbplayerdata_character_bytes.rawfile",
+            "FileHash": "010e34dc07fcab1d80a95c75ba5d7e56",
+            "FileCRC": "5bd678a4",
+            "FileSize": 166,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbuidata_character_bytes.rawfile",
+            "FileHash": "3765c1b315f0d0e12313251ee1e6ec15",
+            "FileCRC": "1a1621e8",
+            "FileSize": 205,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbuidata_gamemode_bytes.rawfile",
+            "FileHash": "3841f54bd0fca51dfd0b9ee1f88c7243",
+            "FileCRC": "e4eba28f",
+            "FileSize": 246,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_tbuidata_race_bytes.rawfile",
+            "FileHash": "bce7c6286a359c95ba7cfdde0fef9332",
+            "FileCRC": "e1d5da62",
+            "FileSize": 225,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
             "BundleName": "defaultpackage_unityshaders.bundle",
-            "FileHash": "df2c23cb5132fea632ebf424215a3047",
-            "FileCRC": "5fe20a36",
-            "FileSize": 53868,
+            "FileHash": "09186e4cd0a394cf64f10944568eb5ee",
+            "FileCRC": "e8223fb3",
+            "FileSize": 53888,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [
                 6,
+                7,
                 9
             ]
+        },
+        {
+            "BundleName": "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+            "FileHash": "9bdbf79c835285e3f7279e2e028c22b3",
+            "FileCRC": "d741490b",
+            "FileSize": 3996,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
         }
     ]
 }

@@ -41,7 +41,6 @@ internal class FsmCreateDownloader : IStateNode
         int downloadingMaxNum = 10;
         int failedTryAgain = 3;
         var downloader = ResourcesManager.Instance.CreateResourceDownloader(downloadingMaxNum, failedTryAgain);
-        PatchManager.Instance.Downloader = downloader;
 
         if (downloader.TotalDownloadCount == 0)
         {

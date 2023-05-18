@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 110251559
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 72571e455f81282f7449240156fe0729
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Config/tbuidata_race.bytes
+Dependencies: []

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
   <assembly fullname="Main.Runtime">
+    <type fullname="Bright.Config.BeanBase" preserve="all" />
+    <type fullname="Bright.Serialization.ByteBuf" preserve="all" />
+    <type fullname="Bright.Serialization.ByteBufExtensions" preserve="all" />
     <type fullname="GameFramework.Resource.LoadSceneCallbacks" preserve="all" />
     <type fullname="GameFramework.Resource.LoadSceneSuccessCallback" preserve="all" />
     <type fullname="GameFramework.Resource.ResourcesManager" preserve="all" />
@@ -44,6 +47,7 @@
     <type fullname="System.Collections.IEnumerable" preserve="all" />
     <type fullname="System.Collections.IEnumerator" preserve="all" />
     <type fullname="System.Collections.IList" preserve="all" />
+    <type fullname="System.Comparison`1" preserve="all" />
     <type fullname="System.Console" preserve="all" />
     <type fullname="System.Convert" preserve="all" />
     <type fullname="System.DateTime" preserve="all" />
@@ -57,7 +61,9 @@
     <type fullname="System.Enum" preserve="all" />
     <type fullname="System.Environment" preserve="all" />
     <type fullname="System.Exception" preserve="all" />
+    <type fullname="System.FlagsAttribute" preserve="all" />
     <type fullname="System.Func`2" preserve="all" />
+    <type fullname="System.Func`3" preserve="all" />
     <type fullname="System.Globalization.CultureInfo" preserve="all" />
     <type fullname="System.Globalization.DateTimeFormatInfo" preserve="all" />
     <type fullname="System.Globalization.NumberFormatInfo" preserve="all" />
@@ -166,6 +172,19 @@
     <type fullname="UniFramework.Singleton.SingletonInstance`1" preserve="all" />
     <type fullname="UniFramework.Singleton.UniSingleton" preserve="all" />
   </assembly>
+  <assembly fullname="UniTask">
+    <type fullname="Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder`1" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.EnumeratorAsyncExtensions" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask/Awaiter" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask`1" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask`1/Awaiter" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro">
+    <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
+    <type fullname="TMPro.TMP_Text" preserve="all" />
+  </assembly>
   <assembly fullname="UnityEngine.CoreModule">
     <type fullname="AOT.MonoPInvokeCallbackAttribute" preserve="all" />
     <type fullname="Unity.Profiling.ProfilerCategory" preserve="all" />
@@ -173,6 +192,7 @@
     <type fullname="Unity.Profiling.ProfilerRecorderOptions" preserve="all" />
     <type fullname="UnityEngine.Application" preserve="all" />
     <type fullname="UnityEngine.AsyncOperation" preserve="all" />
+    <type fullname="UnityEngine.Behaviour" preserve="all" />
     <type fullname="UnityEngine.Bounds" preserve="all" />
     <type fullname="UnityEngine.Camera" preserve="all" />
     <type fullname="UnityEngine.Color" preserve="all" />
@@ -200,7 +220,6 @@
     <type fullname="UnityEngine.RectTransform/Edge" preserve="all" />
     <type fullname="UnityEngine.RequireComponent" preserve="all" />
     <type fullname="UnityEngine.ResourceRequest" preserve="all" />
-    <type fullname="UnityEngine.Resources" preserve="all" />
     <type fullname="UnityEngine.RuntimeInitializeLoadType" preserve="all" />
     <type fullname="UnityEngine.RuntimeInitializeOnLoadMethodAttribute" preserve="all" />
     <type fullname="UnityEngine.SceneManagement.LoadSceneMode" preserve="all" />
@@ -209,6 +228,7 @@
     <type fullname="UnityEngine.Screen" preserve="all" />
     <type fullname="UnityEngine.Scripting.PreserveAttribute" preserve="all" />
     <type fullname="UnityEngine.SerializeField" preserve="all" />
+    <type fullname="UnityEngine.TextAsset" preserve="all" />
     <type fullname="UnityEngine.Texture" preserve="all" />
     <type fullname="UnityEngine.Texture2D" preserve="all" />
     <type fullname="UnityEngine.TextureFormat" preserve="all" />
@@ -239,6 +259,7 @@
   <assembly fullname="UnityEngine.UI">
     <type fullname="UnityEngine.EventSystems.BaseInput" preserve="all" />
     <type fullname="UnityEngine.EventSystems.BaseInputModule" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
     <type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="all" />
     <type fullname="UnityEngine.EventSystems.UIBehaviour" preserve="all" />
     <type fullname="UnityEngine.UI.Button" preserve="all" />
@@ -257,7 +278,6 @@
     <type fullname="UnityEngine.WWW" preserve="all" />
   </assembly>
   <assembly fullname="YooAsset">
-    <type fullname="YooAsset.AssetOperationHandle" preserve="all" />
-    <type fullname="YooAsset.YooAssets" preserve="all" />
+    <type fullname="YooAsset.RawFileOperationHandle" preserve="all" />
   </assembly>
 </linker>

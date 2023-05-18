@@ -4,14 +4,28 @@ import { formatJsonStr } from './sdk';
 const tempCacheObj = {};
 
 export default {
-  WXCameraCreateCamera(option) {
-    const obj = wx.createCamera(formatJsonStr(option));
+  WXCameraCreateCamera(conf, callbackId) {
+    const obj = wx.createCamera({
+      ...formatJsonStr(conf),
+      success(res) {
+        moduleHelper.send('CameraCreateCallback', JSON.stringify({
+          callbackId, type: 'success', res: JSON.stringify(res),
+        }));
+      },
+      fail(res) {
+        moduleHelper.send('CameraCreateCallback', JSON.stringify({
+          callbackId, type: 'fail', res: JSON.stringify(res),
+        }));
+      },
+      complete(res) {
+        moduleHelper.send('CameraCreateCallback', JSON.stringify({
+          callbackId, type: 'complete', res: JSON.stringify(res),
+        }));
+      },
+    });
     this.CameraList = this.CameraList || {};
     const list = this.CameraList;
-    const count = Object.keys(list);
-    const key = `${count}${new Date().getTime()}`;
-    list[key] = obj;
-    return key;
+    list[callbackId] = obj;
   },
   WXCameraCloseFrameChange(id) {
     const obj = this.CameraList[id];

@@ -5,8 +5,6 @@ namespace hybridclr
 	const char* g_placeHolderAssemblies[] =
 	{
 		//!!!{{PLACE_HOLDER
-		"Hotfix",
-		"UIFrame",
 		"Assembly-CSharp",
 
 		//!!!}}PLACE_HOLDER

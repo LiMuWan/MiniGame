@@ -20,13 +20,14 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
       "UniTask.dll",
       "UnityEngine.CoreModule.dll",
       "mscorlib.dll",
+      "UIFrame.dll",
     };
 
 
     // TODO 可以用配置文件
     public static List<string> HotfixAssemblyNames {get;} = new List<string>()
     {
-       "Hotfix.dll",
+       "Assembly-CSharp.dll",
     };     
 
     private static Dictionary<string,byte[]> assetDatas = new Dictionary<string, byte[]>();
@@ -56,8 +57,8 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
         yield return LoadMetadataForAOTAssemblies();
         yield return LoadHotfixAssemblies();
         Debug.Log("LoadHotfixAssemblies Finish!!!");
-        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
-        Debug.Log("Assembly.Load(Hotfix.dll)) Finish!!!");
+        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Assembly-CSharp.dll"));
+        Debug.Log("Assembly.Load(Assembly-CSharp.dll)) Finish!!!");
         Type type = hotUpdateAss.GetType("Main");
         type.GetMethod("Run").Invoke(null, null);
         Debug.Log("Main Run Finish!!!");
@@ -81,7 +82,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             assetDatas[aotDllName] = dllBytes;
             // 加载assembly对应的dll，会自动为它hook。一旦aot泛型函数的native函数不存在，用解释器版本代码
             int err = (int)HybridCLR.RuntimeApi.LoadMetadataForAOTAssembly(dllBytes, mode);
-            Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}, dllBytes :{dllBytes}");
         }
     }
     

@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Singleton;
-using System.Linq;
-using YooAsset;
 using System.Reflection;
 using System;
 using GameFramework.Resource;
@@ -14,18 +12,20 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
     //补充元数据dll的列表
     //通过RuntimeApi.LoadMetadataForAOTAssembly()函数来补充AOT泛型的原始元数据
     // TODO 可以用配置文件
-    public static List<string> AOTMetaAssemblyNames {get;} = new List<string>()
+    public static List<string> AOTMetaAssemblyNames { get; } = new List<string>()
     {
-        "mscorlib.dll",
-        "System.dll",
-        "System.Core.dll",
+      "Main.Runtime.dll",
+      "System.Core.dll",
+      "UniFramework.Singleton.dll",
+      "UniTask.dll",
+      "UnityEngine.CoreModule.dll",
+      "mscorlib.dll",
     };
 
 
     // TODO 可以用配置文件
     public static List<string> HotfixAssemblyNames {get;} = new List<string>()
     {
-       "Assembly-CSharp.dll",
        "Hotfix.dll",
     };     
 
@@ -60,7 +60,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
         Debug.Log("Assembly.Load(Hotfix.dll)) Finish!!!");
         Type type = hotUpdateAss.GetType("Main");
         type.GetMethod("Run").Invoke(null, null);
-         Debug.Log("Main Run Finish!!!");
+        Debug.Log("Main Run Finish!!!");
     }
 
     /// <summary>

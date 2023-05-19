@@ -786,7 +786,7 @@ PlayerSettings:
   webGLDataCaching: 0
   webGLDebugSymbols: 2
   webGLEmscriptenArgs: ' -s EXPORTED_FUNCTIONS=_sbrk,_emscripten_stack_get_base,_emscripten_stack_get_end
-    -s TOTAL_MEMORY=256MB --memoryprofiler '
+    -s TOTAL_MEMORY=256MB'
   webGLModulesDirectory: 
   webGLTemplate: PROJECT:WXTemplate2020
   webGLAnalyzeBuildSize: 0

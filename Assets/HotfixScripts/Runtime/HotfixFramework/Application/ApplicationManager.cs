@@ -35,7 +35,7 @@ public class ApplicationManager : MonoBehaviour
     /// <summary>
     /// 程序启动
     /// </summary>
-    private async void AppLaunch()
+    private  void AppLaunch()
     {
         DontDestroyOnLoad(gameObject);
         Application.runInBackground = true;
@@ -49,7 +49,7 @@ public class ApplicationManager : MonoBehaviour
         //UIManager启动
         // UniSingleton.CreateSingleton<UIManager>();
         Debug.Log("UI Init");
-        await UIManager.Init();
+        UIManager.Init();
         ApplicationStatusManager.Init();     //游戏流程状态机初始化
         GlobalLogicManager.Init();           //初始化全局逻辑
 

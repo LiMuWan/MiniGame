@@ -1,69 +1,29 @@
 ManifestFileVersion: 0
-CRC: 3125451595
+CRC: 746789272
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 445e9493aee8332aa5bf71de82cbc5f7
+    Hash: 9f688c2e281e1171e38adf992a1fda5a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 73b877d503688165b20e2525ebd822c1
+    Hash: 09b744abe66c570f6e28d9aba8afc13c
 HashAppended: 0
 ClassTypes:
-- Class: 28
-  Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 307a736764ebbce44b54d72f8467b6fd, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
+  Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 572910c10080c0945a0ef731ccedc739, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-- Class: 115
-  Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers:
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.BoolParameter
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.ClampedFloatParameter
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.ClampedIntParameter
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.ColorParameter
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.MinFloatParameter
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.TextureParameter
-- AssemblyName: Unity.RenderPipelines.Core.Runtime
-  ClassName: UnityEngine.Rendering.Vector2Parameter
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.PostProcessData/ShaderResources
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.PostProcessData/TextureResources
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionSettings
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.ScriptableRendererData/DebugShaderResources
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.StencilStateData
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.TonemappingModeParameter
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.UniversalRendererData/ShaderResources
-- AssemblyName: Unity.RenderPipelines.Universal.Runtime
-  ClassName: UnityEngine.Rendering.Universal.XRSystemData/ShaderResources
+SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Settings/URP-Balanced.asset
 - Assets/Settings/SampleSceneProfile.asset
@@ -72,5 +32,4 @@ Assets:
 - Assets/Settings/URP-HighFidelity-Renderer.asset
 - Assets/Settings/URP-Performant-Renderer.asset
 - Assets/Settings/URP-Balanced-Renderer.asset
-Dependencies:
-- D:/MyProject/WXMiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+Dependencies: []

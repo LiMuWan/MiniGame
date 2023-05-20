@@ -30,10 +30,9 @@ public static class UIManager
         }
     }
     
-    public static async Task Init()
+    public static void Init()
     {
-        var go = await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"{UIPath}UIPanel/UIFrame.prefab");
-        var canvas = GameObject.Instantiate(go);
+        var canvas =  ResourcesManager.Instance.LoadAsset<GameObject>($"{UIPath}UIPanel/UIFrame.prefab");
         s_EventSystem = canvas.GetComponentInChildren<EventSystem>();
         stuckPanel = canvas.transform.Find("SutckPanel").gameObject;
         stuckPanel.SetActive(false);

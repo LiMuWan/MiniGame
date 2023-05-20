@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UniFramework.Singleton;
 using GameFramework.Resource;
-using UnityEngine.SceneManagement;
 
 public class Main 
 {
@@ -12,6 +10,7 @@ public class Main
         //跳转到入口场景
         //    UniSingleton.CreateSingleton<GameManager>();
         //    GameManager.Instance.Run();
+        Debug.Log("Load Scene Main!!!");
         ResourcesManager.Instance.LoadScene("Main", 0, new LoadSceneCallbacks(LoadSceneSuccessCallback));
     }
 

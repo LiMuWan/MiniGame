@@ -31,6 +31,7 @@ MonoBehaviour:
   - UniTask
   - UnityEngine.CoreModule
   - mscorlib
+  - UIFrame
   outputLinkFile: HybridCLRData/Generated/link.xml
   outputAOTGenericReferenceFile: HybridCLRData/Generated/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10

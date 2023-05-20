@@ -6,7 +6,6 @@ namespace hybridclr
 	{
 		//!!!{{PLACE_HOLDER
 		"Hotfix",
-		"UIFrame",
 		"Assembly-CSharp",
 
 		//!!!}}PLACE_HOLDER

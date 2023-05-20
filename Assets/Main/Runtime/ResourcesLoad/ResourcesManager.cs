@@ -181,7 +181,7 @@ namespace GameFramework.Resource
         private string GetHostServerURL()
         {
 
-            string hostServerIP = "http://192.168.1.15";//"http://192.168.0.111";
+            string hostServerIP = "http://192.168.0.111";//"http://192.168.1.15";
             string gameVersion = "version";
 
 #if UNITY_EDITOR

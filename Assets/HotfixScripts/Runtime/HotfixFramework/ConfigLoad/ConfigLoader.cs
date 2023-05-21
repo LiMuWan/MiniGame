@@ -20,12 +20,18 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
             return m_tables;
         }
     }
-
-     private Dictionary<string, Byte[]> m_Configs = new Dictionary<string, Byte[]>();
+    
+    private List<string> cfgNames = new List<string>(){
+        "item_tbitem",
+        "battle_tbskill",
+        "battle_tbbuff",
+        "battle_tbbuffattr",
+    };
+    private Dictionary<string, Byte[]> m_Configs = new Dictionary<string, Byte[]>();
 
     void ISingleton.OnCreate(object createParam)
     {
-        Load();
+
     }
 
     void ISingleton.OnDestroy()
@@ -62,9 +68,9 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
     /// <summary>
     /// 加载配置
     /// </summary>
-    public void Load()
+    public void Load(LoadConfigCompleteCallback callback)
     {
-        m_tables = new Tables(LoadByteBuf);
+        UniSingleton.StartCoroutine(LoadAllConfigs(callback));
     }
 
     // public async UniTask<Tables> LoadAllUserConfig()
@@ -100,63 +106,48 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
         {
             // 如果没有缓存，则进行异步加载
             // UniSingleton.StartCoroutine(LoadByteBufAsync(file));
-            var rawFileOperationHandle = ResourcesManager.Instance.LoadRawFileAsync(file);
+            // var rawFileOperationHandle = ResourcesManager.Instance.LoadRawFileAsync(file);
 
-            if (rawFileOperationHandle.Status == EOperationStatus.Succeed)
-            {
-                // 如果加载操作已经完成，则直接获取结果并缓存
-                ret = rawFileOperationHandle.GetRawFileData();
-                m_Configs.Add(key, ret);
-                Debug.Log($"Cache TextAssets, {key}");
-            }
-            else
-            {
-                // 如果加载操作未完成，则添加完成事件监听器，并返回一个空 ByteBuf
-                rawFileOperationHandle.Completed += handle =>
-                {
-                    var result = handle.GetRawFileData();
-                    if (result != null)
-                    {
-                        m_Configs.Add(key, result);
-                        Debug.Log($"Cache TextAssets, {key}");
-                    }
-                };
-            }
+            // if (rawFileOperationHandle.Status == EOperationStatus.Succeed)
+            // {
+            //     // 如果加载操作已经完成，则直接获取结果并缓存
+            //     ret = rawFileOperationHandle.GetRawFileData();
+            //     m_Configs.Add(key, ret);
+            //     Debug.Log($"Cache TextAssets, {key}");
+            // }
+            // else
+            // {
+            //     // 如果加载操作未完成，则添加完成事件监听器，并返回一个空 ByteBuf
+            //     rawFileOperationHandle.Completed += handle =>
+            //     {
+            //         var result = handle.GetRawFileData();
+            //         if (result != null)
+            //         {
+            //             m_Configs.Add(key, result);
+            //             Debug.Log($"Cache TextAssets, {key}");
+            //         }
+            //     };
+            // }
         }
         return new ByteBuf(ret ?? new byte[0]);
     }
 
-    private IEnumerator LoadByteBufAsync(string file)
+    private IEnumerator LoadAllConfigs(LoadConfigCompleteCallback callback)
     {
-        // 如果没有缓存，则进行异步加载
-        string key = $"{file}.bytes";
-        var rawFileOperationHandle = ResourcesManager.Instance.LoadRawFileAsync(file);
-        yield return rawFileOperationHandle;
-        var result = rawFileOperationHandle.GetRawFileData();
-        if (result != null)
+        byte[] ret = null;
+
+        foreach (var cfgName in cfgNames)
         {
-            m_Configs.Add(key, result);
+            string key = $"{cfgName}.bytes";
+            var rawFileOperationHandle = ResourcesManager.Instance.LoadRawFileAsync(cfgName);
+            yield return rawFileOperationHandle;
+            // 如果加载操作已经完成，则直接获取结果并缓存
+            ret = rawFileOperationHandle.GetRawFileData();
+            m_Configs.Add(key, ret);
             Debug.Log($"Cache TextAssets, {key}");
         }
-        // if (rawFileOperationHandle.Status == EOperationStatus.Succeed)
-        // {
-        //     // 如果加载操作已经完成，则直接获取结果并缓存
-        //     ret = rawFileOperationHandle.GetRawFileData();
-        //     m_Configs.Add(key, ret);
-        //     Debug.Log($"Cache TextAssets, {key}");
-        // }
-        // else
-        // {
-        //     // 如果加载操作未完成，则添加完成事件监听器，并返回一个空 ByteBuf
-        //     rawFileOperationHandle.Completed += handle =>
-        //     {
-        //         var result = handle.GetRawFileData();
-        //         if (result != null)
-        //         {
-        //             m_Configs.Add(key, result);
-        //             Debug.Log($"Cache TextAssets, {key}");
-        //         }
-        //     };
-        // }
+
+        m_tables = new Tables(LoadByteBuf);
+        callback?.Invoke(true);
     }
 }

@@ -11,8 +11,7 @@ public class LoginStatus : IApplicationStatus
     public override void OnEnterStatus()
     {
         var uiMain = ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
-        Debug.Log($"Config Count = {ConfigLoader.Instance.Tables.TbItem.DataList.Count}");
-         Debug.Log($"Config Name = {ConfigLoader.Instance.Tables.TbItem.DataList[0].Name}");
+    
          WX.InitSDK((code) =>
         {
 
@@ -65,7 +64,14 @@ public class LoginStatus : IApplicationStatus
     //Update逻辑放在这里
     public override void OnUpdate()
     {
-
+        // if (ConfigLoader.Instance.Tables.TbItem.DataList.Count > 0)
+        // {
+        //     Debug.Log($"Config Count = {ConfigLoader.Instance.Tables.TbItem.DataList.Count}");
+        //     if (ConfigLoader.Instance.Tables.TbItem.DataList[0] != null)
+        //     {
+        //         Debug.Log($"Config Name = {ConfigLoader.Instance.Tables.TbItem.DataList[0].Name}");
+        //     }
+        // }
     }
 
 }

@@ -45,6 +45,7 @@ public class ApplicationManager : MonoBehaviour
         Timer.Init();  //计时器启动
         //配置管理器c创建
         UniSingleton.CreateSingleton<ConfigLoader>();
+        ConfigLoader.Instance.Load(OnLoadConfigCompleteCallback);
         //输入管理器启动
         //UIManager启动
         // UniSingleton.CreateSingleton<UIManager>();
@@ -61,7 +62,19 @@ public class ApplicationManager : MonoBehaviour
             s_OnApplicationModuleInitEnd();
         }
     }
-
+    
+    /// <summary>
+    /// 配置加载完毕
+    /// </summary>
+    /// <param name="result"></param>
+    /// <param name="resultMessage"></param>
+    private void OnLoadConfigCompleteCallback(bool result, string resultMessage = "")
+    {
+        if(result)
+        {
+            Debug.Log("Configs Loaded all!!!");
+        }
+    }
      #region 程序生命周期事件派发
     /// <summary>
     /// 框架模块初始化完成回调

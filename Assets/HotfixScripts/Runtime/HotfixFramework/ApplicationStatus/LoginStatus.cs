@@ -12,6 +12,7 @@ public class LoginStatus : IApplicationStatus
     {
         var uiMain = ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
 
+#if !UNITY_EDITOR
         WX.InitSDK((code) =>
         {
 
@@ -47,7 +48,7 @@ public class LoginStatus : IApplicationStatus
             });
             Debug.Log("infoButton Created");
         });
-
+#endif
     }
 
     private void LoginSuccess(LoginSuccessCallbackResult result)

@@ -368,16 +368,6 @@ namespace GameFramework.Resource
         #endregion
 
         #region 资源加载
-
-        /// <summary>
-        /// 同步加载资源对象
-        /// </summary>
-        /// <param name="assetInfo">资源信息</param>
-        public AssetOperationHandle LoadAssetSync(AssetInfo assetInfo)
-        {
-            return YooAssets.LoadAssetSync(assetInfo);
-        }
-
         /// <summary>
         /// 异步加载资源对象
         /// </summary>
@@ -431,16 +421,6 @@ namespace GameFramework.Resource
         }
 
         /// <summary>
-        /// 同步加载资源对象
-        /// </summary>
-        /// <typeparam name="TObject">资源类型</typeparam>
-        /// <param name="location">资源的定位地址</param>
-        public AssetOperationHandle LoadAssetSync<TObject>(string location) where TObject : UnityEngine.Object
-        {
-            return YooAssets.LoadAssetSync<TObject>(location);
-        }
-
-        /// <summary>
         /// 异步加载原生对象
         /// </summary>
         /// <typeparam name="TObject">资源类型</typeparam>
@@ -451,44 +431,13 @@ namespace GameFramework.Resource
         }
 
         /// <summary>
-        /// 同步加载原生对象
-        /// </summary>
-        /// <typeparam name="TObject">资源类型</typeparam>
-        /// <param name="location">资源的定位地址</param>
-        public RawFileOperationHandle LoadRawFileSync(string location)
-        {
-            return YooAssets.LoadRawFileSync(location);
-        }
-
-        /// <summary>
-        /// 同步加载原生对象
+        /// 异步加载子对象
         /// </summary>
         /// <typeparam name="TObject">资源类型</typeparam>
         /// <param name="location">资源的定位地址</param>
         public SubAssetsOperationHandle LoadSubAssetsAsync<T>(string location) where T : UnityEngine.Object
         {
-            var package = YooAssets.GetPackage(PackageName);
             return YooAssets.LoadSubAssetsAsync<T>(location);
-        }
-
-        /// <summary>
-        /// 同步加载资源对象
-        /// </summary>
-        /// <param name="location">资源的定位地址</param>
-        /// <param name="type">资源类型</param>
-        public AssetOperationHandle LoadAssetSync(string location, System.Type type)
-        {
-            return YooAssets.LoadAssetSync(location, type);
-        }
-
-
-        /// <summary>
-        /// 异步加载资源对象
-        /// </summary>
-        /// <param name="assetInfo">资源信息</param>
-        public AssetOperationHandle LoadAssetAsync(AssetInfo assetInfo)
-        {
-            return YooAssets.LoadAssetAsync(assetInfo);
         }
 
         /// <summary>
@@ -516,72 +465,6 @@ namespace GameFramework.Resource
                 return;
             }
             LoadAssetAsync(assetName, assetType, DefaultPriority, loadAssetCallbacks, userData);
-        }
-
-        /// <summary>
-        /// 同步加载资源并获取句柄。
-        /// </summary>
-        /// <param name="location">要加载资源的名称。</param>
-        /// <typeparam name="T">要加载资源的类型。</typeparam>
-        /// <returns>同步加载资源句柄。</returns>
-        public AssetOperationHandle LoadAssetGetOperation<T>(string location) where T : UnityEngine.Object
-        {
-            var handle = LoadAssetSync<T>(location);
-
-            return handle;
-        }
-
-        /// <summary>
-        /// 同步加载资源对象。
-        /// </summary>
-        /// <param name="location">资源的定位地址。</param>
-        /// <typeparam name="T">资源类型。</typeparam>
-        /// <returns>资源实例。</returns>
-        public T LoadAsset<T>(string location) where T : UnityEngine.Object
-        {
-            if (string.IsNullOrEmpty(location))
-            {
-                Debug.LogError("Asset name is invalid.");
-                return default;
-            }
-            var assetPackage = YooAssets.TryGetPackage(PackageName);
-
-            AssetInfo assetInfo = assetPackage.GetAssetInfo(location);
-
-            if (assetInfo == null)
-            {
-                string errorMessage = StringFormat.Format("Can not load asset '{0}'.", location);
-
-                throw new Exception(errorMessage);
-            }
-
-            var handle = LoadAssetSync<T>(location);
-
-            if (typeof(T) == typeof(UnityEngine.GameObject))
-            {
-                return handle.InstantiateSync() as T;
-            }
-
-            return handle.AssetObject as T;
-        }
-
-        /// <summary>
-        /// 同步加载资源对象。
-        /// </summary>
-        /// <param name="location">资源的定位地址。</param>
-        /// <param name="parent">父节点。</param>
-        /// <typeparam name="TObject">资源类型。</typeparam>
-        /// <returns>资源实例。</returns>
-        public TObject LoadAsset<TObject>(string location, Transform parent) where TObject : UnityEngine.Object
-        {
-            var handle = LoadAssetSync<TObject>(location);
-
-            if (typeof(TObject) == typeof(UnityEngine.GameObject))
-            {
-                return handle.InstantiateSync(parent) as TObject;
-            }
-
-            return handle.AssetObject as TObject;
         }
 
         public async UniTask<TObject> LoadAsync<TObject>(string location) where TObject : UnityEngine.Object

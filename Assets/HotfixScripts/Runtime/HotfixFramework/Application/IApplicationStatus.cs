@@ -2,14 +2,13 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
-using Feif.UIFramework;
-using System.Threading.Tasks;
+using UniFramework.Window;
 
 public abstract class IApplicationStatus
 {
     #region UI 管理
 
-    List<UIBase> m_uiList = new List<UIBase>();
+    List<UIWindow> m_uiList = new List<UIWindow>();
 
     /// <summary>
     /// 获取现在ApplicationStatus管理的打开的UI的个数
@@ -20,9 +19,9 @@ public abstract class IApplicationStatus
         return m_uiList.Count;
     }
 
-    public List<UIBase> GetUIList(bool isSort = false)
+    public List<UIWindow> GetUIList(bool isSort = false)
     {
-        List < UIBase > list= new List<UIBase>( m_uiList);
+        List < UIWindow > list= new List<UIWindow>(m_uiList);
         if(isSort)
         list.Sort(SortUIWindow);
         return list;
@@ -33,7 +32,7 @@ public abstract class IApplicationStatus
     /// <param name="w"></param>
     /// <param name="b"></param>
     /// <returns></returns>
-    private int SortUIWindow(UIBase w, UIBase b)
+    private int SortUIWindow(UIWindow w, UIWindow b)
     {
         int childCount = w.transform.parent.childCount;
         int index0 = -1;
@@ -61,7 +60,7 @@ public abstract class IApplicationStatus
     /// 获取status打开的window的最上层Window
     /// </summary>
     /// <returns></returns>
-    public UIBase GetStatusTopUIWindow()
+    public UIWindow GetStatusTopUIWindow()
     {
         if (m_uiList.Count > 0)
             return m_uiList[m_uiList.Count - 1];
@@ -69,44 +68,46 @@ public abstract class IApplicationStatus
         return null;
     }
 
-    public UIBase GetUI(string name)
+    public UIWindow GetUI(string name)
     {
         foreach (var item in m_uiList)
         {
-            if (item.name == name)
+            if (item.WindowName == name)
                 return item;
         }
         return null;
     }
-    public T GetUI<T>() where T : UIBase
+    public T GetUI<T>() where T : UIWindow
     {
         foreach (var item in m_uiList)
         {
-            if (item.name == typeof(T).Name)
+            if (item.WindowName == typeof(T).Name)
                 return (T)item;
         }
         return default(T);
     }
 
-    public async Task<T> OpenUI<T>(UIData uiData = null) where T: UIBase
+    public T OpenUI<T>(params System.Object[] userDatas) where T: UIWindow
     {
-        await UIManager.Show<T>(uiData);
+        UIManager.OpenWindowSync<T>(userDatas);
  
-        m_uiList.Add(UIFrame.CurrentPanel);
-
-        return (T)UIFrame.CurrentPanel;
+        var window = UIManager.GetWindow<T>();
+        Debug.Log($"OpenUI window = {window}");
+        m_uiList.Add(window);
+      
+        return (T)window;
     }
 
-    public async void CloseUI<T>(bool isPlayAnim = true) where T:UIBase
+    public void CloseUI<T>(bool isPlayAnim = true) where T:UIWindow
     {
-        await UIManager.Hide<T>();
+         UIManager.CloseWindow<T>();
     }
 
-    public bool IsUIOpen<T>() where T : UIBase
+    public bool IsUIOpen<T>() where T : UIWindow
     {
         for (int i = 0; i < m_uiList.Count; i++)
         {
-            UIBase tempWin = m_uiList[i];
+            UIWindow tempWin = m_uiList[i];
             if (tempWin.GetType() == typeof(T) 
                 &&(tempWin.gameObject.activeSelf))
                 return true;
@@ -119,7 +120,7 @@ public abstract class IApplicationStatus
         for (int i = 0; i < m_uiList.Count; i++)
         {
             //Debug.Log("CloseAllUI " + m_uiList[i]);
-            UIManager.Hide(m_uiList[i]);
+            UIManager.CloseWindow(m_uiList[i]);
         }
         m_uiList.Clear();
     }

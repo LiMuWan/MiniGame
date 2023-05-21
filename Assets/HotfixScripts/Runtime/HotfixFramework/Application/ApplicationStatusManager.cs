@@ -66,7 +66,6 @@ public class ApplicationStatusManager
     private  static void EnterStatusLogic(string statusName,bool isFade = true)
     {
        
-
         if (!isFade)
         {
             if (s_currentAppStatus != null)

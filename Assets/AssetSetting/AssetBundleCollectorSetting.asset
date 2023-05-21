@@ -54,7 +54,7 @@ MonoBehaviour:
       - CollectPath: Assets/HotfixAssets/UIPanel
         CollectorGUID: 807f4d0cf6b3c9943ac4e5a4c52708cf
         CollectorType: 0
-        AddressRuleName: AddressByFilePath
+        AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

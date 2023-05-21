@@ -20,7 +20,6 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
       "UniTask.dll",
       "UnityEngine.CoreModule.dll",
       "mscorlib.dll",
-      "UIFrame.dll",
     };
 
 

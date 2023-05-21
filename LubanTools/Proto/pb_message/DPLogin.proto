@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "DeerGameBase.proto";
+import "GameBase.proto";
 
 option java_package ="com.game.juhe.server.protobuf.proto";
 
@@ -88,7 +88,7 @@ message DPGSLogicLoginRetResp
 // 角色列表中的角色信息
 message DPGSRoleItemInfo
 {
-    DeerGameBase.DPRoleBaseInfo stBaseInfo = 1;
+    GameBase.DPRoleBaseInfo stBaseInfo = 1;
     int64 nCreateTime          = 2; // 创建角色时间
     int32 nPlatformId          = 3; // 平台类型
     int32 nCreateServerId      = 4; // 创建角色的服务器ID

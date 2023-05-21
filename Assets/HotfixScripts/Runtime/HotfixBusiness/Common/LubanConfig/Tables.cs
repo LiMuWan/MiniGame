@@ -6,56 +6,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using Bright.Serialization;
-using Cysharp.Threading.Tasks;
 
 
-namespace cfg
+
+namespace GameConfig
+{ 
+public partial class Tables
 {
-   
-public sealed class Tables
-{
-    public TbUIData_GameMode TbUIData_GameMode {get; private set; }
-    public TbUIData_Race TbUIData_Race {get; private set; }
-    public TbUIData_Character TbUIData_Character {get; private set; }
-    public TbPlayerData_Character TbPlayerData_Character {get; private set; }
-    public TbEntityData TbEntityData {get; private set; }
-    public TbLevelData TbLevelData {get; private set; }
+    public item.TbItem TbItem {get; }
+    public Battle.TbSkill TbSkill {get; }
+    public Battle.TbBuff TbBuff {get; }
+    public Battle.TbBuffAttr TbBuffAttr {get; }
 
-    public Tables() { }
-    
-    public async UniTask LoadAsync(System.Func<string, UniTask<ByteBuf>> loader)
+    public Tables(System.Func<string, ByteBuf> loader)
     {
         var tables = new System.Collections.Generic.Dictionary<string, object>();
-        TbUIData_GameMode = new TbUIData_GameMode(await loader("tbuidata_gamemode")); 
-        tables.Add("TbUIData_GameMode", TbUIData_GameMode);
-        TbUIData_Race = new TbUIData_Race(await loader("tbuidata_race")); 
-        tables.Add("TbUIData_Race", TbUIData_Race);
-        TbUIData_Character = new TbUIData_Character(await loader("tbuidata_character")); 
-        tables.Add("TbUIData_Character", TbUIData_Character);
-        TbPlayerData_Character = new TbPlayerData_Character(await loader("tbplayerdata_character")); 
-        tables.Add("TbPlayerData_Character", TbPlayerData_Character);
-        TbEntityData = new TbEntityData(await loader("tbentitydata")); 
-        tables.Add("TbEntityData", TbEntityData);
-        TbLevelData = new TbLevelData(await loader("tbleveldata")); 
-        tables.Add("TbLevelData", TbLevelData);
+        TbItem = new item.TbItem(loader("item_tbitem")); 
+        tables.Add("item.TbItem", TbItem);
+        TbSkill = new Battle.TbSkill(loader("battle_tbskill")); 
+        tables.Add("Battle.TbSkill", TbSkill);
+        TbBuff = new Battle.TbBuff(loader("battle_tbbuff")); 
+        tables.Add("Battle.TbBuff", TbBuff);
+        TbBuffAttr = new Battle.TbBuffAttr(loader("battle_tbbuffattr")); 
+        tables.Add("Battle.TbBuffAttr", TbBuffAttr);
 
-        TbUIData_GameMode.Resolve(tables); 
-        TbUIData_Race.Resolve(tables); 
-        TbUIData_Character.Resolve(tables); 
-        TbPlayerData_Character.Resolve(tables); 
-        TbEntityData.Resolve(tables); 
-        TbLevelData.Resolve(tables); 
+        PostInit();
+        TbItem.Resolve(tables); 
+        TbSkill.Resolve(tables); 
+        TbBuff.Resolve(tables); 
+        TbBuffAttr.Resolve(tables); 
+        PostResolve();
     }
 
     public void TranslateText(System.Func<string, string, string> translator)
     {
-        TbUIData_GameMode.TranslateText(translator); 
-        TbUIData_Race.TranslateText(translator); 
-        TbUIData_Character.TranslateText(translator); 
-        TbPlayerData_Character.TranslateText(translator); 
-        TbEntityData.TranslateText(translator); 
-        TbLevelData.TranslateText(translator); 
+        TbItem.TranslateText(translator); 
+        TbSkill.TranslateText(translator); 
+        TbBuff.TranslateText(translator); 
+        TbBuffAttr.TranslateText(translator); 
     }
+    
+    partial void PostInit();
+    partial void PostResolve();
 }
 
 }

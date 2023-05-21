@@ -4,10 +4,9 @@ using UniFramework.Singleton;
 using YooAsset;
 using System.Threading.Tasks;
 using System;
-using Feif.UIFramework;
-using UIModule.UI;
 using GameFramework.Resource;
 using UnityEngine.EventSystems;
+using UniFramework.Window;
 
 public static class UIManager
 {
@@ -22,102 +21,26 @@ public static class UIManager
         }
     }
 
-    public static UIBase CurrentPanel
-    {
-        get
-        {
-            return UIFrame.CurrentPanel;
-        }
-    }
-    
     public static void Init()
     {
-        var canvas =  ResourcesManager.Instance.LoadAsset<GameObject>($"{UIPath}UIPanel/UIFrame.prefab");
+        var canvas = ResourcesManager.Instance.LoadAsset<GameObject>($"UICanvas");
+        GameObject.DontDestroyOnLoad(canvas);
+        var desktop = canvas.transform.Find("Desktop").gameObject;
+        UniWindow.Initalize(desktop);
         s_EventSystem = canvas.GetComponentInChildren<EventSystem>();
-        stuckPanel = canvas.transform.Find("SutckPanel").gameObject;
-        stuckPanel.SetActive(false);
-        // 注册资源请求释放事件
-        UIFrame.OnAssetRequest += OnAssetRequest;
-        UIFrame.OnAssetRelease += OnAssetRelease;
-        // 注册UI卡住事件
-        // 加载时间超过0.5s后触发UI卡住事件
-        UIFrame.StuckTime = 0.5f;
-        UIFrame.OnStuckStart += OnStuckStart;
-        UIFrame.OnStuckEnd += OnStuckEnd;
-        // <------------------------------>
-        // 自动绑定事件
-        AutoBindUGUIButtonEvent.Enable();
-        // <------------------------------>
-        // var data = new UITestAData_Demo2();
-        // data.Title = "This is UITestA";
-        // UIFrame.Show<UITestA_Demo2>(data);
     }
-
-    // 资源请求事件，type为UI脚本的类型
-    // 可以使用Addressables，YooAssets等第三方资源管理系统
-    private static async Task<GameObject> OnAssetRequest(Type type)
-    {
-        Debug.Log($"UIType = {type.Name}");
-        // return await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"{type.Name}");
-        if (UIFrame.IsPanel(type))
-        {
-            return await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"{UIPath}UIPanel/{type.Name}.prefab");
-        }
-        else
-        {
-            return await ResourcesManager.Instance.LoadAssetAsync<GameObject>($"{UIPath}UIWindow/{type.Name}.prefab");
-        }
-    }
-
-    // 资源释放事件
-    private static void OnAssetRelease(Type type)
-    {
-        // if (UIFrame.IsPanel(type))
-        // {
-        //     ResourcesManager.Instance.UnloadAsset<GameObject>($"Assets/HotfixAssets/UIPanel{type.Name}");
-        // }
-        // else
-        // {
-        //     ResourcesManager.Instance.LoadAssetAsync<GameObject>($"Assets/HotfixAssets/UIWindow{type.Name}");
-        // }
-    }
-
-    private static void OnStuckStart()
-    {
-        stuckPanel.SetActive(true);
-    }
-
-    private static void OnStuckEnd()
-    {
-        stuckPanel.SetActive(false);
-    }
-
-    // async void ISingleton.OnCreate(object createParam)
-    // {
-    //     //await InitCanvas();
-    // }
-
-    // void ISingleton.OnUpdate()
-    // {
-
-    // }
 
     public static void OnDestroy()
     {
-        UIFrame.OnAssetRequest -= OnAssetRequest;
-        UIFrame.OnAssetRelease -= OnAssetRelease;
-        UIFrame.OnStuckStart -= OnStuckStart;
-        UIFrame.OnStuckEnd -= OnStuckEnd;
-        stuckPanel = null;
         s_EventSystem = null;
     }
 
-    
+
     #region EventSystem
 
     public static void SetEventSystemEnable(bool enable)
     {
-        if(EventSystem != null)
+        if (EventSystem != null)
         {
             EventSystem.enabled = enable;
         }
@@ -131,91 +54,96 @@ public static class UIManager
 
     #region 显示
 
+    // private IEnumerator OpenWindow<T>(Action<T> callback,params System.Object[] userDatas) where T : UIWindow
+    // {
+    //     OpenWindowOperation openWindowOperation = OpenWindowSync<T>(userDatas);
+    //     yield return openWindowOperation;
+    //     callback?.Invoke(openWindowOperation);
+    // }
+
     /// <summary>
-    /// 显示UI
+    /// 同步打开窗口
     /// </summary>
-    public static async Task Show(UIBase ui, UIData data = null)
+    /// <typeparam name="T">窗口类</typeparam>
+    /// <param name="location">资源定位地址</param>
+    /// <param name="userDatas">用户自定义数据</param>
+    public static OpenWindowOperation OpenWindowSync<T>(params System.Object[] userDatas) where T : UIWindow
     {
-        await UIFrame.Show(ui, data);
+        return UniWindow.OpenWindowSync<T>(userDatas);
     }
 
     /// <summary>
-    /// 显示Panel或Window
+    /// 异步打开窗口
     /// </summary>
-    public static async Task Show<T>(UIData data = null)
+    /// <param name="location">资源定位地址</param>
+    /// <param name="userDatas">用户自定义数据</param>
+    public static OpenWindowOperation OpenWindowAsync<T>(string location, params System.Object[] userDatas) where T : UIWindow
     {
-        await UIFrame.Show(typeof(T), data);
+        return UniWindow.OpenWindowAsync(typeof(T), location, userDatas);
     }
-
-    /// <summary>
-    /// 显示Panel或Window
-    /// </summary>
-    public static async Task Show(Type type, UIData data = null)
-    {
-        await UIFrame.Show(type, data);
-    }
-
     #endregion
 
     #region 隐藏
 
     /// <summary>
-    /// 隐藏Panel或Window
+    /// 关闭窗口
     /// </summary>
-    public static Task Hide<T>()
+    public static void CloseWindow<T>() where T : UIWindow
     {
-        return UIFrame.Hide(typeof(T));
+        UniWindow.CloseWindow(typeof(T));
+    }
+
+      /// <summary>
+    /// 关闭窗口
+    /// </summary>
+    public static void CloseWindow(UIWindow window)
+    {
+        UniWindow.CloseWindow(window);
     }
 
     /// <summary>
-    /// 隐藏UI
+    /// 关闭所有窗口
     /// </summary>
-    public static Task Hide(UIBase ui)
+    public static void CloseAll()
     {
-       return UIFrame.Hide(ui);
+        UniWindow.CloseAll();
     }
     #endregion
 
-    #region 刷新
-    /// <summary>
-    /// 刷新UI。data为null时，将用之前的data刷新
-    /// </summary>
-    public static Task Refresh<T>(UIData data = null)
+    public static UIWindow GetWindow<T>()
     {
-        return UIFrame.Refresh(typeof(T), data);
-    }
-    #endregion
-
-    /// <summary>
-    /// 创建UI GameObject
-    /// </summary>
-    public static Task<GameObject> Instantiate(GameObject prefab, Transform parent = null, UIData data = null)
-    {
-        return UIFrame.Instantiate(prefab, parent, data);
+        return UniWindow.GetWindow<T>();
     }
 
     /// <summary>
-    /// 销毁UI GameObject
+    /// 查询窗口是否存在
     /// </summary>
-    public static void Destroy(GameObject instance)
+    public static bool HasWindow<T>()
     {
-        UIFrame.Destroy(instance);
+        return UniWindow.HasWindow(typeof(T));
     }
 
     /// <summary>
-    /// 立即销毁UI GameObject
+    /// 获取所有层级下顶部的窗口名称
     /// </summary>
-    public static void DestroyImmediate(GameObject instance)
+    public static string GetTopWindow()
     {
-        UIFrame.DestroyImmediate(instance);
+        return UniWindow.GetTopWindow();
     }
 
     /// <summary>
-    /// 强制释放已经关闭的UI，即使UI的AutoDestroy为false，仍然释放该资源
+    /// 获取指定层级下顶部的窗口名称
     /// </summary>
-    public static void Release()
+    public static string GetTopWindow(int layer)
     {
-        UIFrame.Release();
+        return UniWindow.GetTopWindow(layer);
     }
 
+    /// <summary>
+    /// 是否有任意窗口正在加载
+    /// </summary>
+    public static bool IsAnyLoading()
+    {
+        return UniWindow.IsAnyLoading();
+    }
 }

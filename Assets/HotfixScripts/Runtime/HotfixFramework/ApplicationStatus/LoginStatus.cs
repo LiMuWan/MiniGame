@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Hotfix.UI;
 using WeChatWASM;
 using System;
 
@@ -9,9 +8,11 @@ public class LoginStatus : IApplicationStatus
     public WXRewardedVideoAd ad;
     private WXUserInfoButton infoButton;
     //Status的进入逻辑请放在这里
-    public override async void OnEnterStatus()
+    public override void OnEnterStatus()
     {
-        var uiMain = await ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMain>(new UIMainData(){Content = "Welcome you to Main Page!"});
+        var uiMain = ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
+        Debug.Log($"Config Count = {ConfigLoader.Instance.Tables.TbItem.DataList.Count}");
+         Debug.Log($"Config Name = {ConfigLoader.Instance.Tables.TbItem.DataList[0].Name}");
          WX.InitSDK((code) =>
         {
 

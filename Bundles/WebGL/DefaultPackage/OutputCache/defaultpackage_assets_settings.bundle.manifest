@@ -18,9 +18,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
 SerializeReferenceClassIdentifiers: []

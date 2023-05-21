@@ -29,13 +29,13 @@ public class ApplicationManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        AppLaunch();
+        UniSingleton.StartCoroutine(AppLaunch());
     }
 
     /// <summary>
     /// 程序启动
     /// </summary>
-    private  void AppLaunch()
+    private IEnumerator AppLaunch()
     {
         DontDestroyOnLoad(gameObject);
         Application.runInBackground = true;
@@ -43,14 +43,7 @@ public class ApplicationManager : MonoBehaviour
         
         //管理类初始化
         Timer.Init();  //计时器启动
-        //配置管理器c创建
-        UniSingleton.CreateSingleton<ConfigLoader>();
-        ConfigLoader.Instance.Load(OnLoadConfigCompleteCallback);
-        //输入管理器启动
-        //UIManager启动
-        // UniSingleton.CreateSingleton<UIManager>();
-        Debug.Log("UI Init");
-        UIManager.Init();
+        yield return IenumeratorLaunch();
         ApplicationStatusManager.Init();     //游戏流程状态机初始化
         GlobalLogicManager.Init();           //初始化全局逻辑
 
@@ -63,6 +56,15 @@ public class ApplicationManager : MonoBehaviour
         }
     }
     
+    private IEnumerator IenumeratorLaunch()
+    {
+        UniSingleton.CreateSingleton<ConfigLoader>();
+        yield return ConfigLoader.Instance.LoadAllConfigs(OnLoadConfigCompleteCallback);
+        Debug.Log("ConfigLoader.Instance.LoadAllConfigs");
+        yield return UIManager.InitAsync();
+        Debug.Log("UI Init");
+    }
+
     /// <summary>
     /// 配置加载完毕
     /// </summary>

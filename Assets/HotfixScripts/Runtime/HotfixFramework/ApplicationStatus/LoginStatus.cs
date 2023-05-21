@@ -11,8 +11,8 @@ public class LoginStatus : IApplicationStatus
     public override void OnEnterStatus()
     {
         var uiMain = ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
-    
-         WX.InitSDK((code) =>
+
+        WX.InitSDK((code) =>
         {
 
             // 打印屏幕信息

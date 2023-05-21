@@ -132,7 +132,7 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
         return new ByteBuf(ret ?? new byte[0]);
     }
 
-    private IEnumerator LoadAllConfigs(LoadConfigCompleteCallback callback)
+    public IEnumerator LoadAllConfigs(LoadConfigCompleteCallback callback)
     {
         byte[] ret = null;
 

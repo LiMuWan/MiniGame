@@ -23,7 +23,14 @@ public static class UIManager
 
     public static void Init()
     {
-        var canvas = ResourcesManager.Instance.LoadAsset<GameObject>($"UICanvas");
+       UniSingleton.StartCoroutine(InitAsync());
+    }
+
+    public static IEnumerator InitAsync()
+    {
+        var handle = ResourcesManager.Instance.LoadAssetASync<GameObject>($"UICanvas");
+        yield return handle;
+        GameObject canvas = handle.InstantiateSync();
         GameObject.DontDestroyOnLoad(canvas);
         var desktop = canvas.transform.Find("Desktop").gameObject;
         UniWindow.Initalize(desktop);

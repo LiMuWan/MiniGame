@@ -379,6 +379,15 @@ namespace GameFramework.Resource
         }
 
         /// <summary>
+        /// 异步加载资源对象
+        /// </summary>
+        /// <param name="assetInfo">资源信息</param>
+        public AssetOperationHandle LoadAssetASync<T>(string  assetName) where T : UnityEngine.Object
+        {
+            return YooAssets.LoadAssetAsync<T>(assetName);
+        }
+
+        /// <summary>
         /// 异步加载资源。
         /// </summary>
         /// <param name="assetName">要加载资源的名称。</param>
@@ -392,7 +401,7 @@ namespace GameFramework.Resource
                 return default;
             }
 
-            AssetOperationHandle operationHandle = YooAssets.LoadAssetSync<T>(assetName);
+            AssetOperationHandle operationHandle = YooAssets.LoadAssetAsync<T>(assetName);
 
             await operationHandle.ToUniTask(UniSingleton.Behaviour);
 
@@ -414,7 +423,7 @@ namespace GameFramework.Resource
                 return default;
             }
 
-            AssetOperationHandle operationHandle = YooAssets.LoadAssetSync<T>(assetName);
+            AssetOperationHandle operationHandle = YooAssets.LoadAssetAsync<T>(assetName);
 
             await operationHandle.ToUniTask(cancellationToken: cancellationToken).SuppressCancellationThrow();
 

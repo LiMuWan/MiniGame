@@ -47,7 +47,7 @@ MonoBehaviour:
     AutoProfile: 0
     ScriptOnly: 0
     profilingFuncs: 0
-    Webgl2: 1
+    Webgl2: 0
     DeleteStreamingAssets: 1
     ProfilingMemory: 0
     CleanBuild: 0

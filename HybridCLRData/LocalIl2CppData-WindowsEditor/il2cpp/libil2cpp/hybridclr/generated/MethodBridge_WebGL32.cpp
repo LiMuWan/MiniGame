@@ -2488,6 +2488,14 @@ static void __M2N_C24i4(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
+// System.Nullable`1<T> System.Nullable`1::op_Implicit(T)
+static void __M2N_C24W16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSizeAlign8<24> (*NativeMethod)(WebGLSpeicalValueTypeAlign8<16> __arg0, const MethodInfo* method);
+    *(ValueTypeSizeAlign8<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
 // T System.Collections.Generic.List`1/Enumerator::get_Current()
 static void __M2N_C32i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2541,6 +2549,14 @@ static void __M2N_C8A2i4i4i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef ValueTypeSizeAlign8<8> (*NativeMethod)(ValueTypeSizeAlign2<2> __arg0, int32_t __arg1, int32_t __arg2, int32_t __arg3, const MethodInfo* method);
     *(ValueTypeSizeAlign8<8>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSizeAlign2<2>*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// T System.Nullable`1::op_Explicit(System.Nullable`1<T>)
+static void __M2N_C8C16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSizeAlign8<8> (*NativeMethod)(ValueTypeSizeAlign8<16> __arg0, const MethodInfo* method);
+    *(ValueTypeSizeAlign8<8>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSizeAlign8<16>*)(localVarBase+argVarIndexs[0]), method);
 }
 
 
@@ -2720,6 +2736,22 @@ static void __M2N_i1i1(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 }
 
 
+// System.SByte System.Math::Max(System.SByte,System.SByte)
+static void __M2N_i1i1i1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int8_t (*NativeMethod)(int8_t __arg0, int8_t __arg1, const MethodInfo* method);
+    *(int8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int8_t*)(localVarBase+argVarIndexs[0]), *(int8_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.SByte System.Math::Clamp(System.SByte,System.SByte,System.SByte)
+static void __M2N_i1i1i1i1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int8_t (*NativeMethod)(int8_t __arg0, int8_t __arg1, int8_t __arg2, const MethodInfo* method);
+    *(int8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int8_t*)(localVarBase+argVarIndexs[0]), *(int8_t*)(localVarBase+argVarIndexs[1]), *(int8_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.SByte System.Convert::ToSByte(System.Int16)
 static void __M2N_i1i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2853,6 +2885,22 @@ static void __M2N_i2i2(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 {
     typedef int16_t (*NativeMethod)(int16_t __arg0, const MethodInfo* method);
     *(int16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int16_t*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
+// System.Int16 System.Math::Max(System.Int16,System.Int16)
+static void __M2N_i2i2i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int16_t (*NativeMethod)(int16_t __arg0, int16_t __arg1, const MethodInfo* method);
+    *(int16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int16_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Int16 System.Math::Clamp(System.Int16,System.Int16,System.Int16)
+static void __M2N_i2i2i2i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int16_t (*NativeMethod)(int16_t __arg0, int16_t __arg1, int16_t __arg2, const MethodInfo* method);
+    *(int16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int16_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), *(int16_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -5832,6 +5880,14 @@ static void __M2N_i8B8i4i4i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
+// T System.Nullable`1::op_Explicit(System.Nullable`1<T>)
+static void __M2N_i8C16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(ValueTypeSizeAlign8<16> __arg0, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSizeAlign8<16>*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
 // System.Int64 System.Convert::ToInt64(System.DateTime)
 static void __M2N_i8C8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -5920,11 +5976,27 @@ static void __M2N_i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 }
 
 
-// System.Int64 System.Math::Min(System.Int64,System.Int64)
+// System.Int64 System.Math::Max(System.Int64,System.Int64)
 static void __M2N_i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Int64 System.Math::DivRem(System.Int64,System.Int64,System.Int64&)
+static void __M2N_i8i8i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Int64 System.Math::Clamp(System.Int64,System.Int64,System.Int64)
+static void __M2N_i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -6272,7 +6344,7 @@ static void __M2N_r4r4r4i4r4r4r4(const MethodInfo* method, uint16_t* argVarIndex
 }
 
 
-// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
+// System.Single System.Math::Clamp(System.Single,System.Single,System.Single)
 static void __M2N_r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef float (*NativeMethod)(float __arg0, float __arg1, float __arg2, const MethodInfo* method);
@@ -6440,11 +6512,35 @@ static void __M2N_r8r8(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 }
 
 
-// System.Double System.Math::Log(System.Double,System.Double)
+// System.Double System.Math::Round(System.Double,System.Int32)
+static void __M2N_r8r8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef double (*NativeMethod)(double __arg0, int32_t __arg1, const MethodInfo* method);
+    *(double*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(double*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Double System.Math::Round(System.Double,System.Int32,System.MidpointRounding)
+static void __M2N_r8r8i4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef double (*NativeMethod)(double __arg0, int32_t __arg1, int32_t __arg2, const MethodInfo* method);
+    *(double*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(double*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Double System.Math::IEEERemainder(System.Double,System.Double)
 static void __M2N_r8r8r8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef double (*NativeMethod)(double __arg0, double __arg1, const MethodInfo* method);
     *(double*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(double*)(localVarBase+argVarIndexs[0]), *(double*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Double System.Math::Clamp(System.Double,System.Double,System.Double)
+static void __M2N_r8r8r8r8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef double (*NativeMethod)(double __arg0, double __arg1, double __arg2, const MethodInfo* method);
+    *(double*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(double*)(localVarBase+argVarIndexs[0]), *(double*)(localVarBase+argVarIndexs[1]), *(double*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -6525,6 +6621,14 @@ static void __M2N_S2i4i2(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 {
     typedef ValueTypeSize<2> (*NativeMethod)(int32_t __arg0, int16_t __arg1, const MethodInfo* method);
     *(ValueTypeSize<2>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Nullable`1<T> System.Nullable`1::op_Implicit(T)
+static void __M2N_S2u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<2> (*NativeMethod)(uint8_t __arg0, const MethodInfo* method);
+    *(ValueTypeSize<2>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint8_t*)(localVarBase+argVarIndexs[0]), method);
 }
 
 
@@ -8232,11 +8336,35 @@ static void __M2N_u1r8r8(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
+// T System.Nullable`1::op_Explicit(System.Nullable`1<T>)
+static void __M2N_u1S2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(ValueTypeSize<2> __arg0, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize<2>*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
 // System.Boolean System.Convert::ToBoolean(System.Boolean)
 static void __M2N_u1u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(uint8_t __arg0, const MethodInfo* method);
     *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint8_t*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
+// System.Byte System.Math::Max(System.Byte,System.Byte)
+static void __M2N_u1u1u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(uint8_t __arg0, uint8_t __arg1, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint8_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Byte System.Math::Clamp(System.Byte,System.Byte,System.Byte)
+static void __M2N_u1u1u1u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(uint8_t __arg0, uint8_t __arg1, uint8_t __arg2, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint8_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -8472,6 +8600,22 @@ static void __M2N_u2u2i4(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
+// System.UInt16 System.Math::Max(System.UInt16,System.UInt16)
+static void __M2N_u2u2u2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint16_t (*NativeMethod)(uint16_t __arg0, uint16_t __arg1, const MethodInfo* method);
+    *(uint16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint16_t*)(localVarBase+argVarIndexs[0]), *(uint16_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.UInt16 System.Math::Clamp(System.UInt16,System.UInt16,System.UInt16)
+static void __M2N_u2u2u2u2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint16_t (*NativeMethod)(uint16_t __arg0, uint16_t __arg1, uint16_t __arg2, const MethodInfo* method);
+    *(uint16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint16_t*)(localVarBase+argVarIndexs[0]), *(uint16_t*)(localVarBase+argVarIndexs[1]), *(uint16_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.Char System.Convert::ToChar(System.UInt32)
 static void __M2N_u2u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -8640,6 +8784,22 @@ static void __M2N_u4u4i4i4i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
+// System.UInt32 System.Math::Max(System.UInt32,System.UInt32)
+static void __M2N_u4u4u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint32_t (*NativeMethod)(uint32_t __arg0, uint32_t __arg1, const MethodInfo* method);
+    *(uint32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint32_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.UInt32 System.Math::Clamp(System.UInt32,System.UInt32,System.UInt32)
+static void __M2N_u4u4u4u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint32_t (*NativeMethod)(uint32_t __arg0, uint32_t __arg1, uint32_t __arg2, const MethodInfo* method);
+    *(uint32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint32_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(uint32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.UInt32 System.Convert::ToUInt32(System.UInt64)
 static void __M2N_u4u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -8781,6 +8941,22 @@ static void __M2N_u8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 {
     typedef uint64_t (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
     *(uint64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint64_t*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
+// System.UInt64 System.Math::Max(System.UInt64,System.UInt64)
+static void __M2N_u8u8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint64_t (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, const MethodInfo* method);
+    *(uint64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint64_t*)(localVarBase+argVarIndexs[0]), *(uint64_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.UInt64 System.Math::Clamp(System.UInt64,System.UInt64,System.UInt64)
+static void __M2N_u8u8u8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint64_t (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, const MethodInfo* method);
+    *(uint64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint64_t*)(localVarBase+argVarIndexs[0]), *(uint64_t*)(localVarBase+argVarIndexs[1]), *(uint64_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -9904,7 +10080,7 @@ static void __M2N_vi4B8u1(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Void Cysharp.Threading.Tasks.PlayerLoopTimer::ResetCore(System.Nullable`1<System.TimeSpan>)
+// System.Void Bright.Serialization.ByteBuf::WriteComplex(System.Numerics.Complex)
 static void __M2N_vi4C16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int32_t __arg0, ValueTypeSizeAlign8<16> __arg1, const MethodInfo* method);
@@ -11864,6 +12040,14 @@ static void __M2N_vW16(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 }
 
 
+// T System.Nullable`1::op_Explicit(System.Nullable`1<T>)
+static void __M2N_W16C24(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(ValueTypeSizeAlign8<24> __arg0, const MethodInfo* method);
+    *(WebGLSpeicalValueTypeAlign8<16>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSizeAlign8<24>*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
 // System.Decimal System.Convert::ToDecimal(System.DateTime)
 static void __M2N_W16C8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -11909,6 +12093,14 @@ static void __M2N_W16i4i4i4(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(int32_t __arg0, int32_t __arg1, int32_t __arg2, const MethodInfo* method);
     *(WebGLSpeicalValueTypeAlign8<16>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// T System.Nullable`1::GetValueOrDefault(T)
+static void __M2N_W16i4W16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(int32_t __arg0, WebGLSpeicalValueTypeAlign8<16> __arg1, const MethodInfo* method);
+    *(WebGLSpeicalValueTypeAlign8<16>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -11976,7 +12168,7 @@ static void __M2N_W16W16(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
-// System.Decimal System.Decimal::Round(System.Decimal,System.Int32)
+// System.Decimal System.Math::Round(System.Decimal,System.Int32)
 static void __M2N_W16W16i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(WebGLSpeicalValueTypeAlign8<16> __arg0, int32_t __arg1, const MethodInfo* method);
@@ -11984,11 +12176,27 @@ static void __M2N_W16W16i4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// System.Decimal System.Decimal::op_Addition(System.Decimal,System.Decimal)
+// System.Decimal System.Math::Round(System.Decimal,System.Int32,System.MidpointRounding)
+static void __M2N_W16W16i4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(WebGLSpeicalValueTypeAlign8<16> __arg0, int32_t __arg1, int32_t __arg2, const MethodInfo* method);
+    *(WebGLSpeicalValueTypeAlign8<16>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Decimal System.Math::Max(System.Decimal,System.Decimal)
 static void __M2N_W16W16W16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(WebGLSpeicalValueTypeAlign8<16> __arg0, WebGLSpeicalValueTypeAlign8<16> __arg1, const MethodInfo* method);
     *(WebGLSpeicalValueTypeAlign8<16>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[0]), *(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Decimal System.Math::Clamp(System.Decimal,System.Decimal,System.Decimal)
+static void __M2N_W16W16W16W16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef WebGLSpeicalValueTypeAlign8<16> (*NativeMethod)(WebGLSpeicalValueTypeAlign8<16> __arg0, WebGLSpeicalValueTypeAlign8<16> __arg1, WebGLSpeicalValueTypeAlign8<16> __arg2, const MethodInfo* method);
+    *(WebGLSpeicalValueTypeAlign8<16>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[0]), *(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[1]), *(WebGLSpeicalValueTypeAlign8<16>*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -12416,6 +12624,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"C24C8i4i4", __M2N_C24C8i4i4},
 	{"C24C8i4i4i4", __M2N_C24C8i4i4i4},
 	{"C24i4", __M2N_C24i4},
+	{"C24W16", __M2N_C24W16},
 	{"C32i4", __M2N_C32i4},
 	{"C32i4i4", __M2N_C32i4i4},
 	{"C40i4", __M2N_C40i4},
@@ -12423,6 +12632,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"C48i4", __M2N_C48i4},
 	{"C8", __M2N_C8},
 	{"C8A2i4i4i4", __M2N_C8A2i4i4i4},
+	{"C8C16", __M2N_C8C16},
 	{"C8C8", __M2N_C8C8},
 	{"C8C8C8", __M2N_C8C8C8},
 	{"C8C8i4", __M2N_C8C8i4},
@@ -12445,6 +12655,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i1", __M2N_i1},
 	{"i1C8", __M2N_i1C8},
 	{"i1i1", __M2N_i1i1},
+	{"i1i1i1", __M2N_i1i1i1},
+	{"i1i1i1i1", __M2N_i1i1i1i1},
 	{"i1i2", __M2N_i1i2},
 	{"i1i4", __M2N_i1i4},
 	{"i1i4i4", __M2N_i1i4i4},
@@ -12462,6 +12674,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i2C8", __M2N_i2C8},
 	{"i2i1", __M2N_i2i1},
 	{"i2i2", __M2N_i2i2},
+	{"i2i2i2", __M2N_i2i2i2},
+	{"i2i2i2i2", __M2N_i2i2i2i2},
 	{"i2i4", __M2N_i2i4},
 	{"i2i4i4", __M2N_i2i4i4},
 	{"i2i4i4i4", __M2N_i2i4i4i4},
@@ -12834,6 +13048,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8B8", __M2N_i8B8},
 	{"i8B8i4i4", __M2N_i8B8i4i4},
 	{"i8B8i4i4i4", __M2N_i8B8i4i4i4},
+	{"i8C16", __M2N_i8C16},
 	{"i8C8", __M2N_i8C8},
 	{"i8i1", __M2N_i8i1},
 	{"i8i2", __M2N_i8i2},
@@ -12846,6 +13061,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i4i8i8", __M2N_i8i4i8i8},
 	{"i8i8", __M2N_i8i8},
 	{"i8i8i8", __M2N_i8i8i8},
+	{"i8i8i8i4", __M2N_i8i8i8i4},
+	{"i8i8i8i8", __M2N_i8i8i8i8},
 	{"i8r4", __M2N_i8r4},
 	{"i8r8", __M2N_i8r8},
 	{"i8u1", __M2N_i8u1},
@@ -12910,7 +13127,10 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"r8i8", __M2N_r8i8},
 	{"r8r4", __M2N_r8r4},
 	{"r8r8", __M2N_r8r8},
+	{"r8r8i4", __M2N_r8r8i4},
+	{"r8r8i4i4", __M2N_r8r8i4i4},
 	{"r8r8r8", __M2N_r8r8r8},
+	{"r8r8r8r8", __M2N_r8r8r8r8},
 	{"r8u1", __M2N_r8u1},
 	{"r8u2", __M2N_r8u2},
 	{"r8u4", __M2N_r8u4},
@@ -12921,6 +13141,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"S11i4i2", __M2N_S11i4i2},
 	{"S2i4", __M2N_S2i4},
 	{"S2i4i2", __M2N_S2i4i2},
+	{"S2u1", __M2N_S2u1},
 	{"S3i4", __M2N_S3i4},
 	{"S3i4i2", __M2N_S3i4i2},
 	{"S4i4", __M2N_S4i4},
@@ -13134,7 +13355,10 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1r8", __M2N_u1r8},
 	{"u1r8B8i4B8i4", __M2N_u1r8B8i4B8i4},
 	{"u1r8r8", __M2N_u1r8r8},
+	{"u1S2", __M2N_u1S2},
 	{"u1u1", __M2N_u1u1},
+	{"u1u1u1", __M2N_u1u1u1},
+	{"u1u1u1u1", __M2N_u1u1u1u1},
 	{"u1u2", __M2N_u1u2},
 	{"u1u2i4", __M2N_u1u2i4},
 	{"u1u2u2", __M2N_u1u2u2},
@@ -13164,6 +13388,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u2u1", __M2N_u2u1},
 	{"u2u2", __M2N_u2u2},
 	{"u2u2i4", __M2N_u2u2i4},
+	{"u2u2u2", __M2N_u2u2u2},
+	{"u2u2u2u2", __M2N_u2u2u2u2},
 	{"u2u4", __M2N_u2u4},
 	{"u2u8", __M2N_u2u8},
 	{"u2W16", __M2N_u2W16},
@@ -13185,6 +13411,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u4u4", __M2N_u4u4},
 	{"u4u4i4", __M2N_u4u4i4},
 	{"u4u4i4i4i4", __M2N_u4u4i4i4i4},
+	{"u4u4u4", __M2N_u4u4u4},
+	{"u4u4u4u4", __M2N_u4u4u4u4},
 	{"u4u8", __M2N_u4u8},
 	{"u4W16", __M2N_u4W16},
 	{"u8", __M2N_u8},
@@ -13203,6 +13431,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u8u2", __M2N_u8u2},
 	{"u8u4", __M2N_u8u4},
 	{"u8u8", __M2N_u8u8},
+	{"u8u8u8", __M2N_u8u8u8},
+	{"u8u8u8u8", __M2N_u8u8u8u8},
 	{"u8W16", __M2N_u8W16},
 	{"v", __M2N_v},
 	{"vB12", __M2N_vB12},
@@ -13588,12 +13818,14 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vu4", __M2N_vu4},
 	{"vu8", __M2N_vu8},
 	{"vW16", __M2N_vW16},
+	{"W16C24", __M2N_W16C24},
 	{"W16C8", __M2N_W16C8},
 	{"W16i1", __M2N_W16i1},
 	{"W16i2", __M2N_W16i2},
 	{"W16i4", __M2N_W16i4},
 	{"W16i4i4", __M2N_W16i4i4},
 	{"W16i4i4i4", __M2N_W16i4i4i4},
+	{"W16i4W16", __M2N_W16i4W16},
 	{"W16i8", __M2N_W16i8},
 	{"W16r4", __M2N_W16r4},
 	{"W16r8", __M2N_W16r8},
@@ -13603,7 +13835,9 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"W16u8", __M2N_W16u8},
 	{"W16W16", __M2N_W16W16},
 	{"W16W16i4", __M2N_W16W16i4},
+	{"W16W16i4i4", __M2N_W16W16i4i4},
 	{"W16W16W16", __M2N_W16W16W16},
+	{"W16W16W16W16", __M2N_W16W16W16W16},
 	{"X1", __M2N_X1},
 	{"X1i4", __M2N_X1i4},
 	{"X1i4B4", __M2N_X1i4B4},
@@ -13671,7 +13905,7 @@ static ValueTypeSizeAlign4<12> __N2M_B12(const MethodInfo* method)
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.IAsyncValueChangedEventHandler`1::OnValueChangedAsync()
+// Unity.Collections.NativeArray`1<System.Byte> UnityEngine.Networking.DownloadHandler::GetNativeData()
 static ValueTypeSizeAlign4<12> __N2M_B12i4(int32_t __arg0, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0 };

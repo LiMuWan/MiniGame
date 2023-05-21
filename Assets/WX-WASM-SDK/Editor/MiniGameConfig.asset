@@ -43,14 +43,14 @@ MonoBehaviour:
     UseFriendRelation: 0
     UseCompressedTexture: 0
   CompileOptions:
-    DevelopBuild: 1
-    AutoProfile: 1
+    DevelopBuild: 0
+    AutoProfile: 0
     ScriptOnly: 0
     profilingFuncs: 0
-    Webgl2: 0
+    Webgl2: 1
     DeleteStreamingAssets: 1
-    ProfilingMemory: 1
-    CleanBuild: 1
+    ProfilingMemory: 0
+    CleanBuild: 0
     CustomNodePath: 
   CompressTexture:
     halfSize: 0

@@ -111,6 +111,7 @@
     <type fullname="UnityEngine.Behaviour" preserve="all" />
     <type fullname="UnityEngine.Color" preserve="all" />
     <type fullname="UnityEngine.Component" preserve="all" />
+    <type fullname="UnityEngine.Coroutine" preserve="all" />
     <type fullname="UnityEngine.Debug" preserve="all" />
     <type fullname="UnityEngine.DisallowMultipleComponent" preserve="all" />
     <type fullname="UnityEngine.ExecuteAlways" preserve="all" />
@@ -177,6 +178,5 @@
     <type fullname="YooAsset.GameAsyncOperation" preserve="all" />
     <type fullname="YooAsset.OperationHandleBase" preserve="all" />
     <type fullname="YooAsset.RawFileOperationHandle" preserve="all" />
-    <type fullname="YooAsset.YooAssets" preserve="all" />
   </assembly>
 </linker>

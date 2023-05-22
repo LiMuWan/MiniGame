@@ -7,7 +7,6 @@
     <type fullname="GameFramework.Resource.LoadSceneCallbacks" preserve="all" />
     <type fullname="GameFramework.Resource.LoadSceneSuccessCallback" preserve="all" />
     <type fullname="GameFramework.Resource.ResourcesManager" preserve="all" />
-    <type fullname="PatchWindow" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
     <type fullname="System.Action`1" preserve="all" />

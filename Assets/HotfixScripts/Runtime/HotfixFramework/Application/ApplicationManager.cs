@@ -48,6 +48,7 @@ public class ApplicationManager : MonoBehaviour
         GlobalLogicManager.Init();           //初始化全局逻辑
 
         InitGlobalLogic();                             //全局逻辑
+        UniSingleton.CreateSingleton<GameManager>();
         ApplicationStatusManager.EnterStatus<LoginStatus>();//游戏流程状态机，开始第一个状态
 
         if (s_OnApplicationModuleInitEnd != null)

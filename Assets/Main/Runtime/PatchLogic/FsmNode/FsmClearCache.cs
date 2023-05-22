@@ -4,6 +4,7 @@ using UnityEngine;
 using UniFramework.Machine;
 using YooAsset;
 using GameFramework.Resource;
+using Main.EventDefine;
 
 /// <summary>
 /// 清理未使用的缓存文件

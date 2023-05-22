@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 
-namespace UniFramework.Singleton
+namespace UniFramework.Utility
 {
-	internal static class UniLogger
+	public static class UniLogger
 	{
 		[Conditional("DEBUG")]
 		public static void Log(string info)

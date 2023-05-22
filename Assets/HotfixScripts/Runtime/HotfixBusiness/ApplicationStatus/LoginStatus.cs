@@ -7,11 +7,11 @@ public class LoginStatus : IApplicationStatus
 {
     public WXRewardedVideoAd ad;
     private WXUserInfoButton infoButton;
-    private UIMainWindow uiMain;
+
     //Status的进入逻辑请放在这里
     public override void OnEnterStatus()
     {
-       ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
+       ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
 
 #if !UNITY_EDITOR
         WX.InitSDK((code) =>
@@ -60,7 +60,7 @@ public class LoginStatus : IApplicationStatus
     //Status的退出逻辑请放在这里
     public override void OnExitStatus()
     {
-
+        UIManager.CloseWindow<UILoginWindow>();
     }
 
     //Update逻辑放在这里

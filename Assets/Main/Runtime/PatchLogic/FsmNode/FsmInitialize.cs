@@ -5,6 +5,7 @@ using UnityEngine;
 using YooAsset;
 using System.IO;
 using GameFramework.Resource;
+using Main.EventDefine;
 
 /// <summary>
 /// 初始化资源包

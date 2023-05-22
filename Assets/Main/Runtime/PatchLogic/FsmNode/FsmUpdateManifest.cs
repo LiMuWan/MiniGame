@@ -4,6 +4,7 @@ using UniFramework.Machine;
 using UniFramework.Singleton;
 using YooAsset;
 using GameFramework.Resource;
+using Main.EventDefine;
 
 /// <summary>
 /// 更新资源清单

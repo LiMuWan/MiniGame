@@ -1,4 +1,6 @@
 ﻿
+using UniFramework.Utility;
+
 namespace UniFramework.Singleton
 {
 	public abstract class SingletonInstance<T> where T : class, ISingleton

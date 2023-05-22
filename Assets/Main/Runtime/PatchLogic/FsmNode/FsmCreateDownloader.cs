@@ -5,6 +5,7 @@ using UniFramework.Machine;
 using UniFramework.Singleton;
 using YooAsset;
 using GameFramework.Resource;
+using Main.EventDefine;
 
 /// <summary>
 /// 创建文件下载器

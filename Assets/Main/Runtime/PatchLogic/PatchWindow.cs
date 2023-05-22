@@ -70,7 +70,7 @@ public class PatchWindow : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
         _slider = transform.Find("UIWindow/Slider").GetComponent<Slider>();
         _tips = transform.Find("UIWindow/Slider/txt_tips").GetComponent<TextMeshProUGUI>();
         _version = transform.Find("UIWindow/version").GetComponent<TextMeshProUGUI>();

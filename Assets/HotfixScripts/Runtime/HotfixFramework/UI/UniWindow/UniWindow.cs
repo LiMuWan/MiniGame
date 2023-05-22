@@ -43,6 +43,7 @@ namespace UniFramework.Window
 				UniLogger.Log($"{nameof(UniWindow)} initalize !");
 
 				Desktop = desktop;
+				SimulateIPhoneXNotchScreen();
 			}
 		}
 

@@ -41,7 +41,7 @@ internal class FsmUpdateManifest : IStateNode
         bool savePackageVersion = true;
         var operation = ResourcesManager.Instance.UpdatePackageManifestAsync(ResourcesManager.Instance.PackageVersion,savePackageVersion);
         yield return operation;
-        
+
         if(operation.Status == EOperationStatus.Succeed)
         {
             PatchEventDefine.GameVersionInitOrRefresh.SendEventMessage();

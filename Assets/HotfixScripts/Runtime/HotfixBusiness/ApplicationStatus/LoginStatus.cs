@@ -60,8 +60,7 @@ public class LoginStatus : IApplicationStatus
     //Status的退出逻辑请放在这里
     public override void OnExitStatus()
     {
-        // UIManager.CloseWindow<UILoginWindow>();
-        PatchWindow.Instance.Release();
+     
     }
 
     //Update逻辑放在这里

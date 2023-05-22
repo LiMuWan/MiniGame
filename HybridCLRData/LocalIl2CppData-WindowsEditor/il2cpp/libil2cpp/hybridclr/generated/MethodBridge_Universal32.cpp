@@ -2048,7 +2048,7 @@ static void __M2N_i4i4S20i4i4(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
-// System.Int32 System.Collections.Generic.Comparer`1::Compare(T,T)
+// System.Int32 System.Comparison`1::Invoke(T,T)
 static void __M2N_i4i4S20S20(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int32_t (*NativeMethod)(int32_t __arg0, ValueTypeSize<20> __arg1, ValueTypeSize<20> __arg2, const MethodInfo* method);
@@ -14281,7 +14281,7 @@ static int32_t __N2M_i4i4S20i4i4(int32_t __arg0, ValueTypeSize<20> __arg1, int32
 }
 
 
-// System.Int32 System.Collections.Generic.Comparer`1::Compare(T,T)
+// System.Int32 System.Comparison`1::Invoke(T,T)
 static int32_t __N2M_i4i4S20S20(int32_t __arg0, ValueTypeSize<20> __arg1, ValueTypeSize<20> __arg2, const MethodInfo* method)
 {
     StackObject args[4] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, (uint64_t)&__arg2 };

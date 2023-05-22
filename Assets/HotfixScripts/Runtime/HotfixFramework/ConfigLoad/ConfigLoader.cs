@@ -5,7 +5,6 @@ using UniFramework.Singleton;
 using GameConfig;
 using Bright.Serialization;
 using GameFramework.Resource;
-using YooAsset;
 using System;
 
 public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton

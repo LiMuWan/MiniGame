@@ -3,7 +3,7 @@ CRC: 2481510212
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 33f6b8ecc12e52345171cc4cd18d08c6
+    Hash: e343c4e359e6ef885fcb179f9ac56c6d
   TypeTreeHash:
     serializedVersion: 2
     Hash: c92f7b27467cac68f8fffb0c54e86b07
@@ -43,5 +43,5 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/HotfixAssets/UIFont/zhuyanbosong.asset
 Dependencies:
-- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle
-- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- D:/MyProject/WXMiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle
+- D:/MyProject/WXMiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

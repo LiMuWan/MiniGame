@@ -10,7 +10,6 @@
   </assembly>
   <assembly fullname="mscorlib">
     <type fullname="System.Action`1" preserve="all" />
-    <type fullname="System.Action`2" preserve="all" />
     <type fullname="System.Activator" preserve="all" />
     <type fullname="System.ArgumentNullException" preserve="all" />
     <type fullname="System.Array" preserve="all" />
@@ -63,7 +62,6 @@
     <type fullname="System.IO.TextReader" preserve="all" />
     <type fullname="System.Math" preserve="all" />
     <type fullname="System.MulticastDelegate" preserve="all" />
-    <type fullname="System.NotImplementedException" preserve="all" />
     <type fullname="System.NotSupportedException" preserve="all" />
     <type fullname="System.Nullable`1" preserve="all" />
     <type fullname="System.Object" preserve="all" />
@@ -163,190 +161,19 @@
   <assembly fullname="UnityEngine.UnityWebRequestWWWModule">
     <type fullname="UnityEngine.WWW" preserve="all" />
   </assembly>
-  <assembly fullname="WXSDK.Runtime">
-    <type fullname="WeChatWASM.AccountInfo" preserve="all" />
-    <type fullname="WeChatWASM.AddCardOption" preserve="all" />
-    <type fullname="WeChatWASM.AuthorizeOption" preserve="all" />
-    <type fullname="WeChatWASM.AuthPrivateMessageOption" preserve="all" />
-    <type fullname="WeChatWASM.CheckGameLiveEnabledOption" preserve="all" />
-    <type fullname="WeChatWASM.CheckIsUserAdvisedToRestOption" preserve="all" />
-    <type fullname="WeChatWASM.CheckSessionOption" preserve="all" />
-    <type fullname="WeChatWASM.ChooseImageOption" preserve="all" />
-    <type fullname="WeChatWASM.ChooseMediaOption" preserve="all" />
-    <type fullname="WeChatWASM.ChooseMessageFileOption" preserve="all" />
-    <type fullname="WeChatWASM.ClientRect" preserve="all" />
-    <type fullname="WeChatWASM.CloseBLEConnectionOption" preserve="all" />
-    <type fullname="WeChatWASM.CloseBluetoothAdapterOption" preserve="all" />
-    <type fullname="WeChatWASM.CloseSocketOption" preserve="all" />
-    <type fullname="WeChatWASM.CreateBLEConnectionOption" preserve="all" />
-    <type fullname="WeChatWASM.CreateBLEPeripheralServerOption" preserve="all" />
-    <type fullname="WeChatWASM.EnterOptionsGame" preserve="all" />
-    <type fullname="WeChatWASM.ExitMiniProgramOption" preserve="all" />
-    <type fullname="WeChatWASM.ExitVoIPChatOption" preserve="all" />
-    <type fullname="WeChatWASM.FaceDetectOption" preserve="all" />
-    <type fullname="WeChatWASM.GameLiveState" preserve="all" />
-    <type fullname="WeChatWASM.GeneralCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.GetAvailableAudioSourcesOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBatteryInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBatteryInfoSyncResult" preserve="all" />
-    <type fullname="WeChatWASM.GetBeaconsOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBLEDeviceCharacteristicsOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBLEDeviceRSSIOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBLEDeviceServicesOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBLEMTUOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBluetoothAdapterStateOption" preserve="all" />
-    <type fullname="WeChatWASM.GetBluetoothDevicesOption" preserve="all" />
-    <type fullname="WeChatWASM.GetChannelsLiveInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetChannelsLiveNoticeInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetClipboardDataOption" preserve="all" />
-    <type fullname="WeChatWASM.GetConnectedBluetoothDevicesOption" preserve="all" />
-    <type fullname="WeChatWASM.GetExtConfigOption" preserve="all" />
-    <type fullname="WeChatWASM.getGameClubDataOption" preserve="all" />
-    <type fullname="WeChatWASM.GetGroupEnterInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetLocalIPAddressOption" preserve="all" />
-    <type fullname="WeChatWASM.GetLocationOption" preserve="all" />
-    <type fullname="WeChatWASM.GetNetworkTypeOption" preserve="all" />
-    <type fullname="WeChatWASM.GetScreenBrightnessOption" preserve="all" />
-    <type fullname="WeChatWASM.GetSettingOption" preserve="all" />
-    <type fullname="WeChatWASM.GetShareInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetStorageInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetStorageInfoSyncOption" preserve="all" />
-    <type fullname="WeChatWASM.GetSystemInfoAsyncOption" preserve="all" />
-    <type fullname="WeChatWASM.GetSystemInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetTextLineHeightOption" preserve="all" />
-    <type fullname="WeChatWASM.GetUserCurrentGameliveInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetUserGameLiveDetailsOption" preserve="all" />
-    <type fullname="WeChatWASM.GetUserInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetUserInteractiveStorageOption" preserve="all" />
-    <type fullname="WeChatWASM.GetUserRecentGameLiveInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.GetWeRunDataOption" preserve="all" />
-    <type fullname="WeChatWASM.HideKeyboardOption" preserve="all" />
-    <type fullname="WeChatWASM.HideLoadingOption" preserve="all" />
-    <type fullname="WeChatWASM.HideShareMenuOption" preserve="all" />
-    <type fullname="WeChatWASM.HideToastOption" preserve="all" />
-    <type fullname="WeChatWASM.InitFaceDetectOption" preserve="all" />
-    <type fullname="WeChatWASM.IsBluetoothDevicePairedOption" preserve="all" />
-    <type fullname="WeChatWASM.JoinVoIPChatOption" preserve="all" />
-    <type fullname="WeChatWASM.LaunchOptionsGame" preserve="all" />
-    <type fullname="WeChatWASM.LoginOption" preserve="all" />
-    <type fullname="WeChatWASM.LoginSuccessCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.MakeBluetoothPairOption" preserve="all" />
-    <type fullname="WeChatWASM.NavigateToMiniProgramOption" preserve="all" />
-    <type fullname="WeChatWASM.NotifyBLECharacteristicValueChangeOption" preserve="all" />
-    <type fullname="WeChatWASM.OnAccelerometerChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnAddToFavoritesCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBeaconServiceChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBeaconUpdateCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBLECharacteristicValueChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBLEConnectionStateChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBLEMTUChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBLEPeripheralConnectionStateChangedCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBluetoothAdapterStateChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnBluetoothDeviceFoundCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnCompassChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnCopyUrlCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnDeviceMotionChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnDeviceOrientationChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnGameLiveStateChangeCallbackResponse" preserve="all" />
-    <type fullname="WeChatWASM.OnGameLiveStateChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnGyroscopeChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnHandoffCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnKeyboardHeightChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnKeyboardInputCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnKeyDownCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnMemoryWarningCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnNetworkStatusChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnNetworkWeakChangeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnShareMessageToFriendCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnShareTimelineCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnShowCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnSocketOpenCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnTouchStartCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnUnhandledRejectionCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnVoIPChatInterruptedCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnVoIPChatMembersChangedCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnVoIPChatSpeakersChangedCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnVoIPChatStateChangedCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OnWindowResizeCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.OpenBluetoothAdapterOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenCardOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenChannelsActivityOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenChannelsEventOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenChannelsLiveCollectionOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenChannelsLiveOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenChannelsUserProfileOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenCustomerServiceConversationOption" preserve="all" />
-    <type fullname="WeChatWASM.openPageOption" preserve="all" />
-    <type fullname="WeChatWASM.OpenSettingOption" preserve="all" />
-    <type fullname="WeChatWASM.PreviewImageOption" preserve="all" />
-    <type fullname="WeChatWASM.PreviewMediaOption" preserve="all" />
-    <type fullname="WeChatWASM.ReadBLECharacteristicValueOption" preserve="all" />
-    <type fullname="WeChatWASM.RemoveStorageOption" preserve="all" />
-    <type fullname="WeChatWASM.RemoveUserCloudStorageOption" preserve="all" />
-    <type fullname="WeChatWASM.ReportUserBehaviorBranchAnalyticsOption" preserve="all" />
-    <type fullname="WeChatWASM.RequestMidasFriendPaymentOption" preserve="all" />
-    <type fullname="WeChatWASM.RequestMidasPaymentOption" preserve="all" />
-    <type fullname="WeChatWASM.RequestSubscribeMessageOption" preserve="all" />
-    <type fullname="WeChatWASM.RequestSubscribeSystemMessageOption" preserve="all" />
-    <type fullname="WeChatWASM.ReserveChannelsLiveOption" preserve="all" />
-    <type fullname="WeChatWASM.SaveFileToDiskOption" preserve="all" />
-    <type fullname="WeChatWASM.SaveImageToPhotosAlbumOption" preserve="all" />
-    <type fullname="WeChatWASM.ScanCodeOption" preserve="all" />
-    <type fullname="WeChatWASM.SendSocketMessageOption" preserve="all" />
-    <type fullname="WeChatWASM.SetBLEMTUOption" preserve="all" />
-    <type fullname="WeChatWASM.SetClipboardDataOption" preserve="all" />
-    <type fullname="WeChatWASM.SetEnableDebugOption" preserve="all" />
-    <type fullname="WeChatWASM.SetInnerAudioOption" preserve="all" />
-    <type fullname="WeChatWASM.SetKeepScreenOnOption" preserve="all" />
-    <type fullname="WeChatWASM.SetMenuStyleOption" preserve="all" />
-    <type fullname="WeChatWASM.SetMessageToFriendQueryOption" preserve="all" />
-    <type fullname="WeChatWASM.SetScreenBrightnessOption" preserve="all" />
-    <type fullname="WeChatWASM.SetStatusBarStyleOption" preserve="all" />
-    <type fullname="WeChatWASM.SetUserCloudStorageOption" preserve="all" />
-    <type fullname="WeChatWASM.ShareAppMessageOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowActionSheetOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowKeyboardOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowLoadingOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowModalOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowShareImageMenuOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowShareMenuOption" preserve="all" />
-    <type fullname="WeChatWASM.ShowToastOption" preserve="all" />
-    <type fullname="WeChatWASM.SocketTaskOnCloseCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.SocketTaskOnMessageCallbackResult" preserve="all" />
-    <type fullname="WeChatWASM.StartAccelerometerOption" preserve="all" />
-    <type fullname="WeChatWASM.StartBeaconDiscoveryOption" preserve="all" />
-    <type fullname="WeChatWASM.StartBluetoothDevicesDiscoveryOption" preserve="all" />
-    <type fullname="WeChatWASM.StartCompassOption" preserve="all" />
-    <type fullname="WeChatWASM.StartDeviceMotionListeningOption" preserve="all" />
-    <type fullname="WeChatWASM.StartGameLiveOption" preserve="all" />
-    <type fullname="WeChatWASM.StartGyroscopeOption" preserve="all" />
-    <type fullname="WeChatWASM.StopAccelerometerOption" preserve="all" />
-    <type fullname="WeChatWASM.StopBeaconDiscoveryOption" preserve="all" />
-    <type fullname="WeChatWASM.StopBluetoothDevicesDiscoveryOption" preserve="all" />
-    <type fullname="WeChatWASM.StopCompassOption" preserve="all" />
-    <type fullname="WeChatWASM.StopDeviceMotionListeningOption" preserve="all" />
-    <type fullname="WeChatWASM.StopFaceDetectOption" preserve="all" />
-    <type fullname="WeChatWASM.StopGyroscopeOption" preserve="all" />
-    <type fullname="WeChatWASM.SystemInfo" preserve="all" />
-    <type fullname="WeChatWASM.UpdateKeyboardOption" preserve="all" />
-    <type fullname="WeChatWASM.UpdateManager" preserve="all" />
-    <type fullname="WeChatWASM.UpdateShareMenuOption" preserve="all" />
-    <type fullname="WeChatWASM.UpdateVoIPChatMuteConfigOption" preserve="all" />
-    <type fullname="WeChatWASM.UpdateWeChatAppOption" preserve="all" />
-    <type fullname="WeChatWASM.VibrateLongOption" preserve="all" />
-    <type fullname="WeChatWASM.VibrateShortOption" preserve="all" />
-    <type fullname="WeChatWASM.WriteBLECharacteristicValueOption" preserve="all" />
+  <assembly fullname="Wx">
     <type fullname="WeChatWASM.WX" preserve="all" />
-    <type fullname="WeChatWASM.WXADErrorResponse" preserve="all" />
     <type fullname="WeChatWASM.WXBase" preserve="all" />
+  </assembly>
+  <assembly fullname="wx-runtime">
+    <type fullname="WeChatWASM.LoginSuccessCallbackResult" preserve="all" />
+    <type fullname="WeChatWASM.SystemInfo" preserve="all" />
+    <type fullname="WeChatWASM.WXADErrorResponse" preserve="all" />
     <type fullname="WeChatWASM.WXBaseAd" preserve="all" />
     <type fullname="WeChatWASM.WXBaseResponse" preserve="all" />
     <type fullname="WeChatWASM.WXCreateRewardedVideoAdParam" preserve="all" />
-    <type fullname="WeChatWASM.WxGetFileInfoOption" preserve="all" />
-    <type fullname="WeChatWASM.WxOnErrorCallbackResult" preserve="all" />
     <type fullname="WeChatWASM.WXRewardedVideoAd" preserve="all" />
     <type fullname="WeChatWASM.WXRewardedVideoAdOnCloseResponse" preserve="all" />
-    <type fullname="WeChatWASM.WXSDKManagerHandler" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfo" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfoButton" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfoResponse" preserve="all" />

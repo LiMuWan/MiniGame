@@ -3,7 +3,7 @@ CRC: 2192273045
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f5ce553de230e67da8d9db20765b5d91
+    Hash: a391f53071d0d1af1bc8f32fb9167d74
   TypeTreeHash:
     serializedVersion: 2
     Hash: f662d01bbb36fa5fd54523868f9277fe
@@ -77,4 +77,4 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/HotfixAssets/UIWindow/UILoginWindow.prefab
 Dependencies:
-- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_uifont.bundle
+- D:/MyProject/WXMiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_uifont.bundle

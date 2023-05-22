@@ -11,7 +11,7 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
 {
     private bool _isRun = false;
 
-    private EventGroup _eventGroup;
+    private EventGroup _eventGroup = new EventGroup();
     public void OnCreate(object createParam)
     {
         
@@ -39,7 +39,7 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
             // _eventGroup.AddListener<UserEventDefine.UserTryUpdatePackageVersion>(OnHandleEventMessage);
             // _eventGroup.AddListener<UserEventDefine.UserTryUpdatePatchManifest>(OnHandleEventMessage);
             // _eventGroup.AddListener<UserEventDefine.UserTryDownloadWebFiles>(OnHandleEventMessage);
-            ApplicationStatusManager.EnterStatus<LoginStatus>();
+            ApplicationStatusManager.EnterStatus<LoginStatus>(); //第一个状态登陆
         }
         else
         {

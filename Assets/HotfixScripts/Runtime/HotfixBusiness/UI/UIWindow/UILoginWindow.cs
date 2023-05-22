@@ -21,16 +21,16 @@ public class UILoginWindow : UIWindow
 
     public override void OnDestroy()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void OnRefresh()
     {
-        throw new System.NotImplementedException();
+      
     }
 
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        
     }
 }

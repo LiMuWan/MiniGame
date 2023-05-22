@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Singleton;
+using UniFramework.Utility;
 
 public class ApplicationManager : MonoBehaviour
 {
@@ -48,8 +49,7 @@ public class ApplicationManager : MonoBehaviour
         GlobalLogicManager.Init();           //初始化全局逻辑
 
         InitGlobalLogic();                             //全局逻辑
-        UniSingleton.CreateSingleton<GameManager>();
-        ApplicationStatusManager.EnterStatus<LoginStatus>();//游戏流程状态机，开始第一个状态
+        UniSingleton.CreateSingleton<GameManager>().Run();
 
         if (s_OnApplicationModuleInitEnd != null)
         {
@@ -59,11 +59,11 @@ public class ApplicationManager : MonoBehaviour
     
     private IEnumerator IenumeratorLaunch()
     {
-        UniSingleton.CreateSingleton<ConfigLoader>();
-        yield return ConfigLoader.Instance.LoadAllConfigs(OnLoadConfigCompleteCallback);
-        Debug.Log("ConfigLoader.Instance.LoadAllConfigs");
+        yield return UniSingleton.CreateSingleton<ConfigLoader>().LoadAllConfigs(OnLoadConfigCompleteCallback);
+        // yield return ConfigLoader.Instance.LoadAllConfigs(OnLoadConfigCompleteCallback);
+        UniLogger.Log("ConfigLoader.Instance.LoadAllConfigs");
         yield return UIManager.InitAsync();
-        Debug.Log("UI Init");
+        UniLogger.Log("UI Init");
     }
 
     /// <summary>
@@ -75,7 +75,7 @@ public class ApplicationManager : MonoBehaviour
     {
         if(result)
         {
-            Debug.Log("Configs Loaded all!!!");
+            UniLogger.Log("Configs Loaded all!!!");
         }
     }
      #region 程序生命周期事件派发

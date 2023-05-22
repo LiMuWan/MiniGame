@@ -70,7 +70,7 @@ namespace GameFramework.Resource
         /// </summary>
         public string HostServerURL { get; set; }
 
-
+        
         /// <summary>
         /// 设置异步系统参数，每帧执行消耗的最大时间切片（单位：毫秒）
         /// </summary>
@@ -81,7 +81,7 @@ namespace GameFramework.Resource
         /// </summary>
         private static int _lastUpdateFrame = 0;
 
-        private string m_ApplicableGameVersion;
+        private string m_ApplicableGameVersion = Version.GameVersion;
 
         private int m_InternalResourceVersion;
 
@@ -305,7 +305,12 @@ namespace GameFramework.Resource
             ResourceHelper = InstanceRoot.gameObject.AddComponent<ResourceHelper>();
             CancellationToken = ResourceHelper.GetCancellationTokenOnDestroy();
         }
-
+        
+        public string GetPackageVersion()
+        {
+            var defaultPackage = YooAssets.GetPackage(PackageName);
+            return $"{ApplicableGameVersion}.{defaultPackage.GetPackageVersion()}";
+        }
         #region 资源信息
 
         /// <summary>

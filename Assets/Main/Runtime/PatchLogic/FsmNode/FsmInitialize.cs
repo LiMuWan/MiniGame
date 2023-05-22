@@ -41,6 +41,7 @@ internal class FsmInitialize : IStateNode
         yield return initializationOperation.IsDone;
 
         yield return initializationOperation;
+        PatchEventDefine.GameVersionInitOrRefresh.SendEventMessage();
         if (initializationOperation.Status == EOperationStatus.Succeed)
         {
             _machine.ChangeState<FsmUpdateVersion>();

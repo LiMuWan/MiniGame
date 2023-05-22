@@ -109,5 +109,14 @@ namespace Main.EventDefine
                 UniEvent.SendMessage(msg);
             }
         }
+
+        public class GameVersionInitOrRefresh:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                var msg = new PatchManifestUpdateFailed();
+                UniEvent.SendMessage(msg);
+            }
+        }
     }
 }

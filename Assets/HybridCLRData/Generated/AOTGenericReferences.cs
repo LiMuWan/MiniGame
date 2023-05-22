@@ -3,6 +3,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 
 	// {{ AOT assemblies
 	// Main.Runtime.dll
+	// UniFramework.Event.dll
 	// UniFramework.Singleton.dll
 	// UnityEngine.CoreModule.dll
 	// mscorlib.dll
@@ -12,8 +13,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// }} 
 
 	// {{ AOT generic types
-	// System.Action<int>
 	// System.Action<object>
+	// System.Action<int>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<int,object>
 	// System.Collections.Generic.IEnumerator<object>
@@ -33,7 +34,9 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	{
 		// string Bright.Common.StringUtil.CollectionToString<object>(System.Collections.Generic.IEnumerable<object>)
 		// string Bright.Common.StringUtil.CollectionToString<int>(System.Collections.Generic.IEnumerable<int>)
-		// YooAsset.AssetOperationHandle GameFramework.Resource.ResourcesManager.LoadAssetASync<object>(string)
+		// YooAsset.AssetOperationHandle GameFramework.Resource.ResourcesManager.LoadAssetAsync<object>(string)
+		// object[] System.Array.Empty<object>()
+		// System.Void UniFramework.Event.EventGroup.AddListener<object>(System.Action<UniFramework.Event.IEventMessage>)
 		// object UniFramework.Singleton.UniSingleton.CreateSingleton<object>(int)
 		// object UnityEngine.Component.GetComponent<object>()
 		// object UnityEngine.GameObject.AddComponent<object>()

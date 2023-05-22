@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UniFramework.Event;
 using Main.EventDefine;
+using GameFramework.Resource;
 
 public class PatchWindow : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class PatchWindow : MonoBehaviour
     private GameObject _messageBoxObj;
     private Slider _slider;
     private TextMeshProUGUI _tips;
-    
+    private TextMeshProUGUI _version;
     private static PatchWindow m_instance;
 
     public static PatchWindow Instance;
@@ -72,6 +73,7 @@ public class PatchWindow : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         _slider = transform.Find("UIWindow/Slider").GetComponent<Slider>();
         _tips = transform.Find("UIWindow/Slider/txt_tips").GetComponent<TextMeshProUGUI>();
+        _version = transform.Find("UIWindow/version").GetComponent<TextMeshProUGUI>();
         _tips.text = "Initializing the game world !";
         _messageBoxObj = transform.Find("UIWindow/MessageBox").gameObject;
         _messageBoxObj.SetActive(false);
@@ -99,6 +101,10 @@ public class PatchWindow : MonoBehaviour
                 UserEventDefine.UserTryInitalize.SendEventMessage();
             };
             ShowMessageBox($"Failed to initialize package !", callback);
+        }
+        else if(message is PatchEventDefine.GameVersionInitOrRefresh)
+        {
+            SetVersion(ResourcesManager.Instance.GetPackageVersion());
         }
         else if (message is PatchEventDefine.PatchStatesChange)
         {
@@ -187,6 +193,11 @@ public class PatchWindow : MonoBehaviour
 
         //显示对话框
         msgBox.Show(content,ok);
+    }
+    
+    public void SetVersion(string version)
+    {
+        _version.text = version;
     }
 
     public void Release()

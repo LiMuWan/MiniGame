@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UniFramework.Event;
 using UniFramework.Machine;
 using UniFramework.Singleton;
@@ -9,21 +6,6 @@ using YooAsset;
 
 public class PatchManager : SingletonInstance<PatchManager>, ISingleton
 {
-    /// <summary>
-    /// 运行模式
-    /// </summary>
-    public EPlayMode PlayMode { private set; get; }
-
-    /// <summary>
-    /// 包裹的版本信息
-    /// </summary>
-    public string PackageVersion { set; get; }
-
-    /// <summary>
-    /// 下载器
-    /// </summary>
-    public ResourceDownloaderOperation Downloader { set; get; }
-
     private bool _isRun = false;
     private EventGroup _eventGroup = new EventGroup();
     private StateMachine _machine;
@@ -51,7 +33,6 @@ public class PatchManager : SingletonInstance<PatchManager>, ISingleton
         if (_isRun == false)
         {
             _isRun = true;
-            PlayMode = playMode;
 
             //注册监听事件
             _eventGroup.AddListener<UserEventDefine.UserTryInitalize>(OnHandleEventMessage);

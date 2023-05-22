@@ -22,7 +22,7 @@ internal class FsmUpdateVersion : IStateNode
         PatchEventDefine.PatchStatesChange.SendEventMessage("获取最新的资源版本！");
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
-            Debug.LogWarning("The device is not connected to the network");
+            //Debug.LogWarning("The device is not connected to the network");
             // UILoadMgr.Show(UIDefine.UILoadUpdate, LoadText.Instance.Label_Net_UnReachable);
             // UILoadTip.ShowMessageBox(LoadText.Instance.Label_Net_UnReachable, MessageShowType.TwoButton,
             //     LoadStyle.StyleEnum.Style_Retry,

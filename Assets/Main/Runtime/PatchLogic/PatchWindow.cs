@@ -60,9 +60,15 @@ public class PatchWindow : MonoBehaviour
     private GameObject _messageBoxObj;
     private Slider _slider;
     private TextMeshProUGUI _tips;
+    
+    private static PatchWindow m_instance;
+
+    public static PatchWindow Instance;
 
     private void Awake()
     {
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
         _slider = transform.Find("UIWindow/Slider").GetComponent<Slider>();
         _tips = transform.Find("UIWindow/Slider/txt_tips").GetComponent<TextMeshProUGUI>();
         _tips.text = "Initializing the game world !";
@@ -180,5 +186,10 @@ public class PatchWindow : MonoBehaviour
 
         //显示对话框
         msgBox.Show(content,ok);
+    }
+
+    public void Release()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 }

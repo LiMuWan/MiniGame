@@ -211,18 +211,23 @@ namespace UniFramework.Window
 		{
 			return IsContains(type.FullName);
 		}
-
+        
+		public static UIWindow GetWindow<T>() where T:UIWindow
+		{
+             return GetWindow(typeof(T).FullName);
+		}
 
 		/// <summary>
 		/// 异步打开窗口
 		/// </summary>
 		/// <param name="location">资源定位地址</param>
 		/// <param name="userDatas">用户自定义数据</param>
-		public static OpenWindowOperation OpenWindowAsync<T>(string location, params System.Object[] userDatas) where T : UIWindow
+		public static void OpenWindowAsync<T>(string location, Action<UIWindow> onCreateCallback,params System.Object[] userDatas) where T : UIWindow
 		{
-			return OpenWindowAsync(typeof(T), location, userDatas);
+			OpenWindowAsync(typeof(T), location,onCreateCallback,userDatas);
 		}
-		public static OpenWindowOperation OpenWindowAsync(Type type, string location, params System.Object[] userDatas)
+
+		public static void OpenWindowAsync(Type type, string location,Action<UIWindow> onCreateCallback, params System.Object[] userDatas)
 		{
 			string windowName = type.FullName;
 
@@ -230,41 +235,24 @@ namespace UniFramework.Window
 			if (IsContains(windowName))
 			{
 				UIWindow window = GetWindow(windowName);
+				onCreateCallback?.Invoke(window);
 				Pop(window); //弹出窗口
 				Push(window); //重新压入
 				window.TryInvoke(OnWindowPrepare, userDatas);
-				var operation = new OpenWindowOperation(window.Handle);
-				YooAssets.StartOperation(operation);
-				return operation;
+				// var operation = new OpenWindowOperation(window.Handle);
+				// YooAssets.StartOperation(operation);
+				// return operation;
 			}
 			else
 			{
 				UIWindow window = CreateInstance(type);
+				onCreateCallback?.Invoke(window);
 				Push(window); //首次压入
 				window.InternalLoad(location, OnWindowPrepare, userDatas);
-				var operation = new OpenWindowOperation(window.Handle);
-				YooAssets.StartOperation(operation);
-				return operation;
+				// var operation = new OpenWindowOperation(window.Handle);
+				// YooAssets.StartOperation(operation);
+				// return operation;
 			}
-		}
-
-		/// <summary>
-		/// 同步打开窗口
-		/// </summary>
-		/// <typeparam name="T">窗口类</typeparam>
-		/// <param name="location">资源定位地址</param>
-		/// <param name="userDatas">用户自定义数据</param>
-		public static OpenWindowOperation OpenWindowSync<T>(string location, params System.Object[] userDatas) where T : UIWindow
-		{
-			var operation = OpenWindowAsync(typeof(T), location, userDatas);
-			operation.WaitForAsyncComplete();
-			return operation;
-		}
-		public static OpenWindowOperation OpenWindowSync(Type type, string location, params System.Object[] userDatas)
-		{
-			var operation = OpenWindowAsync(type, location, userDatas);
-			operation.WaitForAsyncComplete();
-			return operation;
 		}
 
 		/// <summary>
@@ -274,18 +262,24 @@ namespace UniFramework.Window
 		{
 			CloseWindow(typeof(T));
 		}
+		
 		public static void CloseWindow(Type type)
 		{
 			string windowName = type.FullName;
 			UIWindow window = GetWindow(windowName);
-			if (window == null)
-				return;
-
-			window.InternalDestroy();
-			Pop(window);
-			OnSortWindowDepth(window.WindowLayer);
-			OnSetWindowVisible();
+			CloseWindow(window);
 		}
+
+        public static void CloseWindow(UIWindow window)
+        {
+            if (window == null)
+                return;
+
+            window.InternalDestroy();
+            Pop(window);
+            OnSortWindowDepth(window.WindowLayer);
+            OnSetWindowVisible();
+        }
 
 		/// <summary>
 		/// 关闭所有窗口

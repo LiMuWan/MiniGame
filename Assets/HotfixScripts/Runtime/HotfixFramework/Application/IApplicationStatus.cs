@@ -87,15 +87,14 @@ public abstract class IApplicationStatus
         return default(T);
     }
 
-    public T OpenUI<T>(params System.Object[] userDatas) where T: UIWindow
+    public void OpenUI<T>(params System.Object[] userDatas) where T: UIWindow
     {
-        UIManager.OpenWindowSync<T>(userDatas);
- 
-        var window = UIManager.GetWindow<T>();
-        Debug.Log($"OpenUI window = {window}");
-        m_uiList.Add(window);
-      
-        return (T)window;
+        UIManager.OpenWindowAsync<T>(
+            (window) =>
+            {
+                m_uiList.Add(window);
+                Debug.Log($"OpenUI window = {window}");
+            },userDatas);
     }
 
     public void CloseUI<T>(bool isPlayAnim = true) where T:UIWindow

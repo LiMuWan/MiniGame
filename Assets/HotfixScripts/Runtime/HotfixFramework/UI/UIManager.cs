@@ -28,7 +28,7 @@ public static class UIManager
 
     public static IEnumerator InitAsync()
     {
-        var handle = ResourcesManager.Instance.LoadAssetASync<GameObject>($"UICanvas");
+        var handle = ResourcesManager.Instance.LoadAssetAsync<GameObject>($"UICanvas");
         yield return handle;
         GameObject canvas = handle.InstantiateSync();
         GameObject.DontDestroyOnLoad(canvas);
@@ -69,24 +69,13 @@ public static class UIManager
     // }
 
     /// <summary>
-    /// 同步打开窗口
-    /// </summary>
-    /// <typeparam name="T">窗口类</typeparam>
-    /// <param name="location">资源定位地址</param>
-    /// <param name="userDatas">用户自定义数据</param>
-    public static OpenWindowOperation OpenWindowSync<T>(params System.Object[] userDatas) where T : UIWindow
-    {
-        return UniWindow.OpenWindowSync<T>(userDatas);
-    }
-
-    /// <summary>
     /// 异步打开窗口
     /// </summary>
     /// <param name="location">资源定位地址</param>
     /// <param name="userDatas">用户自定义数据</param>
-    public static OpenWindowOperation OpenWindowAsync<T>(string location, params System.Object[] userDatas) where T : UIWindow
+    public static void OpenWindowAsync<T>(Action<UIWindow> onCreateCallback,params System.Object[] userDatas) where T : UIWindow
     {
-        return UniWindow.OpenWindowAsync(typeof(T), location, userDatas);
+        UniWindow.OpenWindowAsync<T>(typeof(T).FullName,onCreateCallback, userDatas);
     }
     #endregion
 
@@ -117,7 +106,7 @@ public static class UIManager
     }
     #endregion
 
-    public static UIWindow GetWindow<T>()
+    public static UIWindow GetWindow<T>() where T:UIWindow
     {
         return UniWindow.GetWindow<T>();
     }

@@ -4,6 +4,7 @@ using GameFramework.Resource;
 using UnityEngine;
 using UnityEngine.UI;
 using YooAsset;
+using UniFramework.Singleton;
 
 namespace UniFramework.Window
 {
@@ -15,7 +16,6 @@ namespace UniFramework.Window
 		internal AssetOperationHandle Handle { private set; get;}
 		private System.Action<UIWindow> _prepareCallback;
 		private System.Object[] _userDatas;
-
 		private bool _isCreate = false;
 		private GameObject _panel;
 		private Canvas _canvas;
@@ -252,8 +252,7 @@ namespace UniFramework.Window
 
 			_prepareCallback = prepareCallback;
 			_userDatas = userDatas;
-			Handle = YooAssets.LoadAssetAsync<GameObject>(location);
-			Handle.Completed += Handle_Completed;
+			UniSingleton.StartCoroutine(LoadAssetAsync(location));
 		}
 
 		internal IEnumerator LoadAssetAsync(string file) 

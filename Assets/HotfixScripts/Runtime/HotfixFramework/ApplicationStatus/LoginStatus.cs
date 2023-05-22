@@ -7,10 +7,11 @@ public class LoginStatus : IApplicationStatus
 {
     public WXRewardedVideoAd ad;
     private WXUserInfoButton infoButton;
+    private UIMainWindow uiMain;
     //Status的进入逻辑请放在这里
     public override void OnEnterStatus()
     {
-        var uiMain = ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
+       ApplicationStatusManager.s_currentAppStatus.OpenUI<UIMainWindow>(new UIMainData(){Content = "Welcome you to Main Page!"});
 
 #if !UNITY_EDITOR
         WX.InitSDK((code) =>
@@ -44,7 +45,7 @@ public class LoginStatus : IApplicationStatus
             infoButton.OnTap((userInfoButonRet) =>
             {
                 Debug.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
-                uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
+                //uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
             });
             Debug.Log("infoButton Created");
         });

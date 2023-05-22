@@ -372,7 +372,7 @@ namespace GameFramework.Resource
         /// 异步加载资源对象
         /// </summary>
         /// <param name="assetInfo">资源信息</param>
-        public AssetOperationHandle LoadAssetASync<T>(string  assetName) where T : UnityEngine.Object
+        public AssetOperationHandle LoadAssetAsync<T>(string  assetName) where T : UnityEngine.Object
         {
             return YooAssets.LoadAssetAsync<T>(assetName);
         }
@@ -383,7 +383,7 @@ namespace GameFramework.Resource
         /// <param name="assetName">要加载资源的名称。</param>
         /// <typeparam name="T">要加载的资源类型。</typeparam>
         /// <returns>UniTask资源实例。</returns>
-        public async UniTask<T> LoadAssetAsync<T>(string assetName) where T : UnityEngine.Object
+        public async UniTask<T> LoadAssetAsyncUni<T>(string assetName) where T : UnityEngine.Object
         {
             if (string.IsNullOrEmpty(assetName))
             {

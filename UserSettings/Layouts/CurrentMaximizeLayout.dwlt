@@ -35,15 +35,15 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13974, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
+    m_Text: Simulator
+    m_Image: {fileID: 8720083202187608617, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -57,70 +57,37 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
+  m_SerializedViewNames:
+  - UnityEditor.GameView
+  m_SerializedViewValues:
+  - D:\WxMiniGamework\MiniGame\Library\PlayModeViewStates\c387c69afeb68a44a808f947046fc8c4
+  m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 1920}
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
+  m_TargetSize: {x: 1080, y: 2280}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
+  m_EnterPlayModeBehavior: 2
   m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
-    m_VBaseRangeMin: -960
-    m_VBaseRangeMax: 960
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 906
-      height: 416
-    m_Scale: {x: 0.21666665, y: 0.21666667}
-    m_Translation: {x: 453, y: 208}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -2090.7693
-      y: -960
-      width: 4181.5386
-      height: 1920
-    m_MinimalGUI: 1
-  m_defaultScale: 0.21666667
-  m_LastWindowPixelSize: {x: 906, y: 437}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
+  m_SimulatorState:
+    controlPanelVisible: 0
+    controlPanelWidth: 0
+    controlPanelFoldoutKeys:
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    controlPanelFoldoutValues: 00
+    pluginNames:
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    pluginStates:
+    - '{}'
+    scale: 16
+    fitToScreenEnabled: 1
+    rotationDegree: 0
+    highlightSafeAreaEnabled: 0
+    friendlyName: Xiaomi Redmi 6 Pro
+    networkReachability: 1
+    systemLanguage: 10
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -432,9 +399,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: -0.52083325, z: 0}
+    m_Target: {x: 378.98315, y: 1529.2681, z: 4.361162}
     speed: 2
-    m_Value: {x: 0, y: -0.52083325, z: 0}
+    m_Value: {x: 378.98315, y: 1529.2681, z: 4.361162}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -485,9 +452,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.6462054
+    m_Target: 347.894
     speed: 2
-    m_Value: 3.6462054
+    m_Value: 347.894
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -522,7 +489,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SimulatorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -599,7 +566,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5ebdffff70bdffffb2bdffffc2bdffffccc0ffffdcc0ffff0ac5ffffc6c9ffff20cafffff6caffff2cdaffff04dcffffe2dcffff4cdffffface0fffff4ffffff
+      m_ExpandedIDs: 6c68feff8068feffc468feffce68feffde68fefff068feff3269feff4269feff6674feff7a74feffd874feffea74feff0a75feff1a75feff5085feffae85feffc085feffe085fefff085feff6a93feff7c93feff9c93feffac93feff209dfeff329dfeff529dfeff629dfeffa8a0feffeaa0fefffaa0feffb8a5fefffaa5feff0aa6feff6091ffffbc93ffffae98ffffc098fffffc98ffff0c99ffff5ebdffff70bdffffb2bdffffc2bdffffccc0ffffdcc0ffff0ac5ffffc6c9ffff20cafffff6caffff2cdaffff04dcffffe2dcffff4cdffffface0fffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -691,7 +658,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/HotfixAssets/UIWindow
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -706,7 +674,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 386c0000
     m_LastClickedID: 27704
-    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ee6b0000f86b00009c6c0000aa6e00004c72000032730000d6740000ffffff7f
+    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ec6b0000ee6b0000f86b0000266c00009c6c0000946d0000ec6d0000326e0000aa6e0000486f000038700000067200004c720000307300003273000010750000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,7 +702,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ee6b0000f86b00009c6c0000aa6e00004c72000032730000d6740000ffffff7f
+    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ec6b0000ee6b0000f86b0000266c00009c6c0000946d0000ec6d0000326e0000aa6e0000486f000038700000067200004c720000307300003273000010750000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

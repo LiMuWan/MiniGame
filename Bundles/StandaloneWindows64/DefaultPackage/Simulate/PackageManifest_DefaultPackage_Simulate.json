@@ -69,6 +69,20 @@
             "DependIDs": []
         },
         {
+            "Address": "zhuyanbosongEn",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependIDs": []
+        },
+        {
+            "Address": "zhuyanbosongPun",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependIDs": []
+        },
+        {
             "Address": "Level",
             "AssetPath": "Assets/HotfixAssets/Scene/Level.unity",
             "AssetTags": [],

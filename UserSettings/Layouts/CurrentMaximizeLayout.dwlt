@@ -597,7 +597,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 86b8ffff
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 5ebdffff70bdffffb2bdffffc2bdffffccc0ffffdcc0ffff0ac5ffffc6c9ffff20cafffff6caffff2cdaffff04dcffffe2dcffff4cdffffface0fffff4ffffff
       m_RenameOverlay:
@@ -691,8 +691,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/HotfixAssets/UIWindow
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -707,7 +706,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 386c0000
     m_LastClickedID: 27704
-    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ec6b0000f86b00009c6c00007e6d00004c72000032730000ffffff7f
+    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ee6b0000f86b00009c6c0000aa6e00004c72000032730000d6740000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -733,9 +732,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86b8ffff
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ec6b0000f86b00009c6c00007e6d00004c72000032730000ffffff7f
+    m_ExpandedIDs: ffffffff00000000cc6b0000dc6b0000ee6b0000f86b00009c6c0000aa6e00004c72000032730000d6740000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,8 +759,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 86b8ffff
-    m_LastClickedInstanceID: -18298
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -810,8 +809,8 @@ MonoBehaviour:
     y: 0
     width: 367
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}

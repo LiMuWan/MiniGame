@@ -6,6 +6,7 @@ using YooAsset;
 using System.IO;
 using GameFramework.Resource;
 using Main.EventDefine;
+using UniFramework.Utility;
 
 /// <summary>
 /// 初始化资源包
@@ -48,7 +49,7 @@ internal class FsmInitialize : IStateNode
         }
         else
         {
-            Debug.LogWarning($"{initializationOperation.Error}");
+            UniLogger.Warning($"{initializationOperation.Error}");
             PatchEventDefine.InitializeFailed.SendEventMessage();
         }
     }

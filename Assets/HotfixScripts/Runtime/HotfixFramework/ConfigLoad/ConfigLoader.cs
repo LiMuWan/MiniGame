@@ -99,7 +99,6 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
         {
             // 如果已经缓存，则直接使用缓存中的数据
             ret = m_Configs[key];
-            Debug.Log($"Cache TextAssets, {key}");
         }
         else
         {
@@ -143,7 +142,6 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
             // 如果加载操作已经完成，则直接获取结果并缓存
             ret = rawFileOperationHandle.GetRawFileData();
             m_Configs.Add(key, ret);
-            Debug.Log($"Cache TextAssets, {key}");
         }
 
         m_tables = new Tables(LoadByteBuf);

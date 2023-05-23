@@ -1,6 +1,7 @@
 using GameFramework.Resource;
 using UniFramework.Event;
 using UniFramework.Singleton;
+using UniFramework.Utility;
 using UnityEngine;
 using YooAsset;
 
@@ -10,7 +11,7 @@ public class Boot : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log($"资源系统运行模式：{PlayMode}");
+        UniLogger.Log($"资源系统运行模式：{PlayMode}");
         Application.targetFrameRate = 60;
         Application.runInBackground = true;
     }

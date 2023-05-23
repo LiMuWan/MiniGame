@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using GameFramework.Resource;
+using UniFramework.Utility;
 
 public class Main 
 {
@@ -12,7 +10,7 @@ public class Main
 
     private static void LoadSceneSuccessCallback(string sceneAssetName, UnityEngine.SceneManagement.Scene scene, float duration, object userData)
     {
-        Debug.Log("Load Scene Main!!!");
+        UniLogger.Log("Load Scene Main!!!");
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UniFramework.Window;
+using UniFramework.Utility;
 
 public abstract class IApplicationStatus
 {
@@ -93,7 +94,7 @@ public abstract class IApplicationStatus
             (window) =>
             {
                 m_uiList.Add(window);
-                Debug.Log($"OpenUI window = {window}");
+                UniLogger.Log($"OpenUI window = {window}");
             },userDatas);
     }
 
@@ -181,7 +182,7 @@ public abstract class IApplicationStatus
             }
             catch (Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
 

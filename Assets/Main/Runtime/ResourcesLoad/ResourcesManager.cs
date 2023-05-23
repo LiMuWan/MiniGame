@@ -6,6 +6,7 @@ using System;
 using UnityEngine.SceneManagement;
 using System.IO;
 using UnityGameFramework.Runtime;
+using UniFramework.Utility;
 
 namespace GameFramework.Resource
 {
@@ -165,7 +166,7 @@ namespace GameFramework.Resource
 
             HostServerURL = GetHostServerURL();
             Initialize();
-            Debug.Log($"AssetsComponent Run Mode：{PlayMode}");
+            UniLogger.Log($"AssetsComponent Run Mode：{PlayMode}");
         }
 
         private string GetHostServerURL()

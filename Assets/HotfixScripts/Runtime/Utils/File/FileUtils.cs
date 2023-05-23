@@ -162,36 +162,6 @@ public class FileUtils
         return true;
     }
 
-    /// <summary>
-    /// 获取文件MD5
-    /// </summary>
-    /// <param name="filePath"></param>
-    /// <returns></returns>
-    public static string GetFileMD5(string filePath)
-    {
-        try
-        {
-            FileInfo fileTmp = new FileInfo(filePath);
-            if (fileTmp.Exists)
-            {
-                FileStream fs = new FileStream(filePath, FileMode.Open);
-                int len = (int)fs.Length;
-                byte[] data = new byte[len];
-                fs.Read(data, 0, len);
-                fs.Close();
-
-                return MD5Utils.GetMD5(data);
-
-            }
-            return "";
-        }
-        catch (FileNotFoundException e)
-        {
-            Console.WriteLine(e.Message);
-            return "";
-        }
-    }
-
     public static IEnumerator LoadTxtFileIEnumerator(string path, CallBack<string> callback)
     {
 

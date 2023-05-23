@@ -6,6 +6,7 @@ using UniFramework.Singleton;
 using YooAsset;
 using GameFramework.Resource;
 using Main.EventDefine;
+using UniFramework.Utility;
 
 /// <summary>
 /// 更新资源版本号
@@ -58,7 +59,7 @@ internal class FsmUpdateVersion : IStateNode
         }
         else
         {
-            Debug.LogWarning(operation.Error);
+            UniLogger.Warning(operation.Error);
             PatchEventDefine.PackageVersionUpdateFailed.SendEventMessage();
         }
     }

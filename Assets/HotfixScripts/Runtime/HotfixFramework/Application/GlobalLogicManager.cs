@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UniFramework.Utility;
 
 public class GlobalLogicManager
 {
@@ -32,7 +33,7 @@ public class GlobalLogicManager
             }
             catch(Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
     }
@@ -63,7 +64,7 @@ public class GlobalLogicManager
             }
             catch(Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
 	}

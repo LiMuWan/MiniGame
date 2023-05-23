@@ -6,6 +6,7 @@ using UniFramework.Singleton;
 using YooAsset;
 using GameFramework.Resource;
 using Main.EventDefine;
+using UniFramework.Utility;
 
 /// <summary>
 /// 创建文件下载器
@@ -20,7 +21,6 @@ internal class FsmCreateDownloader : IStateNode
 
     public void OnEnter()
     {
-        Debug.Log("创建补丁下载器");
         PatchEventDefine.PatchStatesChange.SendEventMessage("创建补丁下载器");
         UniSingleton.StartCoroutine(CreateDownLoader());
     }
@@ -45,12 +45,12 @@ internal class FsmCreateDownloader : IStateNode
 
         if (downloader.TotalDownloadCount == 0)
         {
-            Debug.Log("Not found any download files !");
+            UniLogger.Log("Not found any download files !");
             _machine.ChangeState<FsmDownloadOver>();
         }
         else
         {
-            Debug.Log($"Found total {downloader.TotalDownloadCount} files that need download !");
+            UniLogger.Log($"Found total {downloader.TotalDownloadCount} files that need download !");
 
             //发现新更新文件后，挂起流程系统
             //注意：开发者需要在下载前检测磁盘空间不足

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UniFramework.Utility;
 
 public class TimerEvent
 {
@@ -63,7 +64,7 @@ public class TimerEvent
     {
         if(this == Timer.test)
         {
-            Debug.Log("CallBackTimer " + (m_callBack == null));
+            UniLogger.Log("CallBackTimer " + (m_callBack == null));
         }
 
         if (m_callBack != null)
@@ -74,7 +75,7 @@ public class TimerEvent
             }
             catch (Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
     }

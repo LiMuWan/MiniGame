@@ -103,7 +103,7 @@ public class ApplicationManager : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
     }
@@ -122,7 +122,7 @@ public class ApplicationManager : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
     }
@@ -137,7 +137,7 @@ public class ApplicationManager : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.LogError(e.ToString());
+                UniLogger.Error(e.ToString());
             }
         }
     }

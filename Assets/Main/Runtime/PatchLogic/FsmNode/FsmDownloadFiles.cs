@@ -3,6 +3,7 @@ using GameFramework.Resource;
 using Main.EventDefine;
 using UniFramework.Machine;
 using UniFramework.Singleton;
+using UniFramework.Utility;
 using UnityEngine;
 using YooAsset;
 
@@ -19,7 +20,7 @@ internal class FsmDownloadFiles : IStateNode
 
     public void OnEnter()
     {
-        Debug.Log("开始下载补丁文件！");
+        UniLogger.Log("开始下载补丁文件！");
         PatchEventDefine.PatchStatesChange.SendEventMessage("开始下载补丁文件！");
         UniSingleton.StartCoroutine(BeginDownload());
     }

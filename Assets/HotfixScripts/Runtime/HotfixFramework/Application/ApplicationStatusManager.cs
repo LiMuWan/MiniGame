@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using GameFramework.Resource;
+using UniFramework.Utility;
 
 public class ApplicationStatusManager 
 {
@@ -80,7 +81,7 @@ public class ApplicationStatusManager
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                    UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
                 }
             }
 
@@ -95,7 +96,7 @@ public class ApplicationStatusManager
             }
             catch (Exception e)
             {
-                Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
             }
 
             try
@@ -105,7 +106,7 @@ public class ApplicationStatusManager
             }
             catch (Exception e)
             {
-                Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
             }
         }
         else
@@ -123,7 +124,7 @@ public class ApplicationStatusManager
                         s_currentAppStatus.OnExitStatus();
                     }catch(Exception e)
                     {
-                        Debug.LogError("OnExitStatus Exception " + statusName + " " + e.ToString());
+                        UniLogger.Error("OnExitStatus Exception " + statusName + " " + e.ToString());
                     }
                     
                     ResourcesManager.Instance.ForceUnloadUnusedAssets(true);
@@ -141,7 +142,7 @@ public class ApplicationStatusManager
                     }
                     catch (Exception e)
                     {
-                        Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                        UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
                     }
 
                     try
@@ -151,7 +152,7 @@ public class ApplicationStatusManager
                     }
                     catch (Exception e)
                     {
-                        Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                        UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
                     }
                 });
             }
@@ -168,7 +169,7 @@ public class ApplicationStatusManager
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                    UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
                 }
 
                 try
@@ -178,7 +179,7 @@ public class ApplicationStatusManager
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("EnterStatus Exception " + statusName + " " + e.ToString());
+                    UniLogger.Error("EnterStatus Exception " + statusName + " " + e.ToString());
                 }
             }
         }

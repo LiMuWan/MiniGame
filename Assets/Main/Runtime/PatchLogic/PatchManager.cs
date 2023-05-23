@@ -2,7 +2,7 @@ using Main.EventDefine;
 using UniFramework.Event;
 using UniFramework.Machine;
 using UniFramework.Singleton;
-using UnityEngine;
+using UniFramework.Utility;
 using YooAsset;
 
 public class PatchManager : SingletonInstance<PatchManager>, ISingleton
@@ -42,7 +42,7 @@ public class PatchManager : SingletonInstance<PatchManager>, ISingleton
             _eventGroup.AddListener<UserEventDefine.UserTryUpdatePatchManifest>(OnHandleEventMessage);
             _eventGroup.AddListener<UserEventDefine.UserTryDownloadWebFiles>(OnHandleEventMessage);
 
-            Debug.Log("开启补丁更新流程...");
+            UniLogger.Log("开启补丁更新流程...");
             _machine = new StateMachine(this);
             _machine.AddNode<FsmPatchPrepare>();
             _machine.AddNode<FsmInitialize>();
@@ -57,7 +57,7 @@ public class PatchManager : SingletonInstance<PatchManager>, ISingleton
         }
         else
         {
-            Debug.LogWarning("补丁更新正在进行中");
+            UniLogger.Warning("补丁更新正在进行中");
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using WeChatWASM;
 using System;
+using UniFramework.Utility;
 
 public class LoginStatus : IApplicationStatus 
 {
@@ -18,21 +19,21 @@ public class LoginStatus : IApplicationStatus
 
             // 打印屏幕信息
             var systemInfo = WeChatWASM.WX.GetSystemInfoSync();
-            Debug.Log($"{systemInfo.screenWidth}:{systemInfo.screenHeight}, {systemInfo.windowWidth}:{systemInfo.windowHeight}, {systemInfo.pixelRatio}");
+            UniLogger.Log($"{systemInfo.screenWidth}:{systemInfo.screenHeight}, {systemInfo.windowWidth}:{systemInfo.windowHeight}, {systemInfo.pixelRatio}");
 
             // 预先创建广告实例
-            Debug.Log("初始化成功！");
+            UniLogger.Log("初始化成功！");
             ad = WX.CreateRewardedVideoAd(new WXCreateRewardedVideoAdParam()
             {
                 adUnitId = "xxxxxxxx" //自己申请广告单元ID
             });
             ad.OnError((r) =>
             {
-                Debug.Log("ad error:" + r.errMsg);
+                UniLogger.Log("ad error:" + r.errMsg);
             });
             ad.OnClose((r) =>
             {
-                Debug.Log("ad close:" + r.isEnded);
+                UniLogger.Log("ad close:" + r.isEnded);
             });
 
             // 创建用户信息获取按钮，在屏幕1/2区域创建一个透明区域
@@ -43,11 +44,11 @@ public class LoginStatus : IApplicationStatus
             infoButton = WX.CreateUserInfoButton(0, canvasHeight - buttonHeight, canvasWith, buttonHeight, "zh_CN", false);
             infoButton.OnTap((userInfoButonRet) =>
             {
-                Debug.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
+                UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
                 //uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
                 UserEventDefine.UserLoginSuccess.SendEventMessage();
             });
-            Debug.Log("infoButton Created");
+            UniLogger.Log("infoButton Created");
         });
 #else
      ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
@@ -56,7 +57,7 @@ public class LoginStatus : IApplicationStatus
 
     private void LoginSuccess(LoginSuccessCallbackResult result)
     {
-        Debug.Log("WxLogin Success!!!");
+        UniLogger.Log("WxLogin Success!!!");
     }
 
     //Status的退出逻辑请放在这里
@@ -70,10 +71,10 @@ public class LoginStatus : IApplicationStatus
     {
         // if (ConfigLoader.Instance.Tables.TbItem.DataList.Count > 0)
         // {
-        //     Debug.Log($"Config Count = {ConfigLoader.Instance.Tables.TbItem.DataList.Count}");
+        //     UniLogger.Log($"Config Count = {ConfigLoader.Instance.Tables.TbItem.DataList.Count}");
         //     if (ConfigLoader.Instance.Tables.TbItem.DataList[0] != null)
         //     {
-        //         Debug.Log($"Config Name = {ConfigLoader.Instance.Tables.TbItem.DataList[0].Name}");
+        //         UniLogger.Log($"Config Name = {ConfigLoader.Instance.Tables.TbItem.DataList[0].Name}");
         //     }
         // }
     }

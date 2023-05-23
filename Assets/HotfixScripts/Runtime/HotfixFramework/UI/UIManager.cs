@@ -7,6 +7,7 @@ using System;
 using GameFramework.Resource;
 using UnityEngine.EventSystems;
 using UniFramework.Window;
+using UniFramework.Utility;
 
 public static class UIManager
 {
@@ -54,7 +55,7 @@ public static class UIManager
         }
         else
         {
-            Debug.LogError("EventSystem.current is null !");
+            UniLogger.Error("EventSystem.current is null !");
         }
     }
 

@@ -1,4 +1,5 @@
 using UniFramework.Event;
+using UniFramework.Utility;
 
 namespace Main.EventDefine
 {
@@ -66,7 +67,7 @@ namespace Main.EventDefine
                 msg.TotalDownloadSizeBytes = totalDownloadSizeBytes;
                 msg.CurrentDownloadSizeBytes = currentDownloadSizeBytes;
                 UniEvent.SendMessage(msg);
-                UnityEngine.Debug.Log($"下载进度更新 = totalDownloadCount = {totalDownloadCount} , currentDownloadCount = {currentDownloadCount}");
+                UniLogger.Log($"下载进度更新 = totalDownloadCount = {totalDownloadCount} , currentDownloadCount = {currentDownloadCount}");
             }
         }
 

@@ -6,6 +6,7 @@ using System.Reflection;
 using System;
 using GameFramework.Resource;
 using HybridCLR;
+using UniFramework.Utility;
 
 public class LoadDll : SingletonInstance<LoadDll>, ISingleton
 {
@@ -55,12 +56,12 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
     {
         yield return LoadMetadataForAOTAssemblies();
         yield return LoadHotfixAssemblies();
-        Debug.Log("LoadHotfixAssemblies Finish!!!");
+        UniLogger.Log("LoadHotfixAssemblies Finish!!!");
         Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
-        Debug.Log("Assembly.Load(Hotfix.dll)) Finish!!!");
+        UniLogger.Log("Assembly.Load(Hotfix.dll)) Finish!!!");
         Type type = hotUpdateAss.GetType("Main");
         type.GetMethod("Run").Invoke(null, null);
-        Debug.Log("Main Run Finish!!!");
+        UniLogger.Log("Main Run Finish!!!");
     }
 
     /// <summary>
@@ -81,7 +82,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             assetDatas[aotDllName] = dllBytes;
             // 加载assembly对应的dll，会自动为它hook。一旦aot泛型函数的native函数不存在，用解释器版本代码
             int err = (int)HybridCLR.RuntimeApi.LoadMetadataForAOTAssembly(dllBytes, mode);
-            Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            UniLogger.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
         }
     }
     
@@ -93,7 +94,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
             yield return handle;
             byte[] dllBytes = handle.GetRawFileData();
             assetDatas[hotfixDllName] = dllBytes;
-            Debug.Log($"hotfixDllName:{hotfixDllName}");
+            UniLogger.Log($"hotfixDllName:{hotfixDllName}");
         }
     }
     

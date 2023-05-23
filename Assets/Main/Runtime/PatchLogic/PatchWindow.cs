@@ -110,7 +110,6 @@ public class PatchWindow : MonoBehaviour
         {
             var msg = message as PatchEventDefine.PatchStatesChange;
             _tips.text = msg.Tips;
-            Debug.Log($"{ _tips.text}");
         }
         else if (message is PatchEventDefine.FoundUpdateFiles)
         {
@@ -131,7 +130,6 @@ public class PatchWindow : MonoBehaviour
             string currentSizeMB = (msg.CurrentDownloadSizeBytes / 1048576f).ToString("f1");
             string totalSizeMB = (msg.TotalDownloadSizeBytes / 1048576f).ToString("f1");
             _tips.text = $"下载进度:{msg.CurrentDownloadCount}/{msg.TotalDownloadCount},{currentSizeMB}MB/{totalSizeMB}MB";
-            Debug.LogWarning($"下载进度更新 {_tips.text}");
         }
         else if (message is PatchEventDefine.PackageVersionUpdateFailed)
         {

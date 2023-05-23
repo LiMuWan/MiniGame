@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UniFramework.Utility;
 
 public class Timer 
 {
@@ -36,7 +35,7 @@ public class Timer
 
         if(test != null)
         {
-            Debug.Log("Test " + test.m_timerName + " " + test.m_currentTimer + " " + m_timers.Contains(test) + " isDone " + test.m_isDone); 
+            UniLogger.Log("Test " + test.m_timerName + " " + test.m_currentTimer + " " + m_timers.Contains(test) + " isDone " + test.m_isDone); 
         }
     }
 
@@ -205,7 +204,7 @@ public class Timer
 
     public static void DestroyTimer(TimerEvent timer,bool isCallBack = false)
     {
-        //Debug.Log("DestroyTimer " + timer.m_timerName + " isTest " + (timer == test));
+        //UniLogger.Log("DestroyTimer " + timer.m_timerName + " isTest " + (timer == test));
 
         if (m_timers.Contains(timer))
         {
@@ -218,13 +217,13 @@ public class Timer
         }
         else
         {
-            Debug.LogError("Timer DestroyTimer error: dont exist timer " + timer);
+            UniLogger.Error("Timer DestroyTimer error: dont exist timer " + timer);
         }
     }
 
     public static void DestroyTimer(string timerName, bool isCallBack = false)
     {
-        //Debug.Log("DestroyTimer2  ----TIMER " + timerName);
+        //UniLogger.Log("DestroyTimer2  ----TIMER " + timerName);
         for (int i = 0; i < m_timers.Count;i++ )
         {
             TimerEvent te = m_timers[i];
@@ -256,7 +255,7 @@ public class Timer
         }
         else
         {
-            Debug.LogError("Timer ResetTimer error: dont exist timer "+ timer);
+            UniLogger.Error("Timer ResetTimer error: dont exist timer "+ timer);
         }
     }
 

@@ -26,6 +26,7 @@ namespace Main.EventDefine
             public static void SendEventMessage(string tips)
             {
                 var msg = new PatchStatesChange();
+                msg.Tips = tips;
                 UniEvent.SendMessage(msg);
             }
         }

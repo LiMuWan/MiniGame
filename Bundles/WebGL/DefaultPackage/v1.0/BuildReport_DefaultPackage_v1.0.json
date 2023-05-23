@@ -2,8 +2,8 @@
     "Summary": {
         "YooVersion": "1.4.13",
         "UnityVersion": "2021.3.23f1c1",
-        "BuildDate": "2023/5/22 22:31:25",
-        "BuildSeconds": 5,
+        "BuildDate": "2023/5/23 12:26:34",
+        "BuildSeconds": 20,
         "BuildTarget": 20,
         "BuildPipeline": 0,
         "BuildMode": 0,
@@ -19,11 +19,11 @@
         "AssetFileTotalCount": 28,
         "MainAssetTotalCount": 24,
         "AllBundleTotalCount": 21,
-        "AllBundleTotalSize": 7962937,
+        "AllBundleTotalSize": 7498845,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0,
         "RawBundleTotalCount": 12,
-        "RawBundleTotalSize": 3789971
+        "RawBundleTotalSize": 3304595
     },
     "AssetInfos": [
         {
@@ -52,7 +52,7 @@
             "AssetGUID": "cd58b655f1a877d46b3dbb9918c4391b",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_main_runtime_dll_bytes.rawfile",
-            "MainBundleSize": 63488,
+            "MainBundleSize": 62976,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -62,7 +62,7 @@
             "AssetGUID": "075e5085ce1a3a04594878b51a713e4f",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
-            "MainBundleSize": 2426880,
+            "MainBundleSize": 2289152,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -72,7 +72,7 @@
             "AssetGUID": "c4e1c000cfcc9c54b99a2fe094cc75a7",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
-            "MainBundleSize": 393216,
+            "MainBundleSize": 47104,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -102,7 +102,7 @@
             "AssetGUID": "35d7730e50b8a9a47a17159a71a8ed97",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_unityengine_coremodule_dll_bytes.rawfile",
-            "MainBundleSize": 336384,
+            "MainBundleSize": 335360,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -119,7 +119,7 @@
                 "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
             ],
             "DependAssets": [
-                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
                 "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
             ]
@@ -256,7 +256,7 @@
             "AssetGUID": "374ba377a2ef2f442a1ee0b888c8e6f6",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_uiwindow_uicanvas.bundle",
-            "MainBundleSize": 5268,
+            "MainBundleSize": 5192,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -274,7 +274,7 @@
                 "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
             ],
             "DependAssets": [
-                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
                 "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
@@ -287,7 +287,7 @@
             "AssetGUID": "2619b56faccc2f64fb0e45a5c517e669",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_uiwindow_uimainwindow.bundle",
-            "MainBundleSize": 6750,
+            "MainBundleSize": 7213,
             "DependBundles": [
                 "defaultpackage_unityshaders.bundle",
                 "defaultpackage_assets_hotfixassets_uifont.bundle",
@@ -295,7 +295,7 @@
                 "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
             ],
             "DependAssets": [
-                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
                 "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
@@ -306,9 +306,9 @@
     "BundleInfos": [
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_assembly-csharp_dll_bytes.rawfile",
-            "FileName": "714bf5b0174e532dbeb75e7201ae0441.rawfile",
-            "FileHash": "714bf5b0174e532dbeb75e7201ae0441",
-            "FileCRC": "f932183a",
+            "FileName": "9caa99f37a6e230117f4403718740811.rawfile",
+            "FileHash": "9caa99f37a6e230117f4403718740811",
+            "FileCRC": "7c800d83",
             "FileSize": 3584,
             "IsRawFile": true,
             "LoadMethod": 0,
@@ -320,9 +320,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
-            "FileName": "a8b320115a40c85cf92f39ce4770651e.rawfile",
-            "FileHash": "a8b320115a40c85cf92f39ce4770651e",
-            "FileCRC": "c96bcc29",
+            "FileName": "09137d83882dd41e74f87f66f939f269.rawfile",
+            "FileHash": "09137d83882dd41e74f87f66f939f269",
+            "FileCRC": "81bcfcf4",
             "FileSize": 76288,
             "IsRawFile": true,
             "LoadMethod": 0,
@@ -334,10 +334,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_main_runtime_dll_bytes.rawfile",
-            "FileName": "f4e17c945a34235ab87977b2d4e4a925.rawfile",
-            "FileHash": "f4e17c945a34235ab87977b2d4e4a925",
-            "FileCRC": "df501df2",
-            "FileSize": 63488,
+            "FileName": "ba4ea232c3a79b68a851c96fdfc117a0.rawfile",
+            "FileHash": "ba4ea232c3a79b68a851c96fdfc117a0",
+            "FileCRC": "78794862",
+            "FileSize": 62976,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -348,10 +348,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
-            "FileName": "ca54eb4bffadb04f3e1c7df09ea60b20.rawfile",
-            "FileHash": "ca54eb4bffadb04f3e1c7df09ea60b20",
-            "FileCRC": "54212953",
-            "FileSize": 2426880,
+            "FileName": "53b79b43ba4dca1d8b47ab637a059989.rawfile",
+            "FileHash": "53b79b43ba4dca1d8b47ab637a059989",
+            "FileCRC": "f97b5360",
+            "FileSize": 2289152,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -362,10 +362,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
-            "FileName": "1934673fd6e17b3739bccba9d51c9577.rawfile",
-            "FileHash": "1934673fd6e17b3739bccba9d51c9577",
-            "FileCRC": "95070077",
-            "FileSize": 393216,
+            "FileName": "01a76a55d81a63d61a4acd57d24aeea4.rawfile",
+            "FileHash": "01a76a55d81a63d61a4acd57d24aeea4",
+            "FileCRC": "caa0f088",
+            "FileSize": 47104,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -376,9 +376,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_uniframework_singleton_dll_bytes.rawfile",
-            "FileName": "1ce02944b790d5d9e0ed0d51186c5492.rawfile",
-            "FileHash": "1ce02944b790d5d9e0ed0d51186c5492",
-            "FileCRC": "2a5fed0a",
+            "FileName": "d12f27723fc132e22a017dabcc57acd3.rawfile",
+            "FileHash": "d12f27723fc132e22a017dabcc57acd3",
+            "FileCRC": "de7bb710",
             "FileSize": 7680,
             "IsRawFile": true,
             "LoadMethod": 0,
@@ -390,9 +390,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_unitask_dll_bytes.rawfile",
-            "FileName": "721c0bc8393cf744e3381e498f9f0db3.rawfile",
-            "FileHash": "721c0bc8393cf744e3381e498f9f0db3",
-            "FileCRC": "0d6c36ab",
+            "FileName": "6d63e4dd1b4779877dd8c30194cbce0c.rawfile",
+            "FileHash": "6d63e4dd1b4779877dd8c30194cbce0c",
+            "FileCRC": "c11b75c0",
             "FileSize": 481792,
             "IsRawFile": true,
             "LoadMethod": 0,
@@ -404,10 +404,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_unityengine_coremodule_dll_bytes.rawfile",
-            "FileName": "bb31d4d1eb267c4a68f3c342422d149d.rawfile",
-            "FileHash": "bb31d4d1eb267c4a68f3c342422d149d",
-            "FileCRC": "a7c274ad",
-            "FileSize": 336384,
+            "FileName": "63cb4d6f90b43878bd189fea86230c7b.rawfile",
+            "FileHash": "63cb4d6f90b43878bd189fea86230c7b",
+            "FileCRC": "1fc1a84b",
+            "FileSize": 335360,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -525,10 +525,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uicanvas.bundle",
-            "FileName": "f8cf1c25db33c7e474d046e9fc5c13fd.bundle",
-            "FileHash": "f8cf1c25db33c7e474d046e9fc5c13fd",
-            "FileCRC": "356bcba5",
-            "FileSize": 5268,
+            "FileName": "b1db61c4d60dc9c09030f2f8816d80d4.bundle",
+            "FileHash": "b1db61c4d60dc9c09030f2f8816d80d4",
+            "FileCRC": "53201d4e",
+            "FileSize": 5192,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
@@ -553,10 +553,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uimainwindow.bundle",
-            "FileName": "0bf7018924e203d779c01c2c826a69e5.bundle",
-            "FileHash": "0bf7018924e203d779c01c2c826a69e5",
-            "FileCRC": "24a12841",
-            "FileSize": 6750,
+            "FileName": "9ea417da253bec3a3237f94a87109272.bundle",
+            "FileHash": "9ea417da253bec3a3237f94a87109272",
+            "FileCRC": "2b62f7e8",
+            "FileSize": 7213,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
@@ -567,10 +567,10 @@
         },
         {
             "BundleName": "defaultpackage_unityshaders.bundle",
-            "FileName": "752713d9276f87713ecb7c0e46bb3f06.bundle",
-            "FileHash": "752713d9276f87713ecb7c0e46bb3f06",
-            "FileCRC": "bc79fa14",
-            "FileSize": 22726,
+            "FileName": "d39539835e675d1db62168b7a5d43e0e.bundle",
+            "FileHash": "d39539835e675d1db62168b7a5d43e0e",
+            "FileCRC": "bdfb8566",
+            "FileSize": 43623,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
@@ -578,7 +578,7 @@
                 8
             ],
             "AllBuiltinAssets": [
-                "Assets/TextMesh Pro/Shaders/TMP_SDF.shader"
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader"
             ]
         },
         {

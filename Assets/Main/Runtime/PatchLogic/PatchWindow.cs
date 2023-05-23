@@ -110,6 +110,7 @@ public class PatchWindow : MonoBehaviour
         {
             var msg = message as PatchEventDefine.PatchStatesChange;
             _tips.text = msg.Tips;
+            Debug.Log($"{ _tips.text}");
         }
         else if (message is PatchEventDefine.FoundUpdateFiles)
         {
@@ -129,8 +130,8 @@ public class PatchWindow : MonoBehaviour
             _slider.value = (float)msg.CurrentDownloadCount / msg.TotalDownloadCount;
             string currentSizeMB = (msg.CurrentDownloadSizeBytes / 1048576f).ToString("f1");
             string totalSizeMB = (msg.TotalDownloadSizeBytes / 1048576f).ToString("f1");
-            _tips.text = $"{msg.CurrentDownloadCount}/{msg.TotalDownloadCount} {currentSizeMB}MB/{totalSizeMB}MB";
-             Debug.LogWarning($"下载进度更新 {_tips.text}");
+            _tips.text = $"下载进度 {msg.CurrentDownloadCount}/{msg.TotalDownloadCount} {currentSizeMB}MB/{totalSizeMB}MB";
+            Debug.LogWarning($"下载进度更新 {_tips.text}");
         }
         else if (message is PatchEventDefine.PackageVersionUpdateFailed)
         {
@@ -138,7 +139,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryUpdatePackageVersion.SendEventMessage();
             };
-            ShowMessageBox($"更新静态版本失败，请检查网络状态。", callback);
+            _tips.text = $"当前已经是最新版本!";
         }
         else if (message is PatchEventDefine.PatchManifestUpdateFailed)
         {
@@ -146,7 +147,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryUpdatePatchManifest.SendEventMessage();
             };
-            ShowMessageBox($"更新补丁清单失败，请检查网络状态。", callback);
+            _tips.text = $"当前已经是最新版本!";
         }
         else if (message is PatchEventDefine.WebFileDownloadFailed)
         {

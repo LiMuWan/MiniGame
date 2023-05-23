@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3711504157
+CRC: 4031394604
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 06e3da349e025a0cf088b3aa227a3821
+    Hash: 93eea4d8b88a27d3460283b08107f341
   TypeTreeHash:
     serializedVersion: 2
     Hash: 7fcb3727810d5d1180f5a5005a85efaf
@@ -61,4 +61,4 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/HotfixAssets/UIWindow/UIMainWindow.prefab
 Dependencies:
-- D:/MyProject/WXMiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_uifont.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_uifont.bundle

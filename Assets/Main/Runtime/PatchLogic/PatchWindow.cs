@@ -74,7 +74,7 @@ public class PatchWindow : MonoBehaviour
         _slider = transform.Find("UIWindow/Slider").GetComponent<Slider>();
         _tips = transform.Find("UIWindow/Slider/txt_tips").GetComponent<TextMeshProUGUI>();
         _version = transform.Find("UIWindow/version").GetComponent<TextMeshProUGUI>();
-        _tips.text = "Initializing the game world !";
+        _tips.text = "游戏初始化中 !";
         _messageBoxObj = transform.Find("UIWindow/MessageBox").gameObject;
         _messageBoxObj.SetActive(false);
         
@@ -100,7 +100,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryInitalize.SendEventMessage();
             };
-            ShowMessageBox($"Failed to initialize package !", callback);
+            ShowMessageBox($"初始化包失败 !", callback);
         }
         else if(message is PatchEventDefine.GameVersionInitOrRefresh)
         {
@@ -121,7 +121,7 @@ public class PatchWindow : MonoBehaviour
             float sizeMB = msg.TotalSizeBytes / 1048576f;
             sizeMB = Mathf.Clamp(sizeMB, 0.1f, float.MaxValue);
             string totalSizeMB = sizeMB.ToString("f1");
-            ShowMessageBox($"Found update patch files,Total count {msg.TotalCount} Total size {totalSizeMB}MB", callback);
+            ShowMessageBox($"发现更新补丁文件,总个数： {msg.TotalCount} , 总大小： {totalSizeMB}兆", callback);
         }
         else if (message is PatchEventDefine.DownloadProgressUpdate)
         {
@@ -130,7 +130,7 @@ public class PatchWindow : MonoBehaviour
             string currentSizeMB = (msg.CurrentDownloadSizeBytes / 1048576f).ToString("f1");
             string totalSizeMB = (msg.TotalDownloadSizeBytes / 1048576f).ToString("f1");
             _tips.text = $"{msg.CurrentDownloadCount}/{msg.TotalDownloadCount} {currentSizeMB}MB/{totalSizeMB}MB";
-             Debug.LogWarning($"DownloadProgressUpdate {_tips.text}");
+             Debug.LogWarning($"下载进度更新 {_tips.text}");
         }
         else if (message is PatchEventDefine.PackageVersionUpdateFailed)
         {
@@ -138,7 +138,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryUpdatePackageVersion.SendEventMessage();
             };
-            ShowMessageBox($"Failed to update static version, please check the network status.", callback);
+            ShowMessageBox($"更新静态版本失败，请检查网络状态。", callback);
         }
         else if (message is PatchEventDefine.PatchManifestUpdateFailed)
         {
@@ -146,7 +146,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryUpdatePatchManifest.SendEventMessage();
             };
-            ShowMessageBox($"Failed to update patch manifest,please check the network status.", callback);
+            ShowMessageBox($"更新补丁清单失败，请检查网络状态。", callback);
         }
         else if (message is PatchEventDefine.WebFileDownloadFailed)
         {
@@ -155,7 +155,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryDownloadWebFiles.SendEventMessage();
             };
-            ShowMessageBox($"Failed to download file : {msg.FileName}", callback);
+            ShowMessageBox($"文件下载失败 : {msg.FileName}", callback);
         }
         else
         {

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UniFramework.Utility;
 using UnityEngine;
 using UnityEngine.UI;
-using YooAsset;
 
 namespace UniFramework.Window
 {
@@ -43,7 +41,7 @@ namespace UniFramework.Window
 				UniLogger.Log($"{nameof(UniWindow)} initalize !");
 
 				Desktop = desktop;
-				SimulateIPhoneXNotchScreen();
+				// SimulateIPhoneXNotchScreen();
 			}
 		}
 

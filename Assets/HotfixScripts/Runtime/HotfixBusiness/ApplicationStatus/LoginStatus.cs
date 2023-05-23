@@ -11,8 +11,7 @@ public class LoginStatus : IApplicationStatus
     //Status的进入逻辑请放在这里
     public override void OnEnterStatus()
     {
-       ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
-
+        ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
 #if !UNITY_EDITOR
         WX.InitSDK((code) =>
         {
@@ -36,19 +35,22 @@ public class LoginStatus : IApplicationStatus
                 Debug.Log("ad close:" + r.isEnded);
             });
 
-            // 创建用户信息获取按钮，在底部1/3区域创建一个透明区域
+            // 创建用户信息获取按钮，在屏幕1/2区域创建一个透明区域
             // 首次获取会弹出用户授权窗口, 可通过右上角-设置-权限管理用户的授权记录
             var canvasWith = (int)(systemInfo.screenWidth * systemInfo.pixelRatio);
             var canvasHeight = (int)(systemInfo.screenHeight * systemInfo.pixelRatio);
-            var buttonHeight = (int)(canvasWith / 1080f * 300f);
+            var buttonHeight = (int)((canvasWith / 1080f) * 300);
             infoButton = WX.CreateUserInfoButton(0, canvasHeight - buttonHeight, canvasWith, buttonHeight, "zh_CN", false);
             infoButton.OnTap((userInfoButonRet) =>
             {
                 Debug.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
                 //uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
+                UserEventDefine.UserLoginSuccess.SendEventMessage();
             });
             Debug.Log("infoButton Created");
         });
+#else
+     ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
 #endif
     }
 

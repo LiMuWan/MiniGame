@@ -31,6 +31,7 @@ public static class UIManager
         var handle = ResourcesManager.Instance.LoadAssetAsync<GameObject>($"UICanvas");
         yield return handle;
         GameObject canvas = handle.InstantiateSync();
+        handle.Release();
         GameObject.DontDestroyOnLoad(canvas);
         var desktop = canvas.transform.Find("Desktop").gameObject;
         UniWindow.Initalize(desktop);

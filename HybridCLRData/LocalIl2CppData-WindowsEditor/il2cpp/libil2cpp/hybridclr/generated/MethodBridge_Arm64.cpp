@@ -80,30 +80,6 @@ static void __M2N_i16i16i4i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UnityAsyncExtensions::WaitAsync(Unity.Jobs.JobHandle,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i16i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(ValueTypeSize16 __arg0, int32_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTaskExtensions::AttachExternalCancellation(Cysharp.Threading.Tasks.UniTask,System.Threading.CancellationToken)
-static void __M2N_i16i16i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(ValueTypeSize16 __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTaskExtensions::Timeout(Cysharp.Threading.Tasks.UniTask,System.TimeSpan,Cysharp.Threading.Tasks.DelayType,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationTokenSource)
-static void __M2N_i16i16i8i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(ValueTypeSize16 __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
 // System.Decimal System.Convert::ToDecimal(System.Int16)
 static void __M2N_i16i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -120,39 +96,7 @@ static void __M2N_i16i4(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Delay(System.Int32,Cysharp.Threading.Tasks.DelayType,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i4i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int32_t __arg0, int32_t __arg1, int32_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::DelayFrame(System.Int32,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int32_t __arg0, int32_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Yield(Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int32_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Delay(System.Int32,System.Boolean,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i4u1i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int32_t __arg0, uint8_t __arg1, int32_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.ReadOnlySpan`1<System.Char> System.String::op_Implicit(System.String)
+// System.ReadOnlySpan`1<System.Char> Interop/NtDll/FILE_FULL_DIR_INFORMATION::get_FileName()
 static void __M2N_i16i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
@@ -160,7 +104,7 @@ static void __M2N_i16i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.Span`1<System.Byte> System.Text.ValueUtf8Converter::ConvertAndTerminateString(System.ReadOnlySpan`1<System.Char>)
+// YooAsset.EncryptResult YooAsset.IEncryptionServices::Encrypt(YooAsset.EncryptFileInfo)
 static void __M2N_i16i8i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, const MethodInfo* method);
@@ -173,14 +117,6 @@ static void __M2N_i16i8i16i8(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, int64_t __arg2, const MethodInfo* method);
     *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// System.ValueTuple`2<T1,T2> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`2::GetResult(System.Int16)
-static void __M2N_i16i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -197,14 +133,6 @@ static void __M2N_i16i8i4i4(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, int32_t __arg1, int32_t __arg2, const MethodInfo* method);
     *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Delay(System.TimeSpan,Cysharp.Threading.Tasks.DelayType,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i8i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, int32_t __arg1, int32_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -232,14 +160,6 @@ static void __M2N_i16i8i8i4(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UnityAsyncExtensions::ToUniTask(UnityEngine.AsyncOperation,System.IProgress`1<System.Single>,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i8i8i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
 // Unity.Jobs.JobHandle UnityEngine.Rendering.BatchRendererGroup/OnPerformCulling::Invoke(UnityEngine.Rendering.BatchRendererGroup,UnityEngine.Rendering.BatchCullingContext)
 static void __M2N_i16i8i8sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -248,35 +168,11 @@ static void __M2N_i16i8i8sr(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Run(System.Action`1<System.Object>,System.Object,System.Boolean,System.Threading.CancellationToken)
-static void __M2N_i16i8i8u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint8_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
 // System.ConsoleKeyInfo System.IConsoleDriver::ReadKey(System.Boolean)
 static void __M2N_i16i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, uint8_t __arg1, const MethodInfo* method);
     *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Delay(System.TimeSpan,System.Boolean,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_i16i8u1i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int32_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask::Run(System.Action,System.Boolean,System.Threading.CancellationToken)
-static void __M2N_i16i8u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -296,27 +192,11 @@ static void __M2N_i16r8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTask`1::op_Implicit(Cysharp.Threading.Tasks.UniTask`1<T>)
+// T System.Nullable`1::op_Explicit(System.Nullable`1<T>)
 static void __M2N_i16sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize16 (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTaskExtensions::ContinueWith<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.Action`1<T>)
-static void __M2N_i16sri8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(uint64_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask Cysharp.Threading.Tasks.UniTaskExtensions::Unwrap(Cysharp.Threading.Tasks.UniTask`1<System.Threading.Tasks.Task>,System.Boolean)
-static void __M2N_i16sru1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize16 (*NativeMethod)(uint64_t __arg0, uint8_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize16*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -1080,6 +960,22 @@ static void __M2N_i4i8i4i8i4i4u1i8(const MethodInfo* method, uint16_t* argVarInd
 }
 
 
+// System.Int32 System.Security.AccessControl.NativeObjectSecurity/SetSecurityInfoNativeCall::Invoke(System.Security.AccessControl.SecurityInfos,System.Byte[],System.Byte[],System.Byte[],System.Byte[])
+static void __M2N_i4i8i4i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
+}
+
+
+// System.Int32 System.Security.AccessControl.NativeObjectSecurity/GetSecurityInfoNativeCall::Invoke(System.Security.AccessControl.SecurityInfos,System.IntPtr&,System.IntPtr&,System.IntPtr&,System.IntPtr&,System.IntPtr&)
+static void __M2N_i4i8i4i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
+}
+
+
 // System.Int32 System.Threading.WaitHandle::WaitAny(System.Threading.WaitHandle[],System.Int32,System.Boolean)
 static void __M2N_i4i8i4u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -1309,6 +1205,14 @@ static void __M2N_i4i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef int32_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
     *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Int32 Interop/NtDll::NtQueryDirectoryFile(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,Interop/NtDll/IO_STATUS_BLOCK&,System.IntPtr,System.UInt32,Interop/NtDll/FILE_INFORMATION_CLASS,Interop/BOOLEAN,Interop/UNICODE_STRING*,Interop/BOOLEAN)
+static void __M2N_i4i8i8i8i8i8i8u4u4u1i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, uint32_t __arg6, uint32_t __arg7, uint8_t __arg8, int64_t __arg9, uint8_t __arg10, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(uint32_t*)(localVarBase+argVarIndexs[6]), *(uint32_t*)(localVarBase+argVarIndexs[7]), *(uint8_t*)(localVarBase+argVarIndexs[8]), *(int64_t*)(localVarBase+argVarIndexs[9]), *(uint8_t*)(localVarBase+argVarIndexs[10]), method);
 }
 
 
@@ -1608,14 +1512,6 @@ static void __M2N_i4i8vf2(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Int32 System.Collections.Generic.Comparer`1::Compare(T,T)
-static void __M2N_i4i8vf2vf2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, const MethodInfo* method);
-    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector2f*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
 // System.Int32 UnityEngine.PhysicsScene2D::Raycast(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,UnityEngine.ContactFilter2D,UnityEngine.RaycastHit2D[])
 static void __M2N_i4i8vf2vf2r4sri8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -1624,7 +1520,7 @@ static void __M2N_i4i8vf2vf2r4sri8(const MethodInfo* method, uint16_t* argVarInd
 }
 
 
-// System.Int32 Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector3EqualityComparer::GetHashCode(UnityEngine.Vector3)
+// System.Int32 System.Collections.Generic.List`1::BinarySearch(T)
 static void __M2N_i4i8vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method);
@@ -1696,7 +1592,7 @@ static void __M2N_i4i8vf3vf3i8r4i4i4(const MethodInfo* method, uint16_t* argVarI
 }
 
 
-// System.Int32 Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector4EqualityComparer::GetHashCode(UnityEngine.Vector4)
+// System.Int32 System.Collections.Generic.List`1::BinarySearch(T)
 static void __M2N_i4i8vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, const MethodInfo* method);
@@ -1736,7 +1632,7 @@ static void __M2N_i4i8vf4i8vf2(const MethodInfo* method, uint16_t* argVarIndexs,
 }
 
 
-// System.Int32 System.Collections.Generic.IComparer`1::Compare(T,T)
+// System.Int32 System.Comparison`1::Invoke(T,T)
 static void __M2N_i4i8vf4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, HtVector4f __arg2, const MethodInfo* method);
@@ -1952,7 +1848,7 @@ static void __M2N_i4vf4i4i8i8i4(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.TimeZoneInfo System.TimeZoneInfo::get_Local()
+// System.Collections.ObjectModel.ReadOnlyCollection`1<System.TimeZoneInfo> System.TimeZoneInfo::GetSystemTimeZones()
 static void __M2N_i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(const MethodInfo* method);
@@ -2032,14 +1928,6 @@ static void __M2N_i8i16i4i8(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// Cysharp.Threading.Tasks.IUniTaskSource`1<UnityEngine.Rendering.AsyncGPUReadbackRequest> Cysharp.Threading.Tasks.UnityAsyncExtensions/AsyncGPUReadbackRequestAwaiterConfiguredSource::Create(UnityEngine.Rendering.AsyncGPUReadbackRequest,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,System.Int16&)
-static void __M2N_i8i16i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(ValueTypeSize16 __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
 // System.String System.Convert::ToString(System.Decimal,System.IFormatProvider)
 static void __M2N_i8i16i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2096,7 +1984,7 @@ static void __M2N_i8i2i8(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
-// Interop/ErrorInfo InteropErrorExtensions::Info(Interop/Error)
+// Mono.Globalization.Unicode.TailoringInfo Mono.Globalization.Unicode.MSCompatUnicodeTable::GetTailoringInfo(System.Int32)
 static void __M2N_i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int32_t __arg0, const MethodInfo* method);
@@ -2112,7 +2000,7 @@ static void __M2N_i8i4i16i8(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// System.String System.Convert::ToString(System.Int32,System.Int32)
+// Microsoft.Win32.RegistryKey Microsoft.Win32.RegistryKey::OpenBaseKey(Microsoft.Win32.RegistryHive,Microsoft.Win32.RegistryView)
 static void __M2N_i8i4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int32_t __arg0, int32_t __arg1, const MethodInfo* method);
@@ -2141,14 +2029,6 @@ static void __M2N_i8i4i4i4u2i4(const MethodInfo* method, uint16_t* argVarIndexs,
 {
     typedef int64_t (*NativeMethod)(int32_t __arg0, int32_t __arg1, int32_t __arg2, uint16_t __arg3, int32_t __arg4, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint16_t*)(localVarBase+argVarIndexs[3]), *(int32_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.IUniTaskSource Cysharp.Threading.Tasks.UniTask/DelayFramePromise::Create(System.Int32,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,System.Int16&)
-static void __M2N_i8i4i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int32_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -2184,7 +2064,7 @@ static void __M2N_i8i4sri8(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// System.String Interop/ErrorInfo::ToString()
+// Interop/NtDll/FILE_FULL_DIR_INFORMATION* Interop/NtDll/FILE_FULL_DIR_INFORMATION::GetNextInfo(Interop/NtDll/FILE_FULL_DIR_INFORMATION*)
 static void __M2N_i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
@@ -2213,14 +2093,6 @@ static void __M2N_i8i8i16i16i8i8(const MethodInfo* method, uint16_t* argVarIndex
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.Internal.StateTuple`3<T1,T2,T3> Cysharp.Threading.Tasks.Internal.StateTuple::Create<T1,T2,T3>(T1,T2,T3)
-static void __M2N_i8i8i16i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, int32_t __arg2, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -2648,11 +2520,11 @@ static void __M2N_i8i8i8i4i8(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// System.Text.RegularExpressions.RegexReplacement System.Text.RegularExpressions.RegexParser::ParseReplacement(System.String,System.Collections.Hashtable,System.Int32,System.Collections.Hashtable,System.Text.RegularExpressions.RegexOptions)
-static void __M2N_i8i8i8i4i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+// System.Collections.IEnumerator GameFramework.Resource.ResourcesManager::LoadSceneCo(System.String,System.Int32,GameFramework.Resource.LoadSceneCallbacks,UnityEngine.SceneManagement.LoadSceneMode,System.Object)
+static void __M2N_i8i8i8i4i8i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
-    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, int32_t __arg4, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int32_t*)(localVarBase+argVarIndexs[4]), method);
+    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, int32_t __arg4, int64_t __arg5, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int32_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
 }
 
 
@@ -2744,7 +2616,7 @@ static void __M2N_i8i8i8i8i16i8(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.String System.String::Replace(System.String,System.String,System.StringComparison)
+// System.Object Microsoft.Win32.RegistryKey::GetValue(System.String,System.Object,Microsoft.Win32.RegistryValueOptions)
 static void __M2N_i8i8i8i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int32_t __arg3, const MethodInfo* method);
@@ -2784,22 +2656,6 @@ static void __M2N_i8i8i8i8i4i8(const MethodInfo* method, uint16_t* argVarIndexs,
 }
 
 
-// System.Text.RegularExpressions.RegexReplacement System.Text.RegularExpressions.RegexReplacement::GetOrCreate(System.WeakReference`1<System.Text.RegularExpressions.RegexReplacement>,System.String,System.Collections.Hashtable,System.Int32,System.Collections.Hashtable,System.Text.RegularExpressions.RegexOptions)
-static void __M2N_i8i8i8i8i4i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int32_t __arg3, int64_t __arg4, int32_t __arg5, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int32_t*)(localVarBase+argVarIndexs[5]), method);
-}
-
-
-// Cysharp.Threading.Tasks.IUniTaskSource`1<U> Cysharp.Threading.Tasks.UniTask/WaitUntilValueChangedUnityObjectPromise`2::Create(T,System.Func`2<T,U>,System.Collections.Generic.IEqualityComparer`1<U>,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,System.Int16&)
-static void __M2N_i8i8i8i8i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int32_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
-}
-
-
 // System.String System.String::Concat(System.String,System.String,System.String,System.String)
 static void __M2N_i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2832,14 +2688,6 @@ static void __M2N_i8i8i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndex
 }
 
 
-// System.TimeZoneInfo System.TimeZoneInfo::CreateCustomTimeZone(System.String,System.TimeSpan,System.String,System.String,System.String,System.TimeZoneInfo/AdjustmentRule[],System.Boolean)
-static void __M2N_i8i8i8i8i8i8i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, uint8_t __arg6, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(uint8_t*)(localVarBase+argVarIndexs[6]), method);
-}
-
-
 // System.Threading.RegisteredWaitHandle System.Threading.ThreadPool::RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.TimeSpan,System.Boolean)
 static void __M2N_i8i8i8i8i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2853,14 +2701,6 @@ static void __M2N_i8i8i8i8r4i8i8i8(const MethodInfo* method, uint16_t* argVarInd
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, float __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
-}
-
-
-// System.TimeZoneInfo/AdjustmentRule System.TimeZoneInfo/AdjustmentRule::CreateAdjustmentRule(System.DateTime,System.DateTime,System.TimeSpan,System.TimeZoneInfo/TransitionTime,System.TimeZoneInfo/TransitionTime)
-static void __M2N_i8i8i8i8srsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, uint64_t __arg3, uint64_t __arg4, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -2920,7 +2760,7 @@ static void __M2N_i8i8i8r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndex
 }
 
 
-// System.Type System.Type::GetInterface(System.String,System.Boolean)
+// Microsoft.Win32.RegistryKey Microsoft.Win32.RegistryKey::OpenSubKey(System.String,System.Boolean)
 static void __M2N_i8i8i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint8_t __arg2, const MethodInfo* method);
@@ -2973,14 +2813,6 @@ static void __M2N_i8i8i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint8_t __arg2, uint8_t __arg3, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.IAsyncResult WeChatWASM.WXAssetBundleRequest/WXAssetBundleCallBack::BeginInvoke(System.IntPtr,System.UInt32,System.IntPtr,System.AsyncCallback,System.Object)
-static void __M2N_i8i8i8u4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint32_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
 }
 
 
@@ -3037,14 +2869,6 @@ static void __M2N_i8i8sri8i8(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, uint64_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static void __M2N_i8i8sri8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, uint64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -3120,14 +2944,6 @@ static void __M2N_i8i8u1i4i4i4i8i4i4i4i4u1i8(const MethodInfo* method, uint16_t*
 }
 
 
-// Cysharp.Threading.Tasks.PlayerLoopTimer Cysharp.Threading.Tasks.PlayerLoopTimer::Create(System.TimeSpan,System.Boolean,Cysharp.Threading.Tasks.DelayType,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,System.Action`1<System.Object>,System.Object)
-static void __M2N_i8i8u1i4i4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int32_t __arg2, int32_t __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
-}
-
-
 // System.Byte[] UnityEngine.WWWTranscoder::Decode(System.Byte[],System.Byte,System.Byte[])
 static void __M2N_i8i8u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -3200,7 +3016,7 @@ static void __M2N_i8i8u2i8(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// System.IAsyncResult System.Func`2::BeginInvoke(T,System.AsyncCallback,System.Object)
+// System.IAsyncResult System.Action`1::BeginInvoke(T,System.AsyncCallback,System.Object)
 static void __M2N_i8i8u2i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, uint16_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
@@ -3288,7 +3104,7 @@ static void __M2N_i8i8u4u4i8i8(const MethodInfo* method, uint16_t* argVarIndexs,
 }
 
 
-// WeChatWASM.WXAssetBundleRequest WeChatWASM.WXAssetBundle::LoadFromFileAsync(System.String,System.UInt32,System.UInt64)
+// UnityEngine.AssetBundleCreateRequest UnityEngine.AssetBundle::LoadFromFileAsync(System.String,System.UInt32,System.UInt64)
 static void __M2N_i8i8u4u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, uint32_t __arg1, uint64_t __arg2, const MethodInfo* method);
@@ -3320,14 +3136,6 @@ static void __M2N_i8i8vf2i8(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static void __M2N_i8i8vf2i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector2f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
 // System.IAsyncResult UnityEngine.UI.ReflectionMethodsCache/Raycast2DCallback::BeginInvoke(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Int32,System.AsyncCallback,System.Object)
 static void __M2N_i8i8vf2vf2r4i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -3349,14 +3157,6 @@ static void __M2N_i8i8vf3i8i8(const MethodInfo* method, uint16_t* argVarIndexs, 
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static void __M2N_i8i8vf3i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -3389,14 +3189,6 @@ static void __M2N_i8i8vf4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, 
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static void __M2N_i8i8vf4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -3485,22 +3277,6 @@ static void __M2N_i8sr(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 {
     typedef int64_t (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.Threading.CancellationToken Cysharp.Threading.Tasks.CancellationTokenExtensions::ToCancellationToken<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.Threading.CancellationToken)
-static void __M2N_i8sri8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(uint64_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// System.Collections.IEnumerator Cysharp.Threading.Tasks.UniTaskExtensions::ToCoroutine<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.Action`1<T>,System.Action`1<System.Exception>)
-static void __M2N_i8sri8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef int64_t (*NativeMethod)(uint64_t __arg0, int64_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -3821,14 +3597,6 @@ static void __M2N_r4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 {
     typedef float (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// TResult Cysharp.Threading.Tasks.UniTaskCompletionSourceCore`1::GetResult(System.Int16)
-static void __M2N_r4i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef float (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -4320,46 +4088,6 @@ static void __M2N_r8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S104i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<104> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<104>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`6<T8,T9,T10,T11,T12,T13>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`13::GetResult(System.Int16)
-static void __M2N_S104i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<104> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<104>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`4<T8,T9,T10,T11>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`4<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>>>)
-static void __M2N_S104sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<104> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<104>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`4<T7,T8,T9,T10>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>)
-static void __M2N_S104srsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<104> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, const MethodInfo* method);
-    *(ValueTypeSize<104>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`4<T8,T9,T10,T11>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>)
-static void __M2N_S104srsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<104> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, const MethodInfo* method);
-    *(ValueTypeSize<104>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), method);
-}
-
-
 // T System.Collections.Generic.List`1/Enumerator::get_Current()
 static void __M2N_S108i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -4384,83 +4112,11 @@ static void __M2N_S108i8i8(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S112i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<112> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<112>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`7<T8,T9,T10,T11,T12,T13,T14>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`14::GetResult(System.Int16)
-static void __M2N_S112i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<112> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<112>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`5<T8,T9,T10,T11,T12>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`5<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>>>)
-static void __M2N_S112sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<112> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<112>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`5<T7,T8,T9,T10,T11>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>)
-static void __M2N_S112srsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<112> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, const MethodInfo* method);
-    *(ValueTypeSize<112>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`5<T8,T9,T10,T11,T12>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>)
-static void __M2N_S112srsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<112> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, const MethodInfo* method);
-    *(ValueTypeSize<112>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), method);
-}
-
-
 // Unity.Collections.NativeArray`1/Enumerator<T> Unity.Collections.NativeArray`1::GetEnumerator()
 static void __M2N_S120i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<120> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize<120>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`8<T8,T9,T10,T11,T12,T13,T14,System.ValueTuple`1<T15>>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`15::GetResult(System.Int16)
-static void __M2N_S120i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<120> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<120>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`6<T8,T9,T10,T11,T12,T13>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`6<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>>>)
-static void __M2N_S120sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<120> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<120>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`6<T7,T8,T9,T10,T11,T12>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>)
-static void __M2N_S120srsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<120> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, const MethodInfo* method);
-    *(ValueTypeSize<120>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`6<T8,T9,T10,T11,T12,T13>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>)
-static void __M2N_S120srsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<120> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, const MethodInfo* method);
-    *(ValueTypeSize<120>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), method);
 }
 
 
@@ -4472,70 +4128,6 @@ static void __M2N_S128i8(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
-// System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`8<T7,T8,T9,T10,T11,T12,T13,System.ValueTuple`2<T14,T15>>> Cysharp.Threading.Tasks.UniTask/WhenAnyPromise`15::GetResult(System.Int16)
-static void __M2N_S128i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<128> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<128>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`7<T8,T9,T10,T11,T12,T13,T14>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`7<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>>>)
-static void __M2N_S128sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<128> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<128>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`7<T7,T8,T9,T10,T11,T12,T13>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>)
-static void __M2N_S128srsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<128> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, const MethodInfo* method);
-    *(ValueTypeSize<128>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`7<T8,T9,T10,T11,T12,T13,T14>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>)
-static void __M2N_S128srsrsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<128> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, const MethodInfo* method);
-    *(ValueTypeSize<128>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`8<T8,T9,T10,T11,T12,T13,T14,System.ValueTuple`1<T15>>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>,System.ValueTuple`1<Cysharp.Threading.Tasks.UniTask`1<T15>>>>)
-static void __M2N_S136sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<136> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<136>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`8<T7,T8,T9,T10,T11,T12,T13,System.ValueTuple`1<T14>>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>)
-static void __M2N_S136srsrsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<136> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, const MethodInfo* method);
-    *(ValueTypeSize<136>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`8<T8,T9,T10,T11,T12,T13,T14,System.ValueTuple`1<T15>>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>,Cysharp.Threading.Tasks.UniTask`1<T15>)
-static void __M2N_S136srsrsrsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<136> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, uint64_t __arg14, const MethodInfo* method);
-    *(ValueTypeSize<136>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), (uint64_t)(localVarBase+argVarIndexs[14]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`8<T7,T8,T9,T10,T11,T12,T13,System.ValueTuple`2<T14,T15>>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>,Cysharp.Threading.Tasks.UniTask`1<T15>)
-static void __M2N_S144srsrsrsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<144> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, uint64_t __arg14, const MethodInfo* method);
-    *(ValueTypeSize<144>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), (uint64_t)(localVarBase+argVarIndexs[14]), method);
-}
-
-
 // UnityEngine.LightBakingOutput UnityEngine.Light::get_bakingOutput()
 static void __M2N_S20i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -4544,15 +4136,7 @@ static void __M2N_S20i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S20i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<20> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<20>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// System.Threading.AsyncFlowControl System.Threading.ExecutionContext::SuppressFlow()
+// System.Runtime.CompilerServices.AsyncTaskMethodBuilder System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create()
 static void __M2N_S24(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<24> (*NativeMethod)(const MethodInfo* method);
@@ -4568,35 +4152,11 @@ static void __M2N_S24i16(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`3<System.Int32,T1,T2>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>)
-static void __M2N_S24i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(ValueTypeSize16 __arg0, ValueTypeSize16 __arg1, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTaskExtensions::ContinueWith<T>(Cysharp.Threading.Tasks.UniTask,System.Func`1<T>)
-static void __M2N_S24i16i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(ValueTypeSize16 __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
 // System.TimeZoneInfo/TransitionTime System.TimeZoneInfo/AdjustmentRule::get_DaylightTransitionStart()
 static void __M2N_S24i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`3<T1,T2,T3> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`3::GetResult(System.Int16)
-static void __M2N_S24i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -4632,38 +4192,6 @@ static void __M2N_S24i8i8(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.Object[]> Cysharp.Threading.Tasks.UnityAsyncExtensions::AwaitForAllAssets(UnityEngine.AssetBundleRequest,System.IProgress`1<System.Single>,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_S24i8i8i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<U> Cysharp.Threading.Tasks.UniTask::WaitUntilValueChanged<T,U>(T,System.Func`2<T,U>,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Collections.Generic.IEqualityComparer`1<U>,System.Threading.CancellationToken)
-static void __M2N_S24i8i8i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> GameFramework.Resource.ResourcesManager::LoadAssetAsync<T>(System.String,System.Threading.CancellationToken)
-static void __M2N_S24i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// System.Threading.CancellationTokenRegistration System.Threading.CancellationToken::Register(System.Action`1<System.Object>,System.Object,System.Boolean)
-static void __M2N_S24i8i8i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, uint8_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
 // System.Threading.CancellationTokenRegistration System.Threading.CancellationToken::Register(System.Action`1<System.Object>,System.Object,System.Boolean,System.Boolean)
 static void __M2N_S24i8i8i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -4672,35 +4200,11 @@ static void __M2N_S24i8i8i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.Threading.CancellationTokenRegistration System.Threading.CancellationToken::Register(System.Action,System.Boolean)
-static void __M2N_S24i8i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint8_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTask::Run<T>(System.Func`2<System.Object,T>,System.Object,System.Boolean,System.Threading.CancellationToken)
-static void __M2N_S24i8i8u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint8_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
 // System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable`1<TResult> System.Threading.Tasks.ValueTask`1::ConfigureAwait(System.Boolean)
 static void __M2N_S24i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, uint8_t __arg1, const MethodInfo* method);
     *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTask::Run<T>(System.Func`1<T>,System.Boolean,System.Threading.CancellationToken)
-static void __M2N_S24i8u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -4728,91 +4232,11 @@ static void __M2N_S24i8vf3i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTaskExtensions::Unwrap<T>(Cysharp.Threading.Tasks.UniTask`1<Cysharp.Threading.Tasks.UniTask`1<T>>)
-static void __M2N_S24sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTaskExtensions::AttachExternalCancellation<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.Threading.CancellationToken)
-static void __M2N_S24sri8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(uint64_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTaskExtensions::Timeout<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.TimeSpan,Cysharp.Threading.Tasks.DelayType,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationTokenSource)
-static void __M2N_S24sri8i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(uint64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.UniTaskExtensions::Unwrap<T>(Cysharp.Threading.Tasks.UniTask`1<System.Threading.Tasks.Task`1<T>>,System.Boolean)
-static void __M2N_S24sru1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(uint64_t __arg0, uint8_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.ReturnToSynchronizationContext Cysharp.Threading.Tasks.UniTask::ReturnToCurrentSynchronizationContext(System.Boolean,System.Threading.CancellationToken)
-static void __M2N_S24u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<24> (*NativeMethod)(uint8_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint8_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// T Cysharp.Threading.Tasks.UniTask`1/Awaiter::GetResult()
-static void __M2N_S28i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<28> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<28>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S28i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<28> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<28>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// System.Runtime.CompilerServices.AsyncVoidMethodBuilder System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Create()
+// System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder`1<TResult> System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder`1::Create()
 static void __M2N_S32(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<32> (*NativeMethod)(const MethodInfo* method);
     *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<UnityEngine.Rendering.AsyncGPUReadbackRequest> Cysharp.Threading.Tasks.UnityAsyncExtensions::GetAwaiter(UnityEngine.Rendering.AsyncGPUReadbackRequest)
-static void __M2N_S32i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(ValueTypeSize16 __arg0, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.Rendering.AsyncGPUReadbackRequest> Cysharp.Threading.Tasks.UnityAsyncExtensions::ToUniTask(UnityEngine.Rendering.AsyncGPUReadbackRequest,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken)
-static void __M2N_S32i16i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(ValueTypeSize16 __arg0, int32_t __arg1, int64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.Rendering.AsyncGPUReadbackRequest> Cysharp.Threading.Tasks.UnityAsyncExtensions::WithCancellation(UnityEngine.Rendering.AsyncGPUReadbackRequest,System.Threading.CancellationToken)
-static void __M2N_S32i16i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(ValueTypeSize16 __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -4824,67 +4248,11 @@ static void __M2N_S32i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.ValueTuple`4<T1,T2,T3,T4> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`4::GetResult(System.Int16)
-static void __M2N_S32i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
 // System.Reflection.InterfaceMapping System.Type::GetInterfaceMap(System.Type)
 static void __M2N_S32i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<32> (*NativeMethod)(int64_t __arg0, int64_t __arg1, const MethodInfo* method);
     *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`2<T1,T2>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2>(System.ValueTuple`2<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>>)
-static void __M2N_S32sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask::WhenAny<T>(Cysharp.Threading.Tasks.UniTask`1<T>,Cysharp.Threading.Tasks.UniTask)
-static void __M2N_S32sri16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(uint64_t __arg0, ValueTypeSize16 __arg1, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTaskExtensions::TimeoutWithoutException<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.TimeSpan,Cysharp.Threading.Tasks.DelayType,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationTokenSource)
-static void __M2N_S32sri8i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(uint64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, int64_t __arg4, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<T1,T2>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>)
-static void __M2N_S32srsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<32> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<32>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// T Cysharp.Threading.Tasks.UniTask`1/Awaiter::GetResult()
-static void __M2N_S36i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<36> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<36>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S36i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<36> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<36>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -4968,70 +4336,6 @@ static void __M2N_S40i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.ValueTuple`5<T1,T2,T3,T4,T5> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`5::GetResult(System.Int16)
-static void __M2N_S40i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<40> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<40>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// T System.Collections.Generic.List`1::get_Item(System.Int32)
-static void __M2N_S40i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<40> (*NativeMethod)(int64_t __arg0, int32_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<40>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// T System.Collections.Generic.List`1::Find(System.Predicate`1<T>)
-static void __M2N_S40i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<40> (*NativeMethod)(int64_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<40>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`3<T1,T2,T3>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3>(System.ValueTuple`3<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>>)
-static void __M2N_S40sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<40> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<40>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`3<System.Int32,T1,T2>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>)
-static void __M2N_S40srsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<40> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<40>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`3<T1,T2,T3>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>)
-static void __M2N_S40srsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<40> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize<40>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// T Cysharp.Threading.Tasks.UniTask`1/Awaiter::GetResult()
-static void __M2N_S44i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<44> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<44>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S44i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<44> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<44>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
 // UnityEngine.DisplayInfo UnityEngine.Screen::get_mainWindowDisplayInfo()
 static void __M2N_S48(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -5048,115 +4352,11 @@ static void __M2N_S48i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.ValueTuple`6<T1,T2,T3,T4,T5,T6> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`6::GetResult(System.Int16)
-static void __M2N_S48i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<48> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<48>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
 // T System.Collections.Generic.IList`1::get_Item(System.Int32)
 static void __M2N_S48i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<48> (*NativeMethod)(int64_t __arg0, int32_t __arg1, const MethodInfo* method);
     *(ValueTypeSize<48>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`4<T1,T2,T3,T4>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4>(System.ValueTuple`4<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>>)
-static void __M2N_S48sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<48> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<48>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`4<System.Int32,T1,T2,T3>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>)
-static void __M2N_S48srsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<48> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, const MethodInfo* method);
-    *(ValueTypeSize<48>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`4<T1,T2,T3,T4>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>)
-static void __M2N_S48srsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<48> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize<48>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// T Cysharp.Threading.Tasks.Triggers.AsyncTriggerBase`1/AsyncTriggerEnumerator::get_Current()
-static void __M2N_S504i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<504> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<504>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static void __M2N_S504i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<504> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<504>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// T Cysharp.Threading.Tasks.UniTask`1/Awaiter::GetResult()
-static void __M2N_S512i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<512> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<512>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S512i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<512> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<512>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.ParticleSystemJobs.ParticleSystemJobData> Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleUpdateJobScheduledHandler::OnParticleUpdateJobScheduledAsync()
-static void __M2N_S520i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<520> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<520>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S520i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<520> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<520>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.ParticleSystemJobs.ParticleSystemJobData> Cysharp.Threading.Tasks.Triggers.AsyncParticleUpdateJobScheduledTrigger::OnParticleUpdateJobScheduledAsync(System.Threading.CancellationToken)
-static void __M2N_S520i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<520> (*NativeMethod)(int64_t __arg0, int64_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<520>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S528i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<528> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<528>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S528i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<528> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<528>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -5168,179 +4368,11 @@ static void __M2N_S52i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S536i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<536> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<536>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S536i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<536> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<536>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S544i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<544> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<544>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S544i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<544> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<544>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S552i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<552> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<552>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S552i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<552> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<552>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S560i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<560> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<560>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S560i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<560> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<560>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S568i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<568> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<568>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S568i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<568> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<568>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1::GetEnumerator()
+// System.Collections.Generic.Dictionary`2/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2::GetEnumerator()
 static void __M2N_S56i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<56> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize<56>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`7<T1,T2,T3,T4,T5,T6,T7> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`7::GetResult(System.Int16)
-static void __M2N_S56i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<56> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<56>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`5<T1,T2,T3,T4,T5>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5>(System.ValueTuple`5<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>>)
-static void __M2N_S56sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<56> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<56>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`5<System.Int32,T1,T2,T3,T4>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>)
-static void __M2N_S56srsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<56> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, const MethodInfo* method);
-    *(ValueTypeSize<56>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`5<T1,T2,T3,T4,T5>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>)
-static void __M2N_S56srsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<56> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, const MethodInfo* method);
-    *(ValueTypeSize<56>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S576i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<576> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<576>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S576i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<576> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<576>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S584i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<584> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<584>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static void __M2N_S584i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<584> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<584>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S592i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<592> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<592>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S600i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<600> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<600>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S608i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<608> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<608>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
 }
 
 
@@ -5360,43 +4392,11 @@ static void __M2N_S64i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`1<T8>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`8::GetResult(System.Int16)
-static void __M2N_S64i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<64> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
 // System.Security.Cryptography.RSAParameters Mono.Security.Cryptography.RSAManaged::ExportParameters(System.Boolean)
 static void __M2N_S64i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<64> (*NativeMethod)(int64_t __arg0, uint8_t __arg1, const MethodInfo* method);
     *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`6<T1,T2,T3,T4,T5,T6>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6>(System.ValueTuple`6<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>>)
-static void __M2N_S64sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<64> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`6<System.Int32,T1,T2,T3,T4,T5>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>)
-static void __M2N_S64srsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<64> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, const MethodInfo* method);
-    *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`6<T1,T2,T3,T4,T5,T6>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>)
-static void __M2N_S64srsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<64> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, const MethodInfo* method);
-    *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), method);
 }
 
 
@@ -5424,59 +4424,11 @@ static void __M2N_S68i8i4(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Boolean,T>> Cysharp.Threading.Tasks.UniTask`1::SuppressCancellationThrow()
-static void __M2N_S72i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<72> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<72>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`2<T8,T9>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`9::GetResult(System.Int16)
-static void __M2N_S72i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<72> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<72>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`7<T1,T2,T3,T4,T5,T6,T7>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7>(System.ValueTuple`7<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>>)
-static void __M2N_S72sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<72> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<72>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`7<System.Int32,T1,T2,T3,T4,T5,T6>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>)
-static void __M2N_S72srsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<72> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, const MethodInfo* method);
-    *(ValueTypeSize<72>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`7<T1,T2,T3,T4,T5,T6,T7>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>)
-static void __M2N_S72srsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<72> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, const MethodInfo* method);
-    *(ValueTypeSize<72>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), method);
-}
-
-
 // UnityEngine.EventSystems.RaycastResult UnityEngine.EventSystems.PointerEventData::get_pointerCurrentRaycast()
 static void __M2N_S80i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<80> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize<80>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`3<T8,T9,T10>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`10::GetResult(System.Int16)
-static void __M2N_S80i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<80> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<80>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -5496,30 +4448,6 @@ static void __M2N_S80i8i8(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`1<T8>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`1<Cysharp.Threading.Tasks.UniTask`1<T8>>>)
-static void __M2N_S80sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<80> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<80>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`1<T7>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>)
-static void __M2N_S80srsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<80> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, const MethodInfo* method);
-    *(ValueTypeSize<80>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`1<T8>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>)
-static void __M2N_S80srsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<80> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, const MethodInfo* method);
-    *(ValueTypeSize<80>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), method);
-}
-
-
 // T TMPro.TMP_TextProcessingStack`1::get_current()
 static void __M2N_S888i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -5533,38 +4461,6 @@ static void __M2N_S88i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 {
     typedef ValueTypeSize<88> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize<88>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`4<T8,T9,T10,T11>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`11::GetResult(System.Int16)
-static void __M2N_S88i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<88> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<88>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`2<T8,T9>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`2<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>>>)
-static void __M2N_S88sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<88> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<88>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`2<T7,T8>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>)
-static void __M2N_S88srsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<88> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, const MethodInfo* method);
-    *(ValueTypeSize<88>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`2<T8,T9>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>)
-static void __M2N_S88srsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<88> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, const MethodInfo* method);
-    *(ValueTypeSize<88>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), method);
 }
 
 
@@ -5584,14 +4480,6 @@ static void __M2N_S96i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`5<T8,T9,T10,T11,T12>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`12::GetResult(System.Int16)
-static void __M2N_S96i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<96> (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(ValueTypeSize<96>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
 // T Unity.Collections.NativeArray`1::get_Item(System.Int32)
 static void __M2N_S96i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -5605,30 +4493,6 @@ static void __M2N_S96i8vf2(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 {
     typedef ValueTypeSize<96> (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, const MethodInfo* method);
     *(ValueTypeSize<96>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector2f*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1/Awaiter<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`3<T8,T9,T10>>> Cysharp.Threading.Tasks.UniTaskExtensions::GetAwaiter<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10>(System.ValueTuple`8<Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,System.ValueTuple`3<Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>>>)
-static void __M2N_S96sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<96> (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
-    *(ValueTypeSize<96>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`3<T7,T8,T9>>> Cysharp.Threading.Tasks.UniTask::WhenAny<T1,T2,T3,T4,T5,T6,T7,T8,T9>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>)
-static void __M2N_S96srsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<96> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, const MethodInfo* method);
-    *(ValueTypeSize<96>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), method);
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`3<T8,T9,T10>>> Cysharp.Threading.Tasks.UniTask::WhenAll<T1,T2,T3,T4,T5,T6,T7,T8,T9,T10>(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>)
-static void __M2N_S96srsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef ValueTypeSize<96> (*NativeMethod)(uint64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, const MethodInfo* method);
-    *(ValueTypeSize<96>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), method);
 }
 
 
@@ -5845,14 +4709,6 @@ static void __M2N_u1i4i8(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 {
     typedef uint8_t (*NativeMethod)(int32_t __arg0, int64_t __arg1, const MethodInfo* method);
     *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// System.Boolean System.CurrentSystemTimeZone::GetTimeZoneData(System.Int32,System.Int64[]&,System.String[]&,System.Boolean&)
-static void __M2N_u1i4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef uint8_t (*NativeMethod)(int32_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int32_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -6112,14 +4968,6 @@ static void __M2N_u1i8i8i8i4i4i4(const MethodInfo* method, uint16_t* argVarIndex
 }
 
 
-// System.Boolean System.TimeSpan::TryParseExact(System.String,System.String,System.IFormatProvider,System.TimeSpan&)
-static void __M2N_u1i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef uint8_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
-    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
 // System.Boolean UnityEngine.EventSystems.PhysicsRaycaster::ComputeRayAndDistance(UnityEngine.EventSystems.PointerEventData,UnityEngine.Ray&,System.Int32&,System.Single&)
 static void __M2N_u1i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -6240,7 +5088,7 @@ static void __M2N_u1i8sri8(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/BoundsEqualityComparer::Equals(UnityEngine.Bounds,UnityEngine.Bounds)
+// System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static void __M2N_u1i8srsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, const MethodInfo* method);
@@ -6344,6 +5192,14 @@ static void __M2N_u1i8u4i8(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// System.Boolean Interop/Kernel32::GetFileInformationByHandleEx(System.IntPtr,Interop/Kernel32/FILE_INFO_BY_HANDLE_CLASS,System.IntPtr,System.UInt32)
+static void __M2N_u1i8u4i8u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(int64_t __arg0, uint32_t __arg1, int64_t __arg2, uint32_t __arg3, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(uint32_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
 // System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static void __M2N_u1i8u4u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -6400,14 +5256,6 @@ static void __M2N_u1i8vf2i8vf4(const MethodInfo* method, uint16_t* argVarIndexs,
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector2EqualityComparer::Equals(UnityEngine.Vector2,UnityEngine.Vector2)
-static void __M2N_u1i8vf2vf2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef uint8_t (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, const MethodInfo* method);
-    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector2f*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
 // System.Boolean UnityEngine.Rect::Contains(UnityEngine.Vector3)
 static void __M2N_u1i8vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -6432,7 +5280,7 @@ static void __M2N_u1i8vf3u1(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector3EqualityComparer::Equals(UnityEngine.Vector3,UnityEngine.Vector3)
+// System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static void __M2N_u1i8vf3vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, const MethodInfo* method);
@@ -6480,7 +5328,7 @@ static void __M2N_u1i8vf4u1(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector4EqualityComparer::Equals(UnityEngine.Vector4,UnityEngine.Vector4)
+// System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static void __M2N_u1i8vf4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, HtVector4f __arg2, const MethodInfo* method);
@@ -7056,7 +5904,7 @@ static void __M2N_u4i2(const MethodInfo* method, uint16_t* argVarIndexs, StackOb
 }
 
 
-// System.UInt32 System.Convert::ToUInt32(System.Int32)
+// System.UInt32 Interop/NtDll::RtlNtStatusToDosError(System.Int32)
 static void __M2N_u4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint32_t (*NativeMethod)(int32_t __arg0, const MethodInfo* method);
@@ -7381,14 +6229,6 @@ static void __M2N_vf2i8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 {
     typedef HtVector2f (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
-}
-
-
-// TResult Cysharp.Threading.Tasks.UniTaskCompletionSourceCore`1::GetResult(System.Int16)
-static void __M2N_vf2i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef HtVector2f (*NativeMethod)(int64_t __arg0, int16_t __arg1, const MethodInfo* method);
-    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int16_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -8024,14 +6864,6 @@ static void __M2N_vi16i8i4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// System.Void Cysharp.Threading.Tasks.UniTaskExtensions::Forget(Cysharp.Threading.Tasks.UniTask,System.Action`1<System.Exception>,System.Boolean)
-static void __M2N_vi16i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(ValueTypeSize16 __arg0, int64_t __arg1, uint8_t __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(ValueTypeSize16*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
 // System.Void Internal.Runtime.Augments.RuntimeThread::Sleep(System.Int32)
 static void __M2N_vi4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -8173,62 +7005,6 @@ static void __M2N_vi8i16i16(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// System.Void System.ValueTuple`3::.ctor(T1,T2,T3)
-static void __M2N_vi8i16i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.Void System.ValueTuple`4::.ctor(T1,T2,T3,T4)
-static void __M2N_vi8i16i16i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// System.Void System.ValueTuple`5::.ctor(T1,T2,T3,T4,T5)
-static void __M2N_vi8i16i16i16i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, ValueTypeSize16 __arg5, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[5]), method);
-}
-
-
-// System.Void System.ValueTuple`6::.ctor(T1,T2,T3,T4,T5,T6)
-static void __M2N_vi8i16i16i16i16i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, ValueTypeSize16 __arg5, ValueTypeSize16 __arg6, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[5]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[6]), method);
-}
-
-
-// System.Void System.ValueTuple`7::.ctor(T1,T2,T3,T4,T5,T6,T7)
-static void __M2N_vi8i16i16i16i16i16i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, ValueTypeSize16 __arg5, ValueTypeSize16 __arg6, ValueTypeSize16 __arg7, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[5]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[6]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[7]), method);
-}
-
-
-// System.Void System.ValueTuple`8::.ctor(T1,T2,T3,T4,T5,T6,T7,TRest)
-static void __M2N_vi8i16i16i16i16i16i16i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, ValueTypeSize16 __arg5, ValueTypeSize16 __arg6, ValueTypeSize16 __arg7, ValueTypeSize16 __arg8, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[5]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[6]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[7]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[8]), method);
-}
-
-
-// System.Void System.ValueTuple`8::.ctor(T1,T2,T3,T4,T5,T6,T7,TRest)
-static void __M2N_vi8i16i16i16i16i16i16i16sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, ValueTypeSize16 __arg5, ValueTypeSize16 __arg6, ValueTypeSize16 __arg7, uint64_t __arg8, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[5]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[6]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), method);
 }
 
 
@@ -8568,15 +7344,7 @@ static void __M2N_vi8i4i8i4i4i4(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.Void System.Action`5::Invoke(T1,T2,T3,T4,T5)
-static void __M2N_vi8i4i8i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, int64_t __arg2, int32_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
-}
-
-
-// System.Void System.Text.Encoding::.ctor(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)
+// System.Void System.TimeZoneInfo/OffsetAndRule::.ctor(System.Int32,System.TimeSpan,System.TimeZoneInfo/AdjustmentRule)
 static void __M2N_vi8i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
@@ -8629,6 +7397,14 @@ static void __M2N_vi8i4r4i8(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, float __arg2, int64_t __arg3, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void System.Collections.Hashtable::.ctor(System.Int32,System.Single,System.Collections.IHashCodeProvider,System.Collections.IComparer)
+static void __M2N_vi8i4r4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, float __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -8776,7 +7552,7 @@ static void __M2N_vi8i8i2(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Void System.TimeZoneInfo/TZifType::.ctor(System.Byte[],System.Int32)
+// System.Void System.ArraySegment`1::CopyTo(T[],System.Int32)
 static void __M2N_vi8i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, const MethodInfo* method);
@@ -8920,7 +7696,7 @@ static void __M2N_vi8i8i4i8i4u1(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.Void GameFramework.Resource.ResourcesManager::LoadAssetAsync(System.String,System.Int32,GameFramework.Resource.LoadAssetCallbacks,System.Object)
+// System.Void YooAsset.BundleInfo::.ctor(YooAsset.PackageBundle,YooAsset.BundleInfo/ELoadMode,System.String,System.String)
 static void __M2N_vi8i8i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
@@ -8952,7 +7728,7 @@ static void __M2N_vi8i8i4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.Void System.IO.FileStream::.ctor(System.IntPtr,System.IO.FileAccess,System.Boolean)
+// System.Void System.Diagnostics.StackTrace::.ctor(System.Exception,System.Int32,System.Boolean)
 static void __M2N_vi8i8i4u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, uint8_t __arg3, const MethodInfo* method);
@@ -9005,14 +7781,6 @@ static void __M2N_vi8i8i8i16u1(const MethodInfo* method, uint16_t* argVarIndexs,
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, ValueTypeSize16 __arg3, uint8_t __arg4, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(uint8_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.AsyncReactiveProperty`1/WaitAsyncSource::OnCompleted(System.Action`1<System.Object>,System.Object,System.Int16)
-static void __M2N_vi8i8i8i2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int16_t __arg3, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int16_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -9144,19 +7912,11 @@ static void __M2N_vi8i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.Void System.ValueTuple`6::.ctor(T1,T2,T3,T4,T5,T6)
+// System.Void System.Runtime.Serialization.ObjectManager::RegisterObject(System.Object,System.Int64,System.Runtime.Serialization.SerializationInfo,System.Int64,System.Reflection.MemberInfo,System.Int32[])
 static void __M2N_vi8i8i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
-}
-
-
-// System.Void System.ValueTuple`7::.ctor(T1,T2,T3,T4,T5,T6,T7)
-static void __M2N_vi8i8i8i8i8i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, int64_t __arg7, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), *(int64_t*)(localVarBase+argVarIndexs[7]), method);
 }
 
 
@@ -9181,14 +7941,6 @@ static void __M2N_vi8i8i8i8i8u1i4i4(const MethodInfo* method, uint16_t* argVarIn
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, uint8_t __arg5, int32_t __arg6, int32_t __arg7, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(uint8_t*)(localVarBase+argVarIndexs[5]), *(int32_t*)(localVarBase+argVarIndexs[6]), *(int32_t*)(localVarBase+argVarIndexs[7]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UnityBindingExtensions::BindTo<TSource,TObject>(Cysharp.Threading.Tasks.IUniTaskAsyncEnumerable`1<TSource>,TObject,System.Action`2<TObject,TSource>,System.Threading.CancellationToken,System.Boolean)
-static void __M2N_vi8i8i8i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, uint8_t __arg4, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(uint8_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -9368,14 +8120,6 @@ static void __M2N_vi8i8u1i4(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// System.Void Cysharp.Threading.Tasks.DeltaTimePlayerLoopTimer::.ctor(System.TimeSpan,System.Boolean,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,System.Action`1<System.Object>,System.Object)
-static void __M2N_vi8i8u1i4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint8_t __arg2, int32_t __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
-}
-
-
 // System.Void UnityEngine.Bindings.NativePropertyAttribute::.ctor(System.String,System.Boolean,UnityEngine.Bindings.TargetType,System.Boolean)
 static void __M2N_vi8i8u1i4u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9448,7 +8192,7 @@ static void __M2N_vi8i8u4(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Void WeChatWASM.WXAssetBundleRequest/WXAssetBundleCallBack::Invoke(System.IntPtr,System.UInt32,System.IntPtr)
+// System.Void Interop/NtDll/OBJECT_ATTRIBUTES::.ctor(Interop/UNICODE_STRING*,Interop/NtDll/ObjectAttributes,System.IntPtr)
 static void __M2N_vi8i8u4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint32_t __arg2, int64_t __arg3, const MethodInfo* method);
@@ -9640,14 +8384,6 @@ static void __M2N_vi8sr(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAnyLRPromise`1::.ctor(Cysharp.Threading.Tasks.UniTask`1<T>,Cysharp.Threading.Tasks.UniTask)
-static void __M2N_vi8sri16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, ValueTypeSize16 __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
 // System.Void UnityEngine.ParticleSystem::Emit(UnityEngine.ParticleSystem/EmitParams,System.Int32)
 static void __M2N_vi8sri4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9661,14 +8397,6 @@ static void __M2N_vi8sri8(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, int64_t __arg2, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTaskExtensions/ToCoroutineEnumerator`1::.ctor(Cysharp.Threading.Tasks.UniTask`1<T>,System.Action`1<T>,System.Action`1<System.Exception>)
-static void __M2N_vi8sri8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -9688,110 +8416,6 @@ static void __M2N_vi8srsr(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`3::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>)
-static void __M2N_vi8srsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`4::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>)
-static void __M2N_vi8srsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`5::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>)
-static void __M2N_vi8srsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`6::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>)
-static void __M2N_vi8srsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`7::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>)
-static void __M2N_vi8srsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`8::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>)
-static void __M2N_vi8srsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`9::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`10::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`11::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`12::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`13::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`14::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, uint64_t __arg14, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), (uint64_t)(localVarBase+argVarIndexs[14]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTask/WhenAllPromise`15::.ctor(Cysharp.Threading.Tasks.UniTask`1<T1>,Cysharp.Threading.Tasks.UniTask`1<T2>,Cysharp.Threading.Tasks.UniTask`1<T3>,Cysharp.Threading.Tasks.UniTask`1<T4>,Cysharp.Threading.Tasks.UniTask`1<T5>,Cysharp.Threading.Tasks.UniTask`1<T6>,Cysharp.Threading.Tasks.UniTask`1<T7>,Cysharp.Threading.Tasks.UniTask`1<T8>,Cysharp.Threading.Tasks.UniTask`1<T9>,Cysharp.Threading.Tasks.UniTask`1<T10>,Cysharp.Threading.Tasks.UniTask`1<T11>,Cysharp.Threading.Tasks.UniTask`1<T12>,Cysharp.Threading.Tasks.UniTask`1<T13>,Cysharp.Threading.Tasks.UniTask`1<T14>,Cysharp.Threading.Tasks.UniTask`1<T15>)
-static void __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsrsrsrsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, uint64_t __arg3, uint64_t __arg4, uint64_t __arg5, uint64_t __arg6, uint64_t __arg7, uint64_t __arg8, uint64_t __arg9, uint64_t __arg10, uint64_t __arg11, uint64_t __arg12, uint64_t __arg13, uint64_t __arg14, uint64_t __arg15, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), (uint64_t)(localVarBase+argVarIndexs[3]), (uint64_t)(localVarBase+argVarIndexs[4]), (uint64_t)(localVarBase+argVarIndexs[5]), (uint64_t)(localVarBase+argVarIndexs[6]), (uint64_t)(localVarBase+argVarIndexs[7]), (uint64_t)(localVarBase+argVarIndexs[8]), (uint64_t)(localVarBase+argVarIndexs[9]), (uint64_t)(localVarBase+argVarIndexs[10]), (uint64_t)(localVarBase+argVarIndexs[11]), (uint64_t)(localVarBase+argVarIndexs[12]), (uint64_t)(localVarBase+argVarIndexs[13]), (uint64_t)(localVarBase+argVarIndexs[14]), (uint64_t)(localVarBase+argVarIndexs[15]), method);
-}
-
-
 // System.Void Mono.Xml.SmallXmlParser::SkipWhitespaces(System.Boolean)
 static void __M2N_vi8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9800,27 +8424,11 @@ static void __M2N_vi8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.Void System.ValueTuple`2::.ctor(T1,T2)
-static void __M2N_vi8u1i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, ValueTypeSize16 __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
 // System.Void System.Threading.ManualResetEventSlim::.ctor(System.Boolean,System.Int32)
 static void __M2N_vi8u1i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int32_t __arg2, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// System.Void System.Globalization.TimeSpanParse/TimeSpanToken::.ctor(System.Globalization.TimeSpanParse/TTT,System.Int32,System.Int32,System.ReadOnlySpan`1<System.Char>)
-static void __M2N_vi8u1i4i4i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int32_t __arg2, int32_t __arg3, ValueTypeSize16 __arg4, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -9872,14 +8480,6 @@ static void __M2N_vi8u1i4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
-// System.Void Cysharp.Threading.Tasks.PlayerLoopTimer::.ctor(System.Boolean,Cysharp.Threading.Tasks.PlayerLoopTiming,System.Threading.CancellationToken,System.Action`1<System.Object>,System.Object)
-static void __M2N_vi8u1i4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int32_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
-}
-
-
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemSet(System.Void*,System.Byte,System.Int64)
 static void __M2N_vi8u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9901,22 +8501,6 @@ static void __M2N_vi8u1i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs, 
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, int64_t __arg2, uint8_t __arg3, uint8_t __arg4, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(uint8_t*)(localVarBase+argVarIndexs[4]), method);
-}
-
-
-// System.Void System.ValueTuple`2::.ctor(T1,T2)
-static void __M2N_vi8u1r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, float __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), method);
-}
-
-
-// System.Void System.ValueTuple`2::.ctor(T1,T2)
-static void __M2N_vi8u1sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, uint64_t __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -9952,11 +8536,19 @@ static void __M2N_vi8u1u1i4u1(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
-// System.Void System.Text.RegularExpressions.RegexCharClass::AddDigit(System.Boolean,System.Boolean,System.String)
+// System.Void System.Security.AccessControl.DiscretionaryAcl::.ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawAcl)
 static void __M2N_vi8u1u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, uint8_t __arg2, int64_t __arg3, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void System.Security.AccessControl.CommonSecurityDescriptor::.ctor(System.Boolean,System.Boolean,System.Byte[],System.Int32)
+static void __M2N_vi8u1u1i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, uint8_t __arg2, int64_t __arg3, int32_t __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int32_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -9989,14 +8581,6 @@ static void __M2N_vi8u1u1u4u4u4(const MethodInfo* method, uint16_t* argVarIndexs
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, uint8_t __arg2, uint32_t __arg3, uint32_t __arg4, uint32_t __arg5, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(uint32_t*)(localVarBase+argVarIndexs[3]), *(uint32_t*)(localVarBase+argVarIndexs[4]), *(uint32_t*)(localVarBase+argVarIndexs[5]), method);
-}
-
-
-// System.Void System.ValueTuple`2::.ctor(T1,T2)
-static void __M2N_vi8u1vf2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(int64_t __arg0, uint8_t __arg1, HtVector2f __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -10072,7 +8656,7 @@ static void __M2N_vi8u4i4i4i4(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
-// System.Void WeChatWASM.WXAssetBundleRequest::Callback(System.IntPtr,System.UInt32,System.IntPtr)
+// System.Void TMPro.TMP_Character::.ctor(System.UInt32,UnityEngine.TextCore.Glyph)
 static void __M2N_vi8u4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint32_t __arg1, int64_t __arg2, const MethodInfo* method);
@@ -10496,7 +9080,7 @@ static void __M2N_vr8r8i8(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Void UnityEngine.LowLevel.PlayerLoop::SetPlayerLoop(UnityEngine.LowLevel.PlayerLoopSystem)
+// System.Void UnityEngine.GUI::set_matrix(UnityEngine.Matrix4x4)
 static void __M2N_vsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(uint64_t __arg0, const MethodInfo* method);
@@ -10509,14 +9093,6 @@ static void __M2N_vsri8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 {
     typedef void (*NativeMethod)(uint64_t __arg0, int64_t __arg1, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), method);
-}
-
-
-// System.Void Cysharp.Threading.Tasks.UniTaskExtensions::Forget<T>(Cysharp.Threading.Tasks.UniTask`1<T>,System.Action`1<System.Exception>,System.Boolean)
-static void __M2N_vsri8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
-{
-    typedef void (*NativeMethod)(uint64_t __arg0, int64_t __arg1, uint8_t __arg2, const MethodInfo* method);
-    ((NativeMethod)(method->methodPointerCallByInterp))((uint64_t)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -10731,36 +9307,21 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i16i16i16i16", __M2N_i16i16i16i16},
 	{"i16i16i4", __M2N_i16i16i4},
 	{"i16i16i4i4", __M2N_i16i16i4i4},
-	{"i16i16i4i8", __M2N_i16i16i4i8},
-	{"i16i16i8", __M2N_i16i16i8},
-	{"i16i16i8i4i4i8", __M2N_i16i16i8i4i4i8},
 	{"i16i2", __M2N_i16i2},
 	{"i16i4", __M2N_i16i4},
-	{"i16i4i4i4i8", __M2N_i16i4i4i4i8},
-	{"i16i4i4i8", __M2N_i16i4i4i8},
-	{"i16i4i8", __M2N_i16i4i8},
-	{"i16i4u1i4i8", __M2N_i16i4u1i4i8},
 	{"i16i8", __M2N_i16i8},
 	{"i16i8i16", __M2N_i16i8i16},
 	{"i16i8i16i8", __M2N_i16i8i16i8},
-	{"i16i8i2", __M2N_i16i8i2},
 	{"i16i8i4", __M2N_i16i8i4},
 	{"i16i8i4i4", __M2N_i16i8i4i4},
-	{"i16i8i4i4i8", __M2N_i16i8i4i4i8},
 	{"i16i8i4i8", __M2N_i16i8i4i8},
 	{"i16i8i8", __M2N_i16i8i8},
 	{"i16i8i8i4", __M2N_i16i8i8i4},
-	{"i16i8i8i4i8", __M2N_i16i8i8i4i8},
 	{"i16i8i8sr", __M2N_i16i8i8sr},
-	{"i16i8i8u1i8", __M2N_i16i8i8u1i8},
 	{"i16i8u1", __M2N_i16i8u1},
-	{"i16i8u1i4i8", __M2N_i16i8u1i4i8},
-	{"i16i8u1i8", __M2N_i16i8u1i8},
 	{"i16r4", __M2N_i16r4},
 	{"i16r8", __M2N_i16r8},
 	{"i16sr", __M2N_i16sr},
-	{"i16sri8", __M2N_i16sri8},
-	{"i16sru1", __M2N_i16sru1},
 	{"i16u1", __M2N_i16u1},
 	{"i16u2", __M2N_i16u2},
 	{"i16u4", __M2N_i16u4},
@@ -10856,6 +9417,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i4i8i4i8i4i4i8i4", __M2N_i4i8i4i8i4i4i8i4},
 	{"i4i8i4i8i4i4u1", __M2N_i4i8i4i8i4i4u1},
 	{"i4i8i4i8i4i4u1i8", __M2N_i4i8i4i8i4i4u1i8},
+	{"i4i8i4i8i8i8i8", __M2N_i4i8i4i8i8i8i8},
+	{"i4i8i4i8i8i8i8i8", __M2N_i4i8i4i8i8i8i8i8},
 	{"i4i8i4u1", __M2N_i4i8i4u1},
 	{"i4i8i4u8", __M2N_i4i8i4u8},
 	{"i4i8i8", __M2N_i4i8i8},
@@ -10885,6 +9448,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i4i8i8i8i4", __M2N_i4i8i8i8i4},
 	{"i4i8i8i8i4i4i4", __M2N_i4i8i8i8i4i4i4},
 	{"i4i8i8i8i8", __M2N_i4i8i8i8i8},
+	{"i4i8i8i8i8i8i8u4u4u1i8u1", __M2N_i4i8i8i8i8i8i8u4u4u1i8u1},
 	{"i4i8i8u1", __M2N_i4i8i8u1},
 	{"i4i8i8u1i4", __M2N_i4i8i8u1i4},
 	{"i4i8i8u1i8", __M2N_i4i8i8u1i8},
@@ -10922,7 +9486,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i4i8u8", __M2N_i4i8u8},
 	{"i4i8u8u8", __M2N_i4i8u8u8},
 	{"i4i8vf2", __M2N_i4i8vf2},
-	{"i4i8vf2vf2", __M2N_i4i8vf2vf2},
 	{"i4i8vf2vf2r4sri8", __M2N_i4i8vf2vf2r4sri8},
 	{"i4i8vf3", __M2N_i4i8vf3},
 	{"i4i8vf3i4", __M2N_i4i8vf3i4},
@@ -10975,7 +9538,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i16i4i4", __M2N_i8i16i4i4},
 	{"i8i16i4i4i8", __M2N_i8i16i4i4i8},
 	{"i8i16i4i8", __M2N_i8i16i4i8},
-	{"i8i16i4i8i8", __M2N_i8i16i4i8i8},
 	{"i8i16i8", __M2N_i8i16i8},
 	{"i8i16i8u1", __M2N_i8i16i8u1},
 	{"i8i16u1", __M2N_i8i16u1},
@@ -10989,7 +9551,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i4i4i4i4i8u1", __M2N_i8i4i4i4i4i8u1},
 	{"i8i4i4i4u1u1i8", __M2N_i8i4i4i4u1u1i8},
 	{"i8i4i4i4u2i4", __M2N_i8i4i4i4u2i4},
-	{"i8i4i4i8i8", __M2N_i8i4i4i8i8},
 	{"i8i4i8", __M2N_i8i4i8},
 	{"i8i4i8i8", __M2N_i8i4i8i8},
 	{"i8i4i8i8i8", __M2N_i8i4i8i8i8},
@@ -10998,7 +9559,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8i1", __M2N_i8i8i1},
 	{"i8i8i16", __M2N_i8i8i16},
 	{"i8i8i16i16i8i8", __M2N_i8i8i16i16i8i8},
-	{"i8i8i16i4", __M2N_i8i8i16i4},
 	{"i8i8i16i8", __M2N_i8i8i16i8},
 	{"i8i8i16i8i8", __M2N_i8i8i16i8i8},
 	{"i8i8i16u4", __M2N_i8i8i16u4},
@@ -11052,7 +9612,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8i8i4i4i8i8i8", __M2N_i8i8i8i4i4i8i8i8},
 	{"i8i8i8i4i4u1", __M2N_i8i8i8i4i4u1},
 	{"i8i8i8i4i8", __M2N_i8i8i8i4i8},
-	{"i8i8i8i4i8i4", __M2N_i8i8i8i4i8i4},
+	{"i8i8i8i4i8i4i8", __M2N_i8i8i8i4i8i4i8},
 	{"i8i8i8i4i8i4i8i8", __M2N_i8i8i8i4i8i4i8i8},
 	{"i8i8i8i4i8i8", __M2N_i8i8i8i4i8i8},
 	{"i8i8i8i4i8i8i8", __M2N_i8i8i8i4i8i8i8},
@@ -11069,16 +9629,12 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8i8i8i4i4i4i4u1i8", __M2N_i8i8i8i8i4i4i4i4u1i8},
 	{"i8i8i8i8i4i4i8i8i8", __M2N_i8i8i8i8i4i4i8i8i8},
 	{"i8i8i8i8i4i8", __M2N_i8i8i8i8i4i8},
-	{"i8i8i8i8i4i8i4", __M2N_i8i8i8i8i4i8i4},
-	{"i8i8i8i8i4i8i8", __M2N_i8i8i8i8i4i8i8},
 	{"i8i8i8i8i8", __M2N_i8i8i8i8i8},
 	{"i8i8i8i8i8i4i8", __M2N_i8i8i8i8i8i4i8},
 	{"i8i8i8i8i8i8", __M2N_i8i8i8i8i8i8},
 	{"i8i8i8i8i8i8i8", __M2N_i8i8i8i8i8i8i8},
-	{"i8i8i8i8i8i8i8u1", __M2N_i8i8i8i8i8i8i8u1},
 	{"i8i8i8i8i8u1", __M2N_i8i8i8i8i8u1},
 	{"i8i8i8i8r4i8i8i8", __M2N_i8i8i8i8r4i8i8i8},
-	{"i8i8i8i8srsr", __M2N_i8i8i8i8srsr},
 	{"i8i8i8i8u1", __M2N_i8i8i8i8u1},
 	{"i8i8i8i8u1i4i8i8i8i8", __M2N_i8i8i8i8u1i4i8i8i8i8},
 	{"i8i8i8i8u1i4i8i8i8i8i8", __M2N_i8i8i8i8u1i4i8i8i8i8i8},
@@ -11093,7 +9649,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8i8u1i8i8i8", __M2N_i8i8i8u1i8i8i8},
 	{"i8i8i8u1i8i8i8i8", __M2N_i8i8i8u1i8i8i8i8},
 	{"i8i8i8u1u1", __M2N_i8i8i8u1u1},
-	{"i8i8i8u4i8i8i8", __M2N_i8i8i8u4i8i8i8},
 	{"i8i8r4", __M2N_i8i8r4},
 	{"i8i8r4i8i8", __M2N_i8i8r4i8i8},
 	{"i8i8r4r4i8i8", __M2N_i8i8r4r4i8i8},
@@ -11101,7 +9656,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8r8", __M2N_i8i8r8},
 	{"i8i8sr", __M2N_i8i8sr},
 	{"i8i8sri8i8", __M2N_i8i8sri8i8},
-	{"i8i8sri8i8i8", __M2N_i8i8sri8i8i8},
 	{"i8i8sri8r4i4i8i8", __M2N_i8i8sri8r4i4i8i8},
 	{"i8i8srr4i4", __M2N_i8i8srr4i4},
 	{"i8i8srr4i4i8i8", __M2N_i8i8srr4i4i8i8},
@@ -11111,7 +9665,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8u1i4", __M2N_i8i8u1i4},
 	{"i8i8u1i4i4", __M2N_i8i8u1i4i4},
 	{"i8i8u1i4i4i4i8i4i4i4i4u1i8", __M2N_i8i8u1i4i4i4i8i4i4i4i4u1i8},
-	{"i8i8u1i4i4i8i8i8", __M2N_i8i8u1i4i4i8i8i8},
 	{"i8i8u1i8", __M2N_i8i8u1i8},
 	{"i8i8u1i8i8", __M2N_i8i8u1i8i8},
 	{"i8i8u1i8i8u1", __M2N_i8i8u1i8i8u1},
@@ -11136,16 +9689,13 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8u8", __M2N_i8i8u8},
 	{"i8i8u8u8i8i8", __M2N_i8i8u8u8i8i8},
 	{"i8i8vf2i8", __M2N_i8i8vf2i8},
-	{"i8i8vf2i8i8i8", __M2N_i8i8vf2i8i8i8},
 	{"i8i8vf2vf2r4i4i8i8", __M2N_i8i8vf2vf2r4i4i8i8},
 	{"i8i8vf3", __M2N_i8i8vf3},
 	{"i8i8vf3i8i8", __M2N_i8i8vf3i8i8},
-	{"i8i8vf3i8i8i8", __M2N_i8i8vf3i8i8i8},
 	{"i8i8vf3vf3i8i8", __M2N_i8i8vf3vf3i8i8},
 	{"i8i8vf3vf4", __M2N_i8i8vf3vf4},
 	{"i8i8vf3vf4i8", __M2N_i8i8vf3vf4i8},
 	{"i8i8vf4i8i8", __M2N_i8i8vf4i8i8},
-	{"i8i8vf4i8i8i8", __M2N_i8i8vf4i8i8i8},
 	{"i8i8vf4vf4i8i8", __M2N_i8i8vf4vf4i8i8},
 	{"i8r4", __M2N_i8r4},
 	{"i8r4i8", __M2N_i8r4i8},
@@ -11157,8 +9707,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8r8i8", __M2N_i8r8i8},
 	{"i8r8i8i8", __M2N_i8r8i8i8},
 	{"i8sr", __M2N_i8sr},
-	{"i8sri8", __M2N_i8sri8},
-	{"i8sri8i8", __M2N_i8sri8i8},
 	{"i8srr4", __M2N_i8srr4},
 	{"i8srr4i4", __M2N_i8srr4i4},
 	{"i8srr4i4i4", __M2N_i8srr4i4i4},
@@ -11199,7 +9747,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"r4i2", __M2N_r4i2},
 	{"r4i4", __M2N_r4i4},
 	{"r4i8", __M2N_r4i8},
-	{"r4i8i2", __M2N_r4i8i2},
 	{"r4i8i4", __M2N_r4i8i4},
 	{"r4i8i4i8", __M2N_r4i8i4i8},
 	{"r4i8i4r4", __M2N_r4i8i4r4},
@@ -11261,77 +9808,27 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"r8u2", __M2N_r8u2},
 	{"r8u4", __M2N_r8u4},
 	{"r8u8", __M2N_r8u8},
-	{"S104i8", __M2N_S104i8},
-	{"S104i8i2", __M2N_S104i8i2},
-	{"S104sr", __M2N_S104sr},
-	{"S104srsrsrsrsrsrsrsrsrsr", __M2N_S104srsrsrsrsrsrsrsrsrsr},
-	{"S104srsrsrsrsrsrsrsrsrsrsr", __M2N_S104srsrsrsrsrsrsrsrsrsrsr},
 	{"S108i8", __M2N_S108i8},
 	{"S108i8i4", __M2N_S108i8i4},
 	{"S108i8i8", __M2N_S108i8i8},
-	{"S112i8", __M2N_S112i8},
-	{"S112i8i2", __M2N_S112i8i2},
-	{"S112sr", __M2N_S112sr},
-	{"S112srsrsrsrsrsrsrsrsrsrsr", __M2N_S112srsrsrsrsrsrsrsrsrsrsr},
-	{"S112srsrsrsrsrsrsrsrsrsrsrsr", __M2N_S112srsrsrsrsrsrsrsrsrsrsrsr},
 	{"S120i8", __M2N_S120i8},
-	{"S120i8i2", __M2N_S120i8i2},
-	{"S120sr", __M2N_S120sr},
-	{"S120srsrsrsrsrsrsrsrsrsrsrsr", __M2N_S120srsrsrsrsrsrsrsrsrsrsrsr},
-	{"S120srsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_S120srsrsrsrsrsrsrsrsrsrsrsrsr},
 	{"S128i8", __M2N_S128i8},
-	{"S128i8i2", __M2N_S128i8i2},
-	{"S128sr", __M2N_S128sr},
-	{"S128srsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_S128srsrsrsrsrsrsrsrsrsrsrsrsr},
-	{"S128srsrsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_S128srsrsrsrsrsrsrsrsrsrsrsrsrsr},
-	{"S136sr", __M2N_S136sr},
-	{"S136srsrsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_S136srsrsrsrsrsrsrsrsrsrsrsrsrsr},
-	{"S136srsrsrsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_S136srsrsrsrsrsrsrsrsrsrsrsrsrsrsr},
-	{"S144srsrsrsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_S144srsrsrsrsrsrsrsrsrsrsrsrsrsrsr},
 	{"S20i8", __M2N_S20i8},
-	{"S20i8i2", __M2N_S20i8i2},
 	{"S24", __M2N_S24},
 	{"S24i16", __M2N_S24i16},
-	{"S24i16i16", __M2N_S24i16i16},
-	{"S24i16i8", __M2N_S24i16i8},
 	{"S24i8", __M2N_S24i8},
-	{"S24i8i2", __M2N_S24i8i2},
 	{"S24i8i4", __M2N_S24i8i4},
 	{"S24i8i4i4", __M2N_S24i8i4i4},
 	{"S24i8i4i4i4", __M2N_S24i8i4i4i4},
 	{"S24i8i8", __M2N_S24i8i8},
-	{"S24i8i8i4i8", __M2N_S24i8i8i4i8},
-	{"S24i8i8i4i8i8", __M2N_S24i8i8i4i8i8},
-	{"S24i8i8i8", __M2N_S24i8i8i8},
-	{"S24i8i8i8u1", __M2N_S24i8i8i8u1},
 	{"S24i8i8i8u1u1", __M2N_S24i8i8i8u1u1},
-	{"S24i8i8u1", __M2N_S24i8i8u1},
-	{"S24i8i8u1i8", __M2N_S24i8i8u1i8},
 	{"S24i8u1", __M2N_S24i8u1},
-	{"S24i8u1i8", __M2N_S24i8u1i8},
 	{"S24i8vf2", __M2N_S24i8vf2},
 	{"S24i8vf3", __M2N_S24i8vf3},
 	{"S24i8vf3i4", __M2N_S24i8vf3i4},
-	{"S24sr", __M2N_S24sr},
-	{"S24sri8", __M2N_S24sri8},
-	{"S24sri8i4i4i8", __M2N_S24sri8i4i4i8},
-	{"S24sru1", __M2N_S24sru1},
-	{"S24u1i8", __M2N_S24u1i8},
-	{"S28i8", __M2N_S28i8},
-	{"S28i8i2", __M2N_S28i8i2},
 	{"S32", __M2N_S32},
-	{"S32i16", __M2N_S32i16},
-	{"S32i16i4i8", __M2N_S32i16i4i8},
-	{"S32i16i8", __M2N_S32i16i8},
 	{"S32i8", __M2N_S32i8},
-	{"S32i8i2", __M2N_S32i8i2},
 	{"S32i8i8", __M2N_S32i8i8},
-	{"S32sr", __M2N_S32sr},
-	{"S32sri16", __M2N_S32sri16},
-	{"S32sri8i4i4i8", __M2N_S32sri8i4i4i8},
-	{"S32srsr", __M2N_S32srsr},
-	{"S36i8", __M2N_S36i8},
-	{"S36i8i2", __M2N_S36i8i2},
 	{"S36i8i8", __M2N_S36i8i8},
 	{"S36i8vf2vf2r4i4", __M2N_S36i8vf2vf2r4i4},
 	{"S36i8vf2vf2r4sr", __M2N_S36i8vf2vf2r4sr},
@@ -11342,89 +9839,26 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"S36vf2vf2r4i4r4r4", __M2N_S36vf2vf2r4i4r4r4},
 	{"S40", __M2N_S40},
 	{"S40i8", __M2N_S40i8},
-	{"S40i8i2", __M2N_S40i8i2},
-	{"S40i8i4", __M2N_S40i8i4},
-	{"S40i8i8", __M2N_S40i8i8},
-	{"S40sr", __M2N_S40sr},
-	{"S40srsr", __M2N_S40srsr},
-	{"S40srsrsr", __M2N_S40srsrsr},
-	{"S44i8", __M2N_S44i8},
-	{"S44i8i2", __M2N_S44i8i2},
 	{"S48", __M2N_S48},
 	{"S48i8", __M2N_S48i8},
-	{"S48i8i2", __M2N_S48i8i2},
 	{"S48i8i4", __M2N_S48i8i4},
-	{"S48sr", __M2N_S48sr},
-	{"S48srsrsr", __M2N_S48srsrsr},
-	{"S48srsrsrsr", __M2N_S48srsrsrsr},
-	{"S504i8", __M2N_S504i8},
-	{"S504i8i2", __M2N_S504i8i2},
-	{"S512i8", __M2N_S512i8},
-	{"S512i8i2", __M2N_S512i8i2},
-	{"S520i8", __M2N_S520i8},
-	{"S520i8i2", __M2N_S520i8i2},
-	{"S520i8i8", __M2N_S520i8i8},
-	{"S528i8", __M2N_S528i8},
-	{"S528i8i2", __M2N_S528i8i2},
 	{"S52i8", __M2N_S52i8},
-	{"S536i8", __M2N_S536i8},
-	{"S536i8i2", __M2N_S536i8i2},
-	{"S544i8", __M2N_S544i8},
-	{"S544i8i2", __M2N_S544i8i2},
-	{"S552i8", __M2N_S552i8},
-	{"S552i8i2", __M2N_S552i8i2},
-	{"S560i8", __M2N_S560i8},
-	{"S560i8i2", __M2N_S560i8i2},
-	{"S568i8", __M2N_S568i8},
-	{"S568i8i2", __M2N_S568i8i2},
 	{"S56i8", __M2N_S56i8},
-	{"S56i8i2", __M2N_S56i8i2},
-	{"S56sr", __M2N_S56sr},
-	{"S56srsrsrsr", __M2N_S56srsrsrsr},
-	{"S56srsrsrsrsr", __M2N_S56srsrsrsrsr},
-	{"S576i8", __M2N_S576i8},
-	{"S576i8i2", __M2N_S576i8i2},
-	{"S584i8", __M2N_S584i8},
-	{"S584i8i2", __M2N_S584i8i2},
-	{"S592i8", __M2N_S592i8},
-	{"S600i8", __M2N_S600i8},
-	{"S608i8", __M2N_S608i8},
 	{"S64", __M2N_S64},
 	{"S64i8", __M2N_S64i8},
-	{"S64i8i2", __M2N_S64i8i2},
 	{"S64i8u1", __M2N_S64i8u1},
-	{"S64sr", __M2N_S64sr},
-	{"S64srsrsrsrsr", __M2N_S64srsrsrsrsr},
-	{"S64srsrsrsrsrsr", __M2N_S64srsrsrsrsrsr},
 	{"S64vf3vf4vf3", __M2N_S64vf3vf4vf3},
 	{"S68i4", __M2N_S68i4},
 	{"S68i8i4", __M2N_S68i8i4},
-	{"S72i8", __M2N_S72i8},
-	{"S72i8i2", __M2N_S72i8i2},
-	{"S72sr", __M2N_S72sr},
-	{"S72srsrsrsrsrsr", __M2N_S72srsrsrsrsrsr},
-	{"S72srsrsrsrsrsrsr", __M2N_S72srsrsrsrsrsrsr},
 	{"S80i8", __M2N_S80i8},
-	{"S80i8i2", __M2N_S80i8i2},
 	{"S80i8i4", __M2N_S80i8i4},
 	{"S80i8i8", __M2N_S80i8i8},
-	{"S80sr", __M2N_S80sr},
-	{"S80srsrsrsrsrsrsr", __M2N_S80srsrsrsrsrsrsr},
-	{"S80srsrsrsrsrsrsrsr", __M2N_S80srsrsrsrsrsrsrsr},
 	{"S888i8", __M2N_S888i8},
 	{"S88i8", __M2N_S88i8},
-	{"S88i8i2", __M2N_S88i8i2},
-	{"S88sr", __M2N_S88sr},
-	{"S88srsrsrsrsrsrsrsr", __M2N_S88srsrsrsrsrsrsrsr},
-	{"S88srsrsrsrsrsrsrsrsr", __M2N_S88srsrsrsrsrsrsrsrsr},
 	{"S96", __M2N_S96},
 	{"S96i8", __M2N_S96i8},
-	{"S96i8i2", __M2N_S96i8i2},
 	{"S96i8i4", __M2N_S96i8i4},
 	{"S96i8vf2", __M2N_S96i8vf2},
-	{"S96sr", __M2N_S96sr},
-	{"S96srsrsrsrsrsrsrsrsr", __M2N_S96srsrsrsrsrsrsrsrsr},
-	{"S96srsrsrsrsrsrsrsrsrsr", __M2N_S96srsrsrsrsrsrsrsrsrsr},
 	{"u1", __M2N_u1},
 	{"u1i1", __M2N_u1i1},
 	{"u1i16", __M2N_u1i16},
@@ -11452,7 +9886,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i4i16i8i16i8", __M2N_u1i4i16i8i16i8},
 	{"u1i4i4", __M2N_u1i4i4},
 	{"u1i4i8", __M2N_u1i4i8},
-	{"u1i4i8i8i8", __M2N_u1i4i8i8i8},
 	{"u1i4u1", __M2N_u1i4u1},
 	{"u1i8", __M2N_u1i8},
 	{"u1i8i1", __M2N_u1i8i1},
@@ -11485,7 +9918,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i8i8i8", __M2N_u1i8i8i8},
 	{"u1i8i8i8i4", __M2N_u1i8i8i8i4},
 	{"u1i8i8i8i4i4i4", __M2N_u1i8i8i8i4i4i4},
-	{"u1i8i8i8i8", __M2N_u1i8i8i8i8},
 	{"u1i8i8i8i8i8", __M2N_u1i8i8i8i8i8},
 	{"u1i8i8i8u1", __M2N_u1i8i8i8u1},
 	{"u1i8i8i8u1u1", __M2N_u1i8i8i8u1u1},
@@ -11514,6 +9946,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i8u4i4", __M2N_u1i8u4i4},
 	{"u1i8u4i4i4i8", __M2N_u1i8u4i4i4i8},
 	{"u1i8u4i8", __M2N_u1i8u4i8},
+	{"u1i8u4i8u4", __M2N_u1i8u4i8u4},
 	{"u1i8u4u4", __M2N_u1i8u4u4},
 	{"u1i8u8", __M2N_u1i8u8},
 	{"u1i8vd2", __M2N_u1i8vd2},
@@ -11521,7 +9954,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i8vf2i8", __M2N_u1i8vf2i8},
 	{"u1i8vf2i8i8", __M2N_u1i8vf2i8i8},
 	{"u1i8vf2i8vf4", __M2N_u1i8vf2i8vf4},
-	{"u1i8vf2vf2", __M2N_u1i8vf2vf2},
 	{"u1i8vf3", __M2N_u1i8vf3},
 	{"u1i8vf3i8", __M2N_u1i8vf3i8},
 	{"u1i8vf3u1", __M2N_u1i8vf3u1},
@@ -11644,7 +10076,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vf2", __M2N_vf2},
 	{"vf2i4", __M2N_vf2i4},
 	{"vf2i8", __M2N_vf2i8},
-	{"vf2i8i2", __M2N_vf2i8i2},
 	{"vf2i8i8", __M2N_vf2i8i8},
 	{"vf2i8i8r4i4r4i4", __M2N_vf2i8i8r4i4r4i4},
 	{"vf2i8i8r4r4", __M2N_vf2i8i8r4r4},
@@ -11724,7 +10155,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi16i4i16i4i4", __M2N_vi16i4i16i4i4},
 	{"vi16i4i8i4i4", __M2N_vi16i4i8i4i4},
 	{"vi16i8i4", __M2N_vi16i8i4},
-	{"vi16i8u1", __M2N_vi16i8u1},
 	{"vi4", __M2N_vi4},
 	{"vi4i4", __M2N_vi4i4},
 	{"vi4i4i4", __M2N_vi4i4i4},
@@ -11743,13 +10173,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8", __M2N_vi8},
 	{"vi8i16", __M2N_vi8i16},
 	{"vi8i16i16", __M2N_vi8i16i16},
-	{"vi8i16i16i16", __M2N_vi8i16i16i16},
-	{"vi8i16i16i16i16", __M2N_vi8i16i16i16i16},
-	{"vi8i16i16i16i16i16", __M2N_vi8i16i16i16i16i16},
-	{"vi8i16i16i16i16i16i16", __M2N_vi8i16i16i16i16i16i16},
-	{"vi8i16i16i16i16i16i16i16", __M2N_vi8i16i16i16i16i16i16i16},
-	{"vi8i16i16i16i16i16i16i16i16", __M2N_vi8i16i16i16i16i16i16i16i16},
-	{"vi8i16i16i16i16i16i16i16sr", __M2N_vi8i16i16i16i16i16i16i16sr},
 	{"vi8i16i4i4", __M2N_vi8i16i4i4},
 	{"vi8i16i8", __M2N_vi8i16i8},
 	{"vi8i16i8i4", __M2N_vi8i16i8i4},
@@ -11792,7 +10215,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i4i8i4", __M2N_vi8i4i8i4},
 	{"vi8i4i8i4i4", __M2N_vi8i4i8i4i4},
 	{"vi8i4i8i4i4i4", __M2N_vi8i4i8i4i4i4},
-	{"vi8i4i8i4i8i8", __M2N_vi8i4i8i4i8i8},
 	{"vi8i4i8i8", __M2N_vi8i4i8i8},
 	{"vi8i4i8i8i8", __M2N_vi8i4i8i8i8},
 	{"vi8i4i8i8i8i8i8", __M2N_vi8i4i8i8i8i8i8},
@@ -11800,6 +10222,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i4i8i8u1", __M2N_vi8i4i8i8u1},
 	{"vi8i4r4", __M2N_vi8i4r4},
 	{"vi8i4r4i8", __M2N_vi8i4r4i8},
+	{"vi8i4r4i8i8", __M2N_vi8i4r4i8i8},
 	{"vi8i4r4r4", __M2N_vi8i4r4r4},
 	{"vi8i4r4r4r4r4r4r4r4r4i8i8", __M2N_vi8i4r4r4r4r4r4r4r4r4i8i8},
 	{"vi8i4sr", __M2N_vi8i4sr},
@@ -11847,7 +10270,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i8i8", __M2N_vi8i8i8},
 	{"vi8i8i8i16", __M2N_vi8i8i8i16},
 	{"vi8i8i8i16u1", __M2N_vi8i8i8i16u1},
-	{"vi8i8i8i2", __M2N_vi8i8i8i2},
 	{"vi8i8i8i2i4", __M2N_vi8i8i8i2i4},
 	{"vi8i8i8i4", __M2N_vi8i8i8i4},
 	{"vi8i8i8i4i4", __M2N_vi8i8i8i4i4},
@@ -11865,11 +10287,9 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i8i8i8i8i4i8", __M2N_vi8i8i8i8i8i4i8},
 	{"vi8i8i8i8i8i8", __M2N_vi8i8i8i8i8i8},
 	{"vi8i8i8i8i8i8i8", __M2N_vi8i8i8i8i8i8i8},
-	{"vi8i8i8i8i8i8i8i8", __M2N_vi8i8i8i8i8i8i8i8},
 	{"vi8i8i8i8i8i8i8i8i8", __M2N_vi8i8i8i8i8i8i8i8i8},
 	{"vi8i8i8i8i8i8i8i8i8i8", __M2N_vi8i8i8i8i8i8i8i8i8i8},
 	{"vi8i8i8i8i8u1i4i4", __M2N_vi8i8i8i8i8u1i4i4},
-	{"vi8i8i8i8u1", __M2N_vi8i8i8i8u1},
 	{"vi8i8i8r4", __M2N_vi8i8i8r4},
 	{"vi8i8i8r4i8", __M2N_vi8i8i8r4i8},
 	{"vi8i8i8u1", __M2N_vi8i8i8u1},
@@ -11892,7 +10312,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i8sru4", __M2N_vi8i8sru4},
 	{"vi8i8u1", __M2N_vi8i8u1},
 	{"vi8i8u1i4", __M2N_vi8i8u1i4},
-	{"vi8i8u1i4i8i8i8", __M2N_vi8i8u1i4i8i8i8},
 	{"vi8i8u1i4u1", __M2N_vi8i8u1i4u1},
 	{"vi8i8u1i8", __M2N_vi8i8u1i8},
 	{"vi8i8u1i8i4", __M2N_vi8i8u1i8i4},
@@ -11926,51 +10345,31 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8r8r8", __M2N_vi8r8r8},
 	{"vi8r8r8i8", __M2N_vi8r8r8i8},
 	{"vi8sr", __M2N_vi8sr},
-	{"vi8sri16", __M2N_vi8sri16},
 	{"vi8sri4", __M2N_vi8sri4},
 	{"vi8sri8", __M2N_vi8sri8},
-	{"vi8sri8i8", __M2N_vi8sri8i8},
 	{"vi8sri8i8i8i8i4i8i8", __M2N_vi8sri8i8i8i8i4i8i8},
 	{"vi8srsr", __M2N_vi8srsr},
-	{"vi8srsrsr", __M2N_vi8srsrsr},
-	{"vi8srsrsrsr", __M2N_vi8srsrsrsr},
-	{"vi8srsrsrsrsr", __M2N_vi8srsrsrsrsr},
-	{"vi8srsrsrsrsrsr", __M2N_vi8srsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsrsrsr},
-	{"vi8srsrsrsrsrsrsrsrsrsrsrsrsrsrsr", __M2N_vi8srsrsrsrsrsrsrsrsrsrsrsrsrsrsr},
 	{"vi8u1", __M2N_vi8u1},
-	{"vi8u1i16", __M2N_vi8u1i16},
 	{"vi8u1i4", __M2N_vi8u1i4},
-	{"vi8u1i4i4i16", __M2N_vi8u1i4i4i16},
 	{"vi8u1i4i4i8i4i16i16u1i8", __M2N_vi8u1i4i4i8i4i16i16u1i8},
 	{"vi8u1i4i4i8u1i8", __M2N_vi8u1i4i4i8u1i8},
 	{"vi8u1i4i8", __M2N_vi8u1i4i8},
 	{"vi8u1i4i8i4", __M2N_vi8u1i4i8i4},
 	{"vi8u1i4i8i4i8i8", __M2N_vi8u1i4i8i4i8i8},
 	{"vi8u1i4i8i8", __M2N_vi8u1i4i8i8},
-	{"vi8u1i4i8i8i8", __M2N_vi8u1i4i8i8i8},
 	{"vi8u1i8", __M2N_vi8u1i8},
 	{"vi8u1i8i8i8", __M2N_vi8u1i8i8i8},
 	{"vi8u1i8u1u1", __M2N_vi8u1i8u1u1},
-	{"vi8u1r4", __M2N_vi8u1r4},
-	{"vi8u1sr", __M2N_vi8u1sr},
 	{"vi8u1u1", __M2N_vi8u1u1},
 	{"vi8u1u1i4", __M2N_vi8u1u1i4},
 	{"vi8u1u1i4i8i8i8i8", __M2N_vi8u1u1i4i8i8i8i8},
 	{"vi8u1u1i4u1", __M2N_vi8u1u1i4u1},
 	{"vi8u1u1i8", __M2N_vi8u1u1i8},
+	{"vi8u1u1i8i4", __M2N_vi8u1u1i8i4},
 	{"vi8u1u1i8i8i8i8i4i4i8", __M2N_vi8u1u1i8i8i8i8i4i4i8},
 	{"vi8u1u1u1", __M2N_vi8u1u1u1},
 	{"vi8u1u1u1u1", __M2N_vi8u1u1u1u1},
 	{"vi8u1u1u4u4u4", __M2N_vi8u1u1u4u4u4},
-	{"vi8u1vf2", __M2N_vi8u1vf2},
 	{"vi8u2", __M2N_vi8u2},
 	{"vi8u2i4", __M2N_vi8u2i4},
 	{"vi8u2i4i4i4i4i4i4i4", __M2N_vi8u2i4i4i4i4i4i4i4},
@@ -12035,7 +10434,6 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vr8r8i8", __M2N_vr8r8i8},
 	{"vsr", __M2N_vsr},
 	{"vsri8", __M2N_vsri8},
-	{"vsri8u1", __M2N_vsri8u1},
 	{"vu1", __M2N_vu1},
 	{"vu1i8", __M2N_vu1i8},
 	{"vu1i8i8", __M2N_vu1i8i8},
@@ -12109,16 +10507,6 @@ static ValueTypeSize16 __N2M_i16i8i16i8(int64_t __arg0, ValueTypeSize16 __arg1, 
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, *(uint64_t*)&__arg2 };
     StackObject* ret = args + 3;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize16*)ret;
-}
-
-
-// System.ValueTuple`2<T1,T2> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`2::GetResult(System.Int16)
-static ValueTypeSize16 __N2M_i16i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize16*)ret;
 }
@@ -12244,6 +10632,26 @@ static int32_t __N2M_i4i4i4(int32_t __arg0, int32_t __arg1, const MethodInfo* me
 }
 
 
+// System.Int32 System.Security.AccessControl.NativeObjectSecurity/SetSecurityInfoNativeCall::Invoke(System.Security.AccessControl.SecurityInfos,System.Byte[],System.Byte[],System.Byte[],System.Byte[])
+static int32_t __N2M_i4i4i8i8i8i8(int32_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
+{
+    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
+    StackObject* ret = args + 5;
+    Interpreter::Execute(method, args, ret);
+    return *(int32_t*)ret;
+}
+
+
+// System.Int32 System.Security.AccessControl.NativeObjectSecurity/GetSecurityInfoNativeCall::Invoke(System.Security.AccessControl.SecurityInfos,System.IntPtr&,System.IntPtr&,System.IntPtr&,System.IntPtr&,System.IntPtr&)
+static int32_t __N2M_i4i4i8i8i8i8i8(int32_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method)
+{
+    StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5 };
+    StackObject* ret = args + 6;
+    Interpreter::Execute(method, args, ret);
+    return *(int32_t*)ret;
+}
+
+
 // System.Int32 Mono.RuntimeClassHandle::GetHashCode()
 static int32_t __N2M_i4i8(int64_t __arg0, const MethodInfo* method)
 {
@@ -12339,6 +10747,26 @@ static int32_t __N2M_i4i8i4i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, co
 {
     StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
     StackObject* ret = args + 3;
+    Interpreter::Execute(method, args, ret);
+    return *(int32_t*)ret;
+}
+
+
+// System.Int32 System.Security.AccessControl.NativeObjectSecurity/SetSecurityInfoNativeCall::Invoke(System.Security.AccessControl.SecurityInfos,System.Byte[],System.Byte[],System.Byte[],System.Byte[])
+static int32_t __N2M_i4i8i4i8i8i8i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method)
+{
+    StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5 };
+    StackObject* ret = args + 6;
+    Interpreter::Execute(method, args, ret);
+    return *(int32_t*)ret;
+}
+
+
+// System.Int32 System.Security.AccessControl.NativeObjectSecurity/GetSecurityInfoNativeCall::Invoke(System.Security.AccessControl.SecurityInfos,System.IntPtr&,System.IntPtr&,System.IntPtr&,System.IntPtr&,System.IntPtr&)
+static int32_t __N2M_i4i8i4i8i8i8i8i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method)
+{
+    StackObject args[8] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5, *(uint64_t*)&__arg6 };
+    StackObject* ret = args + 7;
     Interpreter::Execute(method, args, ret);
     return *(int32_t*)ret;
 }
@@ -12654,27 +11082,7 @@ static int32_t __N2M_i4i8u8u8(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, 
 }
 
 
-// System.Int32 Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector2EqualityComparer::GetHashCode(UnityEngine.Vector2)
-static int32_t __N2M_i4i8vf2(int64_t __arg0, HtVector2f __arg1, const MethodInfo* method)
-{
-    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(int32_t*)ret;
-}
-
-
-// System.Int32 System.Collections.Generic.Comparer`1::Compare(T,T)
-static int32_t __N2M_i4i8vf2vf2(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, const MethodInfo* method)
-{
-    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
-    StackObject* ret = args + 3;
-    Interpreter::Execute(method, args, ret);
-    return *(int32_t*)ret;
-}
-
-
-// System.Int32 Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector3EqualityComparer::GetHashCode(UnityEngine.Vector3)
+// System.Int32 System.Collections.Generic.List`1::IndexOf(T)
 static int32_t __N2M_i4i8vf3(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1 };
@@ -12694,7 +11102,7 @@ static int32_t __N2M_i4i8vf3vf3(int64_t __arg0, HtVector3f __arg1, HtVector3f __
 }
 
 
-// System.Int32 Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector4EqualityComparer::GetHashCode(UnityEngine.Vector4)
+// System.Int32 System.Collections.Generic.List`1::IndexOf(T)
 static int32_t __N2M_i4i8vf4(int64_t __arg0, HtVector4f __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1 };
@@ -12704,7 +11112,7 @@ static int32_t __N2M_i4i8vf4(int64_t __arg0, HtVector4f __arg1, const MethodInfo
 }
 
 
-// System.Int32 System.Collections.Generic.IComparer`1::Compare(T,T)
+// System.Int32 System.Comparison`1::Invoke(T,T)
 static int32_t __N2M_i4i8vf4vf4(int64_t __arg0, HtVector4f __arg1, HtVector4f __arg2, const MethodInfo* method)
 {
     StackObject args[4] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, (uint64_t)&__arg2 };
@@ -12834,7 +11242,7 @@ static int64_t __N2M_i8i4i8i8i8(int32_t __arg0, int64_t __arg1, int64_t __arg2, 
 }
 
 
-// System.String Interop/ErrorInfo::ToString()
+// System.String[] Mono.Xml.SmallXmlParser/IAttrList::get_Names()
 static int64_t __N2M_i8i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0 };
@@ -13324,16 +11732,6 @@ static int64_t __N2M_i8i8i8u1u1(int64_t __arg0, int64_t __arg1, uint8_t __arg2, 
 }
 
 
-// System.IAsyncResult WeChatWASM.WXAssetBundleRequest/WXAssetBundleCallBack::BeginInvoke(System.IntPtr,System.UInt32,System.IntPtr,System.AsyncCallback,System.Object)
-static int64_t __N2M_i8i8i8u4i8i8i8(int64_t __arg0, int64_t __arg1, uint32_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method)
-{
-    StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5 };
-    StackObject* ret = args + 6;
-    Interpreter::Execute(method, args, ret);
-    return *(int64_t*)ret;
-}
-
-
 // System.IAsyncResult System.Action`1::BeginInvoke(T,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8r4i8i8(int64_t __arg0, float __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method)
 {
@@ -13379,16 +11777,6 @@ static int64_t __N2M_i8i8sri8i8(int64_t __arg0, uint64_t __arg1, int64_t __arg2,
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
     StackObject* ret = args + 4;
-    Interpreter::Execute(method, args, ret);
-    return *(int64_t*)ret;
-}
-
-
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static int64_t __N2M_i8i8sri8i8i8(int64_t __arg0, uint64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
-    StackObject* ret = args + 5;
     Interpreter::Execute(method, args, ret);
     return *(int64_t*)ret;
 }
@@ -13464,7 +11852,7 @@ static int64_t __N2M_i8i8u1i8i8(int64_t __arg0, uint8_t __arg1, int64_t __arg2, 
 }
 
 
-// System.IAsyncResult System.Func`2::BeginInvoke(T,System.AsyncCallback,System.Object)
+// System.IAsyncResult System.Action`1::BeginInvoke(T,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8u2i8i8(int64_t __arg0, uint16_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
@@ -13524,16 +11912,6 @@ static int64_t __N2M_i8i8u8u8i8i8(int64_t __arg0, uint64_t __arg1, uint64_t __ar
 }
 
 
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static int64_t __N2M_i8i8vf2i8i8i8(int64_t __arg0, HtVector2f __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
-    StackObject* ret = args + 5;
-    Interpreter::Execute(method, args, ret);
-    return *(int64_t*)ret;
-}
-
-
 // System.IAsyncResult UnityEngine.UI.ReflectionMethodsCache/Raycast2DCallback::BeginInvoke(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Int32,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8vf2vf2r4i4i8i8(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, float __arg3, int32_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method)
 {
@@ -13554,16 +11932,6 @@ static int64_t __N2M_i8i8vf3i8i8(int64_t __arg0, HtVector3f __arg1, int64_t __ar
 }
 
 
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static int64_t __N2M_i8i8vf3i8i8i8(int64_t __arg0, HtVector3f __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
-    StackObject* ret = args + 5;
-    Interpreter::Execute(method, args, ret);
-    return *(int64_t*)ret;
-}
-
-
 // System.IAsyncResult System.Comparison`1::BeginInvoke(T,T,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8vf3vf3i8i8(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
 {
@@ -13579,16 +11947,6 @@ static int64_t __N2M_i8i8vf4i8i8(int64_t __arg0, HtVector4f __arg1, int64_t __ar
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
     StackObject* ret = args + 4;
-    Interpreter::Execute(method, args, ret);
-    return *(int64_t*)ret;
-}
-
-
-// System.IAsyncResult LitJson.ExporterFunc`1::BeginInvoke(T,LitJson.JsonWriter,System.AsyncCallback,System.Object)
-static int64_t __N2M_i8i8vf4i8i8i8(int64_t __arg0, HtVector4f __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
-    StackObject* ret = args + 5;
     Interpreter::Execute(method, args, ret);
     return *(int64_t*)ret;
 }
@@ -13619,16 +11977,6 @@ static float __N2M_r4i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0 };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(float*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static float __N2M_r4i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(float*)ret;
 }
@@ -13694,16 +12042,6 @@ static double __N2M_r8i8i8(int64_t __arg0, int64_t __arg1, const MethodInfo* met
 }
 
 
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`6<T8,T9,T10,T11,T12,T13>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`13::GetResult(System.Int16)
-static ValueTypeSize<104> __N2M_S104i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[15] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<104>*)ret;
-}
-
-
 // T System.Collections.Generic.List`1/Enumerator::get_Current()
 static ValueTypeSize<108> __N2M_S108i8(int64_t __arg0, const MethodInfo* method)
 {
@@ -13724,61 +12062,11 @@ static ValueTypeSize<108> __N2M_S108i8i4(int64_t __arg0, int32_t __arg1, const M
 }
 
 
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`7<T8,T9,T10,T11,T12,T13,T14>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`14::GetResult(System.Int16)
-static ValueTypeSize<112> __N2M_S112i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[16] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<112>*)ret;
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`8<T8,T9,T10,T11,T12,T13,T14,System.ValueTuple`1<T15>>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`15::GetResult(System.Int16)
-static ValueTypeSize<120> __N2M_S120i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[17] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<120>*)ret;
-}
-
-
-// System.ValueTuple`8<System.Int32,T1,T2,T3,T4,T5,T6,System.ValueTuple`8<T7,T8,T9,T10,T11,T12,T13,System.ValueTuple`2<T14,T15>>> Cysharp.Threading.Tasks.UniTask/WhenAnyPromise`15::GetResult(System.Int16)
-static ValueTypeSize<128> __N2M_S128i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[18] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<128>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<20> __N2M_S20i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<20>*)ret;
-}
-
-
 // UnityEngine.Bounds TMPro.TextMeshPro::GetCompoundBounds()
 static ValueTypeSize<24> __N2M_S24i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[4] = {*(uint64_t*)&__arg0 };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<24>*)ret;
-}
-
-
-// System.ValueTuple`3<T1,T2,T3> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`3::GetResult(System.Int16)
-static ValueTypeSize<24> __N2M_S24i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<24>*)ret;
 }
@@ -13794,7 +12082,7 @@ static ValueTypeSize<24> __N2M_S24i8i4(int64_t __arg0, int32_t __arg1, const Met
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.IReadOnlyAsyncReactiveProperty`1::WaitAsync(System.Threading.CancellationToken)
+// TValue System.Collections.Generic.Dictionary`2::get_Item(TKey)
 static ValueTypeSize<24> __N2M_S24i8i8(int64_t __arg0, int64_t __arg1, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
@@ -13804,31 +12092,11 @@ static ValueTypeSize<24> __N2M_S24i8i8(int64_t __arg0, int64_t __arg1, const Met
 }
 
 
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<28> __N2M_S28i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<28>*)ret;
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Single[],System.Int32>> Cysharp.Threading.Tasks.Triggers.IAsyncOnAudioFilterReadHandler::OnAudioFilterReadAsync()
+// T System.Collections.Generic.IEnumerator`1::get_Current()
 static ValueTypeSize<32> __N2M_S32i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0 };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<32>*)ret;
-}
-
-
-// System.ValueTuple`4<T1,T2,T3,T4> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`4::GetResult(System.Int16)
-static ValueTypeSize<32> __N2M_S32i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<32>*)ret;
 }
@@ -13841,16 +12109,6 @@ static ValueTypeSize<32> __N2M_S32i8i8(int64_t __arg0, int64_t __arg1, const Met
     StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<32>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<36> __N2M_S36i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<36>*)ret;
 }
 
 
@@ -13884,56 +12142,6 @@ static ValueTypeSize<36> __N2M_S36vf2vf2r4i4(HtVector2f __arg0, HtVector2f __arg
 }
 
 
-// T System.Collections.Generic.List`1/Enumerator::get_Current()
-static ValueTypeSize<40> __N2M_S40i8(int64_t __arg0, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0 };
-    StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<40>*)ret;
-}
-
-
-// System.ValueTuple`5<T1,T2,T3,T4,T5> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`5::GetResult(System.Int16)
-static ValueTypeSize<40> __N2M_S40i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<40>*)ret;
-}
-
-
-// T System.Collections.Generic.List`1::get_Item(System.Int32)
-static ValueTypeSize<40> __N2M_S40i8i4(int64_t __arg0, int32_t __arg1, const MethodInfo* method)
-{
-    StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<40>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<44> __N2M_S44i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[8] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<44>*)ret;
-}
-
-
-// System.ValueTuple`6<T1,T2,T3,T4,T5,T6> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`6::GetResult(System.Int16)
-static ValueTypeSize<48> __N2M_S48i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[8] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<48>*)ret;
-}
-
-
 // T System.Collections.Generic.IList`1::get_Item(System.Int32)
 static ValueTypeSize<48> __N2M_S48i8i4(int64_t __arg0, int32_t __arg1, const MethodInfo* method)
 {
@@ -13941,156 +12149,6 @@ static ValueTypeSize<48> __N2M_S48i8i4(int64_t __arg0, int32_t __arg1, const Met
     StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<48>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.Triggers.AsyncTriggerBase`1/AsyncTriggerEnumerator::get_Current()
-static ValueTypeSize<504> __N2M_S504i8(int64_t __arg0, const MethodInfo* method)
-{
-    StackObject args[64] = {*(uint64_t*)&__arg0 };
-    StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<504>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<504> __N2M_S504i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[65] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<504>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<512> __N2M_S512i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[66] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<512>*)ret;
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.ParticleSystemJobs.ParticleSystemJobData> Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleUpdateJobScheduledHandler::OnParticleUpdateJobScheduledAsync()
-static ValueTypeSize<520> __N2M_S520i8(int64_t __arg0, const MethodInfo* method)
-{
-    StackObject args[66] = {*(uint64_t*)&__arg0 };
-    StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<520>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<520> __N2M_S520i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[67] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<520>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<528> __N2M_S528i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[68] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<528>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<536> __N2M_S536i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[69] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<536>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<544> __N2M_S544i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[70] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<544>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<552> __N2M_S552i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[71] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<552>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<560> __N2M_S560i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[72] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<560>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<568> __N2M_S568i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[73] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<568>*)ret;
-}
-
-
-// System.ValueTuple`7<T1,T2,T3,T4,T5,T6,T7> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`7::GetResult(System.Int16)
-static ValueTypeSize<56> __N2M_S56i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[9] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<56>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<576> __N2M_S576i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[74] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<576>*)ret;
-}
-
-
-// System.ValueTuple`2<System.Boolean,T> Cysharp.Threading.Tasks.UniTask`1/IsCanceledSource::GetResult(System.Int16)
-static ValueTypeSize<584> __N2M_S584i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[75] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<584>*)ret;
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`1<T8>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`8::GetResult(System.Int16)
-static ValueTypeSize<64> __N2M_S64i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[10] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<64>*)ret;
 }
 
 
@@ -14114,31 +12172,11 @@ static ValueTypeSize<68> __N2M_S68i8i4(int64_t __arg0, int32_t __arg1, const Met
 }
 
 
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`2<T8,T9>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`9::GetResult(System.Int16)
-static ValueTypeSize<72> __N2M_S72i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[11] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<72>*)ret;
-}
-
-
 // T System.Collections.Generic.List`1/Enumerator::get_Current()
 static ValueTypeSize<80> __N2M_S80i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[11] = {*(uint64_t*)&__arg0 };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<80>*)ret;
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`3<T8,T9,T10>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`10::GetResult(System.Int16)
-static ValueTypeSize<80> __N2M_S80i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[12] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<80>*)ret;
 }
@@ -14154,31 +12192,11 @@ static ValueTypeSize<80> __N2M_S80i8i4(int64_t __arg0, int32_t __arg1, const Met
 }
 
 
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`4<T8,T9,T10,T11>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`11::GetResult(System.Int16)
-static ValueTypeSize<88> __N2M_S88i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[13] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<88>*)ret;
-}
-
-
 // T Unity.Collections.NativeArray`1/Enumerator::get_Current()
 static ValueTypeSize<96> __N2M_S96i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[13] = {*(uint64_t*)&__arg0 };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<96>*)ret;
-}
-
-
-// System.ValueTuple`8<T1,T2,T3,T4,T5,T6,T7,System.ValueTuple`5<T8,T9,T10,T11,T12>> Cysharp.Threading.Tasks.UniTask/WhenAllPromise`12::GetResult(System.Int16)
-static ValueTypeSize<96> __N2M_S96i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[14] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<96>*)ret;
 }
@@ -14454,7 +12472,7 @@ static uint8_t __N2M_u1i8sri8(int64_t __arg0, uint64_t __arg1, int64_t __arg2, c
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/BoundsEqualityComparer::Equals(UnityEngine.Bounds,UnityEngine.Bounds)
+// System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static uint8_t __N2M_u1i8srsr(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, const MethodInfo* method)
 {
     StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
@@ -14594,16 +12612,6 @@ static uint8_t __N2M_u1i8vf2i8(int64_t __arg0, HtVector2f __arg1, int64_t __arg2
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector2EqualityComparer::Equals(UnityEngine.Vector2,UnityEngine.Vector2)
-static uint8_t __N2M_u1i8vf2vf2(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, const MethodInfo* method)
-{
-    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
-    StackObject* ret = args + 3;
-    Interpreter::Execute(method, args, ret);
-    return *(uint8_t*)ret;
-}
-
-
 // System.Boolean UnityEngine.Vector3::Equals(UnityEngine.Vector3)
 static uint8_t __N2M_u1i8vf3(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method)
 {
@@ -14614,7 +12622,7 @@ static uint8_t __N2M_u1i8vf3(int64_t __arg0, HtVector3f __arg1, const MethodInfo
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector3EqualityComparer::Equals(UnityEngine.Vector3,UnityEngine.Vector3)
+// System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static uint8_t __N2M_u1i8vf3vf3(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, const MethodInfo* method)
 {
     StackObject args[4] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, (uint64_t)&__arg2 };
@@ -14634,7 +12642,7 @@ static uint8_t __N2M_u1i8vf4(int64_t __arg0, HtVector4f __arg1, const MethodInfo
 }
 
 
-// System.Boolean Cysharp.Threading.Tasks.Internal.UnityEqualityComparer/Vector4EqualityComparer::Equals(UnityEngine.Vector4,UnityEngine.Vector4)
+// System.Boolean System.Collections.Generic.EqualityComparer`1::Equals(T,T)
 static uint8_t __N2M_u1i8vf4vf4(int64_t __arg0, HtVector4f __arg1, HtVector4f __arg2, const MethodInfo* method)
 {
     StackObject args[4] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, (uint64_t)&__arg2 };
@@ -14654,7 +12662,7 @@ static uint8_t __N2M_u1r4(float __arg0, const MethodInfo* method)
 }
 
 
-// TResult System.Func`2::Invoke(T)
+// System.Boolean System.Predicate`1::Invoke(T)
 static uint8_t __N2M_u1sr(uint64_t __arg0, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0 };
@@ -14664,7 +12672,7 @@ static uint8_t __N2M_u1sr(uint64_t __arg0, const MethodInfo* method)
 }
 
 
-// TResult System.Func`2::Invoke(T)
+// System.Boolean System.Predicate`1::Invoke(T)
 static uint8_t __N2M_u1u2(uint16_t __arg0, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0 };
@@ -14854,16 +12862,6 @@ static HtVector2f __N2M_vf2i8(int64_t __arg0, const MethodInfo* method)
 }
 
 
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static HtVector2f __N2M_vf2i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(HtVector2f*)ret;
-}
-
-
 // UnityEngine.Yoga.YogaSize UnityEngine.Yoga.MeasureFunction::Invoke(UnityEngine.Yoga.YogaNode,System.Single,UnityEngine.Yoga.YogaMeasureMode,System.Single,UnityEngine.Yoga.YogaMeasureMode)
 static HtVector2f __N2M_vf2i8i8r4i4r4i4(int64_t __arg0, int64_t __arg1, float __arg2, int32_t __arg3, float __arg4, int32_t __arg5, const MethodInfo* method)
 {
@@ -14974,7 +12972,7 @@ static void __N2M_vi16sr(ValueTypeSize16 __arg0, uint64_t __arg1, const MethodIn
 }
 
 
-// System.Void UnityEngine.AudioClip/PCMSetPositionCallback::Invoke(System.Int32)
+// System.Void UnityEngine.Windows.Speech.PhraseRecognitionSystem/ErrorDelegate::Invoke(UnityEngine.Windows.Speech.SpeechError)
 static void __N2M_vi4(int32_t __arg0, const MethodInfo* method)
 {
     StackObject args[1] = {*(uint64_t*)&__arg0 };
@@ -15018,16 +13016,6 @@ static void __N2M_vi4i8(int32_t __arg0, int64_t __arg1, const MethodInfo* method
 static void __N2M_vi4i8i4(int32_t __arg0, int64_t __arg1, int32_t __arg2, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
-    StackObject* ret = nullptr;
-    Interpreter::Execute(method, args, ret);
-    
-}
-
-
-// System.Void System.Action`5::Invoke(T1,T2,T3,T4,T5)
-static void __N2M_vi4i8i4i8i8(int32_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
-{
-    StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
     StackObject* ret = nullptr;
     Interpreter::Execute(method, args, ret);
     
@@ -15254,16 +13242,6 @@ static void __N2M_vi8i4i8i4(int64_t __arg0, int32_t __arg1, int64_t __arg2, int3
 }
 
 
-// System.Void System.Action`5::Invoke(T1,T2,T3,T4,T5)
-static void __N2M_vi8i4i8i4i8i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, int32_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5 };
-    StackObject* ret = nullptr;
-    Interpreter::Execute(method, args, ret);
-    
-}
-
-
 // System.Void System.Collections.CollectionBase::OnSet(System.Int32,System.Object,System.Object)
 static void __N2M_vi8i4i8i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method)
 {
@@ -15474,16 +13452,6 @@ static void __N2M_vi8i8i8i16u1(int64_t __arg0, int64_t __arg1, int64_t __arg2, V
 }
 
 
-// System.Void Cysharp.Threading.Tasks.AsyncReactiveProperty`1/WaitAsyncSource::OnCompleted(System.Action`1<System.Object>,System.Object,System.Int16)
-static void __N2M_vi8i8i8i2(int64_t __arg0, int64_t __arg1, int64_t __arg2, int16_t __arg3, const MethodInfo* method)
-{
-    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
-    StackObject* ret = nullptr;
-    Interpreter::Execute(method, args, ret);
-    
-}
-
-
 // System.Void System.Threading.Tasks.Sources.IValueTaskSource::OnCompleted(System.Action`1<System.Object>,System.Object,System.Int16,System.Threading.Tasks.Sources.ValueTaskSourceOnCompletedFlags)
 static void __N2M_vi8i8i8i2i4(int64_t __arg0, int64_t __arg1, int64_t __arg2, int16_t __arg3, int32_t __arg4, const MethodInfo* method)
 {
@@ -15544,20 +13512,10 @@ static void __N2M_vi8i8i8i8(int64_t __arg0, int64_t __arg1, int64_t __arg2, int6
 }
 
 
-// System.Void System.Action`5::Invoke(T1,T2,T3,T4,T5)
+// System.Void System.IO.TextWriter::Write(System.String,System.Object,System.Object,System.Object)
 static void __N2M_vi8i8i8i8i8(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
-    StackObject* ret = nullptr;
-    Interpreter::Execute(method, args, ret);
-    
-}
-
-
-// System.Void System.Action`5::Invoke(T1,T2,T3,T4,T5)
-static void __N2M_vi8i8i8i8i8i8(int64_t __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, int64_t __arg4, int64_t __arg5, const MethodInfo* method)
-{
-    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5 };
     StackObject* ret = nullptr;
     Interpreter::Execute(method, args, ret);
     
@@ -15794,7 +13752,7 @@ static void __N2M_vi8r8(int64_t __arg0, double __arg1, const MethodInfo* method)
 }
 
 
-// System.Void System.Collections.Generic.ICollection`1::Add(T)
+// System.Void UnityEngine.Windows.Speech.PhraseRecognizer/PhraseRecognizedDelegate::Invoke(UnityEngine.Windows.Speech.PhraseRecognizedEventArgs)
 static void __N2M_vi8sr(int64_t __arg0, uint64_t __arg1, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
@@ -16064,7 +14022,7 @@ static void __N2M_vr4(float __arg0, const MethodInfo* method)
 }
 
 
-// System.Void System.Action`1::Invoke(T)
+// System.Void UnityEngine.Windows.Speech.PhraseRecognizer/PhraseRecognizedDelegate::Invoke(UnityEngine.Windows.Speech.PhraseRecognizedEventArgs)
 static void __N2M_vsr(uint64_t __arg0, const MethodInfo* method)
 {
     StackObject args[1] = {*(uint64_t*)&__arg0 };
@@ -16202,7 +14160,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i16i8", (Il2CppMethodPointer)__N2M_i16i8},
 	{"i16i8i16", (Il2CppMethodPointer)__N2M_i16i8i16},
 	{"i16i8i16i8", (Il2CppMethodPointer)__N2M_i16i8i16i8},
-	{"i16i8i2", (Il2CppMethodPointer)__N2M_i16i8i2},
 	{"i16i8i4", (Il2CppMethodPointer)__N2M_i16i8i4},
 	{"i16i8i8", (Il2CppMethodPointer)__N2M_i16i8i8},
 	{"i16i8i8sr", (Il2CppMethodPointer)__N2M_i16i8i8sr},
@@ -16215,6 +14172,8 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i4", (Il2CppMethodPointer)__N2M_i4},
 	{"i4i16i16", (Il2CppMethodPointer)__N2M_i4i16i16},
 	{"i4i4i4", (Il2CppMethodPointer)__N2M_i4i4i4},
+	{"i4i4i8i8i8i8", (Il2CppMethodPointer)__N2M_i4i4i8i8i8i8},
+	{"i4i4i8i8i8i8i8", (Il2CppMethodPointer)__N2M_i4i4i8i8i8i8i8},
 	{"i4i8", (Il2CppMethodPointer)__N2M_i4i8},
 	{"i4i8i1", (Il2CppMethodPointer)__N2M_i4i8i1},
 	{"i4i8i16", (Il2CppMethodPointer)__N2M_i4i8i16},
@@ -16225,6 +14184,8 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i4i8i4i4", (Il2CppMethodPointer)__N2M_i4i8i4i4},
 	{"i4i8i4i4i4", (Il2CppMethodPointer)__N2M_i4i8i4i4i4},
 	{"i4i8i4i8", (Il2CppMethodPointer)__N2M_i4i8i4i8},
+	{"i4i8i4i8i8i8i8", (Il2CppMethodPointer)__N2M_i4i8i4i8i8i8i8},
+	{"i4i8i4i8i8i8i8i8", (Il2CppMethodPointer)__N2M_i4i8i4i8i8i8i8i8},
 	{"i4i8i8", (Il2CppMethodPointer)__N2M_i4i8i8},
 	{"i4i8i8i4", (Il2CppMethodPointer)__N2M_i4i8i8i4},
 	{"i4i8i8i4i4", (Il2CppMethodPointer)__N2M_i4i8i8i4i4},
@@ -16256,8 +14217,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i4i8u4u4", (Il2CppMethodPointer)__N2M_i4i8u4u4},
 	{"i4i8u8", (Il2CppMethodPointer)__N2M_i4i8u8},
 	{"i4i8u8u8", (Il2CppMethodPointer)__N2M_i4i8u8u8},
-	{"i4i8vf2", (Il2CppMethodPointer)__N2M_i4i8vf2},
-	{"i4i8vf2vf2", (Il2CppMethodPointer)__N2M_i4i8vf2vf2},
 	{"i4i8vf3", (Il2CppMethodPointer)__N2M_i4i8vf3},
 	{"i4i8vf3vf3", (Il2CppMethodPointer)__N2M_i4i8vf3vf3},
 	{"i4i8vf4", (Il2CppMethodPointer)__N2M_i4i8vf4},
@@ -16323,13 +14282,11 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i8i8i8u1i4", (Il2CppMethodPointer)__N2M_i8i8i8u1i4},
 	{"i8i8i8u1i8i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i8u1i8i8i8i8},
 	{"i8i8i8u1u1", (Il2CppMethodPointer)__N2M_i8i8i8u1u1},
-	{"i8i8i8u4i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i8u4i8i8i8},
 	{"i8i8r4i8i8", (Il2CppMethodPointer)__N2M_i8i8r4i8i8},
 	{"i8i8r4r4i8i8", (Il2CppMethodPointer)__N2M_i8i8r4r4i8i8},
 	{"i8i8r4r4r4", (Il2CppMethodPointer)__N2M_i8i8r4r4r4},
 	{"i8i8sr", (Il2CppMethodPointer)__N2M_i8i8sr},
 	{"i8i8sri8i8", (Il2CppMethodPointer)__N2M_i8i8sri8i8},
-	{"i8i8sri8i8i8", (Il2CppMethodPointer)__N2M_i8i8sri8i8i8},
 	{"i8i8sri8r4i4i8i8", (Il2CppMethodPointer)__N2M_i8i8sri8r4i4i8i8},
 	{"i8i8srr4i4", (Il2CppMethodPointer)__N2M_i8i8srr4i4},
 	{"i8i8srr4i4i8i8", (Il2CppMethodPointer)__N2M_i8i8srr4i4i8i8},
@@ -16343,72 +14300,35 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i8i8u4i8i8", (Il2CppMethodPointer)__N2M_i8i8u4i8i8},
 	{"i8i8u4u4i8i8", (Il2CppMethodPointer)__N2M_i8i8u4u4i8i8},
 	{"i8i8u8u8i8i8", (Il2CppMethodPointer)__N2M_i8i8u8u8i8i8},
-	{"i8i8vf2i8i8i8", (Il2CppMethodPointer)__N2M_i8i8vf2i8i8i8},
 	{"i8i8vf2vf2r4i4i8i8", (Il2CppMethodPointer)__N2M_i8i8vf2vf2r4i4i8i8},
 	{"i8i8vf3i8i8", (Il2CppMethodPointer)__N2M_i8i8vf3i8i8},
-	{"i8i8vf3i8i8i8", (Il2CppMethodPointer)__N2M_i8i8vf3i8i8i8},
 	{"i8i8vf3vf3i8i8", (Il2CppMethodPointer)__N2M_i8i8vf3vf3i8i8},
 	{"i8i8vf4i8i8", (Il2CppMethodPointer)__N2M_i8i8vf4i8i8},
-	{"i8i8vf4i8i8i8", (Il2CppMethodPointer)__N2M_i8i8vf4i8i8i8},
 	{"i8i8vf4vf4i8i8", (Il2CppMethodPointer)__N2M_i8i8vf4vf4i8i8},
 	{"i8srr4i4", (Il2CppMethodPointer)__N2M_i8srr4i4},
 	{"r4i8", (Il2CppMethodPointer)__N2M_r4i8},
-	{"r4i8i2", (Il2CppMethodPointer)__N2M_r4i8i2},
 	{"r4i8i4", (Il2CppMethodPointer)__N2M_r4i8i4},
 	{"r4i8i8", (Il2CppMethodPointer)__N2M_r4i8i8},
 	{"r4i8i8r4r4", (Il2CppMethodPointer)__N2M_r4i8i8r4r4},
 	{"r4i8r4r4", (Il2CppMethodPointer)__N2M_r4i8r4r4},
 	{"r8i8", (Il2CppMethodPointer)__N2M_r8i8},
 	{"r8i8i8", (Il2CppMethodPointer)__N2M_r8i8i8},
-	{"S104i8i2", (Il2CppMethodPointer)__N2M_S104i8i2},
 	{"S108i8", (Il2CppMethodPointer)__N2M_S108i8},
 	{"S108i8i4", (Il2CppMethodPointer)__N2M_S108i8i4},
-	{"S112i8i2", (Il2CppMethodPointer)__N2M_S112i8i2},
-	{"S120i8i2", (Il2CppMethodPointer)__N2M_S120i8i2},
-	{"S128i8i2", (Il2CppMethodPointer)__N2M_S128i8i2},
-	{"S20i8i2", (Il2CppMethodPointer)__N2M_S20i8i2},
 	{"S24i8", (Il2CppMethodPointer)__N2M_S24i8},
-	{"S24i8i2", (Il2CppMethodPointer)__N2M_S24i8i2},
 	{"S24i8i4", (Il2CppMethodPointer)__N2M_S24i8i4},
 	{"S24i8i8", (Il2CppMethodPointer)__N2M_S24i8i8},
-	{"S28i8i2", (Il2CppMethodPointer)__N2M_S28i8i2},
 	{"S32i8", (Il2CppMethodPointer)__N2M_S32i8},
-	{"S32i8i2", (Il2CppMethodPointer)__N2M_S32i8i2},
 	{"S32i8i8", (Il2CppMethodPointer)__N2M_S32i8i8},
-	{"S36i8i2", (Il2CppMethodPointer)__N2M_S36i8i2},
 	{"S36i8i8", (Il2CppMethodPointer)__N2M_S36i8i8},
 	{"S36i8vf2vf2r4i4", (Il2CppMethodPointer)__N2M_S36i8vf2vf2r4i4},
 	{"S36vf2vf2r4i4", (Il2CppMethodPointer)__N2M_S36vf2vf2r4i4},
-	{"S40i8", (Il2CppMethodPointer)__N2M_S40i8},
-	{"S40i8i2", (Il2CppMethodPointer)__N2M_S40i8i2},
-	{"S40i8i4", (Il2CppMethodPointer)__N2M_S40i8i4},
-	{"S44i8i2", (Il2CppMethodPointer)__N2M_S44i8i2},
-	{"S48i8i2", (Il2CppMethodPointer)__N2M_S48i8i2},
 	{"S48i8i4", (Il2CppMethodPointer)__N2M_S48i8i4},
-	{"S504i8", (Il2CppMethodPointer)__N2M_S504i8},
-	{"S504i8i2", (Il2CppMethodPointer)__N2M_S504i8i2},
-	{"S512i8i2", (Il2CppMethodPointer)__N2M_S512i8i2},
-	{"S520i8", (Il2CppMethodPointer)__N2M_S520i8},
-	{"S520i8i2", (Il2CppMethodPointer)__N2M_S520i8i2},
-	{"S528i8i2", (Il2CppMethodPointer)__N2M_S528i8i2},
-	{"S536i8i2", (Il2CppMethodPointer)__N2M_S536i8i2},
-	{"S544i8i2", (Il2CppMethodPointer)__N2M_S544i8i2},
-	{"S552i8i2", (Il2CppMethodPointer)__N2M_S552i8i2},
-	{"S560i8i2", (Il2CppMethodPointer)__N2M_S560i8i2},
-	{"S568i8i2", (Il2CppMethodPointer)__N2M_S568i8i2},
-	{"S56i8i2", (Il2CppMethodPointer)__N2M_S56i8i2},
-	{"S576i8i2", (Il2CppMethodPointer)__N2M_S576i8i2},
-	{"S584i8i2", (Il2CppMethodPointer)__N2M_S584i8i2},
-	{"S64i8i2", (Il2CppMethodPointer)__N2M_S64i8i2},
 	{"S64i8u1", (Il2CppMethodPointer)__N2M_S64i8u1},
 	{"S68i8i4", (Il2CppMethodPointer)__N2M_S68i8i4},
-	{"S72i8i2", (Il2CppMethodPointer)__N2M_S72i8i2},
 	{"S80i8", (Il2CppMethodPointer)__N2M_S80i8},
-	{"S80i8i2", (Il2CppMethodPointer)__N2M_S80i8i2},
 	{"S80i8i4", (Il2CppMethodPointer)__N2M_S80i8i4},
-	{"S88i8i2", (Il2CppMethodPointer)__N2M_S88i8i2},
 	{"S96i8", (Il2CppMethodPointer)__N2M_S96i8},
-	{"S96i8i2", (Il2CppMethodPointer)__N2M_S96i8i2},
 	{"u1", (Il2CppMethodPointer)__N2M_u1},
 	{"u1i16", (Il2CppMethodPointer)__N2M_u1i16},
 	{"u1i4", (Il2CppMethodPointer)__N2M_u1i4},
@@ -16450,7 +14370,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"u1i8vd2", (Il2CppMethodPointer)__N2M_u1i8vd2},
 	{"u1i8vf2", (Il2CppMethodPointer)__N2M_u1i8vf2},
 	{"u1i8vf2i8", (Il2CppMethodPointer)__N2M_u1i8vf2i8},
-	{"u1i8vf2vf2", (Il2CppMethodPointer)__N2M_u1i8vf2vf2},
 	{"u1i8vf3", (Il2CppMethodPointer)__N2M_u1i8vf3},
 	{"u1i8vf3vf3", (Il2CppMethodPointer)__N2M_u1i8vf3vf3},
 	{"u1i8vf4", (Il2CppMethodPointer)__N2M_u1i8vf4},
@@ -16476,7 +14395,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"u8i8i8", (Il2CppMethodPointer)__N2M_u8i8i8},
 	{"v", (Il2CppMethodPointer)__N2M_v},
 	{"vf2i8", (Il2CppMethodPointer)__N2M_vf2i8},
-	{"vf2i8i2", (Il2CppMethodPointer)__N2M_vf2i8i2},
 	{"vf2i8i8r4i4r4i4", (Il2CppMethodPointer)__N2M_vf2i8i8r4i4r4i4},
 	{"vf2i8i8vf2u1u1", (Il2CppMethodPointer)__N2M_vf2i8i8vf2u1u1},
 	{"vf2i8r4i4r4i4", (Il2CppMethodPointer)__N2M_vf2i8r4i4r4i4},
@@ -16493,7 +14411,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi4i4i8i8", (Il2CppMethodPointer)__N2M_vi4i4i8i8},
 	{"vi4i8", (Il2CppMethodPointer)__N2M_vi4i8},
 	{"vi4i8i4", (Il2CppMethodPointer)__N2M_vi4i8i4},
-	{"vi4i8i4i8i8", (Il2CppMethodPointer)__N2M_vi4i8i4i8i8},
 	{"vi4i8i8u1", (Il2CppMethodPointer)__N2M_vi4i8i8u1},
 	{"vi4vf4i8i4", (Il2CppMethodPointer)__N2M_vi4vf4i8i4},
 	{"vi8", (Il2CppMethodPointer)__N2M_vi8},
@@ -16516,7 +14433,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8i4i4u1", (Il2CppMethodPointer)__N2M_vi8i4i4u1},
 	{"vi8i4i8", (Il2CppMethodPointer)__N2M_vi8i4i8},
 	{"vi8i4i8i4", (Il2CppMethodPointer)__N2M_vi8i4i8i4},
-	{"vi8i4i8i4i8i8", (Il2CppMethodPointer)__N2M_vi8i4i8i4i8i8},
 	{"vi8i4i8i8", (Il2CppMethodPointer)__N2M_vi8i4i8i8},
 	{"vi8i4i8i8i8", (Il2CppMethodPointer)__N2M_vi8i4i8i8i8},
 	{"vi8i4i8i8u1", (Il2CppMethodPointer)__N2M_vi8i4i8i8u1},
@@ -16538,7 +14454,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8i8i8", (Il2CppMethodPointer)__N2M_vi8i8i8},
 	{"vi8i8i8i16", (Il2CppMethodPointer)__N2M_vi8i8i8i16},
 	{"vi8i8i8i16u1", (Il2CppMethodPointer)__N2M_vi8i8i8i16u1},
-	{"vi8i8i8i2", (Il2CppMethodPointer)__N2M_vi8i8i8i2},
 	{"vi8i8i8i2i4", (Il2CppMethodPointer)__N2M_vi8i8i8i2i4},
 	{"vi8i8i8i4", (Il2CppMethodPointer)__N2M_vi8i8i8i4},
 	{"vi8i8i8i4i4i8", (Il2CppMethodPointer)__N2M_vi8i8i8i4i4i8},
@@ -16546,7 +14461,6 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8i8i8i4i8i8i8", (Il2CppMethodPointer)__N2M_vi8i8i8i4i8i8i8},
 	{"vi8i8i8i8", (Il2CppMethodPointer)__N2M_vi8i8i8i8},
 	{"vi8i8i8i8i8", (Il2CppMethodPointer)__N2M_vi8i8i8i8i8},
-	{"vi8i8i8i8i8i8", (Il2CppMethodPointer)__N2M_vi8i8i8i8i8i8},
 	{"vi8i8i8r4i8", (Il2CppMethodPointer)__N2M_vi8i8i8r4i8},
 	{"vi8i8i8u1", (Il2CppMethodPointer)__N2M_vi8i8i8u1},
 	{"vi8i8i8u4u4i8", (Il2CppMethodPointer)__N2M_vi8i8i8u4u4i8},
@@ -16627,16 +14541,6 @@ static ValueTypeSize16 __N2M_AdjustorThunk_i16i8(int64_t __arg0, const MethodInf
 static ValueTypeSize16 __N2M_AdjustorThunk_i16i8i16(int64_t __arg0, ValueTypeSize16 __arg1, const MethodInfo* method)
 {
     StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), (uint64_t)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize16*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize16 __N2M_AdjustorThunk_i16i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
     StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize16*)ret;
@@ -16933,17 +14837,7 @@ static int32_t __N2M_AdjustorThunk_i4i8u8u8(int64_t __arg0, uint64_t __arg1, uin
 }
 
 
-// System.Int32 System.Collections.Generic.IEqualityComparer`1::GetHashCode(T)
-static int32_t __N2M_AdjustorThunk_i4i8vf2(int64_t __arg0, HtVector2f __arg1, const MethodInfo* method)
-{
-    StackObject args[3] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(int32_t*)ret;
-}
-
-
-// System.Int32 System.Collections.Generic.IEqualityComparer`1::GetHashCode(T)
+// System.Int32 System.Collections.Generic.IList`1::IndexOf(T)
 static int32_t __N2M_AdjustorThunk_i4i8vf3(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), (uint64_t)&__arg1 };
@@ -16963,7 +14857,7 @@ static int32_t __N2M_AdjustorThunk_i4i8vf3vf3(int64_t __arg0, HtVector3f __arg1,
 }
 
 
-// System.Int32 System.Collections.Generic.IEqualityComparer`1::GetHashCode(T)
+// System.Int32 System.Collections.Generic.IList`1::IndexOf(T)
 static int32_t __N2M_AdjustorThunk_i4i8vf4(int64_t __arg0, HtVector4f __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), (uint64_t)&__arg1 };
@@ -17163,16 +15057,6 @@ static float __N2M_AdjustorThunk_r4i8(int64_t __arg0, const MethodInfo* method)
 }
 
 
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static float __N2M_AdjustorThunk_r4i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[3] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(float*)ret;
-}
-
-
 // T System.Collections.Generic.IList`1::get_Item(System.Int32)
 static float __N2M_AdjustorThunk_r4i8i4(int64_t __arg0, int32_t __arg1, const MethodInfo* method)
 {
@@ -17233,31 +15117,11 @@ static ValueTypeSize<108> __N2M_AdjustorThunk_S108i8i4(int64_t __arg0, int32_t _
 }
 
 
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<20> __N2M_AdjustorThunk_S20i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[5] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<20>*)ret;
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.IAsyncValueChangedEventHandler`1::OnValueChangedAsync()
+// T System.Collections.Generic.IEnumerator`1::get_Current()
 static ValueTypeSize<24> __N2M_AdjustorThunk_S24i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)) };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<24>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<24> __N2M_AdjustorThunk_S24i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[5] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<24>*)ret;
 }
@@ -17273,7 +15137,7 @@ static ValueTypeSize<24> __N2M_AdjustorThunk_S24i8i4(int64_t __arg0, int32_t __a
 }
 
 
-// Cysharp.Threading.Tasks.UniTask`1<T> Cysharp.Threading.Tasks.IReadOnlyAsyncReactiveProperty`1::WaitAsync(System.Threading.CancellationToken)
+// TValue System.Collections.Generic.IDictionary`2::get_Item(TKey)
 static ValueTypeSize<24> __N2M_AdjustorThunk_S24i8i8(int64_t __arg0, int64_t __arg1, const MethodInfo* method)
 {
     StackObject args[5] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
@@ -17283,93 +15147,13 @@ static ValueTypeSize<24> __N2M_AdjustorThunk_S24i8i8(int64_t __arg0, int64_t __a
 }
 
 
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<28> __N2M_AdjustorThunk_S28i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[6] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<28>*)ret;
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<System.ValueTuple`2<System.Single[],System.Int32>> Cysharp.Threading.Tasks.Triggers.IAsyncOnAudioFilterReadHandler::OnAudioFilterReadAsync()
+// T System.Collections.Generic.IEnumerator`1::get_Current()
 static ValueTypeSize<32> __N2M_AdjustorThunk_S32i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[5] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)) };
     StackObject* ret = args + 1;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<32>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<32> __N2M_AdjustorThunk_S32i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[6] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<32>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<36> __N2M_AdjustorThunk_S36i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[7] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<36>*)ret;
-}
-
-
-// T System.Collections.Generic.IEnumerator`1::get_Current()
-static ValueTypeSize<40> __N2M_AdjustorThunk_S40i8(int64_t __arg0, const MethodInfo* method)
-{
-    StackObject args[6] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)) };
-    StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<40>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<40> __N2M_AdjustorThunk_S40i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[7] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<40>*)ret;
-}
-
-
-// T System.Collections.Generic.IList`1::get_Item(System.Int32)
-static ValueTypeSize<40> __N2M_AdjustorThunk_S40i8i4(int64_t __arg0, int32_t __arg1, const MethodInfo* method)
-{
-    StackObject args[7] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<40>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<44> __N2M_AdjustorThunk_S44i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[8] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<44>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<48> __N2M_AdjustorThunk_S48i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[8] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<48>*)ret;
 }
 
 
@@ -17383,161 +15167,11 @@ static ValueTypeSize<48> __N2M_AdjustorThunk_S48i8i4(int64_t __arg0, int32_t __a
 }
 
 
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<504> __N2M_AdjustorThunk_S504i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[65] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<504>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<512> __N2M_AdjustorThunk_S512i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[66] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<512>*)ret;
-}
-
-
-// Cysharp.Threading.Tasks.UniTask`1<UnityEngine.ParticleSystemJobs.ParticleSystemJobData> Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleUpdateJobScheduledHandler::OnParticleUpdateJobScheduledAsync()
-static ValueTypeSize<520> __N2M_AdjustorThunk_S520i8(int64_t __arg0, const MethodInfo* method)
-{
-    StackObject args[66] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)) };
-    StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<520>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<520> __N2M_AdjustorThunk_S520i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[67] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<520>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<528> __N2M_AdjustorThunk_S528i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[68] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<528>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<536> __N2M_AdjustorThunk_S536i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[69] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<536>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<544> __N2M_AdjustorThunk_S544i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[70] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<544>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<552> __N2M_AdjustorThunk_S552i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[71] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<552>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<560> __N2M_AdjustorThunk_S560i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[72] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<560>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<568> __N2M_AdjustorThunk_S568i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[73] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<568>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<56> __N2M_AdjustorThunk_S56i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[9] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<56>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<576> __N2M_AdjustorThunk_S576i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[74] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<576>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<64> __N2M_AdjustorThunk_S64i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[10] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<64>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<72> __N2M_AdjustorThunk_S72i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[11] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<72>*)ret;
-}
-
-
 // T System.Collections.Generic.IEnumerator`1::get_Current()
 static ValueTypeSize<80> __N2M_AdjustorThunk_S80i8(int64_t __arg0, const MethodInfo* method)
 {
     StackObject args[11] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)) };
     StackObject* ret = args + 1;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<80>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<80> __N2M_AdjustorThunk_S80i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[12] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<80>*)ret;
 }
@@ -17550,16 +15184,6 @@ static ValueTypeSize<80> __N2M_AdjustorThunk_S80i8i4(int64_t __arg0, int32_t __a
     StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<80>*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static ValueTypeSize<88> __N2M_AdjustorThunk_S88i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[13] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(ValueTypeSize<88>*)ret;
 }
 
 
@@ -17645,16 +15269,6 @@ static uint8_t __N2M_AdjustorThunk_u1i8i4(int64_t __arg0, int32_t __arg1, const 
 
 // System.Boolean System.Collections.Generic.IEqualityComparer`1::Equals(T,T)
 static uint8_t __N2M_AdjustorThunk_u1i8i4i4(int64_t __arg0, int32_t __arg1, int32_t __arg2, const MethodInfo* method)
-{
-    StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
-    StackObject* ret = args + 3;
-    Interpreter::Execute(method, args, ret);
-    return *(uint8_t*)ret;
-}
-
-
-// System.Boolean System.Collections.Generic.IDictionary`2::TryGetValue(TKey,TValue&)
-static uint8_t __N2M_AdjustorThunk_u1i8i4i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, const MethodInfo* method)
 {
     StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
     StackObject* ret = args + 3;
@@ -17823,16 +15437,6 @@ static uint8_t __N2M_AdjustorThunk_u1i8vf2i8(int64_t __arg0, HtVector2f __arg1, 
 }
 
 
-// System.Boolean System.Collections.Generic.IEqualityComparer`1::Equals(T,T)
-static uint8_t __N2M_AdjustorThunk_u1i8vf2vf2(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, const MethodInfo* method)
-{
-    StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
-    StackObject* ret = args + 3;
-    Interpreter::Execute(method, args, ret);
-    return *(uint8_t*)ret;
-}
-
-
 // System.Boolean System.IEquatable`1::Equals(T)
 static uint8_t __N2M_AdjustorThunk_u1i8vf3(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method)
 {
@@ -17843,31 +15447,11 @@ static uint8_t __N2M_AdjustorThunk_u1i8vf3(int64_t __arg0, HtVector3f __arg1, co
 }
 
 
-// System.Boolean System.Collections.Generic.IEqualityComparer`1::Equals(T,T)
-static uint8_t __N2M_AdjustorThunk_u1i8vf3vf3(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, const MethodInfo* method)
-{
-    StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), (uint64_t)&__arg1, (uint64_t)&__arg2 };
-    StackObject* ret = args + 3;
-    Interpreter::Execute(method, args, ret);
-    return *(uint8_t*)ret;
-}
-
-
 // System.Boolean System.IEquatable`1::Equals(T)
 static uint8_t __N2M_AdjustorThunk_u1i8vf4(int64_t __arg0, HtVector4f __arg1, const MethodInfo* method)
 {
     StackObject args[3] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), (uint64_t)&__arg1 };
     StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(uint8_t*)ret;
-}
-
-
-// System.Boolean System.Collections.Generic.IEqualityComparer`1::Equals(T,T)
-static uint8_t __N2M_AdjustorThunk_u1i8vf4vf4(int64_t __arg0, HtVector4f __arg1, HtVector4f __arg2, const MethodInfo* method)
-{
-    StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), (uint64_t)&__arg1, (uint64_t)&__arg2 };
-    StackObject* ret = args + 3;
     Interpreter::Execute(method, args, ret);
     return *(uint8_t*)ret;
 }
@@ -17950,16 +15534,6 @@ static uint64_t __N2M_AdjustorThunk_u8i8i8(int64_t __arg0, int64_t __arg1, const
     StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(uint64_t*)ret;
-}
-
-
-// T Cysharp.Threading.Tasks.IUniTaskSource`1::GetResult(System.Int16)
-static HtVector2f __N2M_AdjustorThunk_vf2i8i2(int64_t __arg0, int16_t __arg1, const MethodInfo* method)
-{
-    StackObject args[3] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1 };
-    StackObject* ret = args + 2;
-    Interpreter::Execute(method, args, ret);
-    return *(HtVector2f*)ret;
 }
 
 
@@ -18253,16 +15827,6 @@ static void __N2M_AdjustorThunk_vi8i8i8i16(int64_t __arg0, int64_t __arg1, int64
 }
 
 
-// System.Void Cysharp.Threading.Tasks.IUniTaskSource::OnCompleted(System.Action`1<System.Object>,System.Object,System.Int16)
-static void __N2M_AdjustorThunk_vi8i8i8i2(int64_t __arg0, int64_t __arg1, int64_t __arg2, int16_t __arg3, const MethodInfo* method)
-{
-    StackObject args[4] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)), *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
-    StackObject* ret = nullptr;
-    Interpreter::Execute(method, args, ret);
-    
-}
-
-
 // System.Void System.Threading.Tasks.Sources.IValueTaskSource::OnCompleted(System.Action`1<System.Object>,System.Object,System.Int16,System.Threading.Tasks.Sources.ValueTaskSourceOnCompletedFlags)
 static void __N2M_AdjustorThunk_vi8i8i8i2i4(int64_t __arg0, int64_t __arg1, int64_t __arg2, int16_t __arg3, int32_t __arg4, const MethodInfo* method)
 {
@@ -18438,7 +16002,6 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 
 	{"i16i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_i16i8},
 	{"i16i8i16", (Il2CppMethodPointer)__N2M_AdjustorThunk_i16i8i16},
-	{"i16i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_i16i8i2},
 	{"i16i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_i16i8i4},
 	{"i16i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_i16i8i8},
 	{"i16i8u1", (Il2CppMethodPointer)__N2M_AdjustorThunk_i16i8u1},
@@ -18468,7 +16031,6 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"i4i8u4u4", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8u4u4},
 	{"i4i8u8", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8u8},
 	{"i4i8u8u8", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8u8u8},
-	{"i4i8vf2", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8vf2},
 	{"i4i8vf3", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8vf3},
 	{"i4i8vf3vf3", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8vf3vf3},
 	{"i4i8vf4", (Il2CppMethodPointer)__N2M_AdjustorThunk_i4i8vf4},
@@ -18491,46 +16053,19 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"i8i8i8u1i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_i8i8i8u1i4},
 	{"i8i8u1i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_i8i8u1i4},
 	{"r4i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_r4i8},
-	{"r4i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_r4i8i2},
 	{"r4i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_r4i8i4},
 	{"r4i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_r4i8i8},
 	{"r8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_r8i8},
 	{"r8i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_r8i8i8},
 	{"S108i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S108i8},
 	{"S108i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S108i8i4},
-	{"S20i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S20i8i2},
 	{"S24i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S24i8},
-	{"S24i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S24i8i2},
 	{"S24i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S24i8i4},
 	{"S24i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S24i8i8},
-	{"S28i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S28i8i2},
 	{"S32i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S32i8},
-	{"S32i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S32i8i2},
-	{"S36i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S36i8i2},
-	{"S40i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S40i8},
-	{"S40i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S40i8i2},
-	{"S40i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S40i8i4},
-	{"S44i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S44i8i2},
-	{"S48i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S48i8i2},
 	{"S48i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S48i8i4},
-	{"S504i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S504i8i2},
-	{"S512i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S512i8i2},
-	{"S520i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S520i8},
-	{"S520i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S520i8i2},
-	{"S528i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S528i8i2},
-	{"S536i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S536i8i2},
-	{"S544i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S544i8i2},
-	{"S552i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S552i8i2},
-	{"S560i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S560i8i2},
-	{"S568i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S568i8i2},
-	{"S56i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S56i8i2},
-	{"S576i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S576i8i2},
-	{"S64i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S64i8i2},
-	{"S72i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S72i8i2},
 	{"S80i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S80i8},
-	{"S80i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S80i8i2},
 	{"S80i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S80i8i4},
-	{"S88i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_S88i8i2},
 	{"u1i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8},
 	{"u1i8i1", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i1},
 	{"u1i8i16", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i16},
@@ -18540,7 +16075,6 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"u1i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i2},
 	{"u1i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i4},
 	{"u1i8i4i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i4i4},
-	{"u1i8i4i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i4i8},
 	{"u1i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i8},
 	{"u1i8i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i8i8},
 	{"u1i8i8i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8i8i8i4},
@@ -18557,11 +16091,8 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"u1i8vd2", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vd2},
 	{"u1i8vf2", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf2},
 	{"u1i8vf2i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf2i8},
-	{"u1i8vf2vf2", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf2vf2},
 	{"u1i8vf3", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf3},
-	{"u1i8vf3vf3", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf3vf3},
 	{"u1i8vf4", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf4},
-	{"u1i8vf4vf4", (Il2CppMethodPointer)__N2M_AdjustorThunk_u1i8vf4vf4},
 	{"u2i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u2i8},
 	{"u2i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_u2i8i4},
 	{"u2i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u2i8i8},
@@ -18570,7 +16101,6 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"u4i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u4i8i8},
 	{"u8i8i16", (Il2CppMethodPointer)__N2M_AdjustorThunk_u8i8i16},
 	{"u8i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_u8i8i8},
-	{"vf2i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_vf2i8i2},
 	{"vf3i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_vf3i8},
 	{"vf3i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_vf3i8i4},
 	{"vf4i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_vf4i8},
@@ -18600,7 +16130,6 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"vi8i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i4},
 	{"vi8i8i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i8},
 	{"vi8i8i8i16", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i8i16},
-	{"vi8i8i8i2", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i8i2},
 	{"vi8i8i8i2i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i8i2i4},
 	{"vi8i8i8u1", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i8u1},
 	{"vi8i8i8u4u4i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_vi8i8i8u4u4i8},

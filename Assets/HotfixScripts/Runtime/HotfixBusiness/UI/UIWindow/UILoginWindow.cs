@@ -13,9 +13,9 @@ public class UILoginWindow : UIWindow
        btnLogin = this.transform.Find("btnLogin").GetComponent<Button>();
        btnLogin.onClick.AddListener(()=>
        {
-            //请求登陆信息 TODO
+#if UNITY_EDITOR
             UserEventDefine.UserLoginSuccess.SendEventMessage();
-
+#endif            
        });
     }
 

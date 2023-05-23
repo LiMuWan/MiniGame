@@ -173,7 +173,7 @@ namespace GameFramework.Resource
                 SetReadWritePath(Application.persistentDataPath);
             }
 
-            HostServerURL = GetHostServerURL();//SettingsUtils.GetResDownLoadPath();
+            HostServerURL = GetHostServerURL();
             Initialize();
             Debug.Log($"AssetsComponent Run Mode：{PlayMode}");
         }
@@ -300,16 +300,13 @@ namespace GameFramework.Resource
                 defaultPackage = YooAssets.CreatePackage(packageName);
                 YooAssets.SetDefaultPackage(defaultPackage);
             }
-
-            InstanceRoot = UniSingleton.Behaviour.transform;
-            ResourceHelper = InstanceRoot.gameObject.AddComponent<ResourceHelper>();
-            CancellationToken = ResourceHelper.GetCancellationTokenOnDestroy();
         }
         
         public string GetPackageVersion()
         {
             var defaultPackage = YooAssets.GetPackage(PackageName);
-            return $"{ApplicableGameVersion}.{defaultPackage.GetPackageVersion()}";
+            Debug.Log($"ApplicableGameVersion = {ApplicableGameVersion}.Version = {defaultPackage.GetPackageVersion()}");
+            return $"{ApplicableGameVersion}.{defaultPackage.GetPackageVersion()}"; 
         }
         #region 资源信息
 

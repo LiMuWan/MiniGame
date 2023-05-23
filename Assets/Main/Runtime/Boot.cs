@@ -24,8 +24,7 @@ public class Boot : MonoBehaviour
         UniSingleton.Initialize();
 
         //初始化资源系统
-        UniSingleton.CreateSingleton<ResourcesManager>();
-        ResourcesManager.Instance.PlayMode = PlayMode;
+        UniSingleton.CreateSingleton<ResourcesManager>().PlayMode = PlayMode;
         
         //创建补丁管理器  //开始补丁更新流程
         UniSingleton.CreateSingleton<PatchManager>().Run(PlayMode);

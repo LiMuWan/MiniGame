@@ -122,7 +122,7 @@ public class PatchWindow : MonoBehaviour
             float sizeMB = msg.TotalSizeBytes / 1048576f;
             sizeMB = Mathf.Clamp(sizeMB, 0.1f, float.MaxValue);
             string totalSizeMB = sizeMB.ToString("f1");
-            ShowMessageBox($"发现更新补丁文件,总个数： {msg.TotalCount} , 总大小： {totalSizeMB}兆", callback);
+            ShowMessageBox($"发现更新补丁文件,总个数:{msg.TotalCount},总大小:{totalSizeMB}兆", callback);
         }
         else if (message is PatchEventDefine.DownloadProgressUpdate)
         {
@@ -130,7 +130,7 @@ public class PatchWindow : MonoBehaviour
             _slider.value = (float)msg.CurrentDownloadCount / msg.TotalDownloadCount;
             string currentSizeMB = (msg.CurrentDownloadSizeBytes / 1048576f).ToString("f1");
             string totalSizeMB = (msg.TotalDownloadSizeBytes / 1048576f).ToString("f1");
-            _tips.text = $"下载进度 {msg.CurrentDownloadCount}/{msg.TotalDownloadCount} {currentSizeMB}MB/{totalSizeMB}MB";
+            _tips.text = $"下载进度:{msg.CurrentDownloadCount}/{msg.TotalDownloadCount},{currentSizeMB}MB/{totalSizeMB}MB";
             Debug.LogWarning($"下载进度更新 {_tips.text}");
         }
         else if (message is PatchEventDefine.PackageVersionUpdateFailed)
@@ -156,7 +156,7 @@ public class PatchWindow : MonoBehaviour
             {
                 UserEventDefine.UserTryDownloadWebFiles.SendEventMessage();
             };
-            ShowMessageBox($"文件下载失败 : {msg.FileName}", callback);
+            ShowMessageBox($"文件下载失败:{msg.FileName}", callback);
         }
         else
         {

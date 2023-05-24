@@ -207,7 +207,7 @@ namespace GameFramework.Resource
             m_LastUnloadUnusedAssetsOperationElapseSeconds += Time.unscaledDeltaTime;
             if (m_AsyncOperation == null && (m_ForceUnloadUnusedAssets || m_LastUnloadUnusedAssetsOperationElapseSeconds >= m_MaxUnloadUnusedAssetsInterval || m_PreorderUnloadUnusedAssets && m_LastUnloadUnusedAssetsOperationElapseSeconds >= m_MinUnloadUnusedAssetsInterval))
             {
-                Debug.Log("Unload unused assets...");
+                UniLogger.Log("Unload unused assets...");
                 m_ForceUnloadUnusedAssets = false;
                 m_PreorderUnloadUnusedAssets = false;
                 m_LastUnloadUnusedAssetsOperationElapseSeconds = 0f;
@@ -220,7 +220,7 @@ namespace GameFramework.Resource
                 m_AsyncOperation = null;
                 if (m_PerformGCCollect)
                 {
-                    Debug.Log("GC.Collect...");
+                    UniLogger.Log("GC.Collect...");
                     m_PerformGCCollect = false;
                     GC.Collect();
                 }
@@ -231,7 +231,7 @@ namespace GameFramework.Resource
         {
             if (PlayMode == EPlayMode.EditorSimulateMode)
             {
-                Debug.Log("During this run, Game Framework will use editor resource files, which you should validate first.");
+                UniLogger.Log("During this run, Game Framework will use editor resource files, which you should validate first.");
 #if !UNITY_EDITOR
             PlayMode = EPlayMode.OfflinePlayMode;
 #endif
@@ -296,7 +296,7 @@ namespace GameFramework.Resource
         public string GetPackageVersion()
         {
             var defaultPackage = YooAssets.GetPackage(PackageName);
-            Debug.Log($"ApplicableGameVersion = {ApplicableGameVersion}.Version = {defaultPackage.GetPackageVersion()}");
+            UniLogger.Log($"ApplicableGameVersion = {ApplicableGameVersion}.Version = {defaultPackage.GetPackageVersion()}");
             return $"{ApplicableGameVersion}.{defaultPackage.GetPackageVersion()}"; 
         }
         #region 资源信息
@@ -423,7 +423,7 @@ namespace GameFramework.Resource
 
         public void GCCleanUpMemory()
         {
-            Debug.Log("ResourceManager GCCleanUpMemory");
+            UniLogger.Log("ResourceManager GCCleanUpMemory");
             GC.Collect();
         }
 
@@ -550,14 +550,14 @@ namespace GameFramework.Resource
         public string ReadStreamingFile(string name)
         {
             var path = Path.Combine(Application.streamingAssetsPath, name);
-            Debug.Log($"Streaming->{path}");
+            UniLogger.Log($"Streaming->{path}");
             return ReadLocalText(path);
         }
 
         public byte[] ReadStreamingBytes(string name)
         {
             var path = Path.Combine(Application.streamingAssetsPath, name);
-            Debug.Log($"Streaming->{path}");
+            UniLogger.Log($"Streaming->{path}");
             return ReadLocalBytes(path);
         }
 

@@ -130,7 +130,7 @@ namespace UniFramework.Window
 				rect = new Rect(132f / deviceWidth, 63f / deviceHeight, 2172f / deviceWidth, 1062f / deviceHeight);
 			}
 
-			Rect safeArea = new Rect(Screen.width * rect.x, Screen.height * rect.y, Screen.width * rect.width, Screen.height * rect.height);
+			Rect safeArea = Screen.safeArea;//new Rect(Screen.width * rect.x, Screen.height * rect.y, Screen.width * rect.width, Screen.height * rect.height);
 			ApplyScreenSafeRect(safeArea);
 		}
 

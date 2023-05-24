@@ -3,6 +3,7 @@ using System.Collections;
 using WeChatWASM;
 using System;
 using UniFramework.Utility;
+using Hotfix.EventDefine;
 
 public class LoginStatus : IApplicationStatus 
 {
@@ -36,7 +37,7 @@ public class LoginStatus : IApplicationStatus
                 UniLogger.Log("ad close:" + r.isEnded);
             });
 
-            // 创建用户信息获取按钮，在屏幕1/2区域创建一个透明区域
+            // 创建用户信息获取按钮，在屏幕1/3区域创建一个透明区域
             // 首次获取会弹出用户授权窗口, 可通过右上角-设置-权限管理用户的授权记录
             var canvasWith = (int)(systemInfo.screenWidth * systemInfo.pixelRatio);
             var canvasHeight = (int)(systemInfo.screenHeight * systemInfo.pixelRatio);

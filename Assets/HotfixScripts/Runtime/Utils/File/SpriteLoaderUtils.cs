@@ -12,10 +12,10 @@ public class SpriteLoaderUtils
     /// <param name="file_full_name">文件全名，带后缀</param>
     /// <param name="url"></param>
     /// <returns></returns>
-    public IEnumerator GetSprite(string file_full_name, string url, Action<Sprite> callback)
+    public IEnumerator GetSprite(string file_full_name, string url,string readAndWritePath, Action<Sprite> callback)
     {
         //现在本地找，本地没有，再去下载
-        string dirPath = Path.Combine(Application.persistentDataPath, "DownloadPictures");
+        string dirPath = Path.Combine(readAndWritePath, "DownloadPictures");
         if (!Directory.Exists(dirPath))
         {
             Directory.CreateDirectory(dirPath);

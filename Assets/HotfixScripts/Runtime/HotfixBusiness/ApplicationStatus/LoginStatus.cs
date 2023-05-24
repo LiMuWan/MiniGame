@@ -41,8 +41,8 @@ public class LoginStatus : IApplicationStatus
             // 首次获取会弹出用户授权窗口, 可通过右上角-设置-权限管理用户的授权记录
             var canvasWith = (int)(systemInfo.screenWidth * systemInfo.pixelRatio);
             var canvasHeight = (int)(systemInfo.screenHeight * systemInfo.pixelRatio);
-            var buttonHeight = (int)((canvasWith / 1080f) * 300);
-            infoButton = WX.CreateUserInfoButton(0, canvasHeight - buttonHeight, canvasWith, buttonHeight, "zh_CN", false);
+            var buttonHeight = (int)((canvasWith / 1080f) * 600);
+            infoButton = WX.CreateUserInfoButton(0, canvasHeight/2, canvasWith, buttonHeight, "zh_CN", false);//canvasHeight - buttonHeight
             infoButton.OnTap((userInfoButonRet) =>
             {
                 UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));

@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+
 const unityNamespace = {
   canvas: GameGlobal.canvas,
   navigator: GameGlobal.navigator,
@@ -18,19 +17,27 @@ const unityNamespace = {
   texturesPath: '$TEXTURES_PATH',
   needCacheTextures: $NEED_CACHE_TEXTURES,
   ttlAssetBundle: 5,
-  enableProfileStats: false, // 是否显示性能面板
+  enableProfileStats: false,
+  preloadwXFont: $PRELOAD_WXFONT,
 };
-// 判断是否需要自动缓存的文件，返回true自动缓存；false不自动缓存
+
+unityNamespace.monitorConfig = {
+  enableMonitor: true,
+  fps: 10,
+  showResultAfterLaunch: true,
+  monitorDuration: 30000,
+};
+
 unityNamespace.isCacheableFile = function (path) {
-  const cacheableFileIdentifier = [$BUNDLE_PATH_IDENTIFIER]; // 判定为下载bundle的路径标识符，此路径下的下载，会自动缓存
-  const excludeFileIdentifier = [$EXCLUDE_FILE_EXTENSIONS]; // 命中路径标识符的情况下，并不是所有文件都有必要缓存，过滤下不需要缓存的文件
+  const cacheableFileIdentifier = [$BUNDLE_PATH_IDENTIFIER];
+  const excludeFileIdentifier = [$EXCLUDE_FILE_EXTENSIONS];
   if (cacheableFileIdentifier.some(identifier => path.includes(identifier)
         && excludeFileIdentifier.every(excludeIdentifier => !path.includes(excludeIdentifier)))) {
     return true;
   }
   return false;
 };
-// 判断是否是AssetBundle
+
 unityNamespace.isWXAssetBundle = function (path) {
   return unityNamespace.WXAssetBundles.has(unityNamespace.PathInFileOS(path));
 };

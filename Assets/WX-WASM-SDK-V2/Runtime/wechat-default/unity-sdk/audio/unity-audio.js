@@ -2,6 +2,7 @@ import { isAndroid, isPc, webAudioNeedResume, isSupportBufferURL, isSupportPlayB
 import { WEBAudio, soundVolumeHandler } from './store';
 import { TEMP_DIR_PATH } from './const';
 import { createInnerAudio, destroyInnerAudio, printErrMsg, resumeWebAudio } from './utils';
+
 const defaultSoundLength = 441000;
 export class AudioChannelInstance {
   gain;
@@ -27,10 +28,6 @@ export class AudioChannelInstance {
   }
   playUrl(startTime, url, startOffset, volume, soundClip) {
     try {
-      if (this.source && url === this.source.url) {
-        this.source.start(startTime, startOffset);
-        return;
-      }
       this.setup(url);
       if (!this.source || !this.source.mediaElement) {
         return;
@@ -95,9 +92,11 @@ export class AudioChannelInstance {
       this.source.mediaElement.onError((e) => {
         printErrMsg(e);
         const { errMsg } = e;
+
         if (errMsg && errMsg.indexOf('play audio fail') < 0) {
           return;
         }
+
         if (typeof this.source !== 'undefined' && this.source.mediaElement) {
           this.source._reset();
           this.source.mediaElement.stop();
@@ -266,6 +265,7 @@ export class AudioChannelInstance {
         if (typeof url !== 'undefined') {
           this.stop(0);
         } else {
+
         }
       } else if (typeof url === 'undefined') {
         if (typeof this.source !== 'undefined') {
@@ -273,15 +273,8 @@ export class AudioChannelInstance {
         }
         this.disconnectSource();
       } else {
-        if (this.source.url === url) {
-          return;
-        }
-        if (url !== this.source.url) {
-          if (typeof this.source !== 'undefined') {
-            this.source._reset();
-          }
-          this.disconnectSource();
-        }
+        this.source._reset();
+        this.disconnectSource();
       }
     }
     if (!url) {
@@ -311,6 +304,7 @@ export class AudioChannelInstance {
           clearTimeout(this.source.fixPlayTicker);
           delete this.source.fixPlayTicker;
         }
+
         this.source.fixPlayTicker = setTimeout(() => {
           if (this.source && this.source.mediaElement && this.source.needCanPlay && !this.source.isPlaying) {
             this.source.mediaElement.play();
@@ -356,6 +350,7 @@ export class AudioChannelInstance {
           }
         }
       };
+
       const _reset = () => {
         if (!this.source) {
           return;
@@ -370,6 +365,7 @@ export class AudioChannelInstance {
           this.source.stopTicker = undefined;
         }
       };
+
       const _pauseMediaElement = () => {
         if (typeof this.source === 'undefined') {
           return;
@@ -380,6 +376,7 @@ export class AudioChannelInstance {
           this.source.mediaElement.pause();
         }
       };
+
       const _startPlayback = (offset) => {
         if (typeof this.source === 'undefined' || !this.source.mediaElement) {
           return;
@@ -463,18 +460,22 @@ export class AudioChannelInstance {
         start,
         stop,
       };
+
+
       const { buffered, referrerPolicy, volume } = getAudio;
       const { source } = this;
       Object.defineProperty(this.source, 'loopStart', {
         get() {
           return 0;
         },
+
         set(v) { },
       });
       Object.defineProperty(source, 'loopEnd', {
         get() {
           return 0;
         },
+
         set(v) { },
       });
       Object.defineProperty(source, 'loop', {
@@ -496,6 +497,7 @@ export class AudioChannelInstance {
           if (!source || !source.mediaElement) {
             return;
           }
+
           if (!isSupportPlayBackRate) {
             source.mediaElement.playbackRate = 1;
           } else {
@@ -658,11 +660,13 @@ export default {
       return 0;
     }
     const audioData = GameGlobal.unityNamespace.Module.HEAPU8.buffer.slice(ptr, ptr + length);
+
     if (length > 131072) {
       decompress = 0;
     } else {
       decompress = 1;
     }
+
     if (isAndroid || isPc) {
       decompress = 1;
     }
@@ -908,6 +912,7 @@ export default {
       printErrMsg(`Invalid audio pitch ${v} specified to WebAudio backend!`);
     }
   },
+
   _JS_Sound_SetPosition(channelInstance, x, y, z) {
     if (WEBAudio.audio3DSupport === 0 || WEBAudio.audioWebSupport === 0 || WEBAudio.audioWebEnabled === 0) {
       return;
@@ -924,6 +929,7 @@ export default {
       if (cur === volume) {
         return;
       }
+
       if (cur == undefined && v == 1) {
         return;
       }

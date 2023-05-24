@@ -10,7 +10,7 @@ export const resumeWebAudio = () => {
 };
 export const createInnerAudio = () => {
   const id = uid();
-  const audio = (isSupportCacheAudio && WEBAudio.audioCache.length ? WEBAudio.audioCache.pop() : wx.createInnerAudioContext());
+  const audio = (isSupportCacheAudio && WEBAudio.audioCache.length ? WEBAudio.audioCache.shift() : wx.createInnerAudioContext());
   if (audio) {
     audios[id] = audio;
   }
@@ -26,7 +26,6 @@ export const destroyInnerAudio = (id, useCache) => {
   if (!useCache || !isSupportCacheAudio || WEBAudio.audioCache.length > 32) {
     audios[id].destroy();
   } else {
-    audios[id].stop();
     ['Play', 'Pause', 'Stop', 'Canplay', 'Error', 'Ended', 'Waiting', 'Seeking', 'Seeked', 'TimeUpdate'].forEach((eventName) => {
       audios[id][`off${eventName}`]();
     });
@@ -43,7 +42,12 @@ export const destroyInnerAudio = (id, useCache) => {
         audios[id][key] = state[key];
       } catch (e) { }
     });
-    WEBAudio.audioCache.push(audios[id]);
+    audios[id].stop();
+    const cacheAudio = audios[id];
+
+    setTimeout(() => {
+      WEBAudio.audioCache.push(cacheAudio);
+    }, 1000);
   }
   delete audios[id];
 };

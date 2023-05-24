@@ -8,6 +8,7 @@ export default {
     if (!this._send) {
       this.init();
     }
+
     this._send(MODULE_NAME, method, str);
   },
 };

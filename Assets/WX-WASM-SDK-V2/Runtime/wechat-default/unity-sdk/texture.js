@@ -3,6 +3,7 @@ const downloadedTextures = {};
 const downloadingTextures = {};
 const downloadFailedTextures = {};
 let hasCheckSupportedExtensions = false;
+
 if (typeof window !== 'undefined' && window.indexedDB) {
   Object.defineProperty(window, 'indexedDB', {
     get() {
@@ -38,7 +39,7 @@ const mod = {
     const list = canvas
       .getContext(GameGlobal.managerConfig.contextConfig.contextType === 2 ? 'webgl2' : 'webgl')
       .getSupportedExtensions();
-    const noneLimitSupportedTextures = [''];
+    const noneLimitSupportedTextures = ['']; // 兜底采用png
     GameGlobal.TextureCompressedFormat = '';
     if (list.indexOf('WEBGL_compressed_texture_s3tc') !== -1 && UseDXT5) {
       GameGlobal.TextureCompressedFormat = 'dds';
@@ -110,10 +111,12 @@ const mod = {
         delete downloadFailedTextures[cid];
         delete downloadedTextures[cid].data;
       } else {
+        //   err("压缩纹理下载失败！url:"+url);
         mod.reTryRemoteImageFile(path, width, height, limitType);
       }
     };
     xmlhttp.onerror = function () {
+      //   err("压缩纹理下载失败！url:"+url);
       mod.reTryRemoteImageFile(path, width, height, limitType);
     };
     xmlhttp.send(null);
@@ -180,6 +183,14 @@ const mod = {
       mod.getSupportedExtensions();
     }
     const cid = path;
+    /*
+        if(downloadedTextures[cid]){
+            if(downloadedTextures[cid].data){
+                callback();
+            }else{
+                mod.readFile(id,type,callback,width,height);
+            }
+        }else */
     if (isStopDownloadTexture) {
       cachedDownloadTask.push({
         path,
@@ -199,7 +210,7 @@ const mod = {
   },
 };
 GameGlobal.DownloadedTextures = downloadedTextures;
-GameGlobal.TextureCompressedFormat = '';
+GameGlobal.TextureCompressedFormat = ''; // 支持的压缩格式
 GameGlobal.ParalleLDownloadTexture = function (filename) {
   filename = filename.replace(GameGlobal.managerConfig.DATA_CDN, '').replace(/^\//, '');
   filename = `/${filename}`;

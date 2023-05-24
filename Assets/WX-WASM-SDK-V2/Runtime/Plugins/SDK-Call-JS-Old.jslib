@@ -636,9 +636,6 @@ mergeInto(LibraryManager.library, {
         stringToUTF8(returnStr, buffer, bufferSize);
         return buffer;
     },
-    WXReportScene: function(conf, callbackId) {
-        window.WXWASMSDK.WXReportScene(_WXPointer_stringify_adaptor(conf), _WXPointer_stringify_adaptor(callbackId));
-    },
     WXUncaughtException: function() {
        window.WXWASMSDK.WXUncaughtException(false);
     },

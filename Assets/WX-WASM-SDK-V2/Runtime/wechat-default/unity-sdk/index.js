@@ -1,3 +1,4 @@
+
 import storage from './storage';
 import userInfo from './userinfo';
 import moduleHelper from './module-helper';
@@ -20,13 +21,13 @@ import camera from './camera';
 import recorder from './recorder';
 import uploadFile from './upload-file';
 import gameRecorder from './game-recorder';
-import reportScene from './report-scene';
 import chat from './chat';
-import font from './font';
+import font from './font/index';
 const unityVersion = '$unityVersion$';
 GameGlobal.unityNamespace = GameGlobal.unityNamespace || {};
 GameGlobal.unityNamespace.unityVersion = unityVersion;
 window._ScaleRate = 1;
+
 if (unityVersion && unityVersion.split('.').slice(0, 2)
   .join('') < '20193') {
   const width = window.innerWidth * window.devicePixelRatio;
@@ -91,7 +92,6 @@ const WXWASMSDK = {
   ...recorder,
   ...uploadFile,
   ...gameRecorder,
-  ...reportScene,
   ...chat,
   ...font,
 };

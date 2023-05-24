@@ -1,5 +1,6 @@
 import { WEBAudio, audios } from './store';
 import { resumeWebAudio, mkCacheDir } from './utils';
+
 mkCacheDir();
 export default {
   WXGetAudioCount() {
@@ -10,6 +11,7 @@ export default {
     };
   },
 };
+
 const HandleInterruption = {
   init() {
     let INTERRUPT_LIST = {};

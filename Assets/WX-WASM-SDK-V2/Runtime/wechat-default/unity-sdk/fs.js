@@ -1,6 +1,7 @@
 import response from './response';
 import moduleHelper from './module-helper';
 import { formatJsonStr } from './utils';
+
 const tempCacheObj = {};
 export default {
   WXGetUserDataPath() {
@@ -9,6 +10,7 @@ export default {
   WXWriteFileSync(filePath, data, encoding) {
     try {
       const fs = wx.getFileSystemManager();
+
       fs.writeFileSync(filePath, data, encoding);
     } catch (e) {
       console.error(e);
@@ -237,6 +239,7 @@ export default {
       success(res) {
         if (!Array.isArray(res.stats)) {
           res.one_stat = res.stats;
+
           res.stats = null;
         }
         moduleHelper.send('StatCallback', JSON.stringify({
@@ -255,6 +258,7 @@ export default {
       complete(res) {
         if (!Array.isArray(res.stats)) {
           res.one_stat = res.stats;
+
           res.stats = null;
         }
         moduleHelper.send('StatCallback', JSON.stringify({

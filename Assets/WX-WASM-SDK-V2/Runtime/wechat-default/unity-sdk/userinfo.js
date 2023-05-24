@@ -64,6 +64,7 @@ export default {
     if (!obj) {
       return;
     }
+
     obj.onTap((res) => {
       res.userInfo = res.userInfo || {};
       moduleHelper.send('UserInfoButtonOnTapCallback', JSON.stringify({

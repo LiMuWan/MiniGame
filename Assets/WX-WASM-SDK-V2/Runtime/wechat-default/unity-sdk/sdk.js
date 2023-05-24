@@ -1,3 +1,4 @@
+
 import moduleHelper from './module-helper';
 import { uid, formatResponse, formatJsonStr, formatTouchEvent, onEventCallback, offEventCallback, getListObject } from './utils';
 let OnAccelerometerChangeList;
@@ -1784,6 +1785,9 @@ export default {
   },
   WX_ReportScene(conf, callbackId) {
     const config = formatJsonStr(conf);
+    if (GameGlobal.manager && GameGlobal.manager.setGameStage) {
+      GameGlobal.manager.setGameStage(config.sceneId);
+    }
     wx.reportScene({
       ...config,
       success(res) {

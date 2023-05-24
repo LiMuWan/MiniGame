@@ -1,7 +1,9 @@
+
 export default {
   init() {
     this.fixTimer();
   },
+
   fixTimer() {
     const wm = {};
     const privateSetTimeout = window.setTimeout;
@@ -13,6 +15,7 @@ export default {
       }
       return id;
     };
+
     window.setTimeout = function (vCallback, nDelay) {
       const aArgs = Array.prototype.slice.call(arguments, 2);
       const id = getId();
@@ -26,6 +29,7 @@ export default {
       return id;
     };
     const privateClearTimeout = window.clearTimeout;
+
     window.clearTimeout = function (id) {
       if (id) {
         const t = wm[id];
@@ -36,6 +40,7 @@ export default {
       }
     };
     const privateSetInterval = window.setInterval;
+
     window.setInterval = function (vCallback, nDelay) {
       const aArgs = Array.prototype.slice.call(arguments, 2);
       const id = getId();
@@ -48,6 +53,7 @@ export default {
       return id;
     };
     const privateClearInterval = window.clearInterval;
+
     window.clearInterval = function (id) {
       if (id) {
         const t = wm[id];

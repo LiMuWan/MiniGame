@@ -6,7 +6,7 @@ const ads = {};
 export default {
   WXCreateBannerAd(conf) {
     const config = formatJsonStr(conf);
-    config.style = JSON.parse(config.styleRaw);
+    config.style = JSON.parse(config.styleRaw || '{}');
     const ad = wx.createBannerAd(config);
     const key = uid();
     ads[key] = ad;
@@ -81,6 +81,7 @@ export default {
     const key = uid();
     ads[key] = ad;
     if (!config.multiton) {
+      // 单例模式要处理一下
       ad.offLoad();
       ad.offError();
       ad.offClose();
@@ -93,6 +94,7 @@ export default {
         errCode: res.errCode || res.err_code,
       }));
     });
+
     ad.onLoad((res) => {
       moduleHelper.send('ADOnLoadCallback', JSON.stringify({
         callbackId: key,
@@ -141,7 +143,7 @@ export default {
   },
   WXCreateGridAd(conf) {
     const config = formatJsonStr(conf);
-    conf.style = JSON.parse(conf.styleRaw);
+    config.style = JSON.parse(config.styleRaw || '{}');
     const ad = wx.createGridAd(config);
     const key = uid();
     ads[key] = ad;
@@ -170,7 +172,7 @@ export default {
   },
   WXCreateCustomAd(conf) {
     const config = formatJsonStr(conf);
-    conf.style = JSON.parse(conf.styleRaw);
+    config.style = JSON.parse(config.styleRaw || '{}');
     const ad = wx.createCustomAd(config);
     const key = uid();
     ads[key] = ad;
@@ -248,6 +250,7 @@ export default {
     }
     if (succ || fail) {
       const promise = ads[id].hide();
+
       if (promise) {
         promise.then(() => {
           response.textFormat(succ, {

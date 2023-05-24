@@ -1,14 +1,18 @@
+
 let cachedOpenDataContext;
 let cachedSharedCanvas;
+
 function getOpenDataContext() {
   return cachedOpenDataContext || wx.getOpenDataContext();
 }
+
 function getSharedCanvas() {
   return cachedSharedCanvas || getOpenDataContext().canvas;
 }
 let timerId;
 let textureObject = null;
 let textureId;
+
 function hookUnityRender() {
   if (!textureId) {
     return;
@@ -30,6 +34,7 @@ function hookUnityRender() {
   GL.textures[textureId] = textureObject;
   timerId = requestAnimationFrame(hookUnityRender);
 }
+
 function stopLastRenderLoop() {
   if (typeof timerId !== 'undefined') {
     cancelAnimationFrame(timerId);
@@ -41,9 +46,11 @@ function startHookUnityRender() {
 }
 function stopHookUnityRender() {
   stopLastRenderLoop();
+
   const sharedCanvas = getSharedCanvas();
   sharedCanvas.width = 1;
   sharedCanvas.height = 1;
+
   const { GL } = GameGlobal.manager.gameInstance.Module;
   const gl = GL.currentContext.GLctx;
   gl.deleteTexture(textureObject);
@@ -57,6 +64,7 @@ export default {
     if (width <= 0 || height <= 0) {
       console.error('[unity-sdk]: WXShowOpenData要求 width 和 height 参数必须大于0');
     }
+
     const openDataContext = getOpenDataContext();
     const sharedCanvas = openDataContext.canvas;
     sharedCanvas.width = width;

@@ -32,6 +32,7 @@ namespace WeChatWASM
         // string audioPrefix = "";
         private bool useFriendRelation = false;
         private bool useMiniGameChat = false;
+        private bool preloadWXFont = false;
         private bool developBuild = false;
         private bool autoProfile = false;
         private bool scriptOnly = false;
@@ -150,6 +151,7 @@ namespace WeChatWASM
             // audioPrefix = config.ProjectConf.AssetsUrl;
             useFriendRelation = config.SDKOptions.UseFriendRelation;
             useMiniGameChat = config.SDKOptions.UseMiniGameChat;
+            preloadWXFont = config.SDKOptions.PreloadWXFont;
             bgImageSrc = config.ProjectConf.bgImageSrc;
             tex = AssetDatabase.LoadAssetAtPath<Texture>(bgImageSrc);
             memorySize = config.ProjectConf.MemorySize;
@@ -206,6 +208,7 @@ namespace WeChatWASM
             // config.ProjectConf.AssetsUrl = audioPrefix;
             config.SDKOptions.UseFriendRelation = useFriendRelation;
             config.SDKOptions.UseMiniGameChat = useMiniGameChat;
+            config.SDKOptions.PreloadWXFont = preloadWXFont;
             config.ProjectConf.bgImageSrc = bgImageSrc;
             config.ProjectConf.MemorySize = memorySize;
             config.ProjectConf.HideAfterCallMain = hideAfterCallMain;
@@ -771,156 +774,36 @@ namespace WeChatWASM
 
             var screenOrientation = new List<string>() { "portrait", "landscape", "landscapeLeft", "landscapeRight" }[orientation];
 
-            Rule[] replaceArrayList =
-            {
-                new Rule()
-                {
-                    old = "$GAME_NAME",
-                    newStr = "webgl",
-                },
-                new Rule()
-                {
-                    old = "$PROJECT_NAME",
-                    newStr = projectName == string.Empty ? "webgl" : projectName,
-                },
-                new Rule()
-                {
-                    old = "$APP_ID",
-                    newStr = appid,
-                },
-                new Rule()
-                {
-                    old = "$ORIENTATION",
-                    newStr = screenOrientation,
-                },
-                new Rule()
-                {
-                    old = "$LOADING_VIDEO_URL",
-                    newStr = videoUrl,
-                },
-                new Rule()
-                {
-                    old = "$CODE_MD5",
-                    newStr = codeMd5,
-                },
-                new Rule()
-                {
-                    old = "$DATA_MD5",
-                    newStr = dataMd5,
-                },
-
-                // new Rule()
-                // {
-                //     old="$DATA_FILE_SIZE",
-                //     newStr=dataFileSize
-                // },
-                new Rule()
-                {
-                    old = "$STREAM_CDN",
-                    newStr = streamCDN,
-                },
-                new Rule()
-                {
-                    old = "$AUDIO_PREFIX",
-                    newStr = cdn + "/Assets",
-                },
-
-                new Rule()
-                {
-                    old = "'$PRELOAD_LIST'",
-                    newStr = PRELOAD_LIST,
-                },
-                new Rule()
-                {
-                    old = "$BACKGROUND_IMAGE",
-                    newStr = imgSrc,
-                },
-                new Rule()
-                {
-                    old = "$HIDE_AFTER_CALLMAIN",
-                    newStr = hideAfterCallMain ? "true" : "false",
-                },
-                new Rule()
-                {
-                    old = "$BUNDLE_HASH_LENGTH",
-                    newStr = bundleHashLength.ToString(),
-                },
-                new Rule()
-                {
-                    old = "$BUNDLE_PATH_IDENTIFIER",
-                    newStr = bundlePathIdentifierStr,
-                },
-                new Rule()
-                {
-                    old = "$EXCLUDE_FILE_EXTENSIONS",
-                    newStr = excludeFileExtensionsStr,
-                },
-                new Rule()
-                {
-                    old = "$WEBGL_VERSION",
-                    newStr = webgl2 ? "2" : "1",
-                },
-                new Rule()
-                {
-                    old = "$UNITY_VERSION",
-                    newStr = Application.unityVersion,
-                },
-                new Rule()
-                {
-                    old = "$PLUGIN_VERSION",
-                    newStr = WXExtEnvDef.pluginVersion,
-                },
-                new Rule()
-                {
-                    old = "$DATA_FILE_SUB_PREFIX",
-                    newStr = dataFileSubPrefix,
-                },
-                new Rule()
-                {
-                    old = "$MAX_STORAGE_SIZE",
-                    newStr = maxStorage.ToString(),
-                },
-                new Rule()
-                {
-                    old = "$DEFAULT_RELEASE_SIZE",
-                    newStr = defaultReleaseSize.ToString(),
-                },
-                new Rule()
-                {
-                    old = "$TEXTURE_HASH_LENGTH",
-                    newStr = texturesHashLength.ToString(),
-                },
-                new Rule()
-                {
-                    old = "$TEXTURES_PATH",
-                    newStr = texturesPath,
-                },
-                new Rule()
-                {
-                    old = "$NEED_CACHE_TEXTURES",
-                    newStr = needCacheTextures ? "true" : "false",
-                },
-                new Rule()
-                {
-                    old = "$LOADING_BAR_WIDTH",
-                    newStr = loadingBarWidth.ToString(),
-                },
-                new Rule()
-                {
-                    old = "$NEED_CHECK_UPDATE",
-                    newStr = needCheckUpdate ? "true" : "false",
-                },
-                new Rule()
-                {
-                    old="$UNITY_COLORSPACE",
-                    newStr=GetColorSpace()
-                },
-                new Rule()
-                {
-                    old="$DISABLE_HIGHPERFORMANCE_FALLBACK",
-                    newStr=disableHighPerformanceFallback ? "true" : "false"
-                }
-            };
+            Rule[] replaceArrayList = ReplaceRules.GenRules(new string[] {
+                projectName == string.Empty ? "webgl" : projectName,
+                appid,
+                screenOrientation,
+                videoUrl,
+                codeMd5,
+                dataMd5,
+                streamCDN,
+                cdn + "/Assets",
+                PRELOAD_LIST,
+                imgSrc,
+                hideAfterCallMain ? "true" : "false",
+                bundleHashLength.ToString(),
+                bundlePathIdentifierStr,
+                excludeFileExtensionsStr,
+                webgl2 ? "2" : "1",
+                Application.unityVersion,
+                WXExtEnvDef.pluginVersion,
+                dataFileSubPrefix,
+                maxStorage.ToString(),
+                defaultReleaseSize.ToString(),
+                texturesHashLength.ToString(),
+                texturesPath,
+                needCacheTextures ? "true" : "false",
+                loadingBarWidth.ToString(),
+                needCheckUpdate ? "true" : "false",
+                GetColorSpace(),
+                disableHighPerformanceFallback ? "true" : "false",
+                preloadWXFont ? "true" : "false",
+            });
 
             List<Rule> replaceList = new List<Rule>(replaceArrayList);
             List<string> files = new List<string> { "game.js", "game.json", "project.config.json", "unity-namespace.js", "check-version.js" };
@@ -1065,6 +948,11 @@ namespace WeChatWASM
                 {
                     gameJson.Remove("openDataContext");
                     gameJson["plugins"].Remove("Layout");
+
+                    // 删除 open-data 相应的文件夹
+                    string openDataDir = Path.Combine(dst, miniGameDir, "open-data");
+                    UnityUtil.DelectDir(openDataDir);
+                    Directory.Delete(openDataDir, true);
                 }
 
                 if (!useMiniGameChat)
@@ -1076,11 +964,6 @@ namespace WeChatWASM
                 // 将配置写回到文件夹
                 gameJson.ToJson(writer);
                 File.WriteAllText(filePath, writer.TextWriter.ToString());
-
-                // 删除 open-data 相应的文件夹
-                string openDataDir = Path.Combine(dst, miniGameDir, "open-data");
-                UnityUtil.DelectDir(openDataDir);
-                Directory.Delete(openDataDir, true);
             }
         }
 
@@ -1254,6 +1137,7 @@ namespace WeChatWASM
             GUILayout.BeginHorizontal();
             useFriendRelation = GUILayout.Toggle(useFriendRelation, "使用好友关系链", toggleStyle);
             useMiniGameChat = GUILayout.Toggle(useMiniGameChat, "使用社交组件", toggleStyle);
+            preloadWXFont = GUILayout.Toggle(preloadWXFont, new GUIContent("预载微信字体(?)", "在game.js执行开始时预载微信系统字体，运行期间可使用WX.GetWXFont获取微信字体"), toggleStyle);
             GUILayout.EndHorizontal();
             EditorGUILayout.Space();
 
@@ -1297,6 +1181,8 @@ namespace WeChatWASM
             exportButtonStyle.margin.left = 20;
             exportButtonStyle.margin.top = 15;
 
+            var isMoreConfigPressed = GUILayout.Button("更多配置选项(MiniGameConfig.asset)", exportButtonStyle, GUILayout.Height(30), GUILayout.Width(EditorGUIUtility.currentViewWidth - 40));
+
             EditorGUILayout.BeginHorizontal();
 
             var isExportBtnPressed = GUILayout.Button("导出WEBGL并转换为小游戏(常用)", exportButtonStyle, GUILayout.Height(40), GUILayout.Width(EditorGUIUtility.currentViewWidth - 270));
@@ -1313,6 +1199,12 @@ namespace WeChatWASM
             if (isConvertBtnPressed)
             {
                 DoExport(false);
+            }
+
+            if (isMoreConfigPressed)
+            {
+                var config = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>("Assets/WX-WASM-SDK-V2/Editor/MiniGameConfig.asset");
+                Selection.activeObject = config;
             }
 
             if (choosePathButtonClicked)

@@ -6,6 +6,7 @@ export default {
   WXCreateVideo(conf) {
     const id = uid();
     const params = formatJsonStr(conf);
+
     if (params.underGameView) {
       GameGlobal.enableTransparentCanvas = true;
     }

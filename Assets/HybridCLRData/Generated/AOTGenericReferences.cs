@@ -17,11 +17,13 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<int>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<int,object>
+	// System.Collections.Generic.Dictionary.Enumerator<object,object>
 	// System.Collections.Generic.IEnumerator<object>
-	// System.Collections.Generic.List<object>
-	// System.Collections.Generic.List<UniFramework.Window.UniWindow.WindowInfo>
-	// System.Collections.Generic.List<float>
+	// System.Collections.Generic.KeyValuePair<object,object>
 	// System.Collections.Generic.List<int>
+	// System.Collections.Generic.List<float>
+	// System.Collections.Generic.List<UniFramework.Window.UniWindow.WindowInfo>
+	// System.Collections.Generic.List<object>
 	// System.Collections.Generic.List.Enumerator<object>
 	// System.Comparison<object>
 	// System.Func<object,object>

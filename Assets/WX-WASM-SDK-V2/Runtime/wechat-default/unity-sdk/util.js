@@ -121,6 +121,7 @@ export default {
   WXOnLaunchProgress() {
     if (GameGlobal.manager && GameGlobal.manager.onLaunchProgress) {
       const key = uid();
+      // 异步执行，保证C#已经记录这个回调ID
       setTimeout(() => {
         GameGlobal.manager.onLaunchProgress((e) => {
           moduleHelper.send('OnLaunchProgressCallback', JSON.stringify({
@@ -129,6 +130,7 @@ export default {
               type: e.type,
             })),
           }));
+
           if (e.type === launchEventType.prepareGame) {
             moduleHelper.send('RemoveLaunchProgressCallback', JSON.stringify({
               callbackId: key,

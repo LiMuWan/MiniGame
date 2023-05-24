@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using UnityGameFramework.Runtime;
 using UniFramework.Utility;
+using UnityEngine.Networking;
 
 namespace GameFramework.Resource
 {

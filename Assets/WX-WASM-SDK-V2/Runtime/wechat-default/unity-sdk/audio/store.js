@@ -1,3 +1,4 @@
+
 export const WEBAudio = {
   audioInstanceIdCounter: 0,
   audioInstances: {},
@@ -18,7 +19,11 @@ export const WEBAudio = {
   bufferSourceNodeLength: 0,
   audioBufferLength: 0,
 };
+
 export const audios = {};
+
 export const localAudioMap = {};
+
 export const downloadingAudioMap = {};
+
 export const soundVolumeHandler = {};

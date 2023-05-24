@@ -826,6 +826,12 @@ namespace WeChatWASM
         }
         #endregion
 
+        /// <summary>
+        /// 获取文件的本地缓存路径，若无缓存，可进行预下载
+        /// </summary>
+        /// <param name="fallbackUrl">系统字体不可用时，游戏自己提供的ttf文件地址</param>
+        /// <param name="callback">字体资源回调</param>
+        /// <returns></returns>
         public static void GetWXFont(string fallbackUrl, Action<Font> callback)
         {
             WeChatWASM.WXFont.GetFontData(new GetFontParam
@@ -834,23 +840,41 @@ namespace WeChatWASM
                 success = (succ) =>
                 {
                     var inFontData = succ.binData;
-                    Debug.Log($"some bytes: {succ.binData.Length}, {inFontData[123]}, {inFontData[456]}, {inFontData[succ.binData.Length - 1]}");
-
                     var abBytes = Unity.FontABTool.UnityFontABTool.PacKFontAB(inFontData, "WXFont", 0, 0, 0, 0);
-                    var ab = AssetBundle.LoadFromMemory(abBytes);
-                    Font[] fonts = ab.LoadAllAssets<Font>();
-                    foreach (var font in fonts)
+                    try
                     {
-                        Debug.Log("Load font " + font.name + " from ab.");
-                        callback.Invoke(font);
-                        break;
+                        var ab = AssetBundle.LoadFromMemory(abBytes);
+                        if (ab != null)
+                        {
+                            Font[] fonts = ab.LoadAllAssets<Font>();
+                            if (fonts.Length != 0)
+                            {
+                                WriteLog($"Load font from ab. abBytes:{abBytes.Length}");
+                                callback.Invoke(fonts[0]);
+                            }
+                            else
+                            {
+                                WriteWarn($"LoadAllAssets failed, abBytes:{abBytes.Length}, fonts: {fonts.Length}");
+                                callback.Invoke(null);
+                            }
+                            ab.Unload(false);
+                        }
+                        else
+                        {
+                            WriteWarn($"LoadFromMemory failed, Length: {abBytes.Length}");
+                            callback.Invoke(null);
+                        }
                     }
-
-                    ab.Unload(false);
+                    catch (Exception ex)
+                    {
+                        WriteWarn($"GetWXFont Exception, ex:{ex.ToString()}");
+                        callback.Invoke(null);
+                    }
                 },
                 fail = (fail) =>
                 {
-                    Debug.Log($"GetFontData fail {fail.errMsg}");
+                    WriteWarn($"GetFontData fail {fail.errMsg}");
+                    callback.Invoke(null);
                 },
             });
         }

@@ -1,7 +1,10 @@
 import moduleHelper from './module-helper';
 import { formatJsonStr, uid } from './utils';
+
 let MiniGameChat;
+
 let instance;
+
 let onList;
 function createMiniGameChat(options, callback) {
   try {
@@ -23,12 +26,14 @@ function createMiniGameChat(options, callback) {
         console.error('MiniGameChat create error');
         return '';
       }
+      // 等待插件初始化完成
       instance.on('ready', () => {
         if (!GameGlobal.miniGameChat) {
           GameGlobal.miniGameChat = instance;
           if (!onList) {
             onList = {};
           }
+
           Object.keys(onList).forEach((eventType) => {
             if (!onList) {
               onList = {};
@@ -48,6 +53,7 @@ function createMiniGameChat(options, callback) {
     }
   } catch (e) {
     console.error(e);
+
     return '';
   }
 }
@@ -97,6 +103,7 @@ export default {
       return;
     }
     if (!keysStr) {
+      // eslint-disable-next-line no-param-reassign
       keysStr = '[]';
     }
     const keys = JSON.parse(keysStr);
@@ -110,6 +117,7 @@ export default {
     if (!miniGameChat || typeof onList === 'undefined' || typeof onList[eventType] === 'undefined') {
       return;
     }
+
     for (const key in Object.keys(onList[eventType])) {
       const callback = onList[eventType][key];
       if (callback) {

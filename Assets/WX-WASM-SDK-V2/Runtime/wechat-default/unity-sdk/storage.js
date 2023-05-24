@@ -20,6 +20,7 @@ const storage = {
       this._cacheData[key] = v !== '' ? v : null;
       return v === '' ? defaultValue : v;
     } catch (e) {
+      // console.error(e);
       return defaultValue;
     }
   },

@@ -32,12 +32,14 @@ export function formatIdentifier(identifier) {
   if (identifier >= 0 && Math.abs(identifier) < 2147483648) {
     return Math.round(identifier);
   }
+
   for (const key in identifierCache) {
     if (identifierCache[key] && identifierCache[key].key === identifier) {
       return identifierCache[key].value;
     }
   }
   let value = parseInt(`${Math.random() * 2147483648}`, 10);
+
   while (identifierCache.some(v => v.value === value)) {
     value += 1;
   }
@@ -70,6 +72,7 @@ export function formatResponse(type, data, id) {
   if (!conf) {
     return data;
   }
+
   Object.keys(conf).forEach((key) => {
     if (data[key] === null || typeof data[key] === 'undefined') {
       if (typeof typeMap[conf[key]] === 'undefined') {
@@ -115,9 +118,11 @@ export function formatResponse(type, data, id) {
       });
     }
   });
+  // 如果有动态参数则不处理
   if (conf.anyKeyWord) {
     return data;
   }
+  // 如果返回了协议中未定义的参数，则删除，防止C#侧解析出错
   Object.keys(data).forEach((key) => {
     if (typeof conf[key] === 'undefined') {
       delete data[key];

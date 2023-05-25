@@ -1,34 +1,28 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using UniFramework.Window;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using UnityEngine.UI;
 
-[WindowAttribute(100, false)]
-public class UIMainWindow : UIWindow
+//Donot use base.[MethodName] 
+public partial class UIMainWindow
 {
-    public override void OnCreate()
+    public class item_bagTableModel : TableItemModel<item_bagTableTemplate>
     {
-        
+        public item_bagTableModel() { }
+        public override void InitModel()
+        {
+            //todo
+        }
     }
 
-    public override void OnDestroy()
+    protected override void InitModel()
     {
-       
+        //To do: init
     }
 
-    public override void OnRefresh()
+    protected override void OnSetVisible(bool visible)
     {
-       
+
     }
-
-    public override void OnUpdate()
-    {
-        
-    }
-}
-
-
-public class UIMainData
-{
-    public string Content;
 }

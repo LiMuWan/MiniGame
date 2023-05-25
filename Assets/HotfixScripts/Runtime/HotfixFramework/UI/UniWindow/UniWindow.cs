@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace UniFramework.Window
 {
+	[SettingConfig(Key ="Window.Asset.Path", Value = "Windows/", Label ="UI目录")]
 	public static class UniWindow
 	{
 		public struct WindowInfo

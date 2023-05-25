@@ -210,7 +210,11 @@ namespace UniFramework.Window
 		/// <summary>
 		/// 窗口创建
 		/// </summary>
-		public abstract void OnCreate();
+		public virtual void OnCreate()
+		{
+			InitTemplate();
+			InitModel();
+		}
 
 		/// <summary>
 		/// 窗口刷新
@@ -235,7 +239,31 @@ namespace UniFramework.Window
 		/// <summary>
 		/// 当因为全屏遮挡触发窗口的显隐
 		/// </summary>
-		protected virtual void OnSetVisible(bool visible) { }
+ 		protected virtual void OnSetVisible(bool visible) { }
+
+		protected virtual void InitTemplate(){ }
+
+		protected virtual void InitModel(){ }
+        
+		protected T FindChild<T>(string name) where T : Component
+        {
+            return gameObject.transform.FindChild<T>(name);
+        }
+
+        protected T Find<T>(string path) where T : Component
+        {
+            return gameObject.transform.Find<T>(path);
+        }
+
+        public T FindChildBy<T>(string name) where T : Component
+        {
+            return this.FindChild<T>(name);
+        }
+
+        public T FindChildWithPath<T>(string path) where T : Component
+        {
+            return this.Find<T>(path);
+        }
 
 		internal void TryInvoke(System.Action<UIWindow> prepareCallback, System.Object[] userDatas)
 		{

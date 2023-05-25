@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 7662768818142584576}
   - component: {fileID: 1197474733272277102}
   m_Layer: 5
-  m_Name: exp_text
+  m_Name: user_level_experice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 7699830477744349825}
   m_Layer: 5
   m_Name: animal_slot
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 7353081171404445101}
   m_Layer: 5
   m_Name: level_text
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1627,7 +1627,7 @@ GameObject:
   - component: {fileID: 7322474107706081661}
   m_Layer: 5
   m_Name: btn_battle
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1902,7 +1902,7 @@ GameObject:
   - component: {fileID: 7118354865124727776}
   m_Layer: 5
   m_Name: level_title
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2038,8 +2038,8 @@ GameObject:
   - component: {fileID: 4079780781032242794}
   - component: {fileID: 6784186865047975607}
   m_Layer: 5
-  m_Name: btn_ breeding
-  m_TagString: Untagged
+  m_Name: btn_breeding
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2207,7 +2207,7 @@ GameObject:
   - component: {fileID: 7908204506417420590}
   m_Layer: 5
   m_Name: coin_text
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2344,7 +2344,7 @@ GameObject:
   - component: {fileID: 8041508329712058320}
   m_Layer: 5
   m_Name: btn_other
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2618,7 +2618,7 @@ GameObject:
   - component: {fileID: 3681036325892955870}
   m_Layer: 5
   m_Name: btn_task
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2892,8 +2892,8 @@ GameObject:
   - component: {fileID: 4922590019203937977}
   - component: {fileID: 3998075051748975430}
   m_Layer: 5
-  m_Name: level_slider
-  m_TagString: Untagged
+  m_Name: user_level_slider
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 2855771209182217423}
   m_Layer: 5
   m_Name: btn_egg_level
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3403,7 +3403,7 @@ GameObject:
   - component: {fileID: 5379593989365014640}
   m_Layer: 5
   m_Name: item_bag
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3630,7 +3630,7 @@ GameObject:
   - component: {fileID: 6570181305231646209}
   m_Layer: 5
   m_Name: avator_name
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3779,8 +3779,8 @@ GameObject:
   - component: {fileID: 6584394222498871181}
   - component: {fileID: 2024991460097500589}
   m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_Name: egg_level
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4068,7 +4068,7 @@ GameObject:
   - component: {fileID: 6229178401544051401}
   m_Layer: 5
   m_Name: animal_slot
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4162,6 +4162,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4761763893077841631}
+  - {fileID: 8220683449011418259}
   m_Father: {fileID: 7198937298971897578}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4345,7 +4346,7 @@ GameObject:
   - component: {fileID: 7543446916444560359}
   m_Layer: 5
   m_Name: coin_text
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4829,8 +4830,8 @@ GameObject:
   - component: {fileID: 3718137681571348784}
   - component: {fileID: 3501312818232114999}
   m_Layer: 5
-  m_Name: btn_buy
-  m_TagString: Untagged
+  m_Name: btn_buy_diamand
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5200,7 +5201,7 @@ GameObject:
   - component: {fileID: 6324329968569377271}
   m_Layer: 5
   m_Name: btn_rank
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5527,6 +5528,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.07725169, g: 0.4096246, b: 0.5283019, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5210092230203469874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8220683449011418259}
+  - component: {fileID: 1338161397553210803}
+  - component: {fileID: 6838342734842232223}
+  m_Layer: 5
+  m_Name: head_icon
+  m_TagString: Export
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8220683449011418259
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210092230203469874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6515322844659417845}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1338161397553210803
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210092230203469874}
+  m_CullTransparentMesh: 1
+--- !u!114 &6838342734842232223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210092230203469874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6116,8 +6193,8 @@ GameObject:
   - component: {fileID: 6905048708090831212}
   - component: {fileID: 6852388792671087516}
   m_Layer: 5
-  m_Name: level_text
-  m_TagString: Untagged
+  m_Name: user_level
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6560,8 +6637,8 @@ GameObject:
   - component: {fileID: 6338649660671846633}
   - component: {fileID: 3497752348353918121}
   m_Layer: 5
-  m_Name: btn_buy
-  m_TagString: Untagged
+  m_Name: btn_buy_coin
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7685,7 +7762,7 @@ GameObject:
   - component: {fileID: 5944809687647678153}
   m_Layer: 5
   m_Name: animal_slot_view
-  m_TagString: Untagged
+  m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,9 +7,17 @@ using UnityEngine.UI;
 //Donot use base.[MethodName] 
 public partial class UIMainWindow
 {
-    public class item_bagTableModel : TableItemModel<item_bagTableTemplate>
+     public class animal_slot_viewTableModel : TableItemModel<animal_slot_viewTableTemplate>
     {
-        public item_bagTableModel() { }
+        public animal_slot_viewTableModel(){}
+        public override void InitModel()
+        {
+            //todo
+        }
+    }
+ public class item_bagTableModel : TableItemModel<item_bagTableTemplate>
+    {
+        public item_bagTableModel(){}
         public override void InitModel()
         {
             //todo
@@ -18,11 +26,11 @@ public partial class UIMainWindow
 
     protected override void InitModel()
     {
-        //To do: init
+           //To do: init
     }
 
-    protected override void OnSetVisible(bool visible)
-    {
-
+    protected override void OnSetVisible(bool visible) 
+    { 
+        
     }
 }

@@ -98,9 +98,9 @@ public class UICreater : EditorWindow
     }
 
     private static readonly string tableTemplateField =
-@"            public [Type] [Name];";
+@"        public [Type] [Name];";
     private static readonly string tableTemlateFindField =
-@"                [Name] = FindChild<[Type]>(" + "\"[Name]\"" + ");";
+@"            [Name] = FindChild<[Type]>(" + "\"[Name]\"" + ");";
     private static readonly string tableTemplateClass =
 @"    public class [TableName]TableTemplate : TableItemTemplate
     {
@@ -108,7 +108,7 @@ public class UICreater : EditorWindow
 [TableTemplateField]
         public override void InitTemplate()
         {
-[TableTemplateFindField]
+            [TableTemplateFindField]
         }
     }";
     private static string templateFields =
@@ -138,8 +138,8 @@ public partial class [ClassName] : UIWindow
 [TableManagers]
     protected override void InitTemplate()
     {
-[FieldFinds]
-[InitTables]
+            [FieldFinds]
+            [InitTables]
     }
 
     public override void OnCreate()

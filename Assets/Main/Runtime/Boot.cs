@@ -5,6 +5,7 @@ using UniFramework.Utility;
 using UnityEngine;
 using YooAsset;
 
+[SettingConfig(Key = "App.Version", Label = "Version", Group = "App")]
 public class Boot : MonoBehaviour
 {
     public EPlayMode PlayMode = EPlayMode.EditorSimulateMode;

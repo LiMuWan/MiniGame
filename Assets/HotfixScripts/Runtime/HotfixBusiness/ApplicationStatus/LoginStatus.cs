@@ -6,7 +6,7 @@ using UniFramework.Utility;
 using Hotfix.EventDefine;
 using UniFramework.Singleton;
 
-public class LoginStatus : IApplicationStatus 
+public class LoginStatus : IApplicationStatus
 {
     public WXRewardedVideoAd ad;
     private WXUserInfoButton infoButton;
@@ -14,8 +14,8 @@ public class LoginStatus : IApplicationStatus
     //Status的进入逻辑请放在这里
     public override void OnEnterStatus()
     {
-ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
-#if UNITY_EDITOR
+        ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
+#if !UNITY_EDITOR
         WX.InitSDK((code) =>
         {
 
@@ -43,30 +43,42 @@ ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
             var canvasWith = (int)(systemInfo.screenWidth * systemInfo.pixelRatio);
             var canvasHeight = (int)(systemInfo.screenHeight * systemInfo.pixelRatio);
             var buttonHeight = (int)((canvasWith / 1080f) * 600);
-            infoButton = WX.CreateUserInfoButton(0, canvasHeight/2, canvasWith, buttonHeight, "zh_CN", false);//canvasHeight - buttonHeight
+            infoButton = WX.CreateUserInfoButton(0, canvasHeight / 2, canvasWith, buttonHeight, "zh_CN", false);//canvasHeight - buttonHeight
             infoButton.OnTap((userInfoButonRet) =>
             {
-                UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
+                UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));//192.168.1.21:8082
                 //uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
                 UniSingleton.CreateSingleton<UserDataManager>();
                 UserDataManager.Instance.NickName = userInfoButonRet.userInfo.nickName;
                 UserDataManager.Instance.HeadHostUrl = userInfoButonRet.userInfo.avatarUrl;
-                UserEventDefine.UserLoginSuccess.SendEventMessage();
+
+                LoginOption loginOption = new LoginOption();
+                loginOption.success = (result) =>
+                {
+                    NetMessageHandler.SendLogin(result.code);
+                };
+
+                loginOption.fail = (result) =>
+                {
+                    ShowToastOption showToastOption = new ShowToastOption()
+                    {
+                        title = result.errMsg,
+                        duration = 0.2f,
+                    };
+                    showToastOption.title = result.errMsg;
+                    WX.ShowToast(showToastOption);
+                };
+                WX.Login(loginOption);
             });
             UniLogger.Log("infoButton Created");
         });
 #endif
     }
 
-    private void LoginSuccess(LoginSuccessCallbackResult result)
-    {
-        UniLogger.Log("WxLogin Success!!!");
-    }
-
     //Status的退出逻辑请放在这里
     public override void OnExitStatus()
     {
-     
+
     }
 
     //Update逻辑放在这里

@@ -69,108 +69,129 @@
             "DependIDs": []
         },
         {
+            "Address": "zhuyanbosongEn",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependIDs": []
+        },
+        {
+            "Address": "zhuyanbosongPun",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependIDs": []
+        },
+        {
+            "Address": "Level",
+            "AssetPath": "Assets/HotfixAssets/Scene/Level.unity",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependIDs": []
+        },
+        {
             "Address": "Main",
             "AssetPath": "Assets/HotfixAssets/Scene/Main.unity",
             "AssetTags": [],
-            "BundleID": 9,
+            "BundleID": 10,
             "DependIDs": []
         },
         {
             "Address": "SampleSceneProfile",
             "AssetPath": "Assets/Settings/SampleSceneProfile.asset",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "URP-Balanced-Renderer",
             "AssetPath": "Assets/Settings/URP-Balanced-Renderer.asset",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "URP-Balanced",
             "AssetPath": "Assets/Settings/URP-Balanced.asset",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "URP-HighFidelity-Renderer",
             "AssetPath": "Assets/Settings/URP-HighFidelity-Renderer.asset",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "URP-HighFidelity",
             "AssetPath": "Assets/Settings/URP-HighFidelity.asset",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "URP-Performant-Renderer",
             "AssetPath": "Assets/Settings/URP-Performant-Renderer.asset",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "URP-Performant",
             "AssetPath": "Assets/Settings/URP-Performant.asset",
             "AssetTags": [],
-            "BundleID": 10,
-            "DependIDs": []
-        },
-        {
-            "Address": "battle_tbbuff",
-            "AssetPath": "Assets/HotfixAssets/Config/battle_tbbuff.bytes",
-            "AssetTags": [],
             "BundleID": 11,
             "DependIDs": []
         },
         {
-            "Address": "battle_tbbuffattr",
-            "AssetPath": "Assets/HotfixAssets/Config/battle_tbbuffattr.bytes",
+            "Address": "cfg_tbitem",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbitem.bytes",
             "AssetTags": [],
             "BundleID": 12,
             "DependIDs": []
         },
         {
-            "Address": "battle_tbskill",
-            "AssetPath": "Assets/HotfixAssets/Config/battle_tbskill.bytes",
+            "Address": "cfg_tbplayerlevelup",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbplayerlevelup.bytes",
             "AssetTags": [],
             "BundleID": 13,
             "DependIDs": []
         },
         {
-            "Address": "item_tbitem",
-            "AssetPath": "Assets/HotfixAssets/Config/item_tbitem.bytes",
+            "Address": "cfg_tbtask",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbtask.bytes",
             "AssetTags": [],
             "BundleID": 14,
+            "DependIDs": []
+        },
+        {
+            "Address": "cfg_tbtreasurechest",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbtreasurechest.bytes",
+            "AssetTags": [],
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "UICanvas",
             "AssetPath": "Assets/HotfixAssets/UIWindow/UICanvas.prefab",
             "AssetTags": [],
-            "BundleID": 15,
+            "BundleID": 16,
             "DependIDs": []
         },
         {
             "Address": "UILoginWindow",
             "AssetPath": "Assets/HotfixAssets/UIWindow/UILoginWindow.prefab",
             "AssetTags": [],
-            "BundleID": 16,
+            "BundleID": 17,
             "DependIDs": []
         },
         {
             "Address": "UIMainWindow",
             "AssetPath": "Assets/HotfixAssets/UIWindow/UIMainWindow.prefab",
             "AssetTags": [],
-            "BundleID": 17,
+            "BundleID": 18,
             "DependIDs": []
         }
     ],
@@ -266,6 +287,16 @@
             "ReferenceIDs": []
         },
         {
+            "BundleName": "defaultpackage_assets_hotfixassets_scene_level.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
             "BundleName": "defaultpackage_assets_hotfixassets_scene_main.bundle",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
@@ -286,7 +317,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_battle_tbbuff_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbitem_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -296,7 +327,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_battle_tbbuffattr_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbplayerlevelup_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -306,7 +337,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_battle_tbskill_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbtask_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -316,7 +347,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_item_tbitem_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbtreasurechest_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,

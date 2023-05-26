@@ -6,6 +6,7 @@ using UniFramework.Utility;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[SettingConfig(Key = "TestWebServerUrl",Value = "192.168.1.21:8082",Label = "测试服网址：")]
 public class UnityWebRequestTool 
 {
     /// <summary>
@@ -45,9 +46,10 @@ public class UnityWebRequestTool
         if (callBack != null)
         {
             callBack(error, webRequest.downloadHandler.text);
+            UniSingleton.StopCoroutine(nameof(AsyGet));
         }
-
     }
+    
     static  IEnumerator AsyGet(string uri, CallBack<string, Dictionary<string, string>> callBack)
     {
         UnityWebRequest webRequest = UnityWebRequest.Get(uri);
@@ -77,7 +79,8 @@ public class UnityWebRequestTool
             return map;
         }
         try
-        {
+        {   
+            UniLogger.Log($"post callback = {ss}");
             string[] tempStr = ss.Split('&');
             if (tempStr.Length > 0)
             {
@@ -100,24 +103,15 @@ public class UnityWebRequestTool
     /// <param name="uri"></param>
     /// <param name="data">发送的数据</param>
     /// <param name="callBack"></param>
-    public static void Post(string uri,Dictionary<string,string> data, CallBack<string, Dictionary<string, string>> callBack)
+    public static void Post(string uri,string data, CallBack<string, Dictionary<string, string>> callBack)
     {
         UniSingleton.StartCoroutine(AsyPost(uri,data, callBack));
     }
-    static IEnumerator AsyPost(string uri, Dictionary<string, string> data, CallBack<string, Dictionary<string, string>> callBack)
+
+    static IEnumerator AsyPost(string uri, string data, CallBack<string, Dictionary<string, string>> callBack)
     {
         UniLogger.Log("Send Http Post ->" + uri);
-        WWWForm form = new WWWForm();
-        //键值对
-        if (data != null)
-        {
-            foreach (var item in data)
-            {
-                form.AddField(item.Key, item.Value);
-            }
-        }
-
-        UnityWebRequest webRequest = UnityWebRequest.Post(uri, form);
+        UnityWebRequest webRequest = UnityWebRequest.Post(uri, data);
         webRequest.timeout = 15;
         webRequest.method = UnityWebRequest.kHttpVerbPOST;
         yield return webRequest.SendWebRequest();
@@ -132,6 +126,7 @@ public class UnityWebRequestTool
         if (callBack != null)
         {
             callBack(error, ParseString(webRequest.downloadHandler.text));
+            UniSingleton.StopCoroutine(nameof(AsyPost));
         }
     }
 }

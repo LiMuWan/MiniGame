@@ -13,37 +13,37 @@ namespace GameConfig
 { 
 public partial class Tables
 {
-    public item.TbItem TbItem {get; }
-    public Battle.TbSkill TbSkill {get; }
-    public Battle.TbBuff TbBuff {get; }
-    public Battle.TbBuffAttr TbBuffAttr {get; }
+    public Cfg.TBPlayerLevelUp TBPlayerLevelUp {get; }
+    public Cfg.TbItem TbItem {get; }
+    public Cfg.TbTask TbTask {get; }
+    public Cfg.TbTreasureChest TbTreasureChest {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
         var tables = new System.Collections.Generic.Dictionary<string, object>();
-        TbItem = new item.TbItem(loader("item_tbitem")); 
-        tables.Add("item.TbItem", TbItem);
-        TbSkill = new Battle.TbSkill(loader("battle_tbskill")); 
-        tables.Add("Battle.TbSkill", TbSkill);
-        TbBuff = new Battle.TbBuff(loader("battle_tbbuff")); 
-        tables.Add("Battle.TbBuff", TbBuff);
-        TbBuffAttr = new Battle.TbBuffAttr(loader("battle_tbbuffattr")); 
-        tables.Add("Battle.TbBuffAttr", TbBuffAttr);
+        TBPlayerLevelUp = new Cfg.TBPlayerLevelUp(loader("cfg_tbplayerlevelup")); 
+        tables.Add("Cfg.TBPlayerLevelUp", TBPlayerLevelUp);
+        TbItem = new Cfg.TbItem(loader("cfg_tbitem")); 
+        tables.Add("Cfg.TbItem", TbItem);
+        TbTask = new Cfg.TbTask(loader("cfg_tbtask")); 
+        tables.Add("Cfg.TbTask", TbTask);
+        TbTreasureChest = new Cfg.TbTreasureChest(loader("cfg_tbtreasurechest")); 
+        tables.Add("Cfg.TbTreasureChest", TbTreasureChest);
 
         PostInit();
+        TBPlayerLevelUp.Resolve(tables); 
         TbItem.Resolve(tables); 
-        TbSkill.Resolve(tables); 
-        TbBuff.Resolve(tables); 
-        TbBuffAttr.Resolve(tables); 
+        TbTask.Resolve(tables); 
+        TbTreasureChest.Resolve(tables); 
         PostResolve();
     }
 
     public void TranslateText(System.Func<string, string, string> translator)
     {
+        TBPlayerLevelUp.TranslateText(translator); 
         TbItem.TranslateText(translator); 
-        TbSkill.TranslateText(translator); 
-        TbBuff.TranslateText(translator); 
-        TbBuffAttr.TranslateText(translator); 
+        TbTask.TranslateText(translator); 
+        TbTreasureChest.TranslateText(translator); 
     }
     
     partial void PostInit();

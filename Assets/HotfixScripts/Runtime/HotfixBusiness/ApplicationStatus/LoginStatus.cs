@@ -4,6 +4,7 @@ using WeChatWASM;
 using System;
 using UniFramework.Utility;
 using Hotfix.EventDefine;
+using UniFramework.Singleton;
 
 public class LoginStatus : IApplicationStatus 
 {
@@ -13,8 +14,8 @@ public class LoginStatus : IApplicationStatus
     //Status的进入逻辑请放在这里
     public override void OnEnterStatus()
     {
-        ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
-#if !UNITY_EDITOR
+ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
+#if UNITY_EDITOR
         WX.InitSDK((code) =>
         {
 
@@ -47,12 +48,13 @@ public class LoginStatus : IApplicationStatus
             {
                 UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
                 //uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
+                UniSingleton.CreateSingleton<UserDataManager>();
+                UserDataManager.Instance.NickName = userInfoButonRet.userInfo.nickName;
+                UserDataManager.Instance.HeadHostUrl = userInfoButonRet.userInfo.avatarUrl;
                 UserEventDefine.UserLoginSuccess.SendEventMessage();
             });
             UniLogger.Log("infoButton Created");
         });
-#else
-     ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
 #endif
     }
 

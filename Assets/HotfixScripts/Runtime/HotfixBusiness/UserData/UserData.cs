@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Singleton;
 
-public class UserData : SingletonInstance<UserData>, ISingleton
+public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 {
     //金币
     private int coin;
     //钻石
     private int diamond;
     //昵称
-    private int nick_name;
+    private string nick_name;
     //称号
     private int level_title;
     //等级
@@ -59,6 +59,18 @@ public class UserData : SingletonInstance<UserData>, ISingleton
         {
             return diamond;
         }
+    }
+     
+    public string NickName
+    {
+        get{return nick_name;}
+        set{nick_name = value;}
+    }
+
+    public string HeadHostUrl
+    {
+        get{return headHostUrl;}
+        set{headHostUrl = value;}
     }
 
     public void OnCreate(object createParam)

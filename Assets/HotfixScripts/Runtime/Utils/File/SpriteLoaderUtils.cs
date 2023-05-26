@@ -3,16 +3,22 @@ using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using UniFramework.Singleton;
 
 public class SpriteLoaderUtils
 {
+    public static void GetSprite(string file_full_name, string url,string readAndWritePath, Action<Sprite> callback)
+    {
+        UniSingleton.StartCoroutine(GetSpriteCo(file_full_name,url,readAndWritePath,callback));
+    }
+
     /// <summary>
     /// 获取图片，先从本地找，本地没有，从网络上下载
     /// </summary>
     /// <param name="file_full_name">文件全名，带后缀</param>
     /// <param name="url"></param>
     /// <returns></returns>
-    public IEnumerator GetSprite(string file_full_name, string url,string readAndWritePath, Action<Sprite> callback)
+    public static IEnumerator GetSpriteCo(string file_full_name, string url,string readAndWritePath, Action<Sprite> callback)
     {
         //现在本地找，本地没有，再去下载
         string dirPath = Path.Combine(readAndWritePath, "DownloadPictures");
@@ -29,6 +35,8 @@ public class SpriteLoaderUtils
             Texture2D texture = new Texture2D(2, 2);
             texture.LoadImage(data);
             Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+
+            UniSingleton.StopCoroutine(nameof(GetSpriteCo));
             // 使用 sprite 进行显示
             callback?.Invoke(sprite);
         }

@@ -6,6 +6,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UniFramework.Window;
+using WeChatWASM;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -99,5 +100,10 @@ public partial class UIMainWindow : UIWindow
     public override void OnUpdate()
     {
 
+    }
+
+    private void InitUI()
+    {
+        // head_icon = SpriteLoaderUtils.GetSprite("head_icon",UserDataManager.Instance.HeadHostUrl,WX.)
     }
 }

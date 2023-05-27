@@ -72,19 +72,6 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-    - GroupName: SceneSettings
-      GroupDesc: "\u573A\u666F\u4F9D\u8D56urp"
-      AssetTags: 
-      ActiveRuleName: EnableGroup
-      Collectors:
-      - CollectPath: Assets/Settings
-        CollectorGUID: 709f11a7f3c4041caa4ef136ea32d874
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
     - GroupName: Configs
       GroupDesc: "\u914D\u7F6E\u8868\u6570\u636E"
       AssetTags: 

@@ -8,6 +8,7 @@ using GameFramework.Resource;
 using UnityEngine.EventSystems;
 using UniFramework.Window;
 using UniFramework.Utility;
+using UnityEngine.UI;
 
 public static class UIManager
 {
@@ -35,6 +36,8 @@ public static class UIManager
         handle.Release();
         GameObject.DontDestroyOnLoad(canvas);
         var desktop = canvas.transform.Find("Desktop").gameObject;
+        // var uicanvas = canvas.GetComponent<CanvasScaler>();
+        // Debug.LogWarning($"screen.width = {Screen.width},screen.height = {Screen.height} , ratio = {(Screen.height/Screen.width).ToString("F2")}");
         UniWindow.Initalize(desktop);
         s_EventSystem = canvas.GetComponentInChildren<EventSystem>();
     }

@@ -112,6 +112,7 @@ public partial class UIMainWindow : UIWindow
         item_food_bagTableManager.Count = 4;
         item_home_bagTableManager.Count = 2;
 
+
     }
 
     public override void OnCreate()

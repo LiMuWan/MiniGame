@@ -28,6 +28,11 @@ public partial class UIMainWindow : UIWindow
             icon_img = FindChild<Image>("icon_img");
             name_text = FindChild<TextMeshProUGUI>("name_text");
         }
+
+        public void RefreshUI(EquipData equipData)
+        {
+            name_text.text = equipData.Name;
+        }
     }
     public class item_food_bagTableTemplate : TableItemTemplate
     {
@@ -111,8 +116,6 @@ public partial class UIMainWindow : UIWindow
         animal_slot_viewTableManager.Count = 16;
         item_food_bagTableManager.Count = 4;
         item_home_bagTableManager.Count = 2;
-
-
     }
 
     public override void OnCreate()

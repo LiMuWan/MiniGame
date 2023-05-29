@@ -12,32 +12,32 @@ using System.Collections.Generic;
 namespace GameConfig.Cfg
 {
    
-public partial class TbPlayerLevelUp
+public partial class TbItemType
 {
-    private readonly Dictionary<int, Cfg.PlayerLevelUpConfig> _dataMap;
-    private readonly List<Cfg.PlayerLevelUpConfig> _dataList;
+    private readonly Dictionary<int, Cfg.ItemTypeConfig> _dataMap;
+    private readonly List<Cfg.ItemTypeConfig> _dataList;
     
-    public TbPlayerLevelUp(ByteBuf _buf)
+    public TbItemType(ByteBuf _buf)
     {
-        _dataMap = new Dictionary<int, Cfg.PlayerLevelUpConfig>();
-        _dataList = new List<Cfg.PlayerLevelUpConfig>();
+        _dataMap = new Dictionary<int, Cfg.ItemTypeConfig>();
+        _dataList = new List<Cfg.ItemTypeConfig>();
         
         for(int n = _buf.ReadSize() ; n > 0 ; --n)
         {
-            Cfg.PlayerLevelUpConfig _v;
-            _v = Cfg.PlayerLevelUpConfig.DeserializePlayerLevelUpConfig(_buf);
+            Cfg.ItemTypeConfig _v;
+            _v = Cfg.ItemTypeConfig.DeserializeItemTypeConfig(_buf);
             _dataList.Add(_v);
-            _dataMap.Add(_v.Lv, _v);
+            _dataMap.Add(_v.Type, _v);
         }
         PostInit();
     }
 
-    public Dictionary<int, Cfg.PlayerLevelUpConfig> DataMap => _dataMap;
-    public List<Cfg.PlayerLevelUpConfig> DataList => _dataList;
+    public Dictionary<int, Cfg.ItemTypeConfig> DataMap => _dataMap;
+    public List<Cfg.ItemTypeConfig> DataList => _dataList;
 
-    public Cfg.PlayerLevelUpConfig GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public Cfg.PlayerLevelUpConfig Get(int key) => _dataMap[key];
-    public Cfg.PlayerLevelUpConfig this[int key] => _dataMap[key];
+    public Cfg.ItemTypeConfig GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public Cfg.ItemTypeConfig Get(int key) => _dataMap[key];
+    public Cfg.ItemTypeConfig this[int key] => _dataMap[key];
 
     public void Resolve(Dictionary<string, object> _tables)
     {

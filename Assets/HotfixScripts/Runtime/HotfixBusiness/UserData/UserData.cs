@@ -206,7 +206,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
        EggNum = playerData.boxNum;
 
        //读配置
-       MaxExperience = ConfigLoader.Instance.Tables.TBPlayerLevelUp.Get(Level).Exp;
+       MaxExperience = ConfigLoader.Instance.Tables.TbPlayerLevelUp.Get(Level).Exp;
        //称号 ToDo
     }
 

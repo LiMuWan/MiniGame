@@ -12,32 +12,32 @@ using System.Collections.Generic;
 namespace GameConfig.Cfg
 {
    
-public partial class TbPlayerLevelUp
+public partial class TbItemQuality
 {
-    private readonly Dictionary<int, Cfg.PlayerLevelUpConfig> _dataMap;
-    private readonly List<Cfg.PlayerLevelUpConfig> _dataList;
+    private readonly Dictionary<string, Cfg.ItemQualityConfig> _dataMap;
+    private readonly List<Cfg.ItemQualityConfig> _dataList;
     
-    public TbPlayerLevelUp(ByteBuf _buf)
+    public TbItemQuality(ByteBuf _buf)
     {
-        _dataMap = new Dictionary<int, Cfg.PlayerLevelUpConfig>();
-        _dataList = new List<Cfg.PlayerLevelUpConfig>();
+        _dataMap = new Dictionary<string, Cfg.ItemQualityConfig>();
+        _dataList = new List<Cfg.ItemQualityConfig>();
         
         for(int n = _buf.ReadSize() ; n > 0 ; --n)
         {
-            Cfg.PlayerLevelUpConfig _v;
-            _v = Cfg.PlayerLevelUpConfig.DeserializePlayerLevelUpConfig(_buf);
+            Cfg.ItemQualityConfig _v;
+            _v = Cfg.ItemQualityConfig.DeserializeItemQualityConfig(_buf);
             _dataList.Add(_v);
-            _dataMap.Add(_v.Lv, _v);
+            _dataMap.Add(_v.Quality, _v);
         }
         PostInit();
     }
 
-    public Dictionary<int, Cfg.PlayerLevelUpConfig> DataMap => _dataMap;
-    public List<Cfg.PlayerLevelUpConfig> DataList => _dataList;
+    public Dictionary<string, Cfg.ItemQualityConfig> DataMap => _dataMap;
+    public List<Cfg.ItemQualityConfig> DataList => _dataList;
 
-    public Cfg.PlayerLevelUpConfig GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public Cfg.PlayerLevelUpConfig Get(int key) => _dataMap[key];
-    public Cfg.PlayerLevelUpConfig this[int key] => _dataMap[key];
+    public Cfg.ItemQualityConfig GetOrDefault(string key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public Cfg.ItemQualityConfig Get(string key) => _dataMap[key];
+    public Cfg.ItemQualityConfig this[string key] => _dataMap[key];
 
     public void Resolve(Dictionary<string, object> _tables)
     {

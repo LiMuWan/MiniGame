@@ -12,32 +12,32 @@ using System.Collections.Generic;
 namespace GameConfig.Cfg
 {
    
-public partial class TbPlayerLevelUp
+public partial class TbPlayerBaseProperty
 {
-    private readonly Dictionary<int, Cfg.PlayerLevelUpConfig> _dataMap;
-    private readonly List<Cfg.PlayerLevelUpConfig> _dataList;
+    private readonly Dictionary<int, Cfg.PlayerBasePropertyConfig> _dataMap;
+    private readonly List<Cfg.PlayerBasePropertyConfig> _dataList;
     
-    public TbPlayerLevelUp(ByteBuf _buf)
+    public TbPlayerBaseProperty(ByteBuf _buf)
     {
-        _dataMap = new Dictionary<int, Cfg.PlayerLevelUpConfig>();
-        _dataList = new List<Cfg.PlayerLevelUpConfig>();
+        _dataMap = new Dictionary<int, Cfg.PlayerBasePropertyConfig>();
+        _dataList = new List<Cfg.PlayerBasePropertyConfig>();
         
         for(int n = _buf.ReadSize() ; n > 0 ; --n)
         {
-            Cfg.PlayerLevelUpConfig _v;
-            _v = Cfg.PlayerLevelUpConfig.DeserializePlayerLevelUpConfig(_buf);
+            Cfg.PlayerBasePropertyConfig _v;
+            _v = Cfg.PlayerBasePropertyConfig.DeserializePlayerBasePropertyConfig(_buf);
             _dataList.Add(_v);
-            _dataMap.Add(_v.Lv, _v);
+            _dataMap.Add(_v.HpBase, _v);
         }
         PostInit();
     }
 
-    public Dictionary<int, Cfg.PlayerLevelUpConfig> DataMap => _dataMap;
-    public List<Cfg.PlayerLevelUpConfig> DataList => _dataList;
+    public Dictionary<int, Cfg.PlayerBasePropertyConfig> DataMap => _dataMap;
+    public List<Cfg.PlayerBasePropertyConfig> DataList => _dataList;
 
-    public Cfg.PlayerLevelUpConfig GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public Cfg.PlayerLevelUpConfig Get(int key) => _dataMap[key];
-    public Cfg.PlayerLevelUpConfig this[int key] => _dataMap[key];
+    public Cfg.PlayerBasePropertyConfig GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public Cfg.PlayerBasePropertyConfig Get(int key) => _dataMap[key];
+    public Cfg.PlayerBasePropertyConfig this[int key] => _dataMap[key];
 
     public void Resolve(Dictionary<string, object> _tables)
     {

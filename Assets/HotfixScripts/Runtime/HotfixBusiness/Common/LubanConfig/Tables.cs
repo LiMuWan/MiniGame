@@ -13,26 +13,38 @@ namespace GameConfig
 { 
 public partial class Tables
 {
-    public Cfg.TBPlayerLevelUp TBPlayerLevelUp {get; }
+    public Cfg.TbPlayerLevelUp TbPlayerLevelUp {get; }
+    public Cfg.TbPlayerBaseProperty TbPlayerBaseProperty {get; }
     public Cfg.TbItem TbItem {get; }
+    public Cfg.TbItemType TbItemType {get; }
+    public Cfg.TbItemQuality TbItemQuality {get; }
     public Cfg.TbTask TbTask {get; }
     public Cfg.TbTreasureChest TbTreasureChest {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
         var tables = new System.Collections.Generic.Dictionary<string, object>();
-        TBPlayerLevelUp = new Cfg.TBPlayerLevelUp(loader("cfg_tbplayerlevelup")); 
-        tables.Add("Cfg.TBPlayerLevelUp", TBPlayerLevelUp);
+        TbPlayerLevelUp = new Cfg.TbPlayerLevelUp(loader("cfg_tbplayerlevelup")); 
+        tables.Add("Cfg.TbPlayerLevelUp", TbPlayerLevelUp);
+        TbPlayerBaseProperty = new Cfg.TbPlayerBaseProperty(loader("cfg_tbplayerbaseproperty")); 
+        tables.Add("Cfg.TbPlayerBaseProperty", TbPlayerBaseProperty);
         TbItem = new Cfg.TbItem(loader("cfg_tbitem")); 
         tables.Add("Cfg.TbItem", TbItem);
+        TbItemType = new Cfg.TbItemType(loader("cfg_tbitemtype")); 
+        tables.Add("Cfg.TbItemType", TbItemType);
+        TbItemQuality = new Cfg.TbItemQuality(loader("cfg_tbitemquality")); 
+        tables.Add("Cfg.TbItemQuality", TbItemQuality);
         TbTask = new Cfg.TbTask(loader("cfg_tbtask")); 
         tables.Add("Cfg.TbTask", TbTask);
         TbTreasureChest = new Cfg.TbTreasureChest(loader("cfg_tbtreasurechest")); 
         tables.Add("Cfg.TbTreasureChest", TbTreasureChest);
 
         PostInit();
-        TBPlayerLevelUp.Resolve(tables); 
+        TbPlayerLevelUp.Resolve(tables); 
+        TbPlayerBaseProperty.Resolve(tables); 
         TbItem.Resolve(tables); 
+        TbItemType.Resolve(tables); 
+        TbItemQuality.Resolve(tables); 
         TbTask.Resolve(tables); 
         TbTreasureChest.Resolve(tables); 
         PostResolve();
@@ -40,8 +52,11 @@ public partial class Tables
 
     public void TranslateText(System.Func<string, string, string> translator)
     {
-        TBPlayerLevelUp.TranslateText(translator); 
+        TbPlayerLevelUp.TranslateText(translator); 
+        TbPlayerBaseProperty.TranslateText(translator); 
         TbItem.TranslateText(translator); 
+        TbItemType.TranslateText(translator); 
+        TbItemQuality.TranslateText(translator); 
         TbTask.TranslateText(translator); 
         TbTreasureChest.TranslateText(translator); 
     }

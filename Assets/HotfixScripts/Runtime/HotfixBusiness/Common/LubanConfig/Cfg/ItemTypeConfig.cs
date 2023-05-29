@@ -11,14 +11,12 @@ using System.Collections.Generic;
 
 namespace GameConfig.Cfg
 {
-public sealed partial class ItemConfig :  Bright.Config.BeanBase 
+public sealed partial class ItemTypeConfig :  Bright.Config.BeanBase 
 {
-    public ItemConfig(ByteBuf _buf) 
+    public ItemTypeConfig(ByteBuf _buf) 
     {
-        Id = _buf.ReadInt();
         Type = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Icon = _buf.ReadString();
+        Text = _buf.ReadString();
         Hp = _buf.ReadInt();
         Spd = _buf.ReadInt();
         Atk = _buf.ReadInt();
@@ -26,45 +24,37 @@ public sealed partial class ItemConfig :  Bright.Config.BeanBase
         PostInit();
     }
 
-    public static ItemConfig DeserializeItemConfig(ByteBuf _buf)
+    public static ItemTypeConfig DeserializeItemTypeConfig(ByteBuf _buf)
     {
-        return new Cfg.ItemConfig(_buf);
+        return new Cfg.ItemTypeConfig(_buf);
     }
 
     /// <summary>
-    /// id
-    /// </summary>
-    public int Id { get; private set; }
-    /// <summary>
-    /// 类型
+    /// 品种
     /// </summary>
     public int Type { get; private set; }
     /// <summary>
-    /// 名称
+    /// 中文
     /// </summary>
-    public string Name { get; private set; }
+    public string Text { get; private set; }
     /// <summary>
-    /// 图标
-    /// </summary>
-    public string Icon { get; private set; }
-    /// <summary>
-    /// 血量修正
+    /// 血量系数
     /// </summary>
     public int Hp { get; private set; }
     /// <summary>
-    /// 速度修正
+    /// 速度系数
     /// </summary>
     public int Spd { get; private set; }
     /// <summary>
-    /// 攻击修正
+    /// 攻击系数
     /// </summary>
     public int Atk { get; private set; }
     /// <summary>
-    /// 防御修正
+    /// 防御系数
     /// </summary>
     public int Def { get; private set; }
 
-    public const int __ID__ = -783814593;
+    public const int __ID__ = 1836896665;
     public override int GetTypeId() => __ID__;
 
     public  void Resolve(Dictionary<string, object> _tables)
@@ -79,10 +69,8 @@ public sealed partial class ItemConfig :  Bright.Config.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "Id:" + Id + ","
         + "Type:" + Type + ","
-        + "Name:" + Name + ","
-        + "Icon:" + Icon + ","
+        + "Text:" + Text + ","
         + "Hp:" + Hp + ","
         + "Spd:" + Spd + ","
         + "Atk:" + Atk + ","

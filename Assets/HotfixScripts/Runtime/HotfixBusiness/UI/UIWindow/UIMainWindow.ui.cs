@@ -29,9 +29,9 @@ public partial class UIMainWindow : UIWindow
             name_text = FindChild<TextMeshProUGUI>("name_text");
         }
 
-        public void RefreshUI(EquipData equipData)
+        public void RefreshUI(ItemData animalData)
         {
-            name_text.text = equipData.Name;
+            name_text.text = animalData.Name;
         }
     }
     public class item_food_bagTableTemplate : TableItemTemplate
@@ -44,6 +44,14 @@ public partial class UIMainWindow : UIWindow
         public override void InitTemplate()
         {
             food_item = FindChild<Button>("food_item");
+            quality_img = FindChild<Image>("quality_img");
+            icon_img = FindChild<Image>("icon_img");
+            name_text = FindChild<TextMeshProUGUI>("name_text");
+        }
+
+        public void RefreshUI(ItemData foodData)
+        {
+            name_text.text = foodData.Name;
         }
     }
 
@@ -61,6 +69,11 @@ public partial class UIMainWindow : UIWindow
             icon_img = FindChild<Image>("icon_img");
             name_text = FindChild<TextMeshProUGUI>("name_text");
         }
+
+        public void RefreshUI(ItemData homeData)
+        {
+            name_text.text = homeData.Name;
+        }
     }
 
     protected Image head_icon;
@@ -72,7 +85,7 @@ public partial class UIMainWindow : UIWindow
     protected Button btn_buy_diamand;
     protected TextMeshProUGUI user_level;
     protected Slider user_level_slider;
-    protected GridLayoutGroup animal_slot_view;
+    protected GridLayoutGroup animal_bag;
     protected GridLayoutGroup food_bag;
     protected VerticalLayoutGroup home_bag;
     protected Button btn_task;
@@ -83,7 +96,7 @@ public partial class UIMainWindow : UIWindow
     protected Image btn_egg_level;
     protected TextMeshProUGUI egg_level;
 
-    protected AutoUITableManager<AutoGenTableItem<animal_slot_viewTableTemplate, animal_slot_viewTableModel>> animal_slot_viewTableManager = new AutoUITableManager<AutoGenTableItem<animal_slot_viewTableTemplate, animal_slot_viewTableModel>>();
+    protected AutoUITableManager<AutoGenTableItem<animal_slot_viewTableTemplate, animal_slot_viewTableModel>> item_animal_bagTableManager = new AutoUITableManager<AutoGenTableItem<animal_slot_viewTableTemplate, animal_slot_viewTableModel>>();
     protected AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>> item_food_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>>();
     protected AutoUITableManager<AutoGenTableItem<item_home_bagTableTemplate, item_home_bagTableModel>> item_home_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_home_bagTableTemplate, item_home_bagTableModel>>();
 
@@ -99,7 +112,7 @@ public partial class UIMainWindow : UIWindow
         btn_buy_diamand = FindChild<Button>("btn_buy_diamand");
         user_level = FindChild<TextMeshProUGUI>("user_level");
         user_level_slider = FindChild<Slider>("user_level_slider");
-        animal_slot_view = FindChild<GridLayoutGroup>("animal_slot_view");
+        animal_bag = FindChild<GridLayoutGroup>("animal_bag");
         food_bag = FindChild<GridLayoutGroup>("food_bag");
         home_bag = FindChild<VerticalLayoutGroup>("home_bag");
         btn_task = FindChild<Button>("btn_task");
@@ -110,10 +123,10 @@ public partial class UIMainWindow : UIWindow
         btn_egg_level = FindChild<Image>("btn_egg_level");
         egg_level = FindChild<TextMeshProUGUI>("egg_level");
 
-        animal_slot_viewTableManager.InitFromLayout(animal_slot_view);
+        item_animal_bagTableManager.InitFromLayout(animal_bag);
         item_food_bagTableManager.InitFromLayout(food_bag);
         item_home_bagTableManager.InitFromLayout(home_bag);
-        animal_slot_viewTableManager.Count = 16;
+        item_animal_bagTableManager.Count = 16;
         item_food_bagTableManager.Count = 4;
         item_home_bagTableManager.Count = 2;
     }

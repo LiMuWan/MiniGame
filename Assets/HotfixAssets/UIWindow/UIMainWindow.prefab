@@ -5900,7 +5900,7 @@ GameObject:
   - component: {fileID: 8308067966459712080}
   - component: {fileID: 5944809687647678153}
   m_Layer: 5
-  m_Name: animal_slot_view
+  m_Name: animal_bag
   m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

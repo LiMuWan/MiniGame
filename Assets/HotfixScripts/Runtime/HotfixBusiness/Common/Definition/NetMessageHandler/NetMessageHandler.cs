@@ -39,6 +39,22 @@ public static class NetMessageHandler
         UnityWebRequestTool.Get($"http://{SettingManager.Instance.GetValue("TestWebServerUrl")}/server-box/boxLvUpFinish/{UserDataManager.Instance.PlayerId}", OnCallback);
     }
 
+    /// <summary>
+    /// 穿装备
+    /// </summary>
+    public static void SendWearTempEquip()
+    {
+        UnityWebRequestTool.Get($"http://{SettingManager.Instance.GetValue("TestWebServerUrl")}/server-box/wearTempEquip/{UserDataManager.Instance.PlayerId}", OnCallback);
+    }
+
+    /// <summary>
+    /// 卖装备
+    /// </summary>
+    public static void SendSellTempEquip()
+    {
+        UnityWebRequestTool.Get($"http://{SettingManager.Instance.GetValue("TestWebServerUrl")}/server-box/sellTempEquip/{UserDataManager.Instance.PlayerId}", OnCallback);
+    }
+
     private static void OnCallback(string error, string jsonData)
     {
         if (!string.IsNullOrEmpty(error)) UniLogger.Error(error);

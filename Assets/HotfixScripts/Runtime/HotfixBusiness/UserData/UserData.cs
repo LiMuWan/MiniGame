@@ -35,7 +35,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
     private string open_id;
     private string create_time;
     private int egg_num;
-
+    private JEquipDataList equipList;
 
     public int Coin
     {
@@ -193,6 +193,19 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         }
     }
 
+     //装备列表
+     public JEquipDataList EquipList
+     {
+        get {return equipList;}
+        set
+        {
+            if (equipList != value)
+            {
+                equipList = value;
+            }
+        }
+     }
+
     public void Init(JPlayerData playerData)
     {
        PlayerId = playerData.playerId;
@@ -204,6 +217,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
        EggLevelUpTime = playerData.boxLvUpEndTime;
        Experience = playerData.exp;
        EggNum = playerData.boxNum;
+       EquipList = playerData.equipList;
 
        //读配置
        MaxExperience = ConfigLoader.Instance.Tables.TbPlayerLevelUp.Get(Level).Exp;

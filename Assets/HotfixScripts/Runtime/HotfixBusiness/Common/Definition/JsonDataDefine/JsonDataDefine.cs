@@ -25,7 +25,7 @@ public class JPlayerData
 
 public class JEquipDataList
 {
-    public string tempEquip;
+    public JEquipData tempEquip;
     public JEquipData[] equipList;
 }
 

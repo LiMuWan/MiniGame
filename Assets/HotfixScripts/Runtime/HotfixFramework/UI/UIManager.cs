@@ -78,7 +78,7 @@ public static class UIManager
     /// </summary>
     /// <param name="location">资源定位地址</param>
     /// <param name="userDatas">用户自定义数据</param>
-    public static void OpenWindowAsync<T>(Action<UIWindow> onCreateCallback,params System.Object[] userDatas) where T : UIWindow
+    public static void OpenWindowAsync<T>(Action<T> onCreateCallback,params System.Object[] userDatas) where T : UIWindow
     {
         UniWindow.OpenWindowAsync<T>(typeof(T).FullName,onCreateCallback, userDatas);
     }

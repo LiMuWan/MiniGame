@@ -13,10 +13,10 @@ public class UnityWebRequestTool
     /// <param name="callBack">string：error， Dictionary<string,string> 返回的数据</param>
     public static void Get(string uri,CallBack<string, string> callBack)
     {
-        UniSingleton.StartCoroutine(AsyGet(uri, callBack));
+        UniSingleton.StartCoroutine(AsyGetCo(uri, callBack));
     }
 
-    static IEnumerator AsyGet(string uri, CallBack<string,string> callBack)
+    static IEnumerator AsyGetCo(string uri, CallBack<string,string> callBack)
     {
         UnityWebRequest webRequest = UnityWebRequest.Get(uri);
         webRequest.method = UnityWebRequest.kHttpVerbGET;
@@ -30,11 +30,8 @@ public class UnityWebRequestTool
         if (webRequest.result == UnityWebRequest.Result.ProtocolError || webRequest.result == UnityWebRequest.Result.ConnectionError)
             error = webRequest.error;
 
-        if (callBack != null)
-        {
-            callBack(error, webRequest.downloadHandler.text);
-            UniSingleton.StopCoroutine(nameof(AsyGet));
-        }
+        callBack?.Invoke(error, webRequest.downloadHandler.text);
+        UniSingleton.StopCoroutine(AsyGetCo(uri,callBack));
     }
 
     /// <summary>
@@ -45,10 +42,10 @@ public class UnityWebRequestTool
     /// <param name="callBack"></param>
     public static void Post(string uri,string data, CallBack<string, string> callBack)
     {
-        UniSingleton.StartCoroutine(AsyPost(uri,data, callBack));
+        UniSingleton.StartCoroutine(AsyPostCo(uri,data, callBack));
     }
 
-    static IEnumerator AsyPost(string uri, string data, CallBack<string, string> callBack)
+    static IEnumerator AsyPostCo(string uri, string data, CallBack<string, string> callBack)
     {
         UniLogger.Log("Send Http Post ->" + uri);
         UnityWebRequest webRequest = UnityWebRequest.Post(uri, data);
@@ -63,10 +60,7 @@ public class UnityWebRequestTool
             UniLogger.Error(error);
         }
 
-        if (callBack != null)
-        {
-            callBack(error, webRequest.downloadHandler.text);
-            UniSingleton.StopCoroutine(nameof(AsyPost));
-        }
+        callBack?.Invoke(error, webRequest.downloadHandler.text);
+        UniSingleton.StopCoroutine(AsyPostCo(uri,data,callBack));
     }
 }

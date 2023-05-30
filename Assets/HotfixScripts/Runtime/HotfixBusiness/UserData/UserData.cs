@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Singleton;
 using Hotfix.EventDefine;
+using System;
 
 public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 {
@@ -116,7 +117,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
             }
         }
     }
-    
+
     public int Level
     {
         get { return level; }
@@ -124,8 +125,9 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         {
             if (level != value)
             {
-                UserEventDefine.UserLevelUp.SendEventMessage(level,value);
+                UserEventDefine.UserLevelUp.SendEventMessage(level, value);
                 level = value;
+                MaxExperience = ConfigLoader.Instance.Tables.PlayerLevelUp.Get(Level).Exp;
             }
         }
     }
@@ -137,7 +139,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         {
             if (egg_level != value)
             {
-                UserEventDefine.UserLevelUp.SendEventMessage(egg_level,value);
+                UserEventDefine.UserLevelUp.SendEventMessage(egg_level, value);
                 egg_level = value;
             }
         }
@@ -193,37 +195,107 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         }
     }
 
-     //装备列表
-     public JEquipDataList EquipList
-     {
-        get {return equipList;}
+    //装备列表
+    public JEquipDataList EquipList
+    {
+        get { return equipList; }
         set
         {
-            if (equipList != value)
+            if (equipList != value || value == null)
             {
+                InitEquipData(value);
                 equipList = value;
             }
         }
-     }
-
-    public void Init(JPlayerData playerData)
-    {
-       PlayerId = playerData.playerId;
-       OpenId = playerData.openId;
-       CreateTime = playerData.createTime;
-       Coin = playerData.coin;
-       Level = playerData.lv;
-       EggLevel = playerData.boxLv;
-       EggLevelUpTime = playerData.boxLvUpEndTime;
-       Experience = playerData.exp;
-       EggNum = playerData.boxNum;
-       EquipList = playerData.equipList;
-
-       //读配置
-       MaxExperience = ConfigLoader.Instance.Tables.TbPlayerLevelUp.Get(Level).Exp;
-       //称号 ToDo
     }
 
+    private List<ItemData> animalDatas;
+    public List<ItemData> AnimalDatas => animalDatas;
+    private List<ItemData> foodDatas;
+    public List<ItemData> FoodDatas => foodDatas;
+    private List<ItemData> homeDatas;
+    public List<ItemData> HomeDatas => homeDatas;
+    private ConfigLoader ConfigLoader => ConfigLoader.Instance;
+
+    public void InitOrRefresh(JPlayerData playerData)
+    {
+        PlayerId = playerData.playerId;
+        OpenId = playerData.openId;
+        CreateTime = playerData.createTime;
+        Coin = playerData.coin;
+        Level = playerData.lv;
+        EggLevel = playerData.boxLv;
+        EggLevelUpTime = playerData.boxLvUpEndTime;
+        Experience = playerData.exp;
+        EggNum = playerData.boxNum;
+        EquipList = playerData.equipList;
+
+        //读配置
+
+        //称号 ToDo
+    }
+
+    public void InitEquipData(JEquipDataList equipDataList)
+    {
+        if ((equipDataList == null || equipDataList.equipList == null) && animalDatas == null)
+        {
+            animalDatas = new List<ItemData>(16);
+            //动物数据
+            animalDatas.Add(new ItemData() { Type = 1, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 1, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 2, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 2, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 3, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 3, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 4, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 4, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 5, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 5, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 6, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 6, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 7, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 7, Sex = 2 });
+            animalDatas.Add(new ItemData() { Type = 8, Sex = 1 });
+            animalDatas.Add(new ItemData() { Type = 8, Sex = 2 });
+            //食物数据
+            foodDatas.Add(new ItemData() { Type = 9 });
+            foodDatas.Add(new ItemData() { Type = 9 });
+            foodDatas.Add(new ItemData() { Type = 9 });
+            foodDatas.Add(new ItemData() { Type = 9 });
+            //爱巢数据
+            homeDatas.Add(new ItemData() { Type = 10 });
+            homeDatas.Add(new ItemData() { Type = 10 });
+        }
+        else
+        {
+
+
+            for (int i = 0; i < EquipList.equipList.Length; i++)
+            {
+                InitItemData(EquipList.equipList[i]);
+            }
+            UserEventDefine.UserEquipRefresh.SendEventMessage();
+        }
+    }
+
+    public ItemData InitItemData(JEquipData equipData)
+    {
+        var itemBasePropertyCfg = ConfigLoader.Tables.ItemBaseProperty.DataList[0];
+        var itemQualityCfg = ConfigLoader.Tables.ItemQuality;
+        var itemConfig = ConfigLoader.Tables.Item.Get(equipData.itemId);
+        int type = itemConfig.Type;
+        var itemData = animalDatas.Find((item) => { return item.Type == type && item.Sex == equipData.sex; });
+        itemData.ItemId = equipData.itemId;
+        itemData.Level = equipData.lv;
+        itemData.Quality = equipData.quality;
+        itemData.Name = ConfigLoader.Tables.Item.Get(equipData.itemId).Name;
+        var itemTypeCfg = ConfigLoader.Tables.ItemType.Get(type);
+        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * 10 * itemConfig.Hp).RoundToOneDecimal();
+        itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
+        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * 10 * itemConfig.Atk).RoundToOneDecimal();
+        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * 10 * itemConfig.Def).RoundToOneDecimal();
+        return itemData;
+    }
     public void OnCreate(object createParam)
     {
 
@@ -237,5 +309,29 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
     public void OnUpdate()
     {
 
+    }
+
+    //新获取装备的状态
+    public Tuple<int, ItemData> GetEquipStatus()
+    {
+        //第一次获取该类型装备
+        int type = ConfigLoader.Tables.Item.Get(EquipList.tempEquip.itemId).Type;
+        var itemData = AnimalDatas.Find((item) => item.Type == type && item.Sex == EquipList.tempEquip.sex);
+        if (itemData.ItemId == 0)
+        {
+            //第一次获取
+            return new Tuple<int, ItemData>(0, itemData);
+        }
+        else
+        {
+            //已经获取,旧的数据返回
+            return new Tuple<int, ItemData>(0, itemData);
+        }
+    }
+
+    //获取临时装备的数据
+    public ItemData GetTempEquipData()
+    {
+        return InitItemData(EquipList.tempEquip);
     }
 }

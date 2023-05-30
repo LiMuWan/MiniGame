@@ -28,9 +28,15 @@ public static class NetMessageHandler
     /// </summary>
     public static void SendOpenTreasureBox()
     {
-        UnityWebRequestTool.Get($"http://{SettingManager.Instance.GetValue("TestWebServerUrl")}/server-box/openBox/{UserDataManager.Instance.PlayerId}", OnCallback);
+        UnityWebRequestTool.Get($"http://{SettingManager.Instance.GetValue("TestWebServerUrl")}/server-box/openBox/{UserDataManager.Instance.PlayerId}", OnSendOpenTreasureBox);
     }
     
+    private static void OnSendOpenTreasureBox(string error, string jsonData)
+    {
+       OnCallback(error,jsonData);
+       UserEventDefine.UserLoginSuccess.SendEventMessage();
+    }
+
     /// <summary>
     /// 箱子升升级完成
     /// </summary>
@@ -60,6 +66,6 @@ public static class NetMessageHandler
         if (!string.IsNullOrEmpty(error)) UniLogger.Error(error);
         var jUserData = JsonMapper.ToObject<JUserData>(jsonData);
         UniLogger.Log(jUserData.ToStringFormat());
-        UserDataManager.Instance.Init(jUserData.data);
+        UserDataManager.Instance.InitOrRefresh(jUserData.data);
     }
 }

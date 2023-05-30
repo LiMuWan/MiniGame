@@ -23,26 +23,53 @@ public partial class UIItemInfo : UIWindow
             title_text = FindChild<TextMeshProUGUI>("title_text");
             value_text = FindChild<TextMeshProUGUI>("value_text");
             compare_icon = FindChild<Image>("compare_icon");
-
+        }
+        
+        public void InitOrRefresh(ItemData itemData,int index)
+        {
+            if (index == 1)
+            {
+                title_text.text = "血量";
+                value_text.text = itemData.Hp.ToString();
+            }
+            else if (index == 2)
+            {
+                title_text.text = "速度";
+                value_text.text = itemData.Spd.ToString();
+            }
+            else if (index == 3)
+            {
+                title_text.text = "攻击";
+                value_text.text = itemData.Atk.ToString();
+            }
+            else if (index == 4)
+            {
+                title_text.text = "防御";
+                value_text.text = itemData.Def.ToString();
+            }
         }
     }
     
     //old or current
+    protected GameObject oldGo;
     protected TextMeshProUGUI old_title;
-    protected Image old_quality_icon;
-    protected Image old_item_icon;
+    protected RawImage old_quality_icon;
+    protected RawImage old_item_icon;
     protected Image old_sex_icon;
     protected TextMeshProUGUI old_quality_text;
     protected TextMeshProUGUI old_item_name;
+    protected TextMeshProUGUI old_item_lv;
     protected VerticalLayoutGroup old_Properties;
 
     //new 
+    protected GameObject newGo;
     protected TextMeshProUGUI new_title;
-    protected Image new_quality_icon;
-    protected Image new_item_icon;
+    protected RawImage new_quality_icon;
+    protected RawImage new_item_icon;
     protected Image new_sex_icon;
     protected TextMeshProUGUI new_quality_text;
     protected TextMeshProUGUI new_item_name;
+    protected TextMeshProUGUI new_item_lv;
     protected VerticalLayoutGroup new_Properties;
 
     protected Button btn_sell;
@@ -54,20 +81,25 @@ public partial class UIItemInfo : UIWindow
     protected override void InitTemplate()
     {
         //old 
-        old_title = Find<TextMeshProUGUI>("old/left/title");
-        old_quality_icon = Find<Image>("old/left/quality_icon");
-        old_item_icon = Find<Image>("old/left/item_icon");
+        oldGo = Find<Transform>("old").gameObject;
+        old_title = Find<TextMeshProUGUI>("old/title");
+        old_quality_icon = Find<RawImage>("old/left/quality_icon");
+        old_item_icon = Find<RawImage>("old/left/item_icon");
         old_sex_icon = Find<Image>("old/left/sex_icon");
+        old_item_lv = Find<TextMeshProUGUI>("old/left/lv_text");
         old_quality_text = Find<TextMeshProUGUI>("old/right/quality_text");
         old_item_name = Find<TextMeshProUGUI>("old/right/item_name");
         old_Properties = Find<VerticalLayoutGroup>("old/right/Properties");
         old_PropertiesTableManager.InitFromLayout(old_Properties);
 
         //new
-        new_quality_icon = Find<Image>("new/left/quality_icon");
-        new_item_icon = Find<Image>("new/left/item_icon");
+        newGo = Find<Transform>("new").gameObject;
+        new_quality_icon = Find<RawImage>("new/left/quality_icon");
+        new_item_icon = Find<RawImage>("new/left/item_icon");
         new_sex_icon = Find<Image>("new/left/sex_icon");
+        new_item_lv = Find<TextMeshProUGUI>("new/left/lv_text");
         new_quality_text = Find<TextMeshProUGUI>("new/right/quality_text");
+
         new_item_name = Find<TextMeshProUGUI>("new/right/item_name");
         new_Properties = Find<VerticalLayoutGroup>("new/right/Properties");
         btn_sell = FindChild<Button>("btn_sell");

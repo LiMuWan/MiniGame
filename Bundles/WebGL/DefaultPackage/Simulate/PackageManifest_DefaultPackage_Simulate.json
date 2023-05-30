@@ -104,45 +104,73 @@
             "DependIDs": []
         },
         {
+            "Address": "cfg_tbitemquality",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbitemquality.bytes",
+            "AssetTags": [],
+            "BundleID": 12,
+            "DependIDs": []
+        },
+        {
+            "Address": "cfg_tbitemtype",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbitemtype.bytes",
+            "AssetTags": [],
+            "BundleID": 13,
+            "DependIDs": []
+        },
+        {
+            "Address": "cfg_tbplayerbaseproperty",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbplayerbaseproperty.bytes",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependIDs": []
+        },
+        {
             "Address": "cfg_tbplayerlevelup",
             "AssetPath": "Assets/HotfixAssets/Config/cfg_tbplayerlevelup.bytes",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "cfg_tbtask",
             "AssetPath": "Assets/HotfixAssets/Config/cfg_tbtask.bytes",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 16,
             "DependIDs": []
         },
         {
             "Address": "cfg_tbtreasurechest",
             "AssetPath": "Assets/HotfixAssets/Config/cfg_tbtreasurechest.bytes",
             "AssetTags": [],
-            "BundleID": 14,
+            "BundleID": 17,
             "DependIDs": []
         },
         {
             "Address": "UICanvas",
             "AssetPath": "Assets/HotfixAssets/UIWindow/UICanvas.prefab",
             "AssetTags": [],
-            "BundleID": 15,
+            "BundleID": 18,
+            "DependIDs": []
+        },
+        {
+            "Address": "UIItemInfo",
+            "AssetPath": "Assets/HotfixAssets/UIWindow/UIItemInfo.prefab",
+            "AssetTags": [],
+            "BundleID": 19,
             "DependIDs": []
         },
         {
             "Address": "UILoginWindow",
             "AssetPath": "Assets/HotfixAssets/UIWindow/UILoginWindow.prefab",
             "AssetTags": [],
-            "BundleID": 16,
+            "BundleID": 20,
             "DependIDs": []
         },
         {
             "Address": "UIMainWindow",
             "AssetPath": "Assets/HotfixAssets/UIWindow/UIMainWindow.prefab",
             "AssetTags": [],
-            "BundleID": 17,
+            "BundleID": 21,
             "DependIDs": []
         }
     ],
@@ -268,6 +296,36 @@
             "ReferenceIDs": []
         },
         {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbitemquality_bytes.rawfile",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbitemtype_bytes.rawfile",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbplayerbaseproperty_bytes.rawfile",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
             "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbplayerlevelup_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
@@ -299,6 +357,16 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uicanvas.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uiiteminfo.bundle",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,

@@ -273,21 +273,22 @@ namespace UniFramework.Window
 			else
 				_prepareCallback = prepareCallback;
 		}
-		internal void InternalLoad(string location, System.Action<UIWindow> prepareCallback, System.Object[] userDatas)
+		internal void InternalLoad<T>(string location, System.Action<UIWindow> prepareCallback,Action<T> onCreateCallback, System.Object[] userDatas)where T:UIWindow
 		{
 			if (Handle != null)
 				return;
 
 			_prepareCallback = prepareCallback;
 			_userDatas = userDatas;
-			UniSingleton.StartCoroutine(LoadAssetAsync(location));
+			UniSingleton.StartCoroutine(LoadAssetAsync(location,onCreateCallback));
 		}
 
-		internal IEnumerator LoadAssetAsync(string file) 
+		internal IEnumerator LoadAssetAsync<T>(string file,Action<T> onCreateCallback) where T:UIWindow 
 		{
 		    Handle = ResourcesManager.Instance.LoadAssetAsync<GameObject>(file);
 			yield return Handle;
-			Handle_Completed(Handle);
+			Handle_Completed<T>(Handle,onCreateCallback);
+			UniSingleton.StopCoroutine(LoadAssetAsync(file,onCreateCallback));
 		}
 		internal void InternalCreate()
 		{
@@ -331,7 +332,7 @@ namespace UniFramework.Window
 			}
 		}
 
-		private void Handle_Completed(AssetOperationHandle handle)
+		private void Handle_Completed<T>(AssetOperationHandle handle,Action<T> onCreateCallback)where T:UIWindow
 		{
 			if (handle.AssetObject == null)
 				return;
@@ -356,6 +357,7 @@ namespace UniFramework.Window
 			// 通知UI管理器
 			IsPrepare = true;
 			_prepareCallback?.Invoke(this);
+			onCreateCallback?.Invoke(this as T);
 		}
 	}
 }

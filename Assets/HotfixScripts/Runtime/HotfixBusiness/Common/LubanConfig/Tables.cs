@@ -13,52 +13,52 @@ namespace GameConfig
 { 
 public partial class Tables
 {
-    public Cfg.TbPlayerLevelUp TbPlayerLevelUp {get; }
-    public Cfg.TbPlayerBaseProperty TbPlayerBaseProperty {get; }
-    public Cfg.TbItem TbItem {get; }
-    public Cfg.TbItemType TbItemType {get; }
-    public Cfg.TbItemQuality TbItemQuality {get; }
-    public Cfg.TbTask TbTask {get; }
-    public Cfg.TbTreasureChest TbTreasureChest {get; }
+    public Cfg.PlayerLevelUp PlayerLevelUp {get; }
+    public Cfg.ItemBaseProperty ItemBaseProperty {get; }
+    public Cfg.Item Item {get; }
+    public Cfg.ItemType ItemType {get; }
+    public Cfg.ItemQuality ItemQuality {get; }
+    public Cfg.Task Task {get; }
+    public Cfg.TreasureChest TreasureChest {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
         var tables = new System.Collections.Generic.Dictionary<string, object>();
-        TbPlayerLevelUp = new Cfg.TbPlayerLevelUp(loader("cfg_tbplayerlevelup")); 
-        tables.Add("Cfg.TbPlayerLevelUp", TbPlayerLevelUp);
-        TbPlayerBaseProperty = new Cfg.TbPlayerBaseProperty(loader("cfg_tbplayerbaseproperty")); 
-        tables.Add("Cfg.TbPlayerBaseProperty", TbPlayerBaseProperty);
-        TbItem = new Cfg.TbItem(loader("cfg_tbitem")); 
-        tables.Add("Cfg.TbItem", TbItem);
-        TbItemType = new Cfg.TbItemType(loader("cfg_tbitemtype")); 
-        tables.Add("Cfg.TbItemType", TbItemType);
-        TbItemQuality = new Cfg.TbItemQuality(loader("cfg_tbitemquality")); 
-        tables.Add("Cfg.TbItemQuality", TbItemQuality);
-        TbTask = new Cfg.TbTask(loader("cfg_tbtask")); 
-        tables.Add("Cfg.TbTask", TbTask);
-        TbTreasureChest = new Cfg.TbTreasureChest(loader("cfg_tbtreasurechest")); 
-        tables.Add("Cfg.TbTreasureChest", TbTreasureChest);
+        PlayerLevelUp = new Cfg.PlayerLevelUp(loader("cfg_playerlevelup")); 
+        tables.Add("Cfg.PlayerLevelUp", PlayerLevelUp);
+        ItemBaseProperty = new Cfg.ItemBaseProperty(loader("cfg_itembaseproperty")); 
+        tables.Add("Cfg.ItemBaseProperty", ItemBaseProperty);
+        Item = new Cfg.Item(loader("cfg_item")); 
+        tables.Add("Cfg.Item", Item);
+        ItemType = new Cfg.ItemType(loader("cfg_itemtype")); 
+        tables.Add("Cfg.ItemType", ItemType);
+        ItemQuality = new Cfg.ItemQuality(loader("cfg_itemquality")); 
+        tables.Add("Cfg.ItemQuality", ItemQuality);
+        Task = new Cfg.Task(loader("cfg_task")); 
+        tables.Add("Cfg.Task", Task);
+        TreasureChest = new Cfg.TreasureChest(loader("cfg_treasurechest")); 
+        tables.Add("Cfg.TreasureChest", TreasureChest);
 
         PostInit();
-        TbPlayerLevelUp.Resolve(tables); 
-        TbPlayerBaseProperty.Resolve(tables); 
-        TbItem.Resolve(tables); 
-        TbItemType.Resolve(tables); 
-        TbItemQuality.Resolve(tables); 
-        TbTask.Resolve(tables); 
-        TbTreasureChest.Resolve(tables); 
+        PlayerLevelUp.Resolve(tables); 
+        ItemBaseProperty.Resolve(tables); 
+        Item.Resolve(tables); 
+        ItemType.Resolve(tables); 
+        ItemQuality.Resolve(tables); 
+        Task.Resolve(tables); 
+        TreasureChest.Resolve(tables); 
         PostResolve();
     }
 
     public void TranslateText(System.Func<string, string, string> translator)
     {
-        TbPlayerLevelUp.TranslateText(translator); 
-        TbPlayerBaseProperty.TranslateText(translator); 
-        TbItem.TranslateText(translator); 
-        TbItemType.TranslateText(translator); 
-        TbItemQuality.TranslateText(translator); 
-        TbTask.TranslateText(translator); 
-        TbTreasureChest.TranslateText(translator); 
+        PlayerLevelUp.TranslateText(translator); 
+        ItemBaseProperty.TranslateText(translator); 
+        Item.TranslateText(translator); 
+        ItemType.TranslateText(translator); 
+        ItemQuality.TranslateText(translator); 
+        Task.TranslateText(translator); 
+        TreasureChest.TranslateText(translator); 
     }
     
     partial void PostInit();

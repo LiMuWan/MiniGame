@@ -21,6 +21,7 @@ public sealed partial class ItemTypeConfig :  Bright.Config.BeanBase
         Spd = _buf.ReadInt();
         Atk = _buf.ReadInt();
         Def = _buf.ReadInt();
+        Icon = _buf.ReadString();
         PostInit();
     }
 
@@ -53,6 +54,10 @@ public sealed partial class ItemTypeConfig :  Bright.Config.BeanBase
     /// 防御系数
     /// </summary>
     public int Def { get; private set; }
+    /// <summary>
+    /// 品类图标
+    /// </summary>
+    public string Icon { get; private set; }
 
     public const int __ID__ = 1836896665;
     public override int GetTypeId() => __ID__;
@@ -75,6 +80,7 @@ public sealed partial class ItemTypeConfig :  Bright.Config.BeanBase
         + "Spd:" + Spd + ","
         + "Atk:" + Atk + ","
         + "Def:" + Def + ","
+        + "Icon:" + Icon + ","
         + "}";
     }
     

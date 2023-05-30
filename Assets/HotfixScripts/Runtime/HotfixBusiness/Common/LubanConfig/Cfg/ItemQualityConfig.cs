@@ -15,9 +15,10 @@ public sealed partial class ItemQualityConfig :  Bright.Config.BeanBase
 {
     public ItemQualityConfig(ByteBuf _buf) 
     {
-        Quality = _buf.ReadString();
+        Quality = _buf.ReadInt();
         Ratio = _buf.ReadFloat();
         Title = _buf.ReadString();
+        Icon = _buf.ReadString();
         PostInit();
     }
 
@@ -29,7 +30,7 @@ public sealed partial class ItemQualityConfig :  Bright.Config.BeanBase
     /// <summary>
     /// 品质
     /// </summary>
-    public string Quality { get; private set; }
+    public int Quality { get; private set; }
     /// <summary>
     /// 系数
     /// </summary>
@@ -38,6 +39,10 @@ public sealed partial class ItemQualityConfig :  Bright.Config.BeanBase
     /// 描述
     /// </summary>
     public string Title { get; private set; }
+    /// <summary>
+    /// 品质icon
+    /// </summary>
+    public string Icon { get; private set; }
 
     public const int __ID__ = 1319739780;
     public override int GetTypeId() => __ID__;
@@ -57,6 +62,7 @@ public sealed partial class ItemQualityConfig :  Bright.Config.BeanBase
         + "Quality:" + Quality + ","
         + "Ratio:" + Ratio + ","
         + "Title:" + Title + ","
+        + "Icon:" + Icon + ","
         + "}";
     }
     

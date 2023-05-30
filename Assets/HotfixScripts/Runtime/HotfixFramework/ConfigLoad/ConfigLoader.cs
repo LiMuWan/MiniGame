@@ -21,13 +21,13 @@ public class ConfigLoader : SingletonInstance<ConfigLoader>, ISingleton
     }
     
     private List<string> cfgNames = new List<string>(){
-        "cfg_tbplayerlevelup",
-        "cfg_tbplayerbaseproperty",
-        "cfg_tbitem",
-        "cfg_tbitemtype",
-        "cfg_tbitemquality",
-        "cfg_tbtask",
-        "cfg_tbtreasurechest"
+        "cfg_playerlevelup",
+        "cfg_itembaseproperty",
+        "cfg_item",
+        "cfg_itemtype",
+        "cfg_itemquality",
+        "cfg_task",
+        "cfg_treasurechest"
     };
     private Dictionary<string, Byte[]> m_Configs = new Dictionary<string, Byte[]>();
 

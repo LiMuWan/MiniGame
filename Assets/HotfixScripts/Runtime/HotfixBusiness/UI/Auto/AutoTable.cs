@@ -85,7 +85,6 @@ public class AutoUITableManager<T> :
             if (ite.Invoke(it, index)) break;
             index++;
         }
-
     }
 }
 

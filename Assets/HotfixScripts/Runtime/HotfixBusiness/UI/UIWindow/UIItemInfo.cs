@@ -35,7 +35,7 @@ public partial class UIItemInfo
         if(oldItem != null && newItem != null)
         {
             ShowOld(oldItem, "已拥有");
-            ShowNew(newItem, "新获得");
+            ShowNew(newItem,oldItem,"新获得");
             return;
         }
 
@@ -55,7 +55,7 @@ public partial class UIItemInfo
         else
         {
             newGo.SetActive(true);
-            ShowNew(newItem,"新获得");
+            ShowNew(newItem,oldItem,"新获得");
         }
     }
 
@@ -85,9 +85,10 @@ public partial class UIItemInfo
         }
     }
 
-    private void ShowNew(ItemData itemData, string title)
+    private void ShowNew(ItemData itemData,ItemData oldItemData, string title)
     {
         this.itemData = itemData;
+        this.itemData.CompareOther(oldItemData);
         var qualityConfig = ConfigLoader.Instance.Tables.ItemQuality.Get(itemData.Quality);
         var item_icon = ConfigLoader.Instance.Tables.Item.Get(itemData.ItemId).Icon;
         if (itemData.Type < 9)

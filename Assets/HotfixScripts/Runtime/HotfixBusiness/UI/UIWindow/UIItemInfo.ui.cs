@@ -6,6 +6,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UniFramework.Window;
+using GameFramework.Resource;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -27,6 +28,13 @@ public partial class UIItemInfo : UIWindow
         
         public void InitOrRefresh(ItemData itemData,int index)
         {
+            bool isShowCompareIcon = itemData.CompareData.Count == 0;
+            compare_icon.gameObject.SetActive(isShowCompareIcon);
+            if(isShowCompareIcon)
+            {
+               var icon_name = itemData.CompareData[index] == true ? UIDefine.arrow_up_icon:UIDefine.arrow_down_icon;
+               ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(icon_name,(sprite)=>{compare_icon.sprite = sprite;});
+            }
             if (index == 1)
             {
                 title_text.text = "血量";

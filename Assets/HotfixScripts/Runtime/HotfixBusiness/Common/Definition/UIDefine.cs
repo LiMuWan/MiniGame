@@ -5,6 +5,8 @@ using UnityEngine;
 public class UIDefine 
 {
    //Sprite 
-   public const string female_icon = "icon_female";//2 雌性
+   public const string female_icon = "icon_female";//1 雌性
    public const string male_icon = "icon_male";//2 雄性
+   public const string arrow_down_icon = "arrow_down";// 下降
+   public const string arrow_up_icon = "arrow_up";//上升
 }

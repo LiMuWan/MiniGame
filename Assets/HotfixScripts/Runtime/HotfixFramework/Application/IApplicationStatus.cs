@@ -88,11 +88,12 @@ public abstract class IApplicationStatus
         return default(T);
     }
 
-    public void OpenUI<T>(params System.Object[] userDatas) where T: UIWindow
+    public void OpenUI<T>(Action<T> callback = null,params System.Object[] userDatas) where T: UIWindow
     {
         UIManager.OpenWindowAsync<T>(
             (window) =>
             {
+                callback?.Invoke(window);
                 m_uiList.Add(window);
                 UniLogger.Log($"OpenUI window = {window}");
             },userDatas);

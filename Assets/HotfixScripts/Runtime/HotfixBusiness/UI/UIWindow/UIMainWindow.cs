@@ -10,10 +10,9 @@ using UnityEngine.UI;
 //Donot use base.[MethodName] 
 public partial class UIMainWindow
 {
-    private List<ItemData> animalDatas = new List<ItemData>(16);
-    private List<ItemData> foodDatas = new List<ItemData>(4);
-
-    private List<ItemData> homeDatas = new List<ItemData>(2);
+    private List<ItemData> animalDatas => UserDataManager.Instance.AnimalDatas;
+    private List<ItemData> foodDatas => UserDataManager.Instance.FoodDatas;
+    private List<ItemData> homeDatas => UserDataManager.Instance.HomeDatas;
     
     private EventGroup eventGroup = new EventGroup();
 
@@ -65,40 +64,17 @@ public partial class UIMainWindow
         }
     }
 
-
-
     protected override void InitModel()
     {
-        // //动物数据
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 1 });
-        // animalDatas.Add(new ItemData() { Name = "母狗", AnimalType = 1 });
-        // animalDatas.Add(new ItemData() { Name = "公猫", AnimalType = 2 });
-        // animalDatas.Add(new ItemData() { Name = "母猫", AnimalType = 2 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 3 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 3 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 4 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 4 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 5 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 5 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 6 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 6 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 7 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 7 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 8 });
-        // animalDatas.Add(new ItemData() { Name = "公狗", AnimalType = 8 });
-        // //食物数据
-        // foodDatas.Add(new ItemData() { Name = "食物A", AnimalType = 9 });
-        // foodDatas.Add(new ItemData() { Name = "食物B", AnimalType = 9 });
-        // foodDatas.Add(new ItemData() { Name = "食物C", AnimalType = 9 });
-        // foodDatas.Add(new ItemData() { Name = "食物D", AnimalType = 9 });
-        // //爱巢数据
-        // homeDatas.Add(new ItemData() { Name = "爱巢A", AnimalType = 10 });
-        // homeDatas.Add(new ItemData() { Name = "爱巢B", AnimalType = 10 });
+        RefreshBag();
+        btn_egg.onClick.AddListener(()=>{NetMessageHandler.SendOpenTreasureBox();});
+    }
 
+    private void RefreshBag()
+    {
         item_animal_bagTableManager.Each(EachAnimalSlot);
         item_food_bagTableManager.Each(EachFoodSlot);
         item_home_bagTableManager.Each(EachHomeSlot);
-        btn_egg.onClick.AddListener(()=>{NetMessageHandler.SendOpenTreasureBox();});
     }
 
     private void InitEvent()
@@ -117,16 +93,27 @@ public partial class UIMainWindow
     {
         if(message is UserEventDefine.UserOpenTreasureBox uotb)
         {
-            
+            var tuple = UserDataManager.Instance.GetEquipStatus();
+            if (tuple.Item1 == 0)
+            {
+                //第一次获取
+                ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
+                {
+                    ui.ShowItemInfo(null, tuple.Item2);
+                });
+            }
+            else
+            {
+                //装备比较
+                ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
+                {
+                    ui.ShowItemInfo(tuple.Item2, UserDataManager.Instance.GetTempEquipData());
+                });
+            }
         }
         else if(message is UserEventDefine.UserEquipRefresh uer)
         {
-            var tuple = UserDataManager.Instance.GetEquipStatus();
-            if(tuple.Item1 == 0)
-            {
-                //第一次获取
-                // ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>()
-            }
+           RefreshBag();
         }
         else if (message is UserEventDefine.UserCoinFresh ucf)
         {

@@ -320,7 +320,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         if (itemData.ItemId == 0)
         {
             //第一次获取
-            return new Tuple<int, ItemData>(0, itemData);
+            return new Tuple<int, ItemData>(0, GetTempEquipData());
         }
         else
         {

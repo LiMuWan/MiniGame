@@ -31,7 +31,7 @@ public partial class UIMainWindow : UIWindow
             icon_img = FindChild<RawImage>("icon_img");
             lv_text = FindChild<TextMeshProUGUI>("lv_text");
             //打开装备详情
-            //animal_item.onClick.AddListener(() => { UIManager.OpenWindowAsync<UIItemInfo>((ui) => { ui.ShowItemInfo(this.animalData); }); });
+            animal_item.onClick.AddListener(() => { ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) => { ui.ShowItemInfo(this.animalData,null); }); });
         }
 
         public void RefreshUI(ItemData animalData)

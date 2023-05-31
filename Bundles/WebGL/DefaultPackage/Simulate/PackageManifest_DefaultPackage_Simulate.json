@@ -97,50 +97,50 @@
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbitem",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbitem.bytes",
+            "Address": "cfg_item",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_item.bytes",
             "AssetTags": [],
             "BundleID": 11,
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbitemquality",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbitemquality.bytes",
+            "Address": "cfg_itembaseproperty",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_itembaseproperty.bytes",
             "AssetTags": [],
             "BundleID": 12,
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbitemtype",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbitemtype.bytes",
+            "Address": "cfg_itemquality",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_itemquality.bytes",
             "AssetTags": [],
             "BundleID": 13,
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbplayerbaseproperty",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbplayerbaseproperty.bytes",
+            "Address": "cfg_itemtype",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_itemtype.bytes",
             "AssetTags": [],
             "BundleID": 14,
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbplayerlevelup",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbplayerlevelup.bytes",
+            "Address": "cfg_playerlevelup",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_playerlevelup.bytes",
             "AssetTags": [],
             "BundleID": 15,
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbtask",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbtask.bytes",
+            "Address": "cfg_task",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_task.bytes",
             "AssetTags": [],
             "BundleID": 16,
             "DependIDs": []
         },
         {
-            "Address": "cfg_tbtreasurechest",
-            "AssetPath": "Assets/HotfixAssets/Config/cfg_tbtreasurechest.bytes",
+            "Address": "cfg_treasurechest",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_treasurechest.bytes",
             "AssetTags": [],
             "BundleID": 17,
             "DependIDs": []
@@ -171,6 +171,111 @@
             "AssetPath": "Assets/HotfixAssets/UIWindow/UIMainWindow.prefab",
             "AssetTags": [],
             "BundleID": 21,
+            "DependIDs": []
+        },
+        {
+            "Address": "icon_type_dog",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemIcon/icon_type_dog.png",
+            "AssetTags": [],
+            "BundleID": 22,
+            "DependIDs": []
+        },
+        {
+            "Address": "icon_type_food",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemIcon/icon_type_food.png",
+            "AssetTags": [],
+            "BundleID": 23,
+            "DependIDs": []
+        },
+        {
+            "Address": "icon_type_nest",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemIcon/icon_type_nest.png",
+            "AssetTags": [],
+            "BundleID": 24,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_1",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_1.png",
+            "AssetTags": [],
+            "BundleID": 25,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_2",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_2.png",
+            "AssetTags": [],
+            "BundleID": 26,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_3",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_3.png",
+            "AssetTags": [],
+            "BundleID": 27,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_4",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_4.png",
+            "AssetTags": [],
+            "BundleID": 28,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_5",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_5.png",
+            "AssetTags": [],
+            "BundleID": 29,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_6",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_6.png",
+            "AssetTags": [],
+            "BundleID": 30,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_7",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_7.png",
+            "AssetTags": [],
+            "BundleID": 31,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_8",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_8.png",
+            "AssetTags": [],
+            "BundleID": 32,
+            "DependIDs": []
+        },
+        {
+            "Address": "quality_9",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_9.png",
+            "AssetTags": [],
+            "BundleID": 33,
+            "DependIDs": []
+        },
+        {
+            "Address": "blur_bg",
+            "AssetPath": "Assets/HotfixAssets/Textures/UIItemInfo/blur_bg.png",
+            "AssetTags": [],
+            "BundleID": 34,
+            "DependIDs": []
+        },
+        {
+            "Address": "bg",
+            "AssetPath": "Assets/HotfixAssets/Textures/UIMainWindow/bg.png",
+            "AssetTags": [],
+            "BundleID": 35,
+            "DependIDs": []
+        },
+        {
+            "Address": "egg",
+            "AssetPath": "Assets/HotfixAssets/Textures/UIMainWindow/egg.png",
+            "AssetTags": [],
+            "BundleID": 36,
             "DependIDs": []
         }
     ],
@@ -286,7 +391,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbitem_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_item_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -296,7 +401,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbitemquality_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_itembaseproperty_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -306,7 +411,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbitemtype_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_itemquality_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -316,7 +421,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbplayerbaseproperty_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_itemtype_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -326,7 +431,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbplayerlevelup_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_playerlevelup_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -336,7 +441,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbtask_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_task_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -346,7 +451,7 @@
             "ReferenceIDs": []
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_tbtreasurechest_bytes.rawfile",
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_treasurechest_bytes.rawfile",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -387,6 +492,156 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uimainwindow.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemicon_icon_type_dog.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemicon_icon_type_food.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemicon_icon_type_nest.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_2.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_3.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_4.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_5.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_6.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_7.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_8.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_9.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_uimainwindow_bg.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_uimainwindow_egg.bundle",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,

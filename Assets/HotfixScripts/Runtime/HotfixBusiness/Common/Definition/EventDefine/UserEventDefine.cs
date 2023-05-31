@@ -120,5 +120,20 @@ namespace Hotfix.EventDefine
                 UniEvent.SendMessage(msg);
             }
         }
+
+        /// <summary>
+        /// 用户蛋数量刷新
+        /// </summary>
+        public class UserEggNumRefresh:IEventMessage
+        {
+            public int egg_num;
+
+            public static void SendEventMessage(int egg_num)
+            {
+                 var msg = new UserEggNumRefresh();
+                 msg.egg_num = egg_num;
+                 UniEvent.SendMessage(msg);
+            }
+        }
     }
 }

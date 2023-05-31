@@ -86,6 +86,7 @@ public partial class UIMainWindow
         eventGroup.AddListener<UserEventDefine.UserMaxExperienceRefresh>(Handler);
         eventGroup.AddListener<UserEventDefine.UserEggLevelUp>(Handler);
         eventGroup.AddListener<UserEventDefine.UserEquipRefresh>(Handler);
+        eventGroup.AddListener<UserEventDefine.UserEggNumRefresh>(Handler);
     }
     
     
@@ -128,9 +129,13 @@ public partial class UIMainWindow
         {
             user_level_slider.value = ue.experience;
         }
-        if (message is UserEventDefine.UserLevelUp ulu)
+        else if (message is UserEventDefine.UserLevelUp ulu)
         {
             level_text.text = $"{ulu.currentLevel}";
+        }
+        else if (message is UserEventDefine.UserEggNumRefresh uenr)
+        {
+            egg_count_text.text = $"{uenr.egg_num}";
         }
     }
     

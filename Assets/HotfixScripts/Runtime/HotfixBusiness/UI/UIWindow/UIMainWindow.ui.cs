@@ -190,6 +190,7 @@ public partial class UIMainWindow : UIWindow
     protected Button btn_breeding;
     protected Image btn_egg_level;
     protected TextMeshProUGUI egg_level;
+    protected TextMeshProUGUI egg_count_text;
 
     protected AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>> item_animal_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>>();
     protected AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>> item_food_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>>();
@@ -216,6 +217,7 @@ public partial class UIMainWindow : UIWindow
         btn_breeding = FindChild<Button>("btn_ breeding");
         btn_egg_level = FindChild<Image>("btn_egg_level");
         egg_level = FindChild<TextMeshProUGUI>("egg_level");
+        egg_count_text = FindChild<TextMeshProUGUI>("egg_count_text");
 
         item_animal_bagTableManager.InitFromLayout(animal_bag);
         item_food_bagTableManager.InitFromLayout(food_bag);
@@ -267,6 +269,7 @@ public partial class UIMainWindow : UIWindow
         user_level_slider.value = UserDataManager.Instance.Experience;
         coin_text.text = $"{UserDataManager.Instance.Coin}";
         egg_level.text = $"Lv.{UserDataManager.Instance.EggLevel}";
+        egg_count_text.text = $"{UserDataManager.Instance.EggNum}";
     }
 
     private void OnLoadSprite(Sprite sprite)

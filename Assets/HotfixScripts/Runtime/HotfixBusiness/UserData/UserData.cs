@@ -190,6 +190,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         {
             if (egg_num != value)
             {
+                UserEventDefine.UserEggNumRefresh.SendEventMessage(value);
                 egg_num = value;
             }
         }

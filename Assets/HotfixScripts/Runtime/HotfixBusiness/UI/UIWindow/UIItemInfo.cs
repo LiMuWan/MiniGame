@@ -20,7 +20,17 @@ public partial class UIItemInfo
 
     protected override void InitModel()
     {
-           //To do: init
+        //To do: init
+        btn_sell.onClick.AddListener(()=>
+        {
+            NetMessageHandler.SendSellTempEquip();
+            ApplicationStatusManager.s_currentAppStatus.CloseUI<UIItemInfo>();
+        });
+        btn_get.onClick.AddListener(()=>
+         {
+            NetMessageHandler.SendWearTempEquip();
+            ApplicationStatusManager.s_currentAppStatus.CloseUI<UIItemInfo>();
+        });
     }
 
     protected override void OnSetVisible(bool visible) 
@@ -69,7 +79,7 @@ public partial class UIItemInfo
             old_title.text = title;
             ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { old_quality_icon.texture = texture; });
             ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { old_item_icon.texture = texture; });
-            if (itemData.Sex == 0)
+            if (itemData.Sex == (int)ItemSex.Female)
             {
                 ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(UIDefine.female_icon, (sprite) => { old_sex_icon.sprite = sprite; });
             }
@@ -91,12 +101,17 @@ public partial class UIItemInfo
         this.itemData.CompareOther(oldItemData);
         var qualityConfig = ConfigLoader.Instance.Tables.ItemQuality.Get(itemData.Quality);
         var item_icon = ConfigLoader.Instance.Tables.Item.Get(itemData.ItemId).Icon;
+        new_title.text = title;
+        ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { new_quality_icon.texture = texture; });
+        ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { new_item_icon.texture = texture; });
+        new_item_name.text = itemData.Name;
+        new_item_lv.text = itemData.Level.ToString();
+        new_quality_text.text = qualityConfig.Title;
+        new_PropertiesTableManager.Count = 4;
+        new_PropertiesTableManager.Each(OnEachProperties);
         if (itemData.Type < 9)
         {
-            new_title.text = title;
-            ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { new_quality_icon.texture = texture; });
-            ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { new_item_icon.texture = texture; });
-            if (itemData.Sex == 0)
+            if (itemData.Sex == (int)ItemSex.Female)
             {
                 ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(UIDefine.female_icon, (sprite) => { new_sex_icon.sprite = sprite; });
             }
@@ -104,11 +119,14 @@ public partial class UIItemInfo
             {
                 ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(UIDefine.male_icon, (sprite) => { new_sex_icon.sprite = sprite; });
             }
-            new_item_name.text = itemData.Name;
-            new_item_lv.text = itemData.Level.ToString();
-            new_quality_text.text = qualityConfig.Title;
-            new_PropertiesTableManager.Count = 4;
-            new_PropertiesTableManager.Each(OnEachProperties);
+        }
+        if(oldItemData == null)
+        {
+            btn_sell.gameObject.SetActive(false);
+        }
+        else
+        {
+            btn_sell.gameObject.SetActive(true);
         }
     }
 

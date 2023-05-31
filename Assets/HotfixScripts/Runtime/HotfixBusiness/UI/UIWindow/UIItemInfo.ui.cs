@@ -122,7 +122,8 @@ public partial class UIItemInfo : UIWindow
 
     public override void OnDestroy()
     {
-       
+       btn_sell.onClick.RemoveAllListeners();
+       btn_get.onClick.RemoveAllListeners();
     }
 
     public override void OnRefresh()

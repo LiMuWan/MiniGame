@@ -80,7 +80,9 @@ public partial class UIItemInfo
         old_item_name.text = itemData.Name;
         old_item_lv.text = $"Lv.{itemData.Level}";
         old_quality_text.text = qualityConfig.Title;
-
+        Color color = ColorTool.HtmlStringToColor(qualityConfig.Color);
+        old_item_lv.color = color;
+        old_quality_text.color = color;
         ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { old_quality_icon.texture = texture; });
         ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { old_item_icon.texture = texture; });
         if (itemData.Type < 9)
@@ -108,6 +110,9 @@ public partial class UIItemInfo
         new_item_name.text = itemData.Name;
         new_item_lv.text = $"Lv.{itemData.Level}";
         new_quality_text.text = qualityConfig.Title;
+        Color color = ColorTool.HtmlStringToColor(qualityConfig.Color);
+        old_item_lv.color = color;
+        old_quality_text.color = color;
         new_PropertiesTableManager.Count = 4;
         new_PropertiesTableManager.Each(OnEachProperties);
         if (itemData.Type < 9)

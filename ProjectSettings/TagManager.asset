@@ -45,6 +45,9 @@ TagManager:
   - name: Bg
     uniqueID: 2131392147
     locked: 0
-  - name: Animal
+  - name: FirstRow
     uniqueID: 4204771987
+    locked: 0
+  - name: SecondRow
+    uniqueID: 3173333333
     locked: 0

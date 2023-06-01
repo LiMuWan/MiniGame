@@ -73,6 +73,8 @@ namespace WeChatWASM
         public int loadingBarWidth = 240;
         public bool needCheckUpdate = false;
         public bool disableHighPerformanceFallback = false;
+        public bool showMonitorSuggestModal = true;
+        public bool enableProfileStats = false;
 
         [MenuItem("微信小游戏 / 转换小游戏", false, 1)]
         public static void Open()
@@ -167,6 +169,8 @@ namespace WeChatWASM
             loadingBarWidth = config.ProjectConf.loadingBarWidth;
             needCheckUpdate = config.ProjectConf.needCheckUpdate;
             disableHighPerformanceFallback = config.ProjectConf.disableHighPerformanceFallback;
+            showMonitorSuggestModal = config.CompileOptions.showMonitorSuggestModal;
+            enableProfileStats = config.CompileOptions.enableProfileStats;
         }
 
         public void OnFocus()
@@ -222,6 +226,8 @@ namespace WeChatWASM
             config.ProjectConf.loadingBarWidth = loadingBarWidth;
             config.ProjectConf.needCheckUpdate = needCheckUpdate;
             config.ProjectConf.disableHighPerformanceFallback = disableHighPerformanceFallback;
+            config.CompileOptions.showMonitorSuggestModal = showMonitorSuggestModal;
+            config.CompileOptions.enableProfileStats = enableProfileStats;
         }
 
         private static string[] GetScenePaths()
@@ -320,7 +326,7 @@ namespace WeChatWASM
 
             if (profilingFuncs)
             {
-                WXExtEnvDef.GOTO("WXEditorWindow.Init");
+                PlayerSettings.WebGL.emscriptenArgs += " --profiling-funcs ";
             }
 
             WXExtEnvDef.GOTO("WXEditorWindow.Build");
@@ -495,6 +501,10 @@ namespace WeChatWASM
             if (text.Contains("UnityModule"))
             {
                 text += ";GameGlobal.unityNamespace.UnityModule = UnityModule;";
+            }
+            else if (text.Contains("unityFramework"))
+            {
+                text += ";GameGlobal.unityNamespace.UnityModule = unityFramework;";
             }
             else
             {
@@ -803,6 +813,8 @@ namespace WeChatWASM
                 GetColorSpace(),
                 disableHighPerformanceFallback ? "true" : "false",
                 preloadWXFont ? "true" : "false",
+                showMonitorSuggestModal ? "true" : "false",
+                enableProfileStats ? "true" : "false",
             });
 
             List<Rule> replaceList = new List<Rule>(replaceArrayList);
@@ -1173,7 +1185,9 @@ namespace WeChatWASM
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
-            fbslim = GUILayout.Toggle(fbslim, new GUIContent("首包资源优化「推荐」(?)", "导出时自动清理UnityEditor默认打包但游戏项目从未使用的资源，瘦身首包资源体积，建议所有游戏启用。"), toggleStyle);
+            fbslim = GUILayout.Toggle(fbslim, new GUIContent("首包资源优化(?)", "导出时自动清理UnityEditor默认打包但游戏项目从未使用的资源，瘦身首包资源体积，建议所有游戏启用。"), toggleStyle);
+            showMonitorSuggestModal = GUILayout.Toggle(showMonitorSuggestModal, new GUIContent("显示优化建议弹框"), toggleStyle);
+            enableProfileStats = GUILayout.Toggle(enableProfileStats, new GUIContent("显示性能面板"), toggleStyle);
             GUILayout.EndHorizontal();
 
             GUIStyle exportButtonStyle = new GUIStyle(GUI.skin.button);
@@ -1246,21 +1260,18 @@ namespace WeChatWASM
             }
         }
 
+        public enum WXExportError
+        {
+            SUCCEED = 0,
+            NODE_NOT_FOUND = 1,
+            BUILD_WEBGL_FAILED = 2,
+        }
+
         // 可以调用这个来集成
-        public void DoExport(bool buildWebGL)
+        public WXExportError DoExport(bool buildWebGL)
         {
             // JSLib
             SettingWXTextureMinJSLib();
-
-            if (WXExtEnvDef.GETDEF("UNITY_2021_2_OR_NEWER"))
-            {
-                var checkNodePath = WeChatWASM.UnityUtil.GetNodePath(customNodePath);
-                if (WeChatWASM.UnityUtil.RunCmd(checkNodePath, "--help") != "succ")
-                {
-                    Debug.LogError($"请安装最新稳定版本Node, {checkNodePath}未能找到；如果自定义安装路径，请修改MiniGameConfig.asset-CompileOption-CustomNodePath为node安装目录");
-                    return;
-                }
-            }
 
             OnLostFocus();
             EditorUtility.SetDirty(config);
@@ -1280,7 +1291,13 @@ namespace WeChatWASM
 
                 if (buildWebGL && Build() != 0)
                 {
-                    return;
+                    return WXExportError.BUILD_WEBGL_FAILED;
+                }
+
+                if (WXExtEnvDef.GETDEF("UNITY_2021_2_OR_NEWER"))
+                {
+                    // 如果是2021版本，官方symbols产生有BUG，这里需要用工具将embedded的函数名提取出来
+                    WeChatWASM.UnityUtil.preprocessSymbols(GetWebGLSymbolPath());
                 }
 
                 ConvertCode();
@@ -1302,6 +1319,7 @@ namespace WeChatWASM
                     finishExport();
                 }
             }
+            return WXExportError.SUCCEED;
         }
 
         private void finishExport()
@@ -1316,15 +1334,6 @@ namespace WeChatWASM
             else
             {
                 checkNeedCopyDataPackage(true);
-            }
-
-            if (WXExtEnvDef.GETDEF("UNITY_2021_2_OR_NEWER"))
-            {
-                // 如果是2021版本，官方symbols产生有BUG，这里需要用工具将embedded的函数名提取出来
-                var nodePath = WeChatWASM.UnityUtil.GetNodePath(customNodePath);
-                var path = "Assets/WX-WASM-SDK-V2/Editor/Node";
-                WeChatWASM.UnityUtil.RunCmd(nodePath, string.Format($"--experimental-modules dump_wasm_symbol.mjs \"{dst}\""), path);
-                UnityEngine.Debug.LogError($"Unity 2021版本使用Embeded Symbols, 代码包中含有函数名体积较大, 发布前<a href=\"https://github.com/wechat-miniprogram/minigame-unity-webgl-transform/blob/main/Design/WasmSplit.md\">使用代码分包工具</a>进行优化");
             }
         }
 

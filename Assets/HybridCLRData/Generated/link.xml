@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
+  <assembly fullname="LitJson">
+    <type fullname="LitJson.JsonMapper" preserve="all" />
+  </assembly>
   <assembly fullname="Main.Runtime">
     <type fullname="Bright.Common.StringUtil" preserve="all" />
     <type fullname="Bright.Config.BeanBase" preserve="all" />
@@ -7,6 +10,8 @@
     <type fullname="GameFramework.Resource.LoadSceneCallbacks" preserve="all" />
     <type fullname="GameFramework.Resource.LoadSceneSuccessCallback" preserve="all" />
     <type fullname="GameFramework.Resource.ResourcesManager" preserve="all" />
+    <type fullname="SettingConfigAttribute" preserve="all" />
+    <type fullname="SettingManager" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
     <type fullname="System.Action`1" preserve="all" />
@@ -17,19 +22,18 @@
     <type fullname="System.Attribute" preserve="all" />
     <type fullname="System.AttributeTargets" preserve="all" />
     <type fullname="System.AttributeUsageAttribute" preserve="all" />
-    <type fullname="System.Boolean" preserve="all" />
     <type fullname="System.Byte" preserve="all" />
     <type fullname="System.Char" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
-    <type fullname="System.Collections.Generic.Dictionary`2/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerable`1" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerator`1" preserve="all" />
-    <type fullname="System.Collections.Generic.KeyValuePair`2" preserve="all" />
     <type fullname="System.Collections.Generic.List`1" preserve="all" />
     <type fullname="System.Collections.Generic.List`1/Enumerator" preserve="all" />
+    <type fullname="System.Collections.IEnumerable" preserve="all" />
     <type fullname="System.Collections.IEnumerator" preserve="all" />
     <type fullname="System.Comparison`1" preserve="all" />
+    <type fullname="System.Decimal" preserve="all" />
     <type fullname="System.Delegate" preserve="all" />
     <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
     <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
@@ -63,10 +67,15 @@
     <type fullname="System.Nullable`1" preserve="all" />
     <type fullname="System.Object" preserve="all" />
     <type fullname="System.ParamArrayAttribute" preserve="all" />
+    <type fullname="System.Predicate`1" preserve="all" />
+    <type fullname="System.Reflection.BindingFlags" preserve="all" />
     <type fullname="System.Reflection.DefaultMemberAttribute" preserve="all" />
+    <type fullname="System.Reflection.FieldInfo" preserve="all" />
     <type fullname="System.Reflection.MemberInfo" preserve="all" />
+    <type fullname="System.Reflection.PropertyInfo" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.ExtensionAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.IteratorStateMachineAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
     <type fullname="System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" preserve="all" />
@@ -80,8 +89,19 @@
     <type fullname="System.Threading.Tasks.Task" preserve="all" />
     <type fullname="System.Threading.Tasks.Task`1" preserve="all" />
     <type fullname="System.Threading.Tasks.TaskCompletionSource`1" preserve="all" />
+    <type fullname="System.Tuple`2" preserve="all" />
     <type fullname="System.Type" preserve="all" />
     <type fullname="System.ValueType" preserve="all" />
+  </assembly>
+  <assembly fullname="System">
+    <type fullname="System.Collections.Generic.Queue`1" preserve="all" />
+    <type fullname="System.Text.RegularExpressions.Group" preserve="all" />
+    <type fullname="System.Text.RegularExpressions.Match" preserve="all" />
+    <type fullname="System.Text.RegularExpressions.Regex" preserve="all" />
+  </assembly>
+  <assembly fullname="System.Core">
+    <type fullname="System.Collections.Generic.HashSet`1" preserve="all" />
+    <type fullname="System.Linq.Enumerable" preserve="all" />
   </assembly>
   <assembly fullname="UniFramework.Event">
     <type fullname="UniFramework.Event.EventGroup" preserve="all" />
@@ -96,20 +116,29 @@
   <assembly fullname="UniFramework.Utility">
     <type fullname="UniFramework.Utility.UniLogger" preserve="all" />
   </assembly>
+  <assembly fullname="Unity.TextMeshPro">
+    <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
+    <type fullname="TMPro.TMP_Text" preserve="all" />
+  </assembly>
   <assembly fullname="UnityEngine.CoreModule">
     <type fullname="UnityEngine.Application" preserve="all" />
     <type fullname="UnityEngine.Behaviour" preserve="all" />
+    <type fullname="UnityEngine.Camera" preserve="all" />
     <type fullname="UnityEngine.Color" preserve="all" />
+    <type fullname="UnityEngine.ColorUtility" preserve="all" />
     <type fullname="UnityEngine.Component" preserve="all" />
     <type fullname="UnityEngine.Coroutine" preserve="all" />
     <type fullname="UnityEngine.Debug" preserve="all" />
     <type fullname="UnityEngine.DisallowMultipleComponent" preserve="all" />
     <type fullname="UnityEngine.Events.UnityAction" preserve="all" />
     <type fullname="UnityEngine.Events.UnityEvent" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityEventBase" preserve="all" />
     <type fullname="UnityEngine.ExecuteAlways" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.Gizmos" preserve="all" />
     <type fullname="UnityEngine.HeaderAttribute" preserve="all" />
     <type fullname="UnityEngine.HideInInspector" preserve="all" />
+    <type fullname="UnityEngine.LayerMask" preserve="all" />
     <type fullname="UnityEngine.Mathf" preserve="all" />
     <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
     <type fullname="UnityEngine.Object" preserve="all" />
@@ -143,7 +172,25 @@
     <type fullname="UnityEngine.UI.Button" preserve="all" />
     <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="all" />
     <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.ContentSizeFitter" preserve="all" />
+    <type fullname="UnityEngine.UI.Dropdown" preserve="all" />
+    <type fullname="UnityEngine.UI.Graphic" preserve="all" />
     <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup/Axis" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup/Constraint" preserve="all" />
+    <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.InputField" preserve="all" />
+    <type fullname="UnityEngine.UI.LayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.RawImage" preserve="all" />
+    <type fullname="UnityEngine.UI.Scrollbar" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
+    <type fullname="UnityEngine.UI.Slider" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+    <type fullname="UnityEngine.UI.Toggle" preserve="all" />
+    <type fullname="UnityEngine.UI.ToggleGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UIModule">
     <type fullname="UnityEngine.Canvas" preserve="all" />
@@ -153,7 +200,6 @@
     <type fullname="UnityEngine.Networking.UnityWebRequest" preserve="all" />
     <type fullname="UnityEngine.Networking.UnityWebRequest/Result" preserve="all" />
     <type fullname="UnityEngine.Networking.UnityWebRequestAsyncOperation" preserve="all" />
-    <type fullname="UnityEngine.WWWForm" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UnityWebRequestWWWModule">
     <type fullname="UnityEngine.WWW" preserve="all" />
@@ -163,13 +209,17 @@
     <type fullname="WeChatWASM.WXBase" preserve="all" />
   </assembly>
   <assembly fullname="wx-runtime">
+    <type fullname="WeChatWASM.GeneralCallbackResult" preserve="all" />
+    <type fullname="WeChatWASM.LoginOption" preserve="all" />
     <type fullname="WeChatWASM.LoginSuccessCallbackResult" preserve="all" />
+    <type fullname="WeChatWASM.ShowToastOption" preserve="all" />
     <type fullname="WeChatWASM.SystemInfo" preserve="all" />
     <type fullname="WeChatWASM.WXADErrorResponse" preserve="all" />
     <type fullname="WeChatWASM.WXBaseAd" preserve="all" />
     <type fullname="WeChatWASM.WXCreateRewardedVideoAdParam" preserve="all" />
     <type fullname="WeChatWASM.WXRewardedVideoAd" preserve="all" />
     <type fullname="WeChatWASM.WXRewardedVideoAdOnCloseResponse" preserve="all" />
+    <type fullname="WeChatWASM.WXUserInfo" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfoButton" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfoResponse" preserve="all" />
   </assembly>

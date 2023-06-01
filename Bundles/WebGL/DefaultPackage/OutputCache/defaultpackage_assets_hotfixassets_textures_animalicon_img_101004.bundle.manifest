@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1787911546
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bc35e278c0941edcb653cd50f7097fec
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/AnimalIcon/img_101004.png
+Dependencies: []

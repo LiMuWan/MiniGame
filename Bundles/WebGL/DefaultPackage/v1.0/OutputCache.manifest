@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4251273121
+CRC: 2798948108
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -8,28 +8,138 @@ AssetBundleManifest:
         Dependency_0: defaultpackage_unityshaders.bundle
         Dependency_1: defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle
     Info_1:
-      Name: defaultpackage_assets_hotfixassets_scene_main.bundle
-      Dependencies: {}
+      Name: defaultpackage_assets_hotfixassets_scene_level.bundle
+      Dependencies:
+        Dependency_0: defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle
+        Dependency_1: defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle
     Info_2:
-      Name: defaultpackage_assets_settings.bundle
+      Name: defaultpackage_assets_hotfixassets_scene_main.bundle
       Dependencies: {}
     Info_3:
       Name: defaultpackage_assets_hotfixassets_uiwindow_uicanvas.bundle
-      Dependencies: {}
+      Dependencies:
+        Dependency_0: defaultpackage_assets_hotfixassets_textures_uimainwindow_bg.bundle
     Info_4:
+      Name: defaultpackage_assets_hotfixassets_uiwindow_uiiteminfo.bundle
+      Dependencies:
+        Dependency_0: defaultpackage_assets_hotfixassets_uifont.bundle
+        Dependency_1: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle
+        Dependency_2: defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle
+        Dependency_3: defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle
+    Info_5:
       Name: defaultpackage_assets_hotfixassets_uiwindow_uiloginwindow.bundle
       Dependencies:
         Dependency_0: defaultpackage_assets_hotfixassets_uifont.bundle
-    Info_5:
+    Info_6:
       Name: defaultpackage_assets_hotfixassets_uiwindow_uimainwindow.bundle
       Dependencies:
         Dependency_0: defaultpackage_assets_hotfixassets_uifont.bundle
-    Info_6:
-      Name: defaultpackage_unityshaders.bundle
-      Dependencies: {}
+        Dependency_1: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_small.bundle
+        Dependency_2: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle
+        Dependency_3: defaultpackage_assets_hotfixassets_textures_uimainwindow_egg.bundle
+        Dependency_4: defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle
     Info_7:
-      Name: defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle
+      Name: defaultpackage_assets_hotfixassets_textures_animalicon_img_101002.bundle
       Dependencies: {}
     Info_8:
+      Name: defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle
+      Dependencies: {}
+    Info_9:
+      Name: defaultpackage_assets_hotfixassets_textures_animalicon_img_101004.bundle
+      Dependencies: {}
+    Info_10:
+      Name: defaultpackage_assets_hotfixassets_textures_animalicon_img_101005.bundle
+      Dependencies: {}
+    Info_11:
+      Name: defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle
+      Dependencies: {}
+    Info_12:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_alien.bundle
+      Dependencies: {}
+    Info_13:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_bear.bundle
+      Dependencies: {}
+    Info_14:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_big.bundle
+      Dependencies: {}
+    Info_15:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_bird.bundle
+      Dependencies: {}
+    Info_16:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_cat.bundle
+      Dependencies: {}
+    Info_17:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_dog.bundle
+      Dependencies: {}
+    Info_18:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_fish.bundle
+      Dependencies: {}
+    Info_19:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_fooda.bundle
+      Dependencies: {}
+    Info_20:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodb.bundle
+      Dependencies: {}
+    Info_21:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodc.bundle
+      Dependencies: {}
+    Info_22:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodd.bundle
+      Dependencies: {}
+    Info_23:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_nesta.bundle
+      Dependencies: {}
+    Info_24:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_nestb.bundle
+      Dependencies: {}
+    Info_25:
+      Name: defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_small.bundle
+      Dependencies: {}
+    Info_26:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle
+      Dependencies: {}
+    Info_27:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_2.bundle
+      Dependencies: {}
+    Info_28:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_3.bundle
+      Dependencies: {}
+    Info_29:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_4.bundle
+      Dependencies: {}
+    Info_30:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_5.bundle
+      Dependencies: {}
+    Info_31:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_6.bundle
+      Dependencies: {}
+    Info_32:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_7.bundle
+      Dependencies: {}
+    Info_33:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_8.bundle
+      Dependencies: {}
+    Info_34:
+      Name: defaultpackage_assets_hotfixassets_textures_qualityicon_quality_9.bundle
+      Dependencies: {}
+    Info_35:
+      Name: defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle
+      Dependencies: {}
+    Info_36:
+      Name: defaultpackage_assets_hotfixassets_textures_uimainwindow_bg.bundle
+      Dependencies: {}
+    Info_37:
+      Name: defaultpackage_assets_hotfixassets_textures_uimainwindow_egg.bundle
+      Dependencies: {}
+    Info_38:
+      Name: defaultpackage_unityshaders.bundle
+      Dependencies: {}
+    Info_39:
+      Name: defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle
+      Dependencies: {}
+    Info_40:
       Name: defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle
+      Dependencies: {}
+    Info_41:
+      Name: defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle
       Dependencies: {}

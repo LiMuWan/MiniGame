@@ -2,8 +2,8 @@
     "Summary": {
         "YooVersion": "1.4.13",
         "UnityVersion": "2021.3.23f1c1",
-        "BuildDate": "2023/5/23 12:26:34",
-        "BuildSeconds": 20,
+        "BuildDate": "2023/6/1 12:15:12",
+        "BuildSeconds": 26,
         "BuildTarget": 20,
         "BuildPipeline": 0,
         "BuildMode": 0,
@@ -16,14 +16,14 @@
         "CompressOption": 2,
         "DisableWriteTypeTree": false,
         "IgnoreTypeTreeChanges": true,
-        "AssetFileTotalCount": 28,
-        "MainAssetTotalCount": 24,
-        "AllBundleTotalCount": 21,
-        "AllBundleTotalSize": 7498845,
+        "AssetFileTotalCount": 85,
+        "MainAssetTotalCount": 59,
+        "AllBundleTotalCount": 57,
+        "AllBundleTotalSize": 10883650,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0,
-        "RawBundleTotalCount": 12,
-        "RawBundleTotalSize": 3304595
+        "RawBundleTotalCount": 15,
+        "RawBundleTotalSize": 3898850
     },
     "AssetInfos": [
         {
@@ -42,7 +42,7 @@
             "AssetGUID": "dbaf8e4b6e95a7c41a53964321b36f0f",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
-            "MainBundleSize": 76288,
+            "MainBundleSize": 108544,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -52,7 +52,7 @@
             "AssetGUID": "cd58b655f1a877d46b3dbb9918c4391b",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_main_runtime_dll_bytes.rawfile",
-            "MainBundleSize": 62976,
+            "MainBundleSize": 58368,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -62,7 +62,7 @@
             "AssetGUID": "075e5085ce1a3a04594878b51a713e4f",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
-            "MainBundleSize": 2289152,
+            "MainBundleSize": 2391040,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -72,7 +72,7 @@
             "AssetGUID": "c4e1c000cfcc9c54b99a2fe094cc75a7",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
-            "MainBundleSize": 47104,
+            "MainBundleSize": 448512,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -82,7 +82,7 @@
             "AssetGUID": "e95093ab9eff79b46a1599312220cba0",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_uniframework_singleton_dll_bytes.rawfile",
-            "MainBundleSize": 7680,
+            "MainBundleSize": 8704,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -102,7 +102,7 @@
             "AssetGUID": "35d7730e50b8a9a47a17159a71a8ed97",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_codes_unityengine_coremodule_dll_bytes.rawfile",
-            "MainBundleSize": 335360,
+            "MainBundleSize": 393728,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -112,7 +112,27 @@
             "AssetGUID": "54010fbc9bb9e2548bf21b789e1f88be",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
-            "MainBundleSize": 2505721,
+            "MainBundleSize": 2642096,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosongEn",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+            "AssetGUID": "4021a6757188fd641bfefb75262b413c",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2642096,
             "DependBundles": [
                 "defaultpackage_unityshaders.bundle",
                 "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
@@ -122,6 +142,124 @@
                 "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
                 "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosongOutline",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongOutline.mat",
+            "AssetGUID": "ca39b008b60835342aa9240260d95509",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2642096,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosongOutlineItemInfo",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo.mat",
+            "AssetGUID": "dcf9e2b1a6b2bb34fb0d62fb104a1d92",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2642096,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosongOutlineItemInfo2",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo2.mat",
+            "AssetGUID": "c192ecead0c87bc4cbaacb668ed00965",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2642096,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosongOutlineItemInfo3",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo3.mat",
+            "AssetGUID": "d76b8d9e4aa3a15439aa442a8dec39cc",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2642096,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "zhuyanbosongPun",
+            "AssetPath": "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+            "AssetGUID": "0581da289fbc4b64d9d02a1e9e1568ac",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
+            "MainBundleSize": 2642096,
+            "DependBundles": [
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+            ],
+            "DependAssets": [
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "Address": "Level",
+            "AssetPath": "Assets/HotfixAssets/Scene/Level.unity",
+            "AssetGUID": "a022fa341f650e646a4f5c9313da1e8c",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_scene_level.bundle",
+            "MainBundleSize": 68755,
+            "DependBundles": [
+                "defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle",
+                "defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/Textures/Battle/battle_bg.png",
+                "Assets/HotfixAssets/Textures/AnimalIcon/img_101003.png"
             ]
         },
         {
@@ -135,118 +273,72 @@
             "DependAssets": []
         },
         {
-            "Address": "SampleSceneProfile",
-            "AssetPath": "Assets/Settings/SampleSceneProfile.asset",
-            "AssetGUID": "a6560a915ef98420e9faacc1c7438823",
+            "Address": "cfg_item",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_item.bytes",
+            "AssetGUID": "c4b1b26d3a405f44ea9c49f70b4beee3",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_item_bytes.rawfile",
+            "MainBundleSize": 2797,
             "DependBundles": [],
             "DependAssets": []
         },
         {
-            "Address": "URP-Balanced-Renderer",
-            "AssetPath": "Assets/Settings/URP-Balanced-Renderer.asset",
-            "AssetGUID": "e634585d5c4544dd297acaee93dc2beb",
+            "Address": "cfg_itembaseproperty",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_itembaseproperty.bytes",
+            "AssetGUID": "69a7fde9dd704fe408715e12f03f4274",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_itembaseproperty_bytes.rawfile",
+            "MainBundleSize": 5,
             "DependBundles": [],
             "DependAssets": []
         },
         {
-            "Address": "URP-Balanced",
-            "AssetPath": "Assets/Settings/URP-Balanced.asset",
-            "AssetGUID": "e1260c1148f6143b28bae5ace5e9c5d1",
+            "Address": "cfg_itemquality",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_itemquality.bytes",
+            "AssetGUID": "6a68fb57ddf28f248863d68929fc7e3d",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
-            "DependBundles": [],
-            "DependAssets": [
-                "Assets/Settings/URP-Balanced-Renderer.asset"
-            ]
-        },
-        {
-            "Address": "URP-HighFidelity-Renderer",
-            "AssetPath": "Assets/Settings/URP-HighFidelity-Renderer.asset",
-            "AssetGUID": "c40be3174f62c4acf8c1216858c64956",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_itemquality_bytes.rawfile",
+            "MainBundleSize": 298,
             "DependBundles": [],
             "DependAssets": []
         },
         {
-            "Address": "URP-HighFidelity",
-            "AssetPath": "Assets/Settings/URP-HighFidelity.asset",
-            "AssetGUID": "7b7fd9122c28c4d15b667c7040e3b3fd",
+            "Address": "cfg_itemtype",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_itemtype.bytes",
+            "AssetGUID": "3fc12d97b8137a547b1d253dd6ddfcad",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
-            "DependBundles": [],
-            "DependAssets": [
-                "Assets/Settings/URP-HighFidelity-Renderer.asset"
-            ]
-        },
-        {
-            "Address": "URP-Performant-Renderer",
-            "AssetPath": "Assets/Settings/URP-Performant-Renderer.asset",
-            "AssetGUID": "707360a9c581a4bd7aa53bfeb1429f71",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_itemtype_bytes.rawfile",
+            "MainBundleSize": 407,
             "DependBundles": [],
             "DependAssets": []
         },
         {
-            "Address": "URP-Performant",
-            "AssetPath": "Assets/Settings/URP-Performant.asset",
-            "AssetGUID": "d0e2fc18fe036412f8223b3b3d9ad574",
+            "Address": "cfg_playerlevelup",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_playerlevelup.bytes",
+            "AssetGUID": "d97b034bf5426bc43a19a0a0abc29d69",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_settings.bundle",
-            "MainBundleSize": 1817,
-            "DependBundles": [],
-            "DependAssets": [
-                "Assets/Settings/URP-Performant-Renderer.asset"
-            ]
-        },
-        {
-            "Address": "battle_tbbuff",
-            "AssetPath": "Assets/HotfixAssets/Config/battle_tbbuff.bytes",
-            "AssetGUID": "0eeb29a186c4ed444a1808d3670f000f",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_hotfixassets_config_battle_tbbuff_bytes.rawfile",
-            "MainBundleSize": 41,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_playerlevelup_bytes.rawfile",
+            "MainBundleSize": 39,
             "DependBundles": [],
             "DependAssets": []
         },
         {
-            "Address": "battle_tbbuffattr",
-            "AssetPath": "Assets/HotfixAssets/Config/battle_tbbuffattr.bytes",
-            "AssetGUID": "3cc7aa2c39ed01740a57a783587d98ba",
+            "Address": "cfg_task",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_task.bytes",
+            "AssetGUID": "3eb125e7f7119dd449a3dcc6a7ee2062",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_hotfixassets_config_battle_tbbuffattr_bytes.rawfile",
-            "MainBundleSize": 47,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_task_bytes.rawfile",
+            "MainBundleSize": 854,
             "DependBundles": [],
             "DependAssets": []
         },
         {
-            "Address": "battle_tbskill",
-            "AssetPath": "Assets/HotfixAssets/Config/battle_tbskill.bytes",
-            "AssetGUID": "f122490fe92bebb498d1cc8e6d308667",
+            "Address": "cfg_treasurechest",
+            "AssetPath": "Assets/HotfixAssets/Config/cfg_treasurechest.bytes",
+            "AssetGUID": "1ef624e9213455244a2f6a8671623267",
             "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_hotfixassets_config_battle_tbskill_bytes.rawfile",
-            "MainBundleSize": 121,
-            "DependBundles": [],
-            "DependAssets": []
-        },
-        {
-            "Address": "item_tbitem",
-            "AssetPath": "Assets/HotfixAssets/Config/item_tbitem.bytes",
-            "AssetGUID": "533f752c20b63b445ae2bef3732f8e1b",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_hotfixassets_config_item_tbitem_bytes.rawfile",
-            "MainBundleSize": 450,
+            "MainBundleName": "defaultpackage_assets_hotfixassets_config_cfg_treasurechest_bytes.rawfile",
+            "MainBundleSize": 178,
             "DependBundles": [],
             "DependAssets": []
         },
@@ -256,9 +348,50 @@
             "AssetGUID": "374ba377a2ef2f442a1ee0b888c8e6f6",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_uiwindow_uicanvas.bundle",
-            "MainBundleSize": 5192,
-            "DependBundles": [],
-            "DependAssets": []
+            "MainBundleSize": 6260,
+            "DependBundles": [
+                "defaultpackage_assets_hotfixassets_textures_uimainwindow_bg.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/Textures/UIMainWindow/bg.png"
+            ]
+        },
+        {
+            "Address": "UIItemInfo",
+            "AssetPath": "Assets/HotfixAssets/UIWindow/UIItemInfo.prefab",
+            "AssetGUID": "4bf05f452b0aa0a4da5368f3f07b34e7",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_uiwindow_uiiteminfo.bundle",
+            "MainBundleSize": 47043,
+            "DependBundles": [
+                "defaultpackage_assets_hotfixassets_uifont.bundle",
+                "defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle",
+                "defaultpackage_unityshaders.bundle",
+                "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle",
+                "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle",
+                "defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle"
+            ],
+            "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/HotfixAssets/Sprites/UICommon/animal_slot.png",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/icon_female.png",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo.mat",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/frame_bg.png",
+                "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/btn_sell.png",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/btn_get.png",
+                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo2.mat",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo3.mat",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/arrow_up.png",
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_1.png",
+                "Assets/HotfixAssets/Textures/UIItemInfo/blur_bg.png"
+            ]
         },
         {
             "Address": "UILoginWindow",
@@ -268,15 +401,17 @@
             "MainBundleName": "defaultpackage_assets_hotfixassets_uiwindow_uiloginwindow.bundle",
             "MainBundleSize": 12565,
             "DependBundles": [
-                "defaultpackage_unityshaders.bundle",
                 "defaultpackage_assets_hotfixassets_uifont.bundle",
+                "defaultpackage_unityshaders.bundle",
                 "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
                 "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
             ],
             "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
                 "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
                 "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
                 "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
             ]
@@ -287,28 +422,365 @@
             "AssetGUID": "2619b56faccc2f64fb0e45a5c517e669",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_hotfixassets_uiwindow_uimainwindow.bundle",
-            "MainBundleSize": 7213,
+            "MainBundleSize": 107659,
             "DependBundles": [
-                "defaultpackage_unityshaders.bundle",
                 "defaultpackage_assets_hotfixassets_uifont.bundle",
+                "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_small.bundle",
+                "defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle",
+                "defaultpackage_unityshaders.bundle",
                 "defaultpackage_share_packages_com_unity_textmeshpro_editor resources_gizmos.bundle",
-                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle"
+                "defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle",
+                "defaultpackage_assets_hotfixassets_textures_uimainwindow_egg.bundle",
+                "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle"
             ],
             "DependAssets": [
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset",
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_small.png",
+                "Assets/HotfixAssets/Sprites/UICommon/animal_slot.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/title_star.png",
                 "Assets/GameArt/Shader/TextMeshPro/Shaders/TMP_SDF.shader",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutline.mat",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/curency_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/head_bg.png",
                 "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
-                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/btn_eggLv.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/icn_coin.png",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/food_slot.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/nest_slot.png",
                 "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd",
-                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+                "Assets/HotfixAssets/Sprites/UIMainWindow/exp_bar_gague.png",
+                "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/btn_menu.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/task_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/bag_bg.png",
+                "Assets/HotfixAssets/Textures/UIMainWindow/egg.png",
+                "Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd",
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_1.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/icon_diamond.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/title_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/icon_egg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/exp_bar_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/btn_add.png"
             ]
+        },
+        {
+            "Address": "img_101002",
+            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101002.png",
+            "AssetGUID": "a4c9782e98d96b9498fd87a57e5d2419",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101002.bundle",
+            "MainBundleSize": 34122,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "img_101003",
+            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101003.png",
+            "AssetGUID": "9bc450060447d724f87358027346143a",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle",
+            "MainBundleSize": 13460,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "img_101004",
+            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101004.png",
+            "AssetGUID": "9b003fbebc93a1a409b68bacd141792f",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101004.bundle",
+            "MainBundleSize": 44273,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "img_101005",
+            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101005.png",
+            "AssetGUID": "a25daed307f85b7458ae8e244fb555bb",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101005.bundle",
+            "MainBundleSize": 32819,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "battle_bg",
+            "AssetPath": "Assets/HotfixAssets/Textures/Battle/battle_bg.png",
+            "AssetGUID": "7d5b8ccd056813a479d042b0e538a822",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle",
+            "MainBundleSize": 1656765,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_alien",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_alien.png",
+            "AssetGUID": "30d151b09382e704797def775f8de8bd",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_alien.bundle",
+            "MainBundleSize": 6184,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_bear",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_bear.png",
+            "AssetGUID": "bd98309ff922e2a409ff0f29787305bc",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_bear.bundle",
+            "MainBundleSize": 4540,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_big",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_big.png",
+            "AssetGUID": "6a6bda9034750ac4da41a005d1b5ff9d",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_big.bundle",
+            "MainBundleSize": 5395,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_bird",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_bird.png",
+            "AssetGUID": "6fdd1fa655cebdf4882f804684a78ad3",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_bird.bundle",
+            "MainBundleSize": 5198,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_cat",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_cat.png",
+            "AssetGUID": "cfc3c1f8bbefbc54fa11831e8d17e74b",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_cat.bundle",
+            "MainBundleSize": 5297,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_dog",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_dog.png",
+            "AssetGUID": "9aceb026e31f92a4d8ec2878762f2964",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_dog.bundle",
+            "MainBundleSize": 4399,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_fish",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_fish.png",
+            "AssetGUID": "9eee13cbf06f8564399c3c8782322d97",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_fish.bundle",
+            "MainBundleSize": 5433,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_foodA",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodA.png",
+            "AssetGUID": "c68e891d533011f4cb5fcb326c97dab7",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_fooda.bundle",
+            "MainBundleSize": 5136,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_foodB",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodB.png",
+            "AssetGUID": "ea5a2c173b5464f42a790e9b1f13dc15",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodb.bundle",
+            "MainBundleSize": 6681,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_foodC",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodC.png",
+            "AssetGUID": "1226506568c0a0845a301b93c1be3c61",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodc.bundle",
+            "MainBundleSize": 3408,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_foodD",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodD.png",
+            "AssetGUID": "6c32799c7f62f40429a752edb7a2960b",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodd.bundle",
+            "MainBundleSize": 3108,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_nestA",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestA.png",
+            "AssetGUID": "27eda9eeccac110458c2f1700bb8e470",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_nesta.bundle",
+            "MainBundleSize": 4348,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_nestB",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestB.png",
+            "AssetGUID": "7df9612ae2cfe3a4db27185b97eec83d",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_nestb.bundle",
+            "MainBundleSize": 5989,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "icon_type_small",
+            "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_small.png",
+            "AssetGUID": "7c5075011a8d4fe43b425e14cdb4476e",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_small.bundle",
+            "MainBundleSize": 5834,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_1",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_1.png",
+            "AssetGUID": "cea426673037dba46af831dc5e20eb38",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle",
+            "MainBundleSize": 12017,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_2",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_2.png",
+            "AssetGUID": "6f14d4776275efa459f8ce545bb0cdeb",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_2.bundle",
+            "MainBundleSize": 9965,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_3",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_3.png",
+            "AssetGUID": "d09ccafa6314e0842b21420267bc0307",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_3.bundle",
+            "MainBundleSize": 9684,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_4",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_4.png",
+            "AssetGUID": "28fb4d522f7951f4ca289954ba5fb274",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_4.bundle",
+            "MainBundleSize": 9917,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_5",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_5.png",
+            "AssetGUID": "e1bf6b46ccbd8c643a7d1a3878d6da79",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_5.bundle",
+            "MainBundleSize": 10329,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_6",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_6.png",
+            "AssetGUID": "28203422428b4ad449c84537b3de2ecf",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_6.bundle",
+            "MainBundleSize": 9812,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_7",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_7.png",
+            "AssetGUID": "fa2906509d984834186409c62fee7a7e",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_7.bundle",
+            "MainBundleSize": 10215,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_8",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_8.png",
+            "AssetGUID": "4bd9e42d12ead564284367b92ff3739c",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_8.bundle",
+            "MainBundleSize": 10057,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "quality_9",
+            "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_9.png",
+            "AssetGUID": "fd6b866e38c7abf4e8b1228376af8860",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_9.bundle",
+            "MainBundleSize": 8128,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "blur_bg",
+            "AssetPath": "Assets/HotfixAssets/Textures/UIItemInfo/blur_bg.png",
+            "AssetGUID": "d60058e80277fb54bb76db5c603236a6",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle",
+            "MainBundleSize": 221327,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "bg",
+            "AssetPath": "Assets/HotfixAssets/Textures/UIMainWindow/bg.png",
+            "AssetGUID": "fb94802b422332b49997d77a0fc6d412",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_uimainwindow_bg.bundle",
+            "MainBundleSize": 147606,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "egg",
+            "AssetPath": "Assets/HotfixAssets/Textures/UIMainWindow/egg.png",
+            "AssetGUID": "2c67bf36c0b58f340a7b60b11f641c6b",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_hotfixassets_textures_uimainwindow_egg.bundle",
+            "MainBundleSize": 120538,
+            "DependBundles": [],
+            "DependAssets": []
         }
     ],
     "BundleInfos": [
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_assembly-csharp_dll_bytes.rawfile",
-            "FileName": "9caa99f37a6e230117f4403718740811.rawfile",
-            "FileHash": "9caa99f37a6e230117f4403718740811",
-            "FileCRC": "7c800d83",
+            "FileName": "89738748480d0861d99d66772b1b82eb.rawfile",
+            "FileHash": "89738748480d0861d99d66772b1b82eb",
+            "FileCRC": "260963a8",
             "FileSize": 3584,
             "IsRawFile": true,
             "LoadMethod": 0,
@@ -320,10 +792,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_hotfix_dll_bytes.rawfile",
-            "FileName": "09137d83882dd41e74f87f66f939f269.rawfile",
-            "FileHash": "09137d83882dd41e74f87f66f939f269",
-            "FileCRC": "81bcfcf4",
-            "FileSize": 76288,
+            "FileName": "ad5359b39d51765c189245fb07feb255.rawfile",
+            "FileHash": "ad5359b39d51765c189245fb07feb255",
+            "FileCRC": "7f966472",
+            "FileSize": 108544,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -334,10 +806,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_main_runtime_dll_bytes.rawfile",
-            "FileName": "ba4ea232c3a79b68a851c96fdfc117a0.rawfile",
-            "FileHash": "ba4ea232c3a79b68a851c96fdfc117a0",
-            "FileCRC": "78794862",
-            "FileSize": 62976,
+            "FileName": "f71f9625b49d2db37a347bbef83040ab.rawfile",
+            "FileHash": "f71f9625b49d2db37a347bbef83040ab",
+            "FileCRC": "c0773daa",
+            "FileSize": 58368,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -348,10 +820,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_mscorlib_dll_bytes.rawfile",
-            "FileName": "53b79b43ba4dca1d8b47ab637a059989.rawfile",
-            "FileHash": "53b79b43ba4dca1d8b47ab637a059989",
-            "FileCRC": "f97b5360",
-            "FileSize": 2289152,
+            "FileName": "c84e44740fa45bef0bf218af9ac7187c.rawfile",
+            "FileHash": "c84e44740fa45bef0bf218af9ac7187c",
+            "FileCRC": "20cc9244",
+            "FileSize": 2391040,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -362,10 +834,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_system_core_dll_bytes.rawfile",
-            "FileName": "01a76a55d81a63d61a4acd57d24aeea4.rawfile",
-            "FileHash": "01a76a55d81a63d61a4acd57d24aeea4",
-            "FileCRC": "caa0f088",
-            "FileSize": 47104,
+            "FileName": "fea4b48edac27929198deb9a0d6f9056.rawfile",
+            "FileHash": "fea4b48edac27929198deb9a0d6f9056",
+            "FileCRC": "247bd7a4",
+            "FileSize": 448512,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -376,10 +848,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_uniframework_singleton_dll_bytes.rawfile",
-            "FileName": "d12f27723fc132e22a017dabcc57acd3.rawfile",
-            "FileHash": "d12f27723fc132e22a017dabcc57acd3",
-            "FileCRC": "de7bb710",
-            "FileSize": 7680,
+            "FileName": "7f1aa8cc93968824ffc7f10ce435f59b.rawfile",
+            "FileHash": "7f1aa8cc93968824ffc7f10ce435f59b",
+            "FileCRC": "1bf68563",
+            "FileSize": 8704,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -404,10 +876,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_codes_unityengine_coremodule_dll_bytes.rawfile",
-            "FileName": "63cb4d6f90b43878bd189fea86230c7b.rawfile",
-            "FileHash": "63cb4d6f90b43878bd189fea86230c7b",
-            "FileCRC": "1fc1a84b",
-            "FileSize": 335360,
+            "FileName": "d0851076331ffa634f76c1efe9db6f86.rawfile",
+            "FileHash": "d0851076331ffa634f76c1efe9db6f86",
+            "FileCRC": "b9a5ff7b",
+            "FileSize": 393728,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
@@ -418,19 +890,40 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uifont.bundle",
-            "FileName": "2a2196f1f6197823470ffa78d6649d70.bundle",
-            "FileHash": "2a2196f1f6197823470ffa78d6649d70",
-            "FileCRC": "a5227279",
-            "FileSize": 2505721,
+            "FileName": "058962a1e6ae78ca2e04af9cd2f98e86.bundle",
+            "FileHash": "058962a1e6ae78ca2e04af9cd2f98e86",
+            "FileCRC": "2b5af129",
+            "FileSize": 2642096,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [
-                16,
-                17
+                19,
+                20,
+                21
             ],
             "AllBuiltinAssets": [
-                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset"
+                "Assets/HotfixAssets/UIFont/zhuyanbosong.asset",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutline.mat",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo.mat",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo2.mat",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo3.mat",
+                "Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_scene_level.bundle",
+            "FileName": "552b0156303d842502e42f1b2da9df2f.bundle",
+            "FileHash": "552b0156303d842502e42f1b2da9df2f",
+            "FileCRC": "09b0ae78",
+            "FileSize": 68755,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Scene/Level.unity"
             ]
         },
         {
@@ -448,93 +941,134 @@
             ]
         },
         {
-            "BundleName": "defaultpackage_assets_settings.bundle",
-            "FileName": "fe00778e7485d9e3f91a0167b12dfa8d.bundle",
-            "FileHash": "fe00778e7485d9e3f91a0167b12dfa8d",
-            "FileCRC": "1222bfef",
-            "FileSize": 1817,
-            "IsRawFile": false,
-            "LoadMethod": 0,
-            "Tags": [],
-            "ReferenceIDs": [],
-            "AllBuiltinAssets": [
-                "Assets/Settings/SampleSceneProfile.asset",
-                "Assets/Settings/URP-Balanced-Renderer.asset",
-                "Assets/Settings/URP-Balanced.asset",
-                "Assets/Settings/URP-HighFidelity-Renderer.asset",
-                "Assets/Settings/URP-HighFidelity.asset",
-                "Assets/Settings/URP-Performant-Renderer.asset",
-                "Assets/Settings/URP-Performant.asset"
-            ]
-        },
-        {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_battle_tbbuff_bytes.rawfile",
-            "FileName": "2b584436e9f197be1f920988419b9d39.rawfile",
-            "FileHash": "2b584436e9f197be1f920988419b9d39",
-            "FileCRC": "870e5c90",
-            "FileSize": 41,
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_item_bytes.rawfile",
+            "FileName": "7d50ad9c4e302df977f37cf37ada3579.rawfile",
+            "FileHash": "7d50ad9c4e302df977f37cf37ada3579",
+            "FileCRC": "32334d57",
+            "FileSize": 2797,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [],
             "AllBuiltinAssets": [
-                "Assets/HotfixAssets/Config/battle_tbbuff.bytes"
+                "Assets/HotfixAssets/Config/cfg_item.bytes"
             ]
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_battle_tbbuffattr_bytes.rawfile",
-            "FileName": "3a6a3235db12f2c60aa901f616e236be.rawfile",
-            "FileHash": "3a6a3235db12f2c60aa901f616e236be",
-            "FileCRC": "13486f83",
-            "FileSize": 47,
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_itembaseproperty_bytes.rawfile",
+            "FileName": "b59f07f71976ee7eda223de370af17d0.rawfile",
+            "FileHash": "b59f07f71976ee7eda223de370af17d0",
+            "FileCRC": "1183055b",
+            "FileSize": 5,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [],
             "AllBuiltinAssets": [
-                "Assets/HotfixAssets/Config/battle_tbbuffattr.bytes"
+                "Assets/HotfixAssets/Config/cfg_itembaseproperty.bytes"
             ]
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_battle_tbskill_bytes.rawfile",
-            "FileName": "9e6de9ba60a888a4e47f52b3fb45a0d7.rawfile",
-            "FileHash": "9e6de9ba60a888a4e47f52b3fb45a0d7",
-            "FileCRC": "54a955ad",
-            "FileSize": 121,
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_itemquality_bytes.rawfile",
+            "FileName": "1299eabbcf08b582df91034b5f87675e.rawfile",
+            "FileHash": "1299eabbcf08b582df91034b5f87675e",
+            "FileCRC": "7e2adf0b",
+            "FileSize": 298,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [],
             "AllBuiltinAssets": [
-                "Assets/HotfixAssets/Config/battle_tbskill.bytes"
+                "Assets/HotfixAssets/Config/cfg_itemquality.bytes"
             ]
         },
         {
-            "BundleName": "defaultpackage_assets_hotfixassets_config_item_tbitem_bytes.rawfile",
-            "FileName": "b76694975c18bed106a7a5fc1f9810c0.rawfile",
-            "FileHash": "b76694975c18bed106a7a5fc1f9810c0",
-            "FileCRC": "c091e5d8",
-            "FileSize": 450,
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_itemtype_bytes.rawfile",
+            "FileName": "2b7012338d32e8cc2580f94a38d19e5d.rawfile",
+            "FileHash": "2b7012338d32e8cc2580f94a38d19e5d",
+            "FileCRC": "cea69700",
+            "FileSize": 407,
             "IsRawFile": true,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [],
             "AllBuiltinAssets": [
-                "Assets/HotfixAssets/Config/item_tbitem.bytes"
+                "Assets/HotfixAssets/Config/cfg_itemtype.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_playerlevelup_bytes.rawfile",
+            "FileName": "0bff4a75ab038c25235b498ad3cdb344.rawfile",
+            "FileHash": "0bff4a75ab038c25235b498ad3cdb344",
+            "FileCRC": "79910fcc",
+            "FileSize": 39,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Config/cfg_playerlevelup.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_task_bytes.rawfile",
+            "FileName": "cddbf4e01287ef8b33c8b57bf218f433.rawfile",
+            "FileHash": "cddbf4e01287ef8b33c8b57bf218f433",
+            "FileCRC": "30b5c1f7",
+            "FileSize": 854,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Config/cfg_task.bytes"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_config_cfg_treasurechest_bytes.rawfile",
+            "FileName": "4fca53964c8096050c712c3a541b761b.rawfile",
+            "FileHash": "4fca53964c8096050c712c3a541b761b",
+            "FileCRC": "0bd322ed",
+            "FileSize": 178,
+            "IsRawFile": true,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Config/cfg_treasurechest.bytes"
             ]
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uicanvas.bundle",
-            "FileName": "b1db61c4d60dc9c09030f2f8816d80d4.bundle",
-            "FileHash": "b1db61c4d60dc9c09030f2f8816d80d4",
-            "FileCRC": "53201d4e",
-            "FileSize": 5192,
+            "FileName": "618f410964e6bf802d634b18a2c91c38.bundle",
+            "FileHash": "618f410964e6bf802d634b18a2c91c38",
+            "FileCRC": "66727401",
+            "FileSize": 6260,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [],
             "AllBuiltinAssets": [
                 "Assets/HotfixAssets/UIWindow/UICanvas.prefab"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uiiteminfo.bundle",
+            "FileName": "3fe3b6ecf8bf74091c4a6d16ff009d4c.bundle",
+            "FileHash": "3fe3b6ecf8bf74091c4a6d16ff009d4c",
+            "FileCRC": "0f84ea0a",
+            "FileSize": 47043,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/UIWindow/UIItemInfo.prefab",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/icon_female.png",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/frame_bg.png",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/btn_sell.png",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/btn_get.png",
+                "Assets/HotfixAssets/Sprites/UIItemInfo/arrow_up.png"
             ]
         },
         {
@@ -553,16 +1087,481 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uimainwindow.bundle",
-            "FileName": "9ea417da253bec3a3237f94a87109272.bundle",
-            "FileHash": "9ea417da253bec3a3237f94a87109272",
-            "FileCRC": "2b62f7e8",
-            "FileSize": 7213,
+            "FileName": "9ee52c79a27e15cf1a944a449e60dbc7.bundle",
+            "FileHash": "9ee52c79a27e15cf1a944a449e60dbc7",
+            "FileCRC": "afff6e98",
+            "FileSize": 107659,
             "IsRawFile": false,
             "LoadMethod": 0,
             "Tags": [],
             "ReferenceIDs": [],
             "AllBuiltinAssets": [
-                "Assets/HotfixAssets/UIWindow/UIMainWindow.prefab"
+                "Assets/HotfixAssets/UIWindow/UIMainWindow.prefab",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/title_star.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/curency_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/head_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/btn_eggLv.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/icn_coin.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/food_slot.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/nest_slot.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/exp_bar_gague.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/btn_menu.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/task_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/bag_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/icon_diamond.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/title_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/icon_egg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/exp_bar_bg.png",
+                "Assets/HotfixAssets/Sprites/UIMainWindow/btn_add.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101002.bundle",
+            "FileName": "89c839d21db5c6f26b741b82f80c625d.bundle",
+            "FileHash": "89c839d21db5c6f26b741b82f80c625d",
+            "FileCRC": "0f6312dd",
+            "FileSize": 34122,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/AnimalIcon/img_101002.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle",
+            "FileName": "45abb119c2a4c2aafc5cae5fa58abac4.bundle",
+            "FileHash": "45abb119c2a4c2aafc5cae5fa58abac4",
+            "FileCRC": "cdce218d",
+            "FileSize": 13460,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                9
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/AnimalIcon/img_101003.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101004.bundle",
+            "FileName": "7d6c014ee24ecb6acd7f55db6dee78f0.bundle",
+            "FileHash": "7d6c014ee24ecb6acd7f55db6dee78f0",
+            "FileCRC": "e076f65f",
+            "FileSize": 44273,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/AnimalIcon/img_101004.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101005.bundle",
+            "FileName": "adc3a1e23a7da3d67182dfc137b2f59e.bundle",
+            "FileHash": "adc3a1e23a7da3d67182dfc137b2f59e",
+            "FileCRC": "73c8f4f8",
+            "FileSize": 32819,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/AnimalIcon/img_101005.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle",
+            "FileName": "a6ce4b8d2f1eafad4ab0448d31c32728.bundle",
+            "FileHash": "a6ce4b8d2f1eafad4ab0448d31c32728",
+            "FileCRC": "4a3cb682",
+            "FileSize": 1656765,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                9
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/Battle/battle_bg.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_alien.bundle",
+            "FileName": "70145e1085f90a8005576922e7609c57.bundle",
+            "FileHash": "70145e1085f90a8005576922e7609c57",
+            "FileCRC": "5f42d2b6",
+            "FileSize": 6184,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_alien.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_bear.bundle",
+            "FileName": "3d6f850cf8e9ad1b7efe4b023cbefdce.bundle",
+            "FileHash": "3d6f850cf8e9ad1b7efe4b023cbefdce",
+            "FileCRC": "da46ec30",
+            "FileSize": 4540,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_bear.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_big.bundle",
+            "FileName": "700f2199dd87435c0e9d0f6b8f668d69.bundle",
+            "FileHash": "700f2199dd87435c0e9d0f6b8f668d69",
+            "FileCRC": "d81bcbd2",
+            "FileSize": 5395,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_big.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_bird.bundle",
+            "FileName": "ac6dee199f9a59b5952c83a11ef0de4c.bundle",
+            "FileHash": "ac6dee199f9a59b5952c83a11ef0de4c",
+            "FileCRC": "7890bf2a",
+            "FileSize": 5198,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_bird.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_cat.bundle",
+            "FileName": "17517609ffb8bff9a6a47b24d8e65f54.bundle",
+            "FileHash": "17517609ffb8bff9a6a47b24d8e65f54",
+            "FileCRC": "0aa38139",
+            "FileSize": 5297,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_cat.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_dog.bundle",
+            "FileName": "dd8609e3f9b8c82d0911076690b74e73.bundle",
+            "FileHash": "dd8609e3f9b8c82d0911076690b74e73",
+            "FileCRC": "bd54fc4f",
+            "FileSize": 4399,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_dog.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_fish.bundle",
+            "FileName": "845b774c7767323c23aa1b3cfaf1d27c.bundle",
+            "FileHash": "845b774c7767323c23aa1b3cfaf1d27c",
+            "FileCRC": "97d5fe51",
+            "FileSize": 5433,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_fish.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_fooda.bundle",
+            "FileName": "4f924da1295e3016ed3989a0644807ba.bundle",
+            "FileHash": "4f924da1295e3016ed3989a0644807ba",
+            "FileCRC": "0f22c1c7",
+            "FileSize": 5136,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodA.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodb.bundle",
+            "FileName": "1a863e798b47d69c787a8ebf26fae0bc.bundle",
+            "FileHash": "1a863e798b47d69c787a8ebf26fae0bc",
+            "FileCRC": "699d327a",
+            "FileSize": 6681,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodB.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodc.bundle",
+            "FileName": "81c27f87e750c23132a145826ab92152.bundle",
+            "FileHash": "81c27f87e750c23132a145826ab92152",
+            "FileCRC": "be9758fe",
+            "FileSize": 3408,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodC.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_foodd.bundle",
+            "FileName": "5f834953a542498fe8d82fa5d4a38127.bundle",
+            "FileHash": "5f834953a542498fe8d82fa5d4a38127",
+            "FileCRC": "dc02edac",
+            "FileSize": 3108,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodD.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_nesta.bundle",
+            "FileName": "6c018a9c00e4ba4ca16f22a35925dfef.bundle",
+            "FileHash": "6c018a9c00e4ba4ca16f22a35925dfef",
+            "FileCRC": "b1e97326",
+            "FileSize": 4348,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestA.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_nestb.bundle",
+            "FileName": "823709071c9524072349a84c7c048811.bundle",
+            "FileHash": "823709071c9524072349a84c7c048811",
+            "FileCRC": "c59eecb8",
+            "FileSize": 5989,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestB.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_itemtypeicon_icon_type_small.bundle",
+            "FileName": "068c192f2c934b8fb11347ae53e0a922.bundle",
+            "FileHash": "068c192f2c934b8fb11347ae53e0a922",
+            "FileCRC": "de751988",
+            "FileSize": 5834,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                21
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_small.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle",
+            "FileName": "68cb1d6d65c3b098bac8b6041a75e8b5.bundle",
+            "FileHash": "68cb1d6d65c3b098bac8b6041a75e8b5",
+            "FileCRC": "c3dae773",
+            "FileSize": 12017,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                19,
+                21
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_1.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_2.bundle",
+            "FileName": "60e00ecff9ba4b7dc1e4a96a82f492be.bundle",
+            "FileHash": "60e00ecff9ba4b7dc1e4a96a82f492be",
+            "FileCRC": "129d5b2e",
+            "FileSize": 9965,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_2.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_3.bundle",
+            "FileName": "eb8458533e68b34746781dad691e5071.bundle",
+            "FileHash": "eb8458533e68b34746781dad691e5071",
+            "FileCRC": "e0b4d487",
+            "FileSize": 9684,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_3.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_4.bundle",
+            "FileName": "91b784a0dca3f3760d5aee512d241dc7.bundle",
+            "FileHash": "91b784a0dca3f3760d5aee512d241dc7",
+            "FileCRC": "e24be1bb",
+            "FileSize": 9917,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_4.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_5.bundle",
+            "FileName": "0835bca005e3e2dd90486166531af38b.bundle",
+            "FileHash": "0835bca005e3e2dd90486166531af38b",
+            "FileCRC": "7da3e6e0",
+            "FileSize": 10329,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_5.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_6.bundle",
+            "FileName": "cc02ced83f8eb83692830d5520fc0113.bundle",
+            "FileHash": "cc02ced83f8eb83692830d5520fc0113",
+            "FileCRC": "3b28625a",
+            "FileSize": 9812,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_6.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_7.bundle",
+            "FileName": "be797f558edebafa3c4e4ed5fdd69639.bundle",
+            "FileHash": "be797f558edebafa3c4e4ed5fdd69639",
+            "FileCRC": "76ffccfd",
+            "FileSize": 10215,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_7.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_8.bundle",
+            "FileName": "5d4cb9ccdbbbdf01d613e02952fe89c1.bundle",
+            "FileHash": "5d4cb9ccdbbbdf01d613e02952fe89c1",
+            "FileCRC": "f84db032",
+            "FileSize": 10057,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_8.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_qualityicon_quality_9.bundle",
+            "FileName": "16ec24e6a114f235f52eda006e81f13a.bundle",
+            "FileHash": "16ec24e6a114f235f52eda006e81f13a",
+            "FileCRC": "1c13b646",
+            "FileSize": 8128,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/QualityIcon/quality_9.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle",
+            "FileName": "41d7d02bf5be2375fd8b79b0f22dca69.bundle",
+            "FileHash": "41d7d02bf5be2375fd8b79b0f22dca69",
+            "FileCRC": "dd865c37",
+            "FileSize": 221327,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                19
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/UIItemInfo/blur_bg.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_uimainwindow_bg.bundle",
+            "FileName": "e8a65edda9e0d565f82f734b00d5d8c9.bundle",
+            "FileHash": "e8a65edda9e0d565f82f734b00d5d8c9",
+            "FileCRC": "d45de2ac",
+            "FileSize": 147606,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                18
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/UIMainWindow/bg.png"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_textures_uimainwindow_egg.bundle",
+            "FileName": "d35c2ceb027df4d8be41c82d6e842dfc.bundle",
+            "FileHash": "d35c2ceb027df4d8be41c82d6e842dfc",
+            "FileCRC": "4ac6aa19",
+            "FileSize": 120538,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                21
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Textures/UIMainWindow/egg.png"
             ]
         },
         {
@@ -610,6 +1609,23 @@
             ],
             "AllBuiltinAssets": [
                 "Assets/GameArt/UIFont/ZhuYanBoSong/zhuyanbosong.ttf"
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle",
+            "FileName": "1a8bcac32c163a180fb96c68e2d07803.bundle",
+            "FileHash": "1a8bcac32c163a180fb96c68e2d07803",
+            "FileCRC": "850f32d7",
+            "FileSize": 6696,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": [
+                19,
+                21
+            ],
+            "AllBuiltinAssets": [
+                "Assets/HotfixAssets/Sprites/UICommon/animal_slot.png"
             ]
         }
     ]

@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 29658591
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a4ff30e99cba10d7d0897965fcc666d3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/UIMainWindow/bg.png
+Dependencies: []

@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2062564710
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8f2908ecb4798477fd7b2609ee8ff254
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/Battle/battle_bg.png
+Dependencies: []

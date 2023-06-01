@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2481510212
+CRC: 3630964856
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 33f6b8ecc12e52345171cc4cd18d08c6
+    Hash: acbc57885f34cb1c424307d6794cb0c5
   TypeTreeHash:
     serializedVersion: 2
     Hash: c92f7b27467cac68f8fffb0c54e86b07
@@ -41,7 +41,13 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.TextCoreFontEngineModule
   ClassName: UnityEngine.TextCore.GlyphRect
 Assets:
+- Assets/HotfixAssets/UIFont/zhuyanbosongPun.asset
+- Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo.mat
+- Assets/HotfixAssets/UIFont/zhuyanbosongOutline.mat
 - Assets/HotfixAssets/UIFont/zhuyanbosong.asset
+- Assets/HotfixAssets/UIFont/zhuyanbosongEn.asset
+- Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo2.mat
+- Assets/HotfixAssets/UIFont/zhuyanbosongOutlineItemInfo3.mat
 Dependencies:
 - D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_gameart_uifont_zhuyanbosong.bundle
 - D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

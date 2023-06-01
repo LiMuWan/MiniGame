@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2409320771
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4b1ed31734b3b29024e3eb8724bc8943
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/QualityIcon/quality_3.png
+Dependencies: []

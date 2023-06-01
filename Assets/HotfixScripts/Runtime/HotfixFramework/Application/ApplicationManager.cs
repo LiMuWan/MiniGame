@@ -43,7 +43,6 @@ public class ApplicationManager : MonoBehaviour
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         
         //管理类初始化
-        UniSingleton.CreateSingleton<SettingManager>();
         Timer.Init();  //计时器启动
         yield return IenumeratorLaunch();
         ApplicationStatusManager.Init();     //游戏流程状态机初始化
@@ -64,6 +63,7 @@ public class ApplicationManager : MonoBehaviour
         // yield return ConfigLoader.Instance.LoadAllConfigs(OnLoadConfigCompleteCallback);
         UniLogger.Log("ConfigLoader.Instance.LoadAllConfigs");
         yield return UIManager.InitAsync();
+        UniSingleton.StopCoroutine(AppLaunch());
         UniLogger.Log("UI Init");
     }
 

@@ -36,7 +36,7 @@ public class UILoginWindow : UIWindow
 #else
             //编辑器运行测试
             UniSingleton.CreateSingleton<UserDataManager>();
-            UserEventDefine.UserLoginSuccess.SendEventMessage();
+            NetMessageHandler.SendLogin("1");
 #endif
         });
     }

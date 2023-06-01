@@ -5,7 +5,6 @@ using UniFramework.Utility;
 using UnityEngine;
 using YooAsset;
 
-[SettingConfig(Key = "App.Version", Label = "Version", Group = "App")]
 public class Boot : MonoBehaviour
 {
     public EPlayMode PlayMode = EPlayMode.EditorSimulateMode;
@@ -27,7 +26,7 @@ public class Boot : MonoBehaviour
 
         //初始化资源系统
         UniSingleton.CreateSingleton<ResourcesManager>().PlayMode = PlayMode;
-        
+
         //创建补丁管理器  //开始补丁更新流程
         UniSingleton.CreateSingleton<PatchManager>().Run(PlayMode);
     }

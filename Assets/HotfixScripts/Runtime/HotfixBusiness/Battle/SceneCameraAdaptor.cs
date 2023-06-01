@@ -6,7 +6,7 @@ public class SceneCameraAdaptor : MonoBehaviour
 {   
    private const float ReferenceWidth = 1080f;
     private const float ReferenceHeight = 1920f;
-    private const float ReferenceSize = 10f;
+    private const float ReferenceSize = 9.5f;
 
     private float m_aspectRatio; // 相机视口宽高比
     private Camera m_camera;

@@ -3,7 +3,6 @@ using UniFramework.Singleton;
 using UniFramework.Utility;
 using UnityEngine.Networking;
 
-[SettingConfig(Key = "TestWebServerUrl",Value = "192.168.1.21:8082",Label = "测试服网址：")]
 public class UnityWebRequestTool 
 {
     /// <summary>
@@ -18,6 +17,7 @@ public class UnityWebRequestTool
 
     static IEnumerator AsyGetCo(string uri, CallBack<string,string> callBack)
     {
+        UniLogger.Log("Get Http Post ->" + uri);
         UnityWebRequest webRequest = UnityWebRequest.Get(uri);
         webRequest.method = UnityWebRequest.kHttpVerbGET;
         webRequest.timeout = 15;

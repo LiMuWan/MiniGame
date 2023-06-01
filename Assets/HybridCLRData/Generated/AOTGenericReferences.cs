@@ -16,7 +16,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 
 	// {{ AOT generic types
 	// System.Action<object>
-	// System.Action<int>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<int,object>
 	// System.Collections.Generic.HashSet<object>

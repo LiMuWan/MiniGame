@@ -206,22 +206,14 @@
   </assembly>
   <assembly fullname="Wx">
     <type fullname="WeChatWASM.WX" preserve="all" />
-    <type fullname="WeChatWASM.WXBase" preserve="all" />
   </assembly>
   <assembly fullname="wx-runtime">
     <type fullname="WeChatWASM.GeneralCallbackResult" preserve="all" />
     <type fullname="WeChatWASM.LoginOption" preserve="all" />
     <type fullname="WeChatWASM.LoginSuccessCallbackResult" preserve="all" />
     <type fullname="WeChatWASM.ShowToastOption" preserve="all" />
-    <type fullname="WeChatWASM.SystemInfo" preserve="all" />
-    <type fullname="WeChatWASM.WXADErrorResponse" preserve="all" />
-    <type fullname="WeChatWASM.WXBaseAd" preserve="all" />
-    <type fullname="WeChatWASM.WXCreateRewardedVideoAdParam" preserve="all" />
     <type fullname="WeChatWASM.WXRewardedVideoAd" preserve="all" />
-    <type fullname="WeChatWASM.WXRewardedVideoAdOnCloseResponse" preserve="all" />
-    <type fullname="WeChatWASM.WXUserInfo" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfoButton" preserve="all" />
-    <type fullname="WeChatWASM.WXUserInfoResponse" preserve="all" />
   </assembly>
   <assembly fullname="YooAsset">
     <type fullname="YooAsset.AssetOperationHandle" preserve="all" />

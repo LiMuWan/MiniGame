@@ -15,7 +15,7 @@ public class LoginStatus : IApplicationStatus
     public override void OnEnterStatus()
     {
         ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
         WX.InitSDK((code) =>
         {
 

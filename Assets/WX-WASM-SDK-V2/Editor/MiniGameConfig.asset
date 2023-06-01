@@ -44,8 +44,8 @@ MonoBehaviour:
     UseMiniGameChat: 0
     PreloadWXFont: 0
   CompileOptions:
-    DevelopBuild: 0
-    AutoProfile: 0
+    DevelopBuild: 1
+    AutoProfile: 1
     ScriptOnly: 0
     profilingFuncs: 0
     Webgl2: 0

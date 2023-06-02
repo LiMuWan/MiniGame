@@ -34,7 +34,7 @@ public static class NetMessageHandler
     private static void OnSendOpenTreasureBox(string error, string jsonData)
     {
        OnCallback(error,jsonData);
-       UserEventDefine.UserLoginSuccess.SendEventMessage();
+       UserEventDefine.UserOpenTreasureBox.SendEventMessage();
     }
 
     /// <summary>

@@ -35,7 +35,6 @@ public class UILoginWindow : UIWindow
             WX.Login(loginOption);
 #else
             //编辑器运行测试
-            UniSingleton.CreateSingleton<UserDataManager>();
             NetMessageHandler.SendLogin("1");
 #endif
         });

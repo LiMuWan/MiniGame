@@ -24,7 +24,7 @@ namespace Hotfix.EventDefine
         /// </summary>
         public class UserOpenTreasureBox:IEventMessage
         {
-            public static void SendEventMessage(int coin)
+            public static void SendEventMessage()
             {
                 var msg = new UserOpenTreasureBox();
                 UniEvent.SendMessage(msg);

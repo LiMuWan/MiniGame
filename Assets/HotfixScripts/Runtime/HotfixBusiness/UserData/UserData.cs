@@ -4,6 +4,7 @@ using UnityEngine;
 using UniFramework.Singleton;
 using Hotfix.EventDefine;
 using System;
+using UniFramework.Utility;
 
 public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 {
@@ -220,6 +221,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 
     public void InitOrRefresh(JPlayerData playerData)
     {
+         UniLogger.Log($"playerData = {playerData}");
         PlayerId = playerData.playerId;
         OpenId = playerData.openId;
         CreateTime = playerData.createTime;
@@ -238,7 +240,8 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 
     public void InitEquipData(JEquipDataList equipDataList)
     {
-        if ((equipDataList == null || equipDataList.equipList == null) && animalDatas == null)
+        UniLogger.Log($"equipDataList = {equipDataList}");
+        if ((equipDataList == null || equipDataList.equipList == null || equipDataList.equipList.Length == 0) && animalDatas == null)
         {
             animalDatas = new List<ItemData>(16);
             //动物数据
@@ -259,18 +262,18 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
             animalDatas.Add(new ItemData() { Type = 8, Sex = 1 });
             animalDatas.Add(new ItemData() { Type = 8, Sex = 2 });
             //食物数据
+            foodDatas = new List<ItemData>(4);
             foodDatas.Add(new ItemData() { Type = 9 });
             foodDatas.Add(new ItemData() { Type = 9 });
             foodDatas.Add(new ItemData() { Type = 9 });
             foodDatas.Add(new ItemData() { Type = 9 });
             //爱巢数据
+            homeDatas = new List<ItemData>(2);
             homeDatas.Add(new ItemData() { Type = 10 });
             homeDatas.Add(new ItemData() { Type = 10 });
         }
         else
         {
-
-
             for (int i = 0; i < EquipList.equipList.Length; i++)
             {
                 InitItemData(EquipList.equipList[i]);

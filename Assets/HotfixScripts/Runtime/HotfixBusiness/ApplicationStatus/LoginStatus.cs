@@ -15,7 +15,7 @@ public class LoginStatus : IApplicationStatus
     public override void OnEnterStatus()
     {
         ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
         WX.InitSDK((code) =>
         {
 
@@ -47,8 +47,6 @@ public class LoginStatus : IApplicationStatus
             infoButton.OnTap((userInfoButonRet) =>
             {
                 UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));//192.168.1.21:8082
-                //uiMain.SetContent($"nickName：{userInfoButonRet.userInfo.nickName}， avartar:{userInfoButonRet.userInfo.avatarUrl}");
-                UniSingleton.CreateSingleton<UserDataManager>();
                 UserDataManager.Instance.NickName = userInfoButonRet.userInfo.nickName;
                 UserDataManager.Instance.HeadHostUrl = userInfoButonRet.userInfo.avatarUrl;
 

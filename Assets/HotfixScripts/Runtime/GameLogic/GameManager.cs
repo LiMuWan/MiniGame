@@ -14,7 +14,7 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
     private EventGroup _eventGroup = new EventGroup();
     public void OnCreate(object createParam)
     {
-        
+        UniSingleton.CreateSingleton<UserDataManager>();
     }
 
     public void OnDestroy()

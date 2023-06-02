@@ -97,6 +97,7 @@ public partial class UIMainWindow
             var tuple = UserDataManager.Instance.GetEquipStatus();
             if (tuple.Item1 == 0)
             {
+                UniLogger.Log($"UserOpenTreasureBox = {"第一次获得装备"}");
                 //第一次获取
                 ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
                 {

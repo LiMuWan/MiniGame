@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine.UI;
 using GameFramework.Resource;
 using UnityEngine;
+using UniFramework.Utility;
 
 //Donot use base.[MethodName] 
 public partial class UIItemInfo
@@ -42,6 +43,7 @@ public partial class UIItemInfo
 
     public void ShowItemInfo(ItemData oldItem, ItemData newItem)
     {
+        UniLogger.Log($"UserOpenTreasureBox = ShowItemInfo");
         if (oldItem != null && newItem != null)
         {
             ShowOld(oldItem, "已拥有");

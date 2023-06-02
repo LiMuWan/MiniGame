@@ -9,24 +9,16 @@ public class BattleHUD : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI lvText;
     public Slider hpSlider;
-    public Slider mpSlider;
 
-    public void SetHUD(CharacterInfo characterInfo)
+    public void SetHUD(ItemData characterInfo)
     {
-        nameText.text = characterInfo.name;
+        nameText.text = characterInfo.Name;
         hpSlider.value = characterInfo.Hp;
-        hpSlider.maxValue = characterInfo.MaxHp;
-        mpSlider.value = characterInfo.Mp;
-        mpSlider.maxValue = characterInfo.MaxMp;
+        hpSlider.maxValue = characterInfo.Hp;
     }
 
-    public void SetHP(int hp)
+    public void SetHP(float hp)
     {
         hpSlider.value = hp;
-    }
-
-    public void SetMp(int mp)
-    {
-        mpSlider.value = mp;
     }
 }

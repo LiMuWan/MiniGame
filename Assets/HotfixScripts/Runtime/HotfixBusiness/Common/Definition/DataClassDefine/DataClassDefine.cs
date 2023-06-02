@@ -38,4 +38,14 @@ public class ItemData
             compareData.Add(Def > otherItemData.Def);
         }
     }
+
+    public bool TakeDamage(float atk, float def)
+    {
+        float damage = atk - def;
+        Hp -= damage;
+        if (Hp <= 0)
+            return true;
+        else
+            return false;
+    }
 }

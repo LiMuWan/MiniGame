@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 562797826
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 951a2d58b597e53e8ef1ad3e20b7f22f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodD.png
+Dependencies: []

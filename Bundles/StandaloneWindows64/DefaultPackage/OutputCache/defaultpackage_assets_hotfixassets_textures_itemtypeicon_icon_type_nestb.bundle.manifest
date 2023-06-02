@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 4027056418
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7474bc0c474e65ae3219f9898731d436
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestB.png
+Dependencies: []

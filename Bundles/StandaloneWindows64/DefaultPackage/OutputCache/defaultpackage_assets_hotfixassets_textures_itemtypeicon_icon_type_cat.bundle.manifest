@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2056450789
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b890918f1429f8fe9f27a54515e43b9e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_cat.png
+Dependencies: []

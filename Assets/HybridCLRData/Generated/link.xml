@@ -22,6 +22,7 @@
     <type fullname="System.Attribute" preserve="all" />
     <type fullname="System.AttributeTargets" preserve="all" />
     <type fullname="System.AttributeUsageAttribute" preserve="all" />
+    <type fullname="System.Boolean" preserve="all" />
     <type fullname="System.Byte" preserve="all" />
     <type fullname="System.Char" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
@@ -38,6 +39,7 @@
     <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
     <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
     <type fullname="System.Diagnostics.DebuggerHiddenAttribute" preserve="all" />
+    <type fullname="System.Double" preserve="all" />
     <type fullname="System.Enum" preserve="all" />
     <type fullname="System.Exception" preserve="all" />
     <type fullname="System.FlagsAttribute" preserve="all" />
@@ -160,12 +162,16 @@
     <type fullname="UnityEngine.Vector2" preserve="all" />
     <type fullname="UnityEngine.Vector3" preserve="all" />
     <type fullname="UnityEngine.WaitForEndOfFrame" preserve="all" />
+    <type fullname="UnityEngine.WaitForSeconds" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.ImageConversionModule">
     <type fullname="UnityEngine.ImageConversion" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.IMGUIModule">
     <type fullname="UnityEngine.GUI" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.JSONSerializeModule">
+    <type fullname="UnityEngine.JsonUtility" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UI">
     <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
@@ -206,14 +212,18 @@
   </assembly>
   <assembly fullname="Wx">
     <type fullname="WeChatWASM.WX" preserve="all" />
+    <type fullname="WeChatWASM.WXBase" preserve="all" />
   </assembly>
   <assembly fullname="wx-runtime">
     <type fullname="WeChatWASM.GeneralCallbackResult" preserve="all" />
     <type fullname="WeChatWASM.LoginOption" preserve="all" />
     <type fullname="WeChatWASM.LoginSuccessCallbackResult" preserve="all" />
     <type fullname="WeChatWASM.ShowToastOption" preserve="all" />
+    <type fullname="WeChatWASM.SystemInfo" preserve="all" />
     <type fullname="WeChatWASM.WXRewardedVideoAd" preserve="all" />
+    <type fullname="WeChatWASM.WXUserInfo" preserve="all" />
     <type fullname="WeChatWASM.WXUserInfoButton" preserve="all" />
+    <type fullname="WeChatWASM.WXUserInfoResponse" preserve="all" />
   </assembly>
   <assembly fullname="YooAsset">
     <type fullname="YooAsset.AssetOperationHandle" preserve="all" />

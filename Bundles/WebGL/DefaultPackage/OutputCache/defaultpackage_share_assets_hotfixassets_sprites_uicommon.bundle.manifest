@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1047477886
+CRC: 2043534514
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c43609a4a492f40ecaed5892b8cc116b
+    Hash: ea893b17f4de3259b1a48d8f9dffae69
   TypeTreeHash:
     serializedVersion: 2
     Hash: f267fd2d8bcb1179236b6179ac5313bc
@@ -16,4 +16,5 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/HotfixAssets/Sprites/UICommon/animal_slot.png
+- Assets/HotfixAssets/Sprites/UICommon/btn_menu.png
 Dependencies: []

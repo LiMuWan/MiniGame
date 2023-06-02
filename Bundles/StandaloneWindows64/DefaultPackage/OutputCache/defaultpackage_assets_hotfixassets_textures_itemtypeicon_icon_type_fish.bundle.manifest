@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3233298714
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b3ae44eda11e5ef69926ab3d5e1b1f07
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_fish.png
+Dependencies: []

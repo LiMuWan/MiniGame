@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2754555364
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b1292a4722e0e727b7f4b156af37106b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_small.png
+Dependencies: []

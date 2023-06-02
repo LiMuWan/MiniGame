@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1491129284
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 782d22b8025f43092d1c58f03fcf15bd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/UIMainWindow/egg.png
+Dependencies: []

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2798948108
+CRC: 3920652645
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -10,8 +10,11 @@ AssetBundleManifest:
     Info_1:
       Name: defaultpackage_assets_hotfixassets_scene_level.bundle
       Dependencies:
-        Dependency_0: defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle
-        Dependency_1: defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle
+        Dependency_0: defaultpackage_assets_hotfixassets_uifont.bundle
+        Dependency_1: defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle
+        Dependency_2: defaultpackage_assets_hotfixassets_textures_animalicon_img_101004.bundle
+        Dependency_3: defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle
+        Dependency_4: defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle
     Info_2:
       Name: defaultpackage_assets_hotfixassets_scene_main.bundle
       Dependencies: {}

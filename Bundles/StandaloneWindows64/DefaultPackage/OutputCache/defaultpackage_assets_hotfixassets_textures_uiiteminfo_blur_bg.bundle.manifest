@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2927949317
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dda3d704492f41e733f159a430af164b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/UIItemInfo/blur_bg.png
+Dependencies: []

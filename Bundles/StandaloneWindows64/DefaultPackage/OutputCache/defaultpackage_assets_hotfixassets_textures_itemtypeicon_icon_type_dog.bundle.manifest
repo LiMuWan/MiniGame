@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1231199277
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 426309488ebcb27041c9416347cd1c93
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff414f606ea1972259b080d7bcf51689
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_dog.png
+Dependencies: []

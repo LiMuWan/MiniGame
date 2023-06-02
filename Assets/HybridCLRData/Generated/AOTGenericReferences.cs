@@ -16,6 +16,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 
 	// {{ AOT generic types
 	// System.Action<object>
+	// System.Action<int>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<int,object>
 	// System.Collections.Generic.HashSet<object>
@@ -61,5 +62,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// object[] UnityEngine.GameObject.GetComponentsInChildren<object>(bool)
 		// object UnityEngine.Object.FindObjectOfType<object>()
 		// object UnityEngine.Object.Instantiate<object>(object)
+		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Transform)
 	}
 }

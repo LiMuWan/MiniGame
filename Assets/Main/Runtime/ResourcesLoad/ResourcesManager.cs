@@ -165,36 +165,9 @@ namespace GameFramework.Resource
                 SetReadWritePath(Application.persistentDataPath);
             }
 
-            HostServerURL = GetHostServerURL();
+            HostServerURL = SettingDefine.GetHostServerURL();
             Initialize();
             UniLogger.Log($"AssetsComponent Run Mode：{PlayMode}");
-        }
-
-        private string GetHostServerURL()
-        {
-
-            string hostServerIP = "http://192.168.1.15";//"http://192.168.0.111";
-            string gameVersion = "version";
-
-#if UNITY_EDITOR
-            if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.Android)
-                return $"{hostServerIP}/CDN/Android/{gameVersion}";
-            else if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.iOS)
-                return $"{hostServerIP}/CDN/IPhone/{gameVersion}";
-            else if (UnityEditor.EditorUserBuildSettings.activeBuildTarget == UnityEditor.BuildTarget.WebGL)
-                return $"{hostServerIP}/CDN/WebGL/{gameVersion}";
-            else
-                return $"{hostServerIP}/CDN/PC/{gameVersion}";
-#else
-        if (Application.platform == RuntimePlatform.Android)
-            return $"{hostServerIP}/CDN/Android/{gameVersion}";
-        else if (Application.platform == RuntimePlatform.IPhonePlayer)
-            return $"{hostServerIP}/CDN/IPhone/{gameVersion}";
-        else if (Application.platform == RuntimePlatform.WebGLPlayer)
-            return $"{hostServerIP}/CDN/WebGL/{gameVersion}";
-        else
-            return $"{hostServerIP}/CDN/PC/{gameVersion}";
-#endif
         }
 
         void ISingleton.OnDestroy()

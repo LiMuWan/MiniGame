@@ -25,10 +25,11 @@ MonoBehaviour:
   externalHotUpdateAssembliyDirs: []
   strippedAOTDllOutputRootDir: HybridCLRData/AssembliesPostIl2CppStrip
   patchAOTAssemblies:
+  - LitJson.dll
   - Main.Runtime
   - System.Core
+  - UniFramework.Event
   - UniFramework.Singleton
-  - UniTask
   - UnityEngine.CoreModule
   - mscorlib
   outputLinkFile: HybridCLRData/Generated/link.xml

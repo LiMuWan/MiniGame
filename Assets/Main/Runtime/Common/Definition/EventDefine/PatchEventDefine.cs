@@ -116,7 +116,7 @@ namespace Main.EventDefine
         {
             public static void SendEventMessage()
             {
-                var msg = new PatchManifestUpdateFailed();
+                var msg = new GameVersionInitOrRefresh();
                 UniEvent.SendMessage(msg);
             }
         }

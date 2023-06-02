@@ -52,5 +52,6 @@ internal class FsmInitialize : IStateNode
             UniLogger.Warning($"{initializationOperation.Error}");
             PatchEventDefine.InitializeFailed.SendEventMessage();
         }
+        UniSingleton.StopCoroutine(InitPackage());
     }
 }

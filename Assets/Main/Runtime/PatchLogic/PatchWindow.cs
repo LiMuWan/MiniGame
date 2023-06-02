@@ -85,6 +85,7 @@ public class PatchWindow : MonoBehaviour
         _eventGroup.AddListener<PatchEventDefine.PackageVersionUpdateFailed>(OnHandleEventMessage);
         _eventGroup.AddListener<PatchEventDefine.PatchManifestUpdateFailed>(OnHandleEventMessage);
         _eventGroup.AddListener<PatchEventDefine.WebFileDownloadFailed>(OnHandleEventMessage);
+        _eventGroup.AddListener<PatchEventDefine.GameVersionInitOrRefresh>(OnHandleEventMessage);
     }
 
     private void OnDestroy()

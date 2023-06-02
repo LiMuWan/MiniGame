@@ -15,10 +15,11 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
     // TODO 可以用配置文件
     public static List<string> AOTMetaAssemblyNames { get; } = new List<string>()
     {
+      "LitJson.dll",
       "Main.Runtime.dll",
       "System.Core.dll",
+      "UniFramework.Event.dll",
       "UniFramework.Singleton.dll",
-      "UniTask.dll",
       "UnityEngine.CoreModule.dll",
       "mscorlib.dll",
     };

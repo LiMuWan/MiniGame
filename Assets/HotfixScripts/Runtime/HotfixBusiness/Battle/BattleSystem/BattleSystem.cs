@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniFramework.Tween;
+using System;
 
 public class BattleSystem : MonoBehaviour
 {
@@ -31,6 +33,10 @@ public class BattleSystem : MonoBehaviour
     public Transform enemy_battle_station;
     #endregion
 
+    private List<BattleRound> battleRounds;
+    private int battleRoundIndex = 0;
+    public AnimationCurve EaseCurve;
+
     private void Awake()
     {
         positioningManager = GetComponent<PositioningManager>();
@@ -39,10 +45,11 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
+        UniTween.Initalize();
         State = BattleState.Start;
         SetupBattle();
     }
-
+    
     private void SetupBattle()
     {
         // teamManager.SetUp()
@@ -58,9 +65,13 @@ public class BattleSystem : MonoBehaviour
         cur_enemy_battle_entity = team_right_entities[0];
         playerHUD.SetHUD(cur_player_battle_info);
         enemyHUD.SetHUD(cur_enemy_battle_info);
-
-        State = BattleState.PlayerTurn;
-        PlayerTurn();
+        
+        battleRounds = GetBattleRoundData(team_left_items,team_right_items);
+        if(battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
+        {
+            State = BattleState.PlayerTurn;
+            PlayerTurn();
+        }
     }
 
     private void PlayerTurn()
@@ -75,11 +86,37 @@ public class BattleSystem : MonoBehaviour
             return;
         StartCoroutine(PlayerAttack());
     }
+    
+    private Vector3Tween MoveTo(Transform transform,float duration,Vector3 targetPos,Action onComplete)
+    {
+        Vector3Tween tween = transform.TweenMove(duration, targetPos);
+        tween.SetEase(EaseCurve);
+        tween.SetOnComplete(onComplete);
+        UniTween.Play(tween);
+        return tween;
+    }
 
     private IEnumerator PlayerAttack()
     {
         //对敌人造成伤害
-        bool isDefeated = cur_enemy_battle_info.TakeDamage(cur_player_battle_info.Atk, cur_enemy_battle_info.Def);
+        GameObject attackerGo = team_left_entities[battleRounds[battleRoundIndex].Left_battle_index];
+        GameObject targetGo = team_right_entities[battleRounds[battleRoundIndex].Right_battle_index];
+        void OnMoveComplete()
+        {
+            //我方抖动
+            attackerGo.transform.ShakePosition(0.2f,Vector3.one*3);
+            //敌方抖动
+            targetGo.transform.ShakePosition(0.2f,Vector3.one*3);
+            //弹出伤害值
+            //设置血量
+            //判断当前目标是否死亡，如果死亡，判断游戏是否结束，
+            //如果没结束，下一个目标移动到当前目标
+            //如果结束，弹出游戏结束面板
+        }
+        //玩家移动到地方身边
+        MoveTo(attackerGo.transform,1f,targetGo.transform.position,OnMoveComplete);
+       
+        bool isDefeated = battleRounds[battleRoundIndex].IsDefeated;
         yield return new WaitForSeconds(3f);
         if (isDefeated)
         {
@@ -130,7 +167,7 @@ public class BattleSystem : MonoBehaviour
     }
    
     //模拟战斗
-    public List<BattleRound> GetRoundData(List<ItemData> team_left_items,List<ItemData> team_right_items)
+    public List<BattleRound> GetBattleRoundData(List<ItemData> team_left_items,List<ItemData> team_right_items)
     {
         List<BattleRound> battleRounds = new List<BattleRound>();
         int roundIndex = 1;
@@ -153,7 +190,7 @@ public class BattleSystem : MonoBehaviour
             else
             {
                 //取随机值
-                int random = Random.Range(0, 2);
+                int random = UnityEngine.Random.Range(0, 2);
                 if (random == 0)
                 {
                     //己方出手

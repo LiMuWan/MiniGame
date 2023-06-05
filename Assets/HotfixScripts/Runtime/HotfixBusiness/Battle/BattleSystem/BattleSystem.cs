@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Tween;
 using System;
+using TMPro;
 
 public class BattleSystem : MonoBehaviour
 {
     public BattleState State;
-    
+    public GameObject hud_tips;
+    public Transform hud_parent;
     #region 队伍
     private PositioningManager positioningManager;
     private TeamManager teamManager;
@@ -98,9 +100,11 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator PlayerAttack()
     {
+        //当前回合
+        var currentBattleRounds = battleRounds[battleRoundIndex];
         //对敌人造成伤害
-        GameObject attackerGo = team_left_entities[battleRounds[battleRoundIndex].Left_battle_index];
-        GameObject targetGo = team_right_entities[battleRounds[battleRoundIndex].Right_battle_index];
+        GameObject attackerGo = team_left_entities[currentBattleRounds.Left_battle_index];
+        GameObject targetGo = team_right_entities[currentBattleRounds.Right_battle_index];
         void OnMoveComplete()
         {
             //我方抖动
@@ -108,8 +112,14 @@ public class BattleSystem : MonoBehaviour
             //敌方抖动
             targetGo.transform.ShakePosition(0.2f,Vector3.one*3);
             //弹出伤害值
+            PopDamage(currentBattleRounds.Damage,targetGo.transform.position,targetGo.transform.position + Vector3.up*4f);
             //设置血量
+            enemyHUD.SetHP(currentBattleRounds.Target.Hp);
             //判断当前目标是否死亡，如果死亡，判断游戏是否结束，
+            if(currentBattleRounds.IsEndBattle)
+            {
+                State = BattleState.Win;
+            }
             //如果没结束，下一个目标移动到当前目标
             //如果结束，弹出游戏结束面板
         }
@@ -166,6 +176,15 @@ public class BattleSystem : MonoBehaviour
         }
     }
    
+    //弹出伤害
+    private void PopDamage(float damage,Vector3 originPos,Vector3 destPos)
+    {
+        var hud_tip = GameObject.Instantiate(hud_tips,hud_parent);
+        hud_tip.transform.position = originPos;
+        hud_tip.GetComponent<TextMeshProUGUI>().text = damage.ToString();
+        hud_tip.transform.TweenMove(0.3f,destPos);
+    }
+
     //模拟战斗
     public List<BattleRound> GetBattleRoundData(List<ItemData> team_left_items,List<ItemData> team_right_items)
     {

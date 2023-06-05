@@ -8,27 +8,25 @@ public class BattleHUD : MonoBehaviour
 {
     public Camera camera;
     public Transform target;
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI lvText;
-    public Slider hpSlider;
+    public Image hpImg;
 
-    public void SetHUD(ItemData characterInfo)
+    public void SetHUD(BattleItemData characterInfo,Transform target)
     {
-        nameText.text = characterInfo.Name;
-        hpSlider.value = characterInfo.Hp;
-        hpSlider.maxValue = characterInfo.Hp;
+        this.target = target;
+        hpImg.fillAmount = characterInfo.CurHp/characterInfo.Hp;
     }
 
-    public void SetHP(float hp)
+    public void SetHP(BattleItemData characterInfo)
     {
-        hpSlider.value = hp;
+         hpImg.fillAmount = characterInfo.CurHp/characterInfo.Hp;
+         Debug.Log($"血量 = { hpImg.fillAmount} characterInfo.CurHp = {characterInfo.CurHp} , characterInfo.Hp ={characterInfo.Hp} ");
     }
 
     private void LateUpdate()
     {
         if (target != null)
         {
-            transform.position = camera.WorldToScreenPoint(target.position); // 将血条放在目标上方
+            transform.position = camera.WorldToScreenPoint(target.position - Vector3.up*1f); // 将血条放在目标上方
         }
     }
 }

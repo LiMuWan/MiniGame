@@ -7,9 +7,9 @@ public class BattleRound
 {
     public int RoundIndex;
     //攻击方
-    public ItemData Attacker;
+    public BattleItemData Attacker;
     //受击方
-    public ItemData Target;
+    public BattleItemData Target;
     //出手队伍
     public EBatteTeam AttackTeam;
     public float Damage;

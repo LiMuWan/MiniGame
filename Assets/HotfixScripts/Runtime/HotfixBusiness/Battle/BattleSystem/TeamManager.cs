@@ -5,15 +5,15 @@ using System.Linq;
 
 public class TeamManager : MonoBehaviour
 {
-   [SerializeField]
-   private GameObject hero_item_template;
-   private List<ItemData> team_left_items;
-   private List<ItemData> team_right_items;
+    [SerializeField]
+    private GameObject hero_item_template;
+    private List<ItemData> team_left_items;
+    private List<ItemData> team_right_items;
 
-   private List<GameObject> team_left_entities;
-   private List<GameObject> team_right_entities;
-   
-   private PositioningManager positioningManager;
+    private List<GameObject> team_left_entities;
+    private List<GameObject> team_right_entities;
+
+    private PositioningManager positioningManager;
 
     public List<ItemData> TeamLeftItems
     {
@@ -35,18 +35,20 @@ public class TeamManager : MonoBehaviour
         get { return team_right_entities; }
     }
 
-   private void Awake() 
-   {
-      positioningManager = GetComponent<PositioningManager>();
-   }
+    private void Awake()
+    {
+        positioningManager = GetComponent<PositioningManager>();
+        team_left_entities = new List<GameObject>();
+        team_right_entities = new List<GameObject>();
+    }
 
-   public void SetUp(List<ItemData> team_left_items,List<ItemData> team_right_items)
-   {
-      this.team_left_items = team_left_items;
-      this.team_right_items = team_right_items;
-      SortTeamDataBySpeed();
-      LoadEntites();
-   }
+    public void SetUp(List<ItemData> team_left_items, List<ItemData> team_right_items)
+    {
+        this.team_left_items = team_left_items;
+        this.team_right_items = team_right_items;
+        SortTeamDataBySpeed();
+        LoadEntites();
+    }
 
     private void LoadEntites()
     {
@@ -54,13 +56,14 @@ public class TeamManager : MonoBehaviour
         LoadTeamEntity(team_right_items, positioningManager.TeamRightPositions, team_right_entities);
     }
 
-    private void LoadTeamEntity(List<ItemData> team_items,List<Transform> team_positions, List<GameObject> team_entities)
+    private void LoadTeamEntity(List<ItemData> team_items, List<Transform> team_positions, List<GameObject> team_entities)
     {
         for (int i = 0; i < team_items.Count; i++)
         {
             var item_entity = GameObject.Instantiate(hero_item_template);
             item_entity.transform.SetParent(team_positions[i]);
             item_entity.transform.SetTRSNormalize();
+            item_entity.SetActive(true);
             var spriteRenderer = item_entity.GetComponent<SpriteRenderer>();
             if (i < 4)
             {
@@ -74,9 +77,9 @@ public class TeamManager : MonoBehaviour
         }
     }
 
-   private void SortTeamDataBySpeed()
-   {
-      team_left_items = team_left_items.OrderByDescending(item=>item.Spd).ToList();
-      team_right_items = team_right_items.OrderByDescending(item=>item.Spd).ToList();
-   }
+    private void SortTeamDataBySpeed()
+    {
+        team_left_items = team_left_items.OrderByDescending(item => item.Spd).ToList();
+        team_right_items = team_right_items.OrderByDescending(item => item.Spd).ToList();
+    }
 }

@@ -16,6 +16,8 @@ public class ItemData
     public float Atk;
     public float Def;
 
+    public float CurHp;
+
     //属性变化值
     private List<bool> compareData = new List<bool>();
     public List<bool> CompareData
@@ -42,10 +44,28 @@ public class ItemData
     public bool TakeDamage(float atk, float def)
     {
         float damage = atk - def;
-        Hp -= damage;
-        if (Hp <= 0)
+        CurHp -= damage;
+        if (CurHp <= 0)
+        {
+            CurHp = 0;
             return true;
+        }
         else
+        {
             return false;
+        }
+    }
+}
+
+//战斗单元数据
+public class BattleItemData
+{
+    public float Hp;
+    public float CurHp;
+    public BattleItemData Copy(ItemData itemData)
+    {
+        Hp = itemData.Hp;
+        CurHp = itemData.CurHp;
+        return this;
     }
 }

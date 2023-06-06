@@ -42,6 +42,23 @@ public class TeamManager : MonoBehaviour
         team_right_entities = new List<GameObject>();
     }
 
+    private void OnDestroy()
+    {
+        for (int i = 0; i < team_left_entities.Count; i++)
+        {
+            GameObject.Destroy(team_left_entities[i]);
+        }
+        team_left_entities.Clear();
+        for (int i = 0; i < team_right_entities.Count; i++)
+        {
+            GameObject.Destroy(team_right_entities[i]);
+        }
+        team_right_entities.Clear();
+        team_left_entities = null;
+        team_right_entities = null;
+        positioningManager = null;
+    }
+
     public void SetUp(List<ItemData> team_left_items, List<ItemData> team_right_items)
     {
         this.team_left_items = team_left_items;

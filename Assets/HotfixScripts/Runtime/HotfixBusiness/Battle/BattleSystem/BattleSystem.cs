@@ -7,12 +7,21 @@ using TMPro;
 using UniFramework.Utility;
 
 public class BattleSystem : MonoBehaviour
-{
+{  
+    [SerializeField]
     public Camera camera;
-    public BattleState State;
+    public EBattleState battleState;
+    #region 战斗UI
+    [SerializeField]
     public GameObject hud_tips;
+    [SerializeField]
     public Transform hud_parent;
+    [SerializeField]
     public TextMeshProUGUI round_text;
+    [SerializeField]
+    public BattleResultUI battleResultUI;
+    #endregion
+
     #region 队伍
     private PositioningManager positioningManager;
     private TeamManager teamManager;
@@ -30,12 +39,12 @@ public class BattleSystem : MonoBehaviour
 
     private ItemData cur_player_battle_info;
     private ItemData cur_enemy_battle_info;
-
+    
     public BattleHUD enemyHUD;
     public BattleHUD playerHUD;
-
-    public Transform player_battle_station;
-    public Transform enemy_battle_station;
+    
+    private Transform player_battle_station;
+    private Transform enemy_battle_station;
     #endregion
 
     private List<BattleRound> battleRounds;
@@ -48,7 +57,7 @@ public class BattleSystem : MonoBehaviour
         teamManager = GetComponent<TeamManager>();
     }
 
-    void Start()
+    private void Start()
     {
         UniTween.Initalize();
         List<ItemData> team_left = new List<ItemData>()
@@ -64,8 +73,37 @@ public class BattleSystem : MonoBehaviour
             new ItemData(){Hp = 100,Atk = 10,Spd = 1,Def = 5,CurHp = 100},
         };
         teamManager.SetUp(team_left, team_right);
-        State = BattleState.Start;
+        battleState = EBattleState.Start;
         SetupBattle();
+    }
+    
+    private void OnDestroy()
+    {
+        team_left_items = null;
+        team_right_items = null;
+        team_left_entities = null;
+        team_right_entities = null;
+        battleRounds.Clear();
+        teamManager = null;
+        positioningManager = null;
+        battleResultUI = null;
+        round_text = null;
+        hud_parent = null;
+        hud_tips = null;
+        playerHUD = null;
+        enemyHUD = null;
+    }
+
+    private void Update() 
+    {
+       if(battleState == EBattleState.Win)
+       {
+          battleResultUI?.ShowResult(true);
+       }
+       else if(battleState == EBattleState.Lost)
+       {
+          battleResultUI?.ShowResult(false);
+       }
     }
 
     private void SetupBattle()
@@ -86,14 +124,14 @@ public class BattleSystem : MonoBehaviour
         TestBattleRounds(battleRounds);
         if (battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
         {
-            State = BattleState.PlayerTurn;
+            battleState = EBattleState.PlayerTurn;
             playerHUD.SetHUD(battleRounds[battleRoundIndex].Attacker, cur_player_battle_entity.transform);
             enemyHUD.SetHUD(battleRounds[battleRoundIndex].Target, cur_enemy_battle_entity.transform);
             PlayerTurn();
         }
         else
         {
-            State = BattleState.EnemyTurn;
+            battleState = EBattleState.EnemyTurn;
             playerHUD.SetHUD(battleRounds[battleRoundIndex].Target, cur_player_battle_entity.transform);
             enemyHUD.SetHUD(battleRounds[battleRoundIndex].Attacker, cur_enemy_battle_entity.transform);
             EnemyTurn();
@@ -118,12 +156,12 @@ public class BattleSystem : MonoBehaviour
         battleRoundIndex += 1;
         if (battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
         {
-            State = BattleState.PlayerTurn;
+            battleState = EBattleState.PlayerTurn;
             PlayerTurn();
         }
         else
         {
-            State = BattleState.EnemyTurn;
+            battleState = EBattleState.EnemyTurn;
             EnemyTurn();
         }
     }
@@ -199,7 +237,7 @@ public class BattleSystem : MonoBehaviour
                     {
                         cur_enemy_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
                     }
-                    Delay(0.3f,()=>{ State = BattleState.Win;});
+                    Delay(0.3f,()=>{ battleState = EBattleState.Win;});
                     UniLogger.Log("You Win");
                     //如果结束，弹出游戏胜利结束面板
                     return;
@@ -258,11 +296,11 @@ public class BattleSystem : MonoBehaviour
 
     private void EndBattle()
     {
-        if (State == BattleState.Win)
+        if (battleState == EBattleState.Win)
         {
             UniLogger.Log("player 赢得了战斗！");
         }
-        else if (State == BattleState.Lost)
+        else if (battleState == EBattleState.Lost)
         {
             UniLogger.Log("player 被击败了");
         }
@@ -298,7 +336,7 @@ public class BattleSystem : MonoBehaviour
                     {
                         cur_player_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
                     }
-                    Delay(0.3f,()=>{ State = BattleState.Lost;});
+                    Delay(0.3f,()=>{ battleState = EBattleState.Lost;});
                     UniLogger.Log("You Lost");
                     return;
                 }

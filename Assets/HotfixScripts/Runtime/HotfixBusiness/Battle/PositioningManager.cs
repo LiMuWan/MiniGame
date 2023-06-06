@@ -20,4 +20,12 @@ public class PositioningManager : MonoBehaviour
         get { return team_right_positions; }
         private set { }
     }
+
+    private void OnDestroy()
+    {
+        team_left_positions.Clear();
+        team_right_positions.Clear();
+        team_left_positions = null;
+        team_right_positions = null;
+    }
 }

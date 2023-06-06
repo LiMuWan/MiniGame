@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class BattleHUD : MonoBehaviour
@@ -19,7 +16,6 @@ public class BattleHUD : MonoBehaviour
     public void SetHP(BattleItemData characterInfo)
     {
          hpImg.fillAmount = characterInfo.CurHp/characterInfo.Hp;
-         Debug.Log($"血量 = { hpImg.fillAmount} characterInfo.CurHp = {characterInfo.CurHp} , characterInfo.Hp ={characterInfo.Hp} ");
     }
 
     private void LateUpdate()
@@ -28,5 +24,12 @@ public class BattleHUD : MonoBehaviour
         {
             transform.position = camera.WorldToScreenPoint(target.position - Vector3.up*1f); // 将血条放在目标上方
         }
+    }
+
+    private void OnDestroy()
+    {
+        camera = null;
+        target = null;
+        hpImg = null;
     }
 }

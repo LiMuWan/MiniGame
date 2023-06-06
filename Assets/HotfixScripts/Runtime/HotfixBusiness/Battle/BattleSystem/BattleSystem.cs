@@ -4,6 +4,7 @@ using UnityEngine;
 using UniFramework.Tween;
 using System;
 using TMPro;
+using UniFramework.Utility;
 
 public class BattleSystem : MonoBehaviour
 {
@@ -82,6 +83,7 @@ public class BattleSystem : MonoBehaviour
         cur_enemy_battle_entity = team_right_entities[0];
 
         battleRounds = GetBattleRoundData(team_left_items, team_right_items);
+        TestBattleRounds(battleRounds);
         if (battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
         {
             State = BattleState.PlayerTurn;
@@ -98,9 +100,61 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    private void TestBattleRounds(List<BattleRound> rounds)
+    {
+        foreach(var r in rounds)
+        {
+            UniLogger.Log($"第{r.RoundIndex}回合,当前left_team_index = {r.Left_battle_index},当前right_ream_index = {r.Right_battle_index} ,攻击方：{r.AttackTeam},攻击力：{r.Damage},敌方剩余血量：{r.Target.CurHp}");
+        }
+    }
+
     private void SetBattleRound(int battleRound)
     {
         round_text.text = $"回合{battleRound}";
+    }
+
+    private void NextRounds()
+    {
+        battleRoundIndex += 1;
+        if (battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
+        {
+            State = BattleState.PlayerTurn;
+            PlayerTurn();
+        }
+        else
+        {
+            State = BattleState.EnemyTurn;
+            EnemyTurn();
+        }
+    }
+    
+    private IEnumerator DelayCo(float seconds,Action callback)
+    {
+        yield return new WaitForSeconds(seconds);
+        callback?.Invoke();
+        StopCoroutine(DelayCo(seconds,callback));
+    }
+
+    private void Delay(float seconds,Action callback)
+    {
+        StartCoroutine(DelayCo(seconds,callback));
+    }
+
+    private void OnTargetDefeated(BattleRound battleRound)
+    {    
+        //如果攻击方是右边，证明玩家动物死亡一个
+        if(battleRound.AttackTeam == EBatteTeam.RightTeam)
+        {
+            playerHUD.SetHUD(battleRound.Target, null);
+            playerHUD.gameObject.SetActive(false);
+            cur_player_battle_entity.SetActive(false);
+        }
+        else
+        {
+            enemyHUD.SetHUD(battleRound.Target, null);
+            enemyHUD.gameObject.SetActive(false);
+            cur_enemy_battle_entity.SetActive(false);
+        }
     }
 
     //玩家回合
@@ -122,109 +176,95 @@ public class BattleSystem : MonoBehaviour
         // 当前回合
         SetBattleRound(currentBattleRounds.RoundIndex);
         //对敌人造成伤害
-        GameObject attackerGo = team_left_entities[currentBattleRounds.Left_battle_index];
-        GameObject targetGo = team_right_entities[currentBattleRounds.Right_battle_index];
+        cur_player_battle_entity = team_left_entities[currentBattleRounds.Left_battle_index];
+        cur_enemy_battle_entity = team_right_entities[currentBattleRounds.Right_battle_index];
         void OnMoveComplete()
         {
             //敌方抖动
-            targetGo.transform.DOShake(0.2f, Vector3.right * 0.2f);
+            cur_enemy_battle_entity.transform.DOShake(0.2f, Vector3.right * 0.2f);
             //我方抖动
-            attackerGo.transform.DOShake(0.2f, Vector3.left * 0.2f, OnShakeComplete);
+            cur_player_battle_entity.transform.DOShake(0.2f, Vector3.left * 0.2f, OnShakeComplete);
+
             void OnShakeComplete()
             {
                 //弹出伤害值
-                PopDamage(currentBattleRounds.Damage, targetGo.transform.position + Vector3.right * 0.5f, targetGo.transform.position + Vector3.up * 2f + Vector3.right * 0.5f);
+                PopDamage(currentBattleRounds.Damage, cur_enemy_battle_entity.transform.position + Vector3.right * 0.5f, cur_enemy_battle_entity.transform.position + Vector3.up * 2f + Vector3.right * 0.5f);
                 //设置血量
                 enemyHUD.SetHP(currentBattleRounds.Target);
-                Debug.Log($"PlayerAttack 回合数：{currentBattleRounds.RoundIndex},攻击方 = {currentBattleRounds.AttackTeam.ToString()},伤害值 = {currentBattleRounds.Damage}，防守方血量 = {currentBattleRounds.Target.CurHp}");
+                UniLogger.Log($"PlayerAttack 回合数：{currentBattleRounds.RoundIndex},Left_battle_index = { currentBattleRounds.Left_battle_index },Right_battle_index = {currentBattleRounds.Right_battle_index},攻击方 = {currentBattleRounds.AttackTeam.ToString()},伤害值 = {currentBattleRounds.Damage}，防守方血量 = {currentBattleRounds.Target.CurHp}");
                 //判断当前目标是否死亡，如果死亡，判断游戏是否结束，
                 if (currentBattleRounds.IsEndBattle)
                 {
-                    State = BattleState.Win;
+                    if(currentBattleRounds.IsDefeated)
+                    {
+                        cur_enemy_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
+                    }
+                    Delay(0.3f,()=>{ State = BattleState.Win;});
+                    UniLogger.Log("You Win");
                     //如果结束，弹出游戏胜利结束面板
                     return;
                 }
                 //如果没结束，下一个目标移动到当前目标
                 if (currentBattleRounds.IsDefeated)
                 {
-                    Debug.Log("当前回合，防守方被击败一个动物");
-                    void OnScaleComplete()
-                    {
-                        team_right_entities[currentBattleRounds.Right_battle_index + 1].transform.DoMove(EaseCurve, 1f, cur_enemy_battle_entity.transform.position, true, OnNextEnemyEntityMoveComplete);
-                        enemyHUD.SetHUD(currentBattleRounds.Target, null);
-                        enemyHUD.gameObject.SetActive(false);
-                    }
+                    UniLogger.Log("当前回合，防守方被击败一个动物");
                     cur_enemy_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
+                    Delay(2f,()=>{NextRounds();});
                 }
                 else
                 {
-                    //回去
-                    cur_player_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
+                     //回去
+                     cur_player_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
                      {
-                         State = BattleState.EnemyTurn;
-                         EnemyTurn();
                          //下一回合
-                         battleRoundIndex += 1;
+                         Delay(0.2f,()=>{NextRounds();});
                      });
                 }
+            }
+
+            void OnScaleComplete()
+            {
+                OnTargetDefeated(currentBattleRounds);
+                //攻击方回去
+                cur_player_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false);
+                //下一个敌人移动回来
+                team_right_entities[currentBattleRounds.Right_battle_index + 1].transform.DoMove(EaseCurve, 1f, cur_enemy_battle_entity.transform.position, true, OnNextEnemyEntityMoveComplete);
             }
         }
 
         void OnNextEnemyEntityMoveComplete()
         {
-            GameObject.DestroyImmediate(cur_enemy_battle_entity);
-            cur_enemy_battle_entity = team_right_entities[currentBattleRounds.Right_battle_index + 1];
+            var nextBattleBound = battleRounds[battleRoundIndex + 1];
+            cur_enemy_battle_entity = team_right_entities[nextBattleBound.Right_battle_index];
             cur_enemy_battle_entity.transform.parent = enemy_battle_station;
             cur_enemy_battle_entity.transform.SetTRSNormalize();
+            cur_enemy_battle_entity.SetActive(true);
 
-            var nextBattleBound = battleRounds[battleRoundIndex + 1];
-            //下一回合
-            battleRoundIndex += 1;
             if (nextBattleBound.AttackTeam == EBatteTeam.LeftTeam)
             {
-                // playerHUD.SetHUD(nextBattleBound.Attacker, cur_player_battle_entity.transform);
                 enemyHUD.SetHUD(nextBattleBound.Target, cur_enemy_battle_entity.transform);
                 enemyHUD.SetHP(nextBattleBound.Target);
             }
             else
             {
-                // playerHUD.SetHUD(nextBattleBound.Target, cur_player_battle_entity.transform);
                 enemyHUD.SetHUD(nextBattleBound.Attacker, cur_enemy_battle_entity.transform);
                 enemyHUD.SetHP(nextBattleBound.Attacker);
             }
             enemyHUD.gameObject.SetActive(true);
-            //回去
-            cur_player_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
-            {
-                cur_player_battle_entity = team_left_entities[currentBattleRounds.Left_battle_index + 1];
-                cur_player_battle_info = team_left_items[currentBattleRounds.Left_battle_index + 1];
-
-                if (nextBattleBound.AttackTeam == EBatteTeam.LeftTeam)
-                {
-                    State = BattleState.PlayerTurn;
-                    PlayerTurn();
-                }
-                else
-                {
-                    State = BattleState.EnemyTurn;
-                    EnemyTurn();
-                }
-            });
-
         }
 
-        attackerGo.transform.DoMove(EaseCurve, 1f, targetGo.transform.position + Vector3.left * 1f, true, OnMoveComplete);
+        cur_player_battle_entity.transform.DoMove(EaseCurve, 1f, cur_enemy_battle_entity.transform.position + Vector3.left * 1f, true, OnMoveComplete);
     }
 
     private void EndBattle()
     {
         if (State == BattleState.Win)
         {
-            Debug.Log("player 赢得了战斗！");
+            UniLogger.Log("player 赢得了战斗！");
         }
         else if (State == BattleState.Lost)
         {
-            Debug.Log("player 被击败了");
+            UniLogger.Log("player 被击败了");
         }
     }
 
@@ -235,98 +275,82 @@ public class BattleSystem : MonoBehaviour
         //显示回合数
         SetBattleRound(currentBattleRounds.RoundIndex);
         //对敌人造成伤害
-        GameObject attackerGo = team_right_entities[currentBattleRounds.Right_battle_index];
-        GameObject targetGo = team_left_entities[currentBattleRounds.Left_battle_index];
+        cur_player_battle_entity = team_right_entities[currentBattleRounds.Right_battle_index];
+        cur_player_battle_entity = team_left_entities[currentBattleRounds.Left_battle_index];
         void OnMoveComplete()
         {
             //敌方抖动
-            targetGo.transform.DOShake(0.2f, Vector3.left * 0.2f);
+            cur_player_battle_entity.transform.DOShake(0.2f, Vector3.left * 0.2f);
             //我方抖动
-            attackerGo.transform.DOShake(0.2f, Vector3.right * 0.2f, OnShakeComplete);
+            cur_player_battle_entity.transform.DOShake(0.2f, Vector3.right * 0.2f, OnShakeComplete);
 
             void OnShakeComplete()
             {
                 //弹出伤害值
-                PopDamage(currentBattleRounds.Damage, targetGo.transform.position + Vector3.right * 0.5f, targetGo.transform.position + Vector3.up * 2f + Vector3.right * 0.5f);
+                PopDamage(currentBattleRounds.Damage, cur_player_battle_entity.transform.position + Vector3.right * 0.5f, cur_player_battle_entity.transform.position + Vector3.up * 2f + Vector3.right * 0.5f);
                 //设置血量
                 playerHUD.SetHP(currentBattleRounds.Target);
-                Debug.Log($"EnemyAttack 回合数：{currentBattleRounds.RoundIndex},攻击方 = {currentBattleRounds.AttackTeam.ToString()},伤害值 = {currentBattleRounds.Damage}，防守方血量 = {currentBattleRounds.Target.CurHp}");
+                UniLogger.Log($"EnemyAttack 回合数：{currentBattleRounds.RoundIndex},Left_battle_index = { currentBattleRounds.Left_battle_index },right_battle_index = {currentBattleRounds.Right_battle_index} , 攻击方 = {currentBattleRounds.AttackTeam.ToString()},伤害值 = {currentBattleRounds.Damage}，防守方血量 = {currentBattleRounds.Target.CurHp}");
                 //判断当前目标是否死亡，如果死亡，判断游戏是否结束，
                 if (currentBattleRounds.IsEndBattle)
                 {
-                    State = BattleState.Lost;
-                    //如果结束，弹出游戏失败结束面板
-                    Debug.Log("You Lost");
+                    if(currentBattleRounds.IsDefeated)
+                    {
+                        cur_player_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
+                    }
+                    Delay(0.3f,()=>{ State = BattleState.Lost;});
+                    UniLogger.Log("You Lost");
                     return;
                 }
                 //如果没结束，下一个目标移动到当前目标
                 if (currentBattleRounds.IsDefeated)
                 {
-                    Debug.Log("当前回合，防守方被击败一个动物");
-                    void OnScaleComplete()
-                    {
-                        team_left_entities[currentBattleRounds.Left_battle_index + 1].transform.DoMove(EaseCurve, 1f, cur_player_battle_entity.transform.position, true, OnNextPlayeEntityMoveComplete);
-                        playerHUD.SetHUD(currentBattleRounds.Target, null);
-                        playerHUD.gameObject.SetActive(false);
-                    }
+                    UniLogger.Log("当前回合，防守方被击败一个动物");
                     cur_player_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
+                    Delay(2f,()=>{NextRounds();});
                 }
                 else
                 {
                     //回去
-                    cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
+                     cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
                      {
-                         State = BattleState.PlayerTurn;
-                         PlayerTurn();
-                         battleRoundIndex += 1;
+                         Delay(0.2f,()=>{NextRounds();});
                      });
                 }
             }
 
+            void OnScaleComplete()
+            {
+                OnTargetDefeated(currentBattleRounds);
+                //攻击方回去
+                cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false);
+                //受击方下一个过来
+                team_left_entities[currentBattleRounds.Left_battle_index + 1].transform.DoMove(EaseCurve, 1f, cur_player_battle_entity.transform.position, true, OnNextPlayeEntityMoveComplete);
+            }
         }
 
         void OnNextPlayeEntityMoveComplete()
         {
-            GameObject.DestroyImmediate(cur_player_battle_entity);
             cur_player_battle_entity = team_left_entities[currentBattleRounds.Left_battle_index + 1];
             cur_player_battle_entity.transform.parent = player_battle_station;
-            cur_enemy_battle_entity.transform.SetTRSNormalize();
+            cur_player_battle_entity.transform.SetTRSNormalize();
+            cur_player_battle_entity.SetActive(true);
 
             var nextBattleBound = battleRounds[battleRoundIndex + 1];
-            battleRoundIndex += 1;
             if (nextBattleBound.AttackTeam == EBatteTeam.RightTeam)
             {
-                //   enemyHUD.SetHUD(nextBattleBound.Attacker, cur_enemy_battle_entity.transform);
                 playerHUD.SetHUD(nextBattleBound.Target, cur_player_battle_entity.transform);
                 playerHUD.SetHP(nextBattleBound.Target);
             }
             else
             {
-                //   enemyHUD.SetHUD(nextBattleBound.Target, cur_enemy_battle_entity.transform);
                 playerHUD.SetHUD(nextBattleBound.Attacker, cur_player_battle_entity.transform);
                 playerHUD.SetHP(nextBattleBound.Attacker);
             }
             playerHUD.gameObject.SetActive(true);
-            //回去
-            cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
-              {
-                  cur_enemy_battle_entity = team_right_entities[currentBattleRounds.Right_battle_index + 1];
-                  cur_enemy_battle_info = team_right_items[currentBattleRounds.Right_battle_index + 1];
-
-                  if (nextBattleBound.AttackTeam == EBatteTeam.RightTeam)
-                  {
-                      State = BattleState.EnemyTurn;
-                      EnemyTurn();
-                  }
-                  else
-                  {
-                      State = BattleState.PlayerTurn;
-                      PlayerTurn();
-                  }
-              });
         }
         //攻击方移动到目标身边
-        attackerGo.transform.DoMove(EaseCurve, 1f, targetGo.transform.position + Vector3.right * 1f, true, OnMoveComplete);
+        cur_enemy_battle_entity.transform.DoMove(EaseCurve, 1f, cur_player_battle_entity.transform.position + Vector3.right * 1f, true, OnMoveComplete);
     }
 
     //弹出伤害
@@ -387,7 +411,7 @@ public class BattleSystem : MonoBehaviour
         {
             float damage = cur_player_battle_info.Atk - cur_enemy_battle_info.Def;
             bool isDefeated = cur_enemy_battle_info.TakeDamage(cur_player_battle_info.Atk, cur_enemy_battle_info.Def);
-            bool isEndBattle = right_battle_index + 1 >= team_right_items.Count;
+            bool isEndBattle = right_battle_index + 1 >= team_right_items.Count && isDefeated;
             BattleRound battleRound = new BattleRound()
             {
                 RoundIndex = roundIndex,
@@ -421,7 +445,7 @@ public class BattleSystem : MonoBehaviour
         {
             float damage = cur_enemy_battle_info.Atk - cur_player_battle_info.Def;
             bool isDefeated = cur_player_battle_info.TakeDamage(cur_enemy_battle_info.Atk, cur_player_battle_info.Def);
-            bool isEndBattle = left_battle_index + 1 >= team_left_items.Count;
+            bool isEndBattle = left_battle_index + 1 >= team_left_items.Count && isDefeated;
             BattleRound battleRound = new BattleRound()
             {
                 RoundIndex = roundIndex,

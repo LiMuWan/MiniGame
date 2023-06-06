@@ -14,7 +14,7 @@ public static class TweenExtesion
         return tween;
     }
 
-    public static Vector3Tween DoMove(this Transform transform,AnimationCurve easeCure, float duration, Vector3 targetPos, bool isWorld, Action onComplete)
+    public static Vector3Tween DoMove(this Transform transform,AnimationCurve easeCure, float duration, Vector3 targetPos, bool isWorld, Action onComplete = null)
     {
         Vector3Tween tween = transform.TweenMove(duration, targetPos, isWorld);
         tween.SetEase(easeCure);
@@ -23,7 +23,7 @@ public static class TweenExtesion
         return tween;
     }
 
-    public static Vector3Tween DoScale(this Transform transform, AnimationCurve easeCure, float duration, Vector3 from, Vector3 to, Action onComplete)
+    public static Vector3Tween DoScale(this Transform transform, AnimationCurve easeCure, float duration, Vector3 from, Vector3 to, Action onComplete = null)
     {
         Vector3Tween tween = transform.TweenScale(duration, from, to);
         tween.SetEase(easeCure);

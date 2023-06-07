@@ -1,7 +1,7 @@
 ﻿
 namespace UniFramework.Utility
 {
-	public sealed class UniTimer
+	public class UniTimer
 	{
 		/// <summary>
 		/// 延迟后，触发一次

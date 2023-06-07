@@ -5,6 +5,10 @@ using UniFramework.Tween;
 using System;
 using TMPro;
 using UniFramework.Utility;
+using UniFramework.Pooling;
+using UniFramework.Singleton;
+using UniFramework.Event;
+using Hotfix.EventDefine;
 
 public class BattleSystem : MonoBehaviour
 {  
@@ -50,16 +54,29 @@ public class BattleSystem : MonoBehaviour
     private List<BattleRound> battleRounds;
     private int battleRoundIndex = 0;
     public AnimationCurve EaseCurve;
+    private Spawner spawner;
+
+    private EventGroup eventGroup = new EventGroup();
 
     private void Awake()
     {
         positioningManager = GetComponent<PositioningManager>();
-        teamManager = GetComponent<TeamManager>();
+        teamManager = GetComponent<TeamManager>(); 
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         UniTween.Initalize();
+        // 初始化游戏对象池系统
+        UniPooling.Initalize();
+        // 创建孵化器
+        spawner = UniPooling.CreateSpawner("DefaultPackage");
+        // 创建hud_tips预制体的对象池
+        var operation = spawner.CreateGameObjectPoolAsync("hud_tips", true, 2, 3);
+        yield return operation;
+        //监听事件
+        eventGroup.AddListener<UserEventDefine.UserSkipBattle>(Handler);
+
         List<ItemData> team_left = new List<ItemData>()
         {
             new ItemData(){Hp = 100,Atk = 10,Spd = 1,Def = 5,CurHp = 100},
@@ -76,9 +93,30 @@ public class BattleSystem : MonoBehaviour
         battleState = EBattleState.Start;
         SetupBattle();
     }
-    
-    private void OnDestroy()
+
+    private void Handler(IEventMessage message)
     {
+        if(message is UserEventDefine.UserSkipBattle)
+        {
+            //skip战斗
+            var battle_last = battleRounds[battleRounds.Count - 1];
+            if (battle_last.AttackTeam == EBatteTeam.LeftTeam && battle_last.IsEndBattle)
+            {
+                //战斗胜利
+                battleState = EBattleState.Win;
+            }
+            else
+            {
+                //战斗失败
+                battleState = EBattleState.Lost;
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {   
+        spawner.Destroy();
+        spawner = null;
         team_left_items = null;
         team_right_items = null;
         team_left_entities = null;
@@ -92,6 +130,9 @@ public class BattleSystem : MonoBehaviour
         hud_tips = null;
         playerHUD = null;
         enemyHUD = null;
+        UniPooling.Destroy();
+        UniTween.Destroy();
+        eventGroup.RemoveAllListener();
     }
 
     private void Update() 
@@ -153,6 +194,7 @@ public class BattleSystem : MonoBehaviour
 
     private void NextRounds()
     {
+        if(battleState == EBattleState.Win || battleState == EBattleState.Lost) return;
         battleRoundIndex += 1;
         if (battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
         {
@@ -390,18 +432,28 @@ public class BattleSystem : MonoBehaviour
         //攻击方移动到目标身边
         cur_enemy_battle_entity.transform.DoMove(EaseCurve, 1f, cur_player_battle_entity.transform.position + Vector3.right * 1f, true, OnMoveComplete);
     }
+    
+     private void PopDamage(float damage, Vector3 originPos, Vector3 destPos)
+     {
+         UniSingleton.StartCoroutine(PopDamageCo(damage,originPos,destPos));
+     }
 
     //弹出伤害
-    private void PopDamage(float damage, Vector3 originPos, Vector3 destPos)
+    private IEnumerator PopDamageCo(float damage, Vector3 originPos, Vector3 destPos)
     {
-        var hud_tip = GameObject.Instantiate(hud_tips, hud_parent);
+       // 孵化hud_tips游戏对象
+        SpawnHandle handle = spawner.SpawnAsync("hud_tips");
+        yield return handle;
+        var hud_tip = handle.GameObj;
+        hud_tip.transform.SetParent(hud_parent);
         hud_tip.transform.position = camera.WorldToScreenPoint(originPos);
         hud_tip.SetActive(true);
         hud_tip.GetComponent<TextMeshProUGUI>().text = damage.ToString();
         destPos = camera.WorldToScreenPoint(destPos);
         var tween = hud_tip.transform.TweenMove(0.5f, destPos, true);
-        tween.SetOnComplete(() => { Destroy(hud_tip); });
+        tween.SetOnComplete(() => { handle.Restore(); });
         UniTween.Play(tween);
+        UniSingleton.StopCoroutine(PopDamageCo(damage,originPos,destPos));
     }
 
     //模拟战斗

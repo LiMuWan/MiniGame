@@ -44,7 +44,6 @@ public class UILoginWindow : UIWindow
         btnBattle = this.transform.Find("btnBattle").GetComponent<Button>();
         btnBattle.onClick.AddListener(() =>
         {
-            UniLogger.Log("LoadBattle");
             SceneLoaderManager.LoadBattle(() =>
                 {
                UIManager.UICanvas.SetActive(false);

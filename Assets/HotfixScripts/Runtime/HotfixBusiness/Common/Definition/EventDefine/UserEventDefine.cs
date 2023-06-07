@@ -135,5 +135,17 @@ namespace Hotfix.EventDefine
                  UniEvent.SendMessage(msg);
             }
         }
+
+        /// <summary>
+        /// 跳过战斗
+        /// </summary>
+        public class UserSkipBattle:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                 var msg = new UserSkipBattle();
+                 UniEvent.SendMessage(msg);
+            }
+        }
     }
 }

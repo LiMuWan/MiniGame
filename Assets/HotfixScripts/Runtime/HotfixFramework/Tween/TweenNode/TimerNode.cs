@@ -1,4 +1,6 @@
 ﻿
+using UniFramework.Utility;
+
 namespace UniFramework.Tween
 {
 	/// <summary>

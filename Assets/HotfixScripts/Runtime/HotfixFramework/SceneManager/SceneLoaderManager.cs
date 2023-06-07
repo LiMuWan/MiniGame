@@ -27,17 +27,22 @@ public class SceneLoaderManager
     private static void LoadSceneSuccessCallback(string sceneAssetName,Scene scene, float duration, object userData)
     {
         UniLogger.Log($"Load Scene {sceneAssetName}!!!");
-        sceneDic.TryAdd(sceneAssetName,scene);
-        onLoadSceneHandler?.Invoke();
-        onLoadSceneHandler = null;
+        if (sceneDic.TryAdd(sceneAssetName, scene))
+        {
+            onLoadSceneHandler?.Invoke();
+            onLoadSceneHandler = null;
+        }
     }
     
     public static void UnLoadScene(string sceneAssetName,Action callback)
     {  
         Scene scene;
-        sceneDic.TryGetValue(sceneAssetName,out scene);
-        onUnLoadSceneHandler = callback;
-        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(scene).completed += OnUnLoadComplete();
+        if(sceneDic.TryGetValue(sceneAssetName,out scene))
+        {
+            sceneDic.Remove(sceneAssetName);
+            onUnLoadSceneHandler = callback;
+            UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(scene).completed += OnUnLoadComplete();
+        }
     }
 
     private static Action<AsyncOperation> OnUnLoadComplete()

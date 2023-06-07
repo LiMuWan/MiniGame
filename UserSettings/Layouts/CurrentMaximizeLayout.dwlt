@@ -165,8 +165,8 @@ MonoBehaviour:
     y: 0
     width: 790
     height: 474
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -599,7 +599,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6cadffff8abeffffbabfffffaec0ffffd0c4ffff3ec5ffff42c5ffff4ec5ffff42c8ffff46c8ffff4cc8ffff54c8ffff46cdffff4acdffff50cdffff58cdffffc6cdffff60d0ffff64d0ffff6ad0ffff10d3ffffc0d3ffffc4d3ffffcad3ffff6edbffff20e4ffff54e6ffff44fbfffff4ffffff125c00009a5c000098660000d4660000d26700007a6d0000
+      m_ExpandedIDs: 44fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -680,7 +680,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SearchFilter:
-    m_NameFilter: boot
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -691,9 +691,10 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/StreamingAssets/BuildinFiles
     m_Globs: []
-    m_OriginalText: boot
+    m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -706,7 +707,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 88530000
     m_LastClickedID: 21384
-    m_ExpandedIDs: ffffffff00000000fe4b0000004c0000024c0000044c0000064c0000084c00000a4c00000c4c00000e4c0000104c0000124c0000144c0000164c0000184c00001a4c00001c4c00001e4c0000224c0000244c0000264c0000964c0000a84c0000c44c0000c04e0000f44e0000dc500000825b0000c45d0000ca5d0000
+    m_ExpandedIDs: 000000000e4c0000104c0000124c0000144c0000164c0000184c00001a4c00001c4c00001e4c0000204c0000224c0000244c0000264c0000284c00002a4c00002c4c00002e4c0000304c0000324c0000344c0000364c0000384c00003a4c00003c4c00003e4c0000404c0000424c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,10 +732,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 712}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000fe4b0000004c0000024c0000044c0000064c0000084c00000a4c00000c4c00000e4c0000104c0000124c0000144c0000164c0000184c00001a4c00001c4c00001e4c0000224c0000244c0000264c0000964c0000a84c0000c44c0000c04e0000f44e0000dc500000825b0000c45d0000ca5d0000
+    m_ExpandedIDs: ffffffff000000000e4c0000104c0000124c0000144c0000164c0000184c00001a4c00001c4c00001e4c0000204c0000224c0000244c0000264c0000284c00002a4c00002c4c00002e4c0000304c0000324c0000344c0000364c0000384c00003a4c00003c4c00003e4c0000404c0000424c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

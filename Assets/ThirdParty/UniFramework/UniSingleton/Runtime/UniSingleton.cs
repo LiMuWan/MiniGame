@@ -223,6 +223,18 @@ namespace UniFramework.Singleton
             }
             coroutineDict.Clear();
         }
+        
+        public static void Delay(float seconds,Action callback)
+        {
+            StartCoroutine(DelayCo(seconds,callback));
+        }
+
+        private static IEnumerator DelayCo(float seconds,Action callback)
+        {
+            yield return new WaitForSeconds(seconds);
+            callback?.Invoke();
+            StopCoroutine(DelayCo(seconds,callback));
+        }
 
         private static int GetMinPriority()
         {

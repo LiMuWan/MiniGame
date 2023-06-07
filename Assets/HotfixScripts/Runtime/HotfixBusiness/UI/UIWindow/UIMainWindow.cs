@@ -1,11 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Hotfix.EventDefine;
 using UniFramework.Event;
 using UniFramework.Utility;
-using UnityEngine.UI;
 
 //Donot use base.[MethodName] 
 public partial class UIMainWindow

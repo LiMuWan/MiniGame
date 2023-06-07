@@ -20,6 +20,10 @@ public class BattleResultUI : MonoBehaviour
         btn_Bg.onClick.AddListener(()=>
         {
             //到主场景
+            SceneLoaderManager.UnLoadScene("Battle",()=>
+            {
+                UIManager.UICanvas.SetActive(true);
+            });
         });
     }
 

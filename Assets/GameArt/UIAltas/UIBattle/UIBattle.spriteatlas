@@ -38,8 +38,14 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ee289000bbe1fdc48af16da083c37293, type: 3}
+  - {fileID: 21300000, guid: db3f66b46939d1d4e9db6abbeb8d5f6c, type: 3}
+  - {fileID: 21300000, guid: 8415a70f91b04354a8318215531c65d3, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - battle_hp_gauge
+  - battle_hp_bg
+  - blur_bg
   m_RenderDataMap: {}
   m_Tag: UIBattle
   m_IsVariant: 0

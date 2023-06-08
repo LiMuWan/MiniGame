@@ -38,8 +38,22 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f5f1d8015f9a539458b72523c861c62e, type: 3}
+  - {fileID: 21300000, guid: 89d44cc296e12de41a3bb4e998fee309, type: 3}
+  - {fileID: 21300000, guid: 8dbaf493ab613814abbf822986750912, type: 3}
+  - {fileID: 21300000, guid: 3b3ba5f4f213c5145872f6f976c4bea9, type: 3}
+  - {fileID: 21300000, guid: 8e94ff1651342224dadb9452bf38eec2, type: 3}
+  - {fileID: 21300000, guid: 3a60d0669cf81144a9a97013bfac60be, type: 3}
+  - {fileID: 21300000, guid: 2dac592af688a6648a311a75f3b5de1b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - btn_sell
+  - arrow_down
+  - icon_female
+  - arrow_up
+  - icon_male
+  - frame_bg
+  - btn_get
   m_RenderDataMap: {}
   m_Tag: UIItemInfo
   m_IsVariant: 0

@@ -266,7 +266,7 @@ public class BattleSystem : MonoBehaviour
             cur_player_battle_entity.transform.DOShake(0.2f, Vector3.left * 0.2f, OnShakeComplete);
 
             void OnShakeComplete()
-            {
+            {   
                 //弹出伤害值
                 PopDamage(currentBattleRounds.Damage, cur_enemy_battle_entity.transform.position + Vector3.right * 0.5f, cur_enemy_battle_entity.transform.position + Vector3.up * 2f + Vector3.right * 0.5f);
                 //设置血量
@@ -289,12 +289,12 @@ public class BattleSystem : MonoBehaviour
                 {
                     UniLogger.Log("当前回合，防守方被击败一个动物");
                     cur_enemy_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
-                    Delay(2f,()=>{NextRounds();});
+                    Delay(0.5f,()=>{NextRounds();});
                 }
                 else
                 {
                      //回去
-                     cur_player_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
+                     cur_player_battle_entity.transform.DoMove(EaseCurve, 0.1f, Vector3.zero, false, () =>
                      {
                          //下一回合
                          Delay(0.2f,()=>{NextRounds();});
@@ -308,7 +308,7 @@ public class BattleSystem : MonoBehaviour
                 //攻击方回去
                 cur_player_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false);
                 //下一个敌人移动回来
-                team_right_entities[currentBattleRounds.Right_battle_index + 1].transform.DoMove(EaseCurve, 1f, cur_enemy_battle_entity.transform.position, true, OnNextEnemyEntityMoveComplete);
+                team_right_entities[currentBattleRounds.Right_battle_index + 1].transform.DoMove(EaseCurve, 0.1f, cur_enemy_battle_entity.transform.position, true, OnNextEnemyEntityMoveComplete);
             }
         }
 
@@ -333,7 +333,7 @@ public class BattleSystem : MonoBehaviour
             enemyHUD.gameObject.SetActive(true);
         }
 
-        cur_player_battle_entity.transform.DoMove(EaseCurve, 1f, cur_enemy_battle_entity.transform.position + Vector3.left * 1f, true, OnMoveComplete);
+        cur_player_battle_entity.transform.DoMove(EaseCurve, 0.1f, cur_enemy_battle_entity.transform.position + Vector3.left * 1f, true, OnMoveComplete);
     }
 
     private void EndBattle()
@@ -387,12 +387,12 @@ public class BattleSystem : MonoBehaviour
                 {
                     UniLogger.Log("当前回合，防守方被击败一个动物");
                     cur_player_battle_entity.transform.DoScale(EaseCurve, 0.2f, Vector3.one, Vector3.zero, OnScaleComplete);
-                    Delay(2f,()=>{NextRounds();});
+                    Delay(0.5f,()=>{NextRounds();});
                 }
                 else
                 {
                     //回去
-                     cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false, () =>
+                     cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.1f, Vector3.zero, false, () =>
                      {
                          Delay(0.2f,()=>{NextRounds();});
                      });
@@ -403,9 +403,9 @@ public class BattleSystem : MonoBehaviour
             {
                 OnTargetDefeated(currentBattleRounds);
                 //攻击方回去
-                cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.3f, Vector3.zero, false);
+                cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.1f, Vector3.zero, false);
                 //受击方下一个过来
-                team_left_entities[currentBattleRounds.Left_battle_index + 1].transform.DoMove(EaseCurve, 1f, cur_player_battle_entity.transform.position, true, OnNextPlayeEntityMoveComplete);
+                team_left_entities[currentBattleRounds.Left_battle_index + 1].transform.DoMove(EaseCurve, 0.1f, cur_player_battle_entity.transform.position, true, OnNextPlayeEntityMoveComplete);
             }
         }
 
@@ -430,7 +430,7 @@ public class BattleSystem : MonoBehaviour
             playerHUD.gameObject.SetActive(true);
         }
         //攻击方移动到目标身边
-        cur_enemy_battle_entity.transform.DoMove(EaseCurve, 1f, cur_player_battle_entity.transform.position + Vector3.right * 1f, true, OnMoveComplete);
+        cur_enemy_battle_entity.transform.DoMove(EaseCurve, 0.1f, cur_player_battle_entity.transform.position + Vector3.right * 1f, true, OnMoveComplete);
     }
     
      private void PopDamage(float damage, Vector3 originPos, Vector3 destPos)
@@ -448,7 +448,7 @@ public class BattleSystem : MonoBehaviour
         hud_tip.transform.SetParent(hud_parent);
         hud_tip.transform.position = camera.WorldToScreenPoint(originPos);
         hud_tip.SetActive(true);
-        hud_tip.GetComponent<TextMeshProUGUI>().text = damage.ToString();
+        hud_tip.GetComponent<TextMeshProUGUI>().text = $"-{damage}";
         destPos = camera.WorldToScreenPoint(destPos);
         var tween = hud_tip.transform.TweenMove(0.5f, destPos, true);
         tween.SetOnComplete(() => { handle.Restore(); });

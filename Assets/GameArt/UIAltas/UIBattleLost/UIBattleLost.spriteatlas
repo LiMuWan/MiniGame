@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UICommon
+  m_Name: UIBattleLost
   serializedVersion: 2
   m_EditorData:
     serializedVersion: 2
@@ -33,20 +33,22 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 102900000, guid: 3ade0eeae03e4594ba3266079c74c065, type: 3}
+    - {fileID: 102900000, guid: 30844beca13f6514cbad3456bf257e8d, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 83df44f3c4cd4514c864029932d515b3, type: 3}
-  - {fileID: 21300000, guid: 088425ec5825ba64186e4a4773284b7d, type: 3}
-  - {fileID: 21300000, guid: 5c1601dfa6bb4c64fb790e8a520505a8, type: 3}
+  - {fileID: 21300000, guid: b8c9c4d41bd140f4d988fa068c53335f, type: 3}
+  - {fileID: 21300000, guid: b559a5695d612cd4e952a7a157fcf1af, type: 3}
+  - {fileID: 21300000, guid: 2bf3218eaf6207c419e86dc2b62b046f, type: 3}
+  - {fileID: 21300000, guid: 060f0eaff6b526849b6b6dc8a0600153, type: 3}
   m_PackedSpriteNamesToIndex:
-  - animal_slot
-  - icon_egg
-  - btn_menu
+  - light_fail
+  - link_bg
+  - ribbon_fail
+  - arrow_01
   m_RenderDataMap: {}
-  m_Tag: UICommon
+  m_Tag: UIBattleLost
   m_IsVariant: 0
   m_IsPlaceholder: 0

@@ -262,6 +262,13 @@ public partial class UIMainWindow : UIWindow
 
     private void InitUI()
     {
+        btn_battle.onClick.AddListener(()=>
+        { 
+             SceneLoaderManager.LoadBattle(() =>
+                {
+               UIManager.UICanvas.SetActive(false);
+           });
+        });
         SpriteLoaderUtils.GetSprite("head_icon", UserDataManager.Instance.HeadHostUrl, Application.streamingAssetsPath, OnLoadSprite);
         avator_name.text = UserDataManager.Instance.NickName;
         level_text.text = $"{UserDataManager.Instance.Level}";

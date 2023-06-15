@@ -19,6 +19,7 @@ public partial class UIRankList : UIWindow
     protected TextMeshProUGUI level_title;
     protected TextMeshProUGUI level_text;
     protected Button btn_challenge;
+    private Cell select;
 
 
     protected override void InitTemplate()
@@ -28,7 +29,9 @@ public partial class UIRankList : UIWindow
         // avator_name = FindChild<TextMeshProUGUI>("avator_name");
         // level_title = FindChild<TextMeshProUGUI>("level_title");
         // level_text = FindChild<TextMeshProUGUI>("level_text");
+
         btn_challenge = FindChild<Button>("btn_challenge");
+        select = FindChild<Cell>("select");
     }
 
     public override void OnCreate()
@@ -47,6 +50,7 @@ public partial class UIRankList : UIWindow
     private void OnSelctHandler(int index)
     {
        //TODO
+       //select.UpdateContent();
     }
 
     public override void OnDestroy()

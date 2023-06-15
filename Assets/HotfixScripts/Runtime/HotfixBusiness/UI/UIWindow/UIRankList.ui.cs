@@ -41,7 +41,7 @@ public partial class UIRankList : UIWindow
 
             // ScrollView.UpdateData(items);
             // ScrollView.SelectCell(0);
-            ScrollView.OnSelectHandle = OnSelctHandler;
+        ScrollView.OnSelectHandle = OnSelctHandler;
     }
     
     private void OnSelctHandler(int index)

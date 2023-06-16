@@ -262,6 +262,12 @@ public partial class UIMainWindow : UIWindow
 
     private void InitUI()
     {
+        btn_task.onClick.AddListener(()=>
+        {
+            //任务todo:
+            //查看当前任务状态，获取下一个任务状态
+            //获取任务奖励
+        });
         btn_battle.onClick.AddListener(()=>
         { 
              SceneLoaderManager.LoadBattle(() =>

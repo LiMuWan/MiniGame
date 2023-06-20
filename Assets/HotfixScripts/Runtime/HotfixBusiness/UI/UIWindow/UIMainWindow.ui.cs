@@ -173,7 +173,7 @@ public partial class UIMainWindow : UIWindow
     protected Image head_icon;
     protected TextMeshProUGUI avator_name;
     protected TextMeshProUGUI level_title;
-    protected TextMeshProUGUI level_text;
+    protected TextMeshProUGUI title_level_text;//称号等级
     protected TextMeshProUGUI coin_text;
     protected Button btn_buy_coin;
     protected Button btn_buy_diamand;
@@ -200,7 +200,7 @@ public partial class UIMainWindow : UIWindow
         head_icon = FindChild<Image>("head_icon");
         avator_name = FindChild<TextMeshProUGUI>("avator_name");
         level_title = FindChild<TextMeshProUGUI>("level_title");
-        level_text = FindChild<TextMeshProUGUI>("level_text");
+        title_level_text = FindChild<TextMeshProUGUI>("title_level_text");
         coin_text = FindChild<TextMeshProUGUI>("coin_text");
         btn_buy_coin = FindChild<Button>("btn_buy_coin");
         btn_buy_diamand = FindChild<Button>("btn_buy_diamand");
@@ -277,7 +277,7 @@ public partial class UIMainWindow : UIWindow
         });
         SpriteLoaderUtils.GetSprite("head_icon", UserDataManager.Instance.HeadHostUrl, Application.streamingAssetsPath, OnLoadSprite);
         avator_name.text = UserDataManager.Instance.NickName;
-        level_text.text = $"{UserDataManager.Instance.Level}";
+        user_level.text = $"{UserDataManager.Instance.Level}";
         user_level_slider.maxValue = UserDataManager.Instance.MaxExperience;
         user_level_slider.value = UserDataManager.Instance.Experience;
         coin_text.text = $"{UserDataManager.Instance.Coin}";

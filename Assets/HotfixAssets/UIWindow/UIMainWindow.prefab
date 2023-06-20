@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 8904909630782239718}
   - component: {fileID: 7353081171404445101}
   m_Layer: 5
-  m_Name: level_text
+  m_Name: title_level_text
   m_TagString: Export
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

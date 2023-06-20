@@ -128,7 +128,11 @@ public partial class UIMainWindow
         }
         else if (message is UserEventDefine.UserLevelUp ulu)
         {
-            level_text.text = $"{ulu.currentLevel}";
+            user_level.text = $"{ulu.currentLevel}";
+        }
+        else if (message is UserEventDefine.UserEggLevelUp uelu)
+        {
+            egg_level.text = $"{uelu.currentLevel}";
         }
         else if (message is UserEventDefine.UserEggNumRefresh uenr)
         {

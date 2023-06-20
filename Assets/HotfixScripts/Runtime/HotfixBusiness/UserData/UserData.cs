@@ -141,7 +141,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         {
             if (egg_level != value)
             {
-                UserEventDefine.UserLevelUp.SendEventMessage(egg_level, value);
+                UserEventDefine.UserEggLevelUp.SendEventMessage(egg_level, value);
                 egg_level = value;
             }
         }
@@ -222,7 +222,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 
     public void InitOrRefresh(JPlayerData playerData)
     {
-         UniLogger.Log($"playerData = {playerData}");
+        UniLogger.Log($"playerData = {playerData}");
         PlayerId = playerData.playerId;
         OpenId = playerData.openId;
         CreateTime = playerData.createTime;

@@ -7,7 +7,8 @@ using System;
 using UniFramework.Utility;
 
 public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
-{
+{   
+    public static JUserLoginData LoginData = default;
     //金币
     private int coin;
     //钻石

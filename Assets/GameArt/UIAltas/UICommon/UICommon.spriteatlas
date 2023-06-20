@@ -51,16 +51,24 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: f5f1d8015f9a539458b72523c861c62e, type: 3}
   - {fileID: 21300000, guid: 83df44f3c4cd4514c864029932d515b3, type: 3}
+  - {fileID: 21300000, guid: d23af03476750614eb8105766d2bd506, type: 3}
   - {fileID: 21300000, guid: 3a60d0669cf81144a9a97013bfac60be, type: 3}
+  - {fileID: 21300000, guid: 4edfe8a90b6652549881f8f8b39b6817, type: 3}
   - {fileID: 21300000, guid: 2dac592af688a6648a311a75f3b5de1b, type: 3}
   - {fileID: 21300000, guid: 088425ec5825ba64186e4a4773284b7d, type: 3}
+  - {fileID: 21300000, guid: dea7cd0fa27df5e429c4a1202964fbc4, type: 3}
   - {fileID: 21300000, guid: 5c1601dfa6bb4c64fb790e8a520505a8, type: 3}
   m_PackedSpriteNamesToIndex:
+  - btn_sell
   - animal_slot
+  - icn_coin
   - frame_bg
+  - btn_add
   - btn_get
   - icon_egg
+  - ticket
   - btn_menu
   m_RenderDataMap: {}
   m_Tag: UICommon

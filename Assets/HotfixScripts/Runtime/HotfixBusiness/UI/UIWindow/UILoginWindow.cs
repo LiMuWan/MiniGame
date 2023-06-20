@@ -17,11 +17,11 @@ public class UILoginWindow : UIWindow
         btnLogin = this.transform.Find("btnLogin").GetComponent<Button>();
         btnLogin.onClick.AddListener(() =>
         {
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
             LoginOption loginOption = new LoginOption();
             loginOption.success = (result) =>
            {
-                 NetMessageHandler.SendLogin(result.code);
+                 //NetMessageHandler.SendLogin(result.code);
              };
 
             loginOption.fail = (result) =>

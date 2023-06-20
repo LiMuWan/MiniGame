@@ -46,14 +46,14 @@ public class LoginStatus : IApplicationStatus
             infoButton = WX.CreateUserInfoButton(0, canvasHeight / 2, canvasWith, buttonHeight, "zh_CN", false);//canvasHeight - buttonHeight
             infoButton.OnTap((userInfoButonRet) =>
             {
-                UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));//192.168.1.21:8082
+                UniLogger.Log(JsonUtility.ToJson(userInfoButonRet.userInfo));
                 UserDataManager.Instance.NickName = userInfoButonRet.userInfo.nickName;
                 UserDataManager.Instance.HeadHostUrl = userInfoButonRet.userInfo.avatarUrl;
 
                 LoginOption loginOption = new LoginOption();
                 loginOption.success = (result) =>
                 {
-                    NetMessageHandler.SendLogin(result.code);
+                    NetMessageHandler.SendLogin(result.code,userInfoButonRet.userInfo.avatarUrl);
                 };
 
                 loginOption.fail = (result) =>

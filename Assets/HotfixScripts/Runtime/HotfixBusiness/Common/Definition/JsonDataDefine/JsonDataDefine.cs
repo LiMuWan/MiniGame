@@ -1,3 +1,39 @@
+using System;
+
+//登录数据
+public class JUser
+{
+    public string userId;
+    public string openId;
+    public string headUrl;
+    public int[] serverIdList;
+    public int lastServerId;
+}
+
+public class JGameServer
+{
+    public int serverId;
+    public string serverIp;
+    public int serverPort;
+    public int serverState;
+}
+
+public class LoginRes
+{
+    public JUser user;
+    public string sessionkey;
+    public string unionId;
+    public JGameServer gameServer;
+}
+
+public class JUserLoginData
+{
+    public int code;
+    public string message;
+
+    public LoginRes data;
+}
+
 public class JUserData
 {
     public int code;

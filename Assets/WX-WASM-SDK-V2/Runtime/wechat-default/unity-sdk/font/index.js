@@ -1,7 +1,6 @@
 import moduleHelper from '../module-helper';
 import { formatJsonStr } from '../utils';
 import fixCmapTable from './fix-cmap';
-import { launchEventType } from '../../plugin-config';
 
 const { platform } = wx.getSystemInfoSync();
 
@@ -74,19 +73,12 @@ function WXShareFontBuffer(buffer, offset, callbackId) {
     buffer.set(new Uint8Array(tempCacheObj[callbackId]), offset);
     delete tempCacheObj[callbackId];
 }
-function preloadWxCommonFont() {
+export function preloadWxCommonFont() {
     
     if (!!GameGlobal.unityNamespace.preloadWXFont && !!GameGlobal.manager?.font?.getCommonFont) {
         handleGetFontData();
     }
 }
-setTimeout(() => {
-    GameGlobal.manager.onLaunchProgress((e) => {
-        if (e.type === launchEventType.launchPlugin) {
-            preloadWxCommonFont();
-        }
-    });
-}, 50);
 export default {
     WXGetFontRawData,
     WXShareFontBuffer,

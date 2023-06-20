@@ -47,11 +47,15 @@ let wxOnHandoffResolveConf;
 let wxOnShareTimelineResolveConf;
 let wxOnGameLiveStateChangeResolveConf;
 const FeedbackButtonList = {};
+const LogManagerList = {};
+const RealtimeLogManagerList = {};
 const UpdateManagerList = {};
 const VideoDecoderList = {};
 const wxFeedbackButtonTapList = {};
 const wxVideoDecoderList = {};
 const getFeedbackButtonObject = getListObject(FeedbackButtonList, 'FeedbackButton');
+const getLogManagerObject = getListObject(LogManagerList, 'LogManager');
+const getRealtimeLogManagerObject = getListObject(RealtimeLogManagerList, 'RealtimeLogManager');
 const getUpdateManagerObject = getListObject(UpdateManagerList, 'UpdateManager');
 const getVideoDecoderObject = getListObject(VideoDecoderList, 'VideoDecoder');
 export default {
@@ -4081,6 +4085,18 @@ export default {
         FeedbackButtonList[key] = obj;
         return key;
     },
+    WX_GetLogManager(option) {
+        const obj = wx.getLogManager(formatJsonStr(option));
+        const key = uid();
+        LogManagerList[key] = obj;
+        return key;
+    },
+    WX_GetRealtimeLogManager() {
+        const obj = wx.getRealtimeLogManager();
+        const key = uid();
+        RealtimeLogManagerList[key] = obj;
+        return key;
+    },
     WX_GetUpdateManager() {
         const obj = wx.getUpdateManager();
         const key = uid();
@@ -4137,6 +4153,69 @@ export default {
             return;
         }
         obj.show();
+    },
+    WX_LogManagerDebug(id, args) {
+        const obj = getLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.debug(args);
+    },
+    WX_LogManagerInfo(id, args) {
+        const obj = getLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.info(args);
+    },
+    WX_LogManagerLog(id, args) {
+        const obj = getLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.log(args);
+    },
+    WX_LogManagerWarn(id, args) {
+        const obj = getLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.warn(args);
+    },
+    WX_RealtimeLogManagerAddFilterMsg(id, msg) {
+        const obj = getRealtimeLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.addFilterMsg(msg);
+    },
+    WX_RealtimeLogManagerError(id, args) {
+        const obj = getRealtimeLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.error(args);
+    },
+    WX_RealtimeLogManagerInfo(id, args) {
+        const obj = getRealtimeLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.info(args);
+    },
+    WX_RealtimeLogManagerSetFilterMsg(id, msg) {
+        const obj = getRealtimeLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.setFilterMsg(msg);
+    },
+    WX_RealtimeLogManagerWarn(id, args) {
+        const obj = getRealtimeLogManagerObject(id);
+        if (!obj) {
+            return;
+        }
+        obj.warn(args);
     },
     WX_UpdateManagerApplyUpdate(id) {
         const obj = getUpdateManagerObject(id);

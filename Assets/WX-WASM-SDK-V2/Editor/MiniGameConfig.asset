@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: MiniGameConfig
   m_EditorClassIdentifier: 
   ProjectConf:
-    projectName: "\u8709\u8763\u5316\u8776\u4F20"
-    Appid: wxa9dda4f571fc2b80
+    projectName: 
+    Appid: 
     CDN: 
-    assetLoadType: 1
+    assetLoadType: 0
     VideoUrl: 
-    DST: D:/WxMiniGamework/WxMiniGameDevelopment
+    DST: 
     StreamCDN: 
     bundleHashLength: 32
     bundlePathIdentifier: StreamingAssets;
@@ -44,18 +44,18 @@ MonoBehaviour:
     UseMiniGameChat: 0
     PreloadWXFont: 0
   CompileOptions:
-    DevelopBuild: 1
-    AutoProfile: 1
+    DevelopBuild: 0
+    AutoProfile: 0
     ScriptOnly: 0
     profilingFuncs: 0
     Webgl2: 0
-    fbslim: 1
+    fbslim: 0
     DeleteStreamingAssets: 1
     ProfilingMemory: 0
     CleanBuild: 0
     CustomNodePath: 
     showMonitorSuggestModal: 1
-    enableProfileStats: 1
+    enableProfileStats: 0
   CompressTexture:
     halfSize: 0
     useDXT5: 0

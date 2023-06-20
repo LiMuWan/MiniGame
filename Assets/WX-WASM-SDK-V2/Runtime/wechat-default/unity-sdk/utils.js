@@ -100,6 +100,16 @@ export function formatResponse(type, data, id) {
             data.arrayBufferLength = data[key].byteLength;
             data[key] = [];
         }
+        else if (typeof data[key] === 'object' && conf[key] === 'object') {
+            Object.keys(data[key]).forEach((v) => {
+                if (typeof data[key][v] === 'object') {
+                    data[key][v] = JSON.stringify(data[key][v]);
+                }
+                else {
+                    data[key][v] += '';
+                }
+            });
+        }
         else if (typeof data[key] === 'object' && conf[key]) {
             
             const array = conf[key].match(/(.+)\[\]/);
@@ -120,22 +130,12 @@ export function formatResponse(type, data, id) {
                 formatResponse(conf[key], data[key]);
             }
         }
-        else if (typeof data[key] === 'object' && conf[key] === 'object') {
-            Object.keys(data[key]).forEach((v) => {
-                if (typeof data[key][v] === 'object') {
-                    data[key][v] = JSON.stringify(data[key][v]);
-                }
-                else {
-                    data[key][v] += '';
-                }
-            });
-        }
     });
-    // 如果有动态参数则不处理
+    
     if (conf.anyKeyWord) {
         return data;
     }
-    // 如果返回了协议中未定义的参数，则删除，防止C#侧解析出错
+    
     Object.keys(data).forEach((key) => {
         if (typeof conf[key] === 'undefined') {
             delete data[key];

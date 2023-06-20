@@ -6,6 +6,7 @@ import './unity-sdk/index.js';
 import checkVersion from './check-version';
 import 'texture-config.js';
 import { launchEventType, scaleMode } from './plugin-config';
+import { preloadWxCommonFont } from './unity-sdk/font/index';
 function checkUpdate() {
     const updateManager = wx.getUpdateManager();
     updateManager.onCheckForUpdate(() => {
@@ -170,6 +171,7 @@ checkVersion().then((enable) => {
             }
             managerConfig.DATA_CDN = GameGlobal.DATA_CDN;
             gameManager.assetPath = `${(managerConfig.DATA_CDN || '').replace(/\/$/, '')}/Assets`;
+            preloadWxCommonFont();
         });
         
         const systeminfo = wx.getSystemInfoSync();

@@ -33,9 +33,7 @@ const isPcWeChatVersionValid = compareVersion(version, '3.3');
 
 const isLibVersionValid = compareVersion(SDKVersion, '2.17.0');
 
-const isH5LibVersionValid = compareVersion(SDKVersion, '2.19.1');
-
-const isWssLibVersionValid = compareVersion(SDKVersion, '2.21.1');
+const isH5LibVersionValid = compareVersion(SDKVersion, '2.23.1');
 
 const isIOSH5SystemVersionValid = compareVersion(systemVersion, '14.0');
 
@@ -52,7 +50,8 @@ export const isSupportPlayBackRate = !isAndroid || compareVersion(version, '8.0.
 
 export const isSupportCacheAudio = !isIOS || compareVersion(version, '8.0.31');
 
-const canUseH5Renderer = (GameGlobal.canUseH5Renderer = isH5Renderer && isH5LibVersionValid);
+
+GameGlobal.canUseH5Renderer = isH5Renderer && isH5LibVersionValid;
 
 const isPcInvalid = isPc && !isPcWeChatVersionValid;
 
@@ -60,10 +59,6 @@ const isMobileInvalid = isMobile && !isLibVersionValid;
 
 const isIOSH5Invalid = (isH5Renderer && !isH5LibVersionValid) || (!isH5Renderer && disableHighPerformanceFallback);
 
-
-const useWss = false;
-
-const isWssNotEnable = canUseH5Renderer && !isWssLibVersionValid && useWss;
 
 const isWebgl2SystemVersionInvalid = () => isIOS && isWebgl2() && !isIOSWebgl2SystemVersionValid;
 
@@ -88,7 +83,6 @@ export default () => new Promise((resolve) => {
         if (isPcInvalid
             || isMobileInvalid
             || isIOSH5Invalid
-            || isWssNotEnable
             || isWebgl2SystemVersionInvalid()) {
             let updateWechat = true;
             let content = '当前微信版本过低\n请更新微信后进行游戏';

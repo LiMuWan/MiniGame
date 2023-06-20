@@ -177,6 +177,9 @@ export const ResType = {
         height: 'int',
         width: 'int',
     },
+    GetLogManagerOption: {
+        level: 'int',
+    },
     Path2D: {},
     OnCheckForUpdateListenerResult: {
         hasUpdate: 'bool',

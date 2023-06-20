@@ -904,6 +904,20 @@ WX_CreateFeedbackButton:function(option) {
     stringToUTF8(res, buffer, bufferSize);
     return buffer;
 },
+WX_GetLogManager:function(option) {
+    var res = window.WXWASMSDK.WX_GetLogManager(_WXPointer_stringify_adaptor(option));
+    var bufferSize = lengthBytesUTF8(res) + 1;
+    var buffer = _malloc(bufferSize);
+    stringToUTF8(res, buffer, bufferSize);
+    return buffer;
+},
+WX_GetRealtimeLogManager:function() {
+    var res = window.WXWASMSDK.WX_GetRealtimeLogManager();
+    var bufferSize = lengthBytesUTF8(res) + 1;
+    var buffer = _malloc(bufferSize);
+    stringToUTF8(res, buffer, bufferSize);
+    return buffer;
+},
 WX_GetUpdateManager:function() {
     var res = window.WXWASMSDK.WX_GetUpdateManager();
     var bufferSize = lengthBytesUTF8(res) + 1;
@@ -939,6 +953,33 @@ WX_FeedbackButtonOnTap:function(id){
 },
 WX_FeedbackButtonShow:function(id) {
     window.WXWASMSDK.WX_FeedbackButtonShow(_WXPointer_stringify_adaptor(id));
+},
+WX_LogManagerDebug:function(id, args) {
+    window.WXWASMSDK.WX_LogManagerDebug(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
+},
+WX_LogManagerInfo:function(id, args) {
+    window.WXWASMSDK.WX_LogManagerInfo(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
+},
+WX_LogManagerLog:function(id, args) {
+    window.WXWASMSDK.WX_LogManagerLog(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
+},
+WX_LogManagerWarn:function(id, args) {
+    window.WXWASMSDK.WX_LogManagerWarn(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
+},
+WX_RealtimeLogManagerAddFilterMsg:function(id, msg) {
+    window.WXWASMSDK.WX_RealtimeLogManagerAddFilterMsg(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(msg));
+},
+WX_RealtimeLogManagerError:function(id, args) {
+    window.WXWASMSDK.WX_RealtimeLogManagerError(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
+},
+WX_RealtimeLogManagerInfo:function(id, args) {
+    window.WXWASMSDK.WX_RealtimeLogManagerInfo(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
+},
+WX_RealtimeLogManagerSetFilterMsg:function(id, msg) {
+    window.WXWASMSDK.WX_RealtimeLogManagerSetFilterMsg(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(msg));
+},
+WX_RealtimeLogManagerWarn:function(id, args) {
+    window.WXWASMSDK.WX_RealtimeLogManagerWarn(_WXPointer_stringify_adaptor(id), _WXPointer_stringify_adaptor(args));
 },
 WX_UpdateManagerApplyUpdate:function(id) {
     window.WXWASMSDK.WX_UpdateManagerApplyUpdate(_WXPointer_stringify_adaptor(id));

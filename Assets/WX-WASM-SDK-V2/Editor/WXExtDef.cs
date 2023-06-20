@@ -66,6 +66,11 @@ namespace WeChatWASM
 #else
             WXExtEnvDef.SETDEF("UNITY_2022", false);
 #endif
+#if UNITY_INSTANTGAME
+            WXExtEnvDef.SETDEF("UNITY_INSTANTGAME", true);
+#else
+            WXExtEnvDef.SETDEF("UNITY_INSTANTGAME", false);
+#endif
             RegisterController();
         }
 

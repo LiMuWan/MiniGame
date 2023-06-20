@@ -1,3 +1,4 @@
+#if UNITY_WEBGL || UNITY_EDITOR
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -246,3 +247,4 @@ public class WXTouchInputOverride : BaseInput
 
 #endif
 }
+#endif

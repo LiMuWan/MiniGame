@@ -1281,6 +1281,7 @@ const isWK = false;
                 this.statusText = '';
                 this.upload = {};
                 this.withCredentials = false;
+                this.timeout = 60000;
                 _requestHeader.set(this, {
                     'content-type': 'application/x-www-form-urlencoded',
                 });
@@ -1338,6 +1339,7 @@ const isWK = false;
                                 responseType: this.responseType,
                                 enableHttp2: true,
                                 enableQuic: true,
+                                timeout: this.timeout ? this.timeout : 60000,
                                 success: function success(_ref) {
                                     let { data } = _ref;
                                     const { statusCode } = _ref;

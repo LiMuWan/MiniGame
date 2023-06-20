@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Utility;
 using LitJson;
+using Hotfix;
 using Hotfix.EventDefine;
 using SettingDefine = Hotfix.SettingDefine;
 
@@ -15,7 +16,7 @@ public static class NetMessageHandler
     /// <param name="code"></param>
     public static void SendLogin(string code,string headUrl)
     {
-        UnityWebRequestTool.Get($"http://{SettingDefine.WebServerUrl}/server-box/login/{code}/{headUrl}", OnLoginServerCallback);
+        UnityWebRequestTool.Get($"http://{SettingDefine.WebServerUrl}/box-login/login/{code}/{LZString.CompressToBase64(headUrl)}", OnLoginServerCallback);
     }
 
     /// <summary>
@@ -24,7 +25,7 @@ public static class NetMessageHandler
     /// <param name="code"></param>
     public static void SendLoginGameServer(int serverId,string openId,string sessionKey,string unionid)
     {
-        UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{openId}/{sessionKey}/{unionid}", OnSendLoginCallback);
+        UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{openId}/{sessionKey}", OnSendLoginCallback);
     }
    
     private static void OnSendLoginCallback(string error, string jsonData)

@@ -32,6 +32,7 @@ MonoBehaviour:
   - UniFramework.Singleton
   - UnityEngine.CoreModule
   - mscorlib
+  - YooAsset
   outputLinkFile: HybridCLRData/Generated/link.xml
   outputAOTGenericReferenceFile: HybridCLRData/Generated/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10

@@ -182,6 +182,9 @@ public partial class UIMainWindow : UIWindow
     protected GridLayoutGroup animal_bag;
     protected GridLayoutGroup food_bag;
     protected VerticalLayoutGroup home_bag;
+    
+    protected TextMeshProUGUI task_desc;
+    protected TextMeshProUGUI task_needCount;
     protected Button btn_egg;
     protected Button btn_task;
     protected Button btn_battle;
@@ -218,6 +221,8 @@ public partial class UIMainWindow : UIWindow
         btn_egg_level = FindChild<Image>("btn_egg_level");
         egg_level = FindChild<TextMeshProUGUI>("egg_level");
         egg_count_text = FindChild<TextMeshProUGUI>("egg_count_text");
+        task_desc = FindChild<TextMeshProUGUI>("task_desc");
+        task_needCount = FindChild<TextMeshProUGUI>("task_needCount");
 
         item_animal_bagTableManager.InitFromLayout(animal_bag);
         item_food_bagTableManager.InitFromLayout(food_bag);
@@ -264,9 +269,10 @@ public partial class UIMainWindow : UIWindow
     {
         btn_task.onClick.AddListener(()=>
         {
-            //任务todo:
-            //查看当前任务状态，获取下一个任务状态
-            //获取任务奖励
+            if (UserDataManager.Instance.Task.state == (int)TaskStatus.Completed)
+            {
+                NetMessageHandler.SendGetTaskReward();
+            }
         });
         btn_battle.onClick.AddListener(()=>
         { 
@@ -283,6 +289,17 @@ public partial class UIMainWindow : UIWindow
         coin_text.text = $"{UserDataManager.Instance.Coin}";
         egg_level.text = $"Lv.{UserDataManager.Instance.EggLevel}";
         egg_count_text.text = $"{UserDataManager.Instance.EggNum}";
+        RefreshTask();
+    }
+    
+    private void RefreshTask()
+    {
+        //任务
+        var task = UserDataManager.Instance.Task;
+        var taskCfg = ConfigLoader.Instance.Tables.Task.Get(task.taskId);
+        task_desc.text = taskCfg.Text;
+        task_needCount.text = $"{task.targetNum}/{taskCfg.TargetNum}";
+        //颜色改变todo
     }
 
     private void OnLoadSprite(Sprite sprite)

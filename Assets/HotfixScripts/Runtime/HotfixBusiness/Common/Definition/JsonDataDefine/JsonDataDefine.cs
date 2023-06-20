@@ -79,3 +79,11 @@ public class JTask
     public int targetNum;
     public int state;
 }
+
+public enum TaskStatus
+{
+    //未完成
+    UnCompleted = 0,
+    Completed = 1,//已完成
+    ReceivedReward = 2,//已领奖
+}

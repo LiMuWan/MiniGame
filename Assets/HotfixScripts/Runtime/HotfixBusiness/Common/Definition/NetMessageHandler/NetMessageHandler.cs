@@ -72,6 +72,14 @@ public static class NetMessageHandler
         UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/sellTempEquip/{UserDataManager.Instance.PlayerId}", OnCallback);
     }
 
+    /// <summary>
+    /// 卖装备
+    /// </summary>
+    public static void SendGetTaskReward()
+    {
+        UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/getTaskReward/{UserDataManager.Instance.PlayerId}", OnCallback);
+    }
+    
     private static void OnCallback(string error, string jsonData)
     {   
         UniLogger.Log($"jsonData = {jsonData}");

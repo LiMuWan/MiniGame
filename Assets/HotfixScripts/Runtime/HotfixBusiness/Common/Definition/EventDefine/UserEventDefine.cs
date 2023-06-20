@@ -135,6 +135,18 @@ namespace Hotfix.EventDefine
                  UniEvent.SendMessage(msg);
             }
         }
+        
+        /// <summary>
+        /// 任务刷新
+        /// </summary>
+        public class TaskRefresh:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                 var msg = new TaskRefresh();
+                 UniEvent.SendMessage(msg);
+            }
+        }
 
         /// <summary>
         /// 跳过战斗

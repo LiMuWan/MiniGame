@@ -27,8 +27,6 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
     private string head_icon_name;
     //头像下载网址
     private string head_host_url;
-    //任务进度
-    private int task;
     //唯一id
     private string uid;
     //宠物蛋等级
@@ -39,6 +37,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
     private string create_time;
     private int egg_num;
     private JEquipDataList equipList;
+    private JTask task;
 
     public int Coin
     {
@@ -212,6 +211,20 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         }
     }
 
+    //任务
+    public JTask Task
+    {
+        get { return task; }
+        set
+        {
+            if (task.targetNum != value.targetNum || task.state != value.state || task.taskId != value.taskId)
+            {
+                value = task;
+                UserEventDefine.TaskRefresh.SendEventMessage();
+            }
+        }
+    }
+
     private List<ItemData> animalDatas;
     public List<ItemData> AnimalDatas => animalDatas;
     private List<ItemData> foodDatas;
@@ -233,7 +246,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         Experience = playerData.exp;
         EggNum = playerData.boxNum;
         EquipList = playerData.equipList;
-
+        Task = playerData.task;
         //读配置
 
         //称号 ToDo

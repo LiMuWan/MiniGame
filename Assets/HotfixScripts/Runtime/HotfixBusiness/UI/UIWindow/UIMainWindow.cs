@@ -117,6 +117,10 @@ public partial class UIMainWindow
         {
             coin_text.text = $"{ucf.coin}";
         }
+        else if (message is UserEventDefine.TaskRefresh)
+        {
+            RefreshTask();
+        }
         else if (message is UserEventDefine.UserMaxExperienceRefresh ume)
         {
             user_level_slider.maxValue = ume.max_experience;

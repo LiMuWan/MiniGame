@@ -9,6 +9,7 @@ using UniFramework.Window;
 using UniFramework.Event;
 using Hotfix.EventDefine;
 using GameFramework.Resource;
+using UniFramework.Singleton;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -191,9 +192,11 @@ public partial class UIMainWindow : UIWindow
     protected Button btn_other;
     protected Button btn_rank;
     protected Button btn_breeding;
+    protected Button btn_animal;
     protected Image btn_egg_level;
     protected TextMeshProUGUI egg_level;
     protected TextMeshProUGUI egg_count_text;
+    protected Transform tips;
 
     protected AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>> item_animal_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>>();
     protected AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>> item_food_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>>();
@@ -223,7 +226,8 @@ public partial class UIMainWindow : UIWindow
         egg_count_text = FindChild<TextMeshProUGUI>("egg_count_text");
         task_desc = FindChild<TextMeshProUGUI>("task_desc");
         task_needCount = FindChild<TextMeshProUGUI>("task_needCount");
-
+        btn_animal = FindChild<Button>("btn_animal");
+        tips = FindChild<Transform>("tips");
         item_animal_bagTableManager.InitFromLayout(animal_bag);
         item_food_bagTableManager.InitFromLayout(food_bag);
         item_home_bagTableManager.InitFromLayout(home_bag);
@@ -274,6 +278,12 @@ public partial class UIMainWindow : UIWindow
                 NetMessageHandler.SendGetTaskReward();
             }
         });
+        btn_animal.onClick.AddListener(()=>
+        {
+            if(tips.gameObject.activeSelf) return;
+            tips.gameObject.SetActive(true);
+            UniSingleton.Delay(0.5f,()=>{tips.gameObject.SetActive(false);});
+        });
         btn_battle.onClick.AddListener(()=>
         { 
              SceneLoaderManager.LoadBattle(() =>
@@ -281,6 +291,7 @@ public partial class UIMainWindow : UIWindow
                UIManager.UICanvas.SetActive(false);
            });
         });
+        tips.gameObject.SetActive(false);
         SpriteLoaderUtils.GetSprite("head_icon", UserDataManager.Instance.HeadHostUrl, Application.streamingAssetsPath, OnLoadSprite);
         avator_name.text = UserDataManager.Instance.NickName;
         user_level.text = $"{UserDataManager.Instance.Level}";

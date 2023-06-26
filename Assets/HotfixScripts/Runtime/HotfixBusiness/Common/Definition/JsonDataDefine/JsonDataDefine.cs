@@ -87,3 +87,16 @@ public enum TaskStatus
     Completed = 1,//已完成
     ReceivedReward = 2,//已领奖
 }
+
+public enum EEquipGetStatus
+{
+    FirstGet, // 第一次获取
+    RepeatedGet,//重复获取
+}
+
+public enum ECompareResult
+{
+    Equals = 0,
+    LessThan = 1,
+    MoreThan = 2,
+}

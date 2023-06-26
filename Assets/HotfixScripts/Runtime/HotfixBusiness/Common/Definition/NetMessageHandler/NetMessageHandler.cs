@@ -16,22 +16,47 @@ public static class NetMessageHandler
     /// <param name="code"></param>
     public static void SendLogin(string code,string headUrl)
     {
-        UnityWebRequestTool.Get($"http://{SettingDefine.WebServerUrl}/box-login/login/{code}/{LZString.CompressToBase64(headUrl)}", OnLoginServerCallback);
+        #if UNITY_EDITOR || UNITY_STANDALONE_WIN || PLATFORM_STANDALONE_WIN
+            UnityWebRequestTool.Get($"http://192.168.1.21:8001/box-login/login/0f1TcbGa160nwF095oHa1NYSVz4TcbGO/BYFxAcGcC4HpZMAlgJwCYHcAeA6AjgDYD2A5kTgMYB2sAtrUeAKY0BuSA+gMwBMsAigAYAVgBYAKhgDi4gGbiAMgEYAguDxIKSgJ4YAqrQCaALQBytAOoAFNAA4LADQBsWbQHYpASSlIAhgBFBACMnAGkAUSU0FVtBEn5wCwVwzwBlUwBOACEAMWBQpCC8NFNPAAlwh20ANQB5TR4CJjc9ILKSAFkSWCVeIA", OnLoginServerCallback);
+        #else
+            UnityWebRequestTool.Get($"http://{SettingDefine.WebServerUrl}/box-login/login/{code}/{LZString.CompressToBase64(headUrl)}", OnLoginServerCallback);
+        #endif
+    }
+    
+    /// <summary>
+    /// 获取服务器列表
+    /// </summary>
+    /// <param name="code"></param>
+    public static void SendGetServerList()
+    {
+        UnityWebRequestTool.Get($"http://{SettingDefine.WebServerUrl}/getServerList", OnLoginServerCallback);
     }
 
     /// <summary>
     /// 登陆游戏服
     /// </summary>
     /// <param name="code"></param>
+    public static void SendChangeServerLogin(int serverId)
+    {
+        UnityWebRequestTool.Get($"http://{SettingDefine.WebServerUrl}/changeServerLogin/{serverId}/{UserDataManager.LoginData.code}", OnSendLoginCallback);
+    }
+    /// <summary>
+    /// 登陆游戏服
+    /// </summary>
+    /// <param name="code"></param>
     public static void SendLoginGameServer(int serverId,string openId,string sessionKey,string unionid)
     {
-        UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{openId}/{sessionKey}", OnSendLoginCallback);
+         #if UNITY_EDITOR || UNITY_STANDALONE_WIN || PLATFORM_STANDALONE_WIN
+              UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{"123"}", OnSendLoginCallback);
+         #else
+              UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{openId}", OnSendLoginCallback);
+         #endif
     }
    
     private static void OnSendLoginCallback(string error, string jsonData)
     {
-       OnCallback(error,jsonData);
        UserEventDefine.UserLoginSuccess.SendEventMessage();
+       OnCallback(error,jsonData);
     }
     
     /// <summary>

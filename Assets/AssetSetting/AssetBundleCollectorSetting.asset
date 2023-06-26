@@ -124,3 +124,16 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: Sprites
+      GroupDesc: "\u7CBE\u7075\u56FE\u7247"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/HotfixAssets/Sprites
+        CollectorGUID: 65160b2bb2495ce428f84c8d34ff04e0
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 

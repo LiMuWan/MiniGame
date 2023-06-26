@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1982412945
+CRC: 2856403313
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a22a69500f62b28d4a30d74ffdce7e04
+    Hash: 9806e163248810b8df193aa380c5e6fa
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6f97c63cc4387ff3ec2d04c9ceff3345
+    Hash: a30cd7ba6fe2251f9b9eda7a69b3f047
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -14,6 +14,8 @@ ClassTypes:
 - Class: 21
   Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 48
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -41,33 +43,15 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.FaceInfo_Legacy
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.FontAssetCreationSettings
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.KerningTable
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_Character
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_FontFeatureTable
-- AssemblyName: Unity.TextMeshPro
-  ClassName: TMPro.TMP_FontWeightPair
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.VertexGradient
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.RectOffset
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.FaceInfo
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.Glyph
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.GlyphMetrics
-- AssemblyName: UnityEngine.TextCoreFontEngineModule
-  ClassName: UnityEngine.TextCore.GlyphRect
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.AnimationTriggers
 - AssemblyName: UnityEngine.UI
@@ -83,7 +67,8 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/HotfixAssets/UIWindow/UIItemInfo.prefab
 Dependencies:
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_textures_common_blur_bg.bundle
 - D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_textures_qualityicon_quality_1.bundle
-- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_textures_uiiteminfo_blur_bg.bundle
-- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_uifont.bundle
 - D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_resources_fonts&materials.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

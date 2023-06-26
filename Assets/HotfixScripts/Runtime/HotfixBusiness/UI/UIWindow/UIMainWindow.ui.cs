@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UniFramework.Window;
-using UniFramework.Event;
-using Hotfix.EventDefine;
 using GameFramework.Resource;
 using UniFramework.Singleton;
+using UniFramework.Utility;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -29,14 +24,30 @@ public partial class UIMainWindow : UIWindow
         {
             quality_img = FindChild<RawImage>("quality_img");
             icon_img = FindChild<RawImage>("icon_img");
-            btn_icon = icon_img.GetComponent<Button>();
+            btn_icon = FindChild<Button>("Button");
             lv_text = FindChild<TextMeshProUGUI>("lv_text");
             //打开装备详情
             btn_icon.onClick.AddListener(() =>
-            {
+            {   
                 if (animalData.ItemId != 0)
-                {
-                    ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) => { ui.ShowItemInfo(this.animalData, null); });
+                {   var tempEquip = UserDataManager.Instance.EquipList.tempEquip;
+                    if(tempEquip != null)
+                    {
+                        var type = ConfigLoader.Instance.Tables.Item.Get(tempEquip.itemId).Type;
+                        if (animalData.Sex == tempEquip.sex && animalData.Type == type)
+                        {   
+                            var tuple = UserDataManager.Instance.GetEquipStatus();
+                            //装备比较
+                            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
+                            {
+                                ui.ShowItemInfo(tuple.Item2, UserDataManager.Instance.GetTempEquipData());
+                            });
+                        }
+                    }
+                    else
+                    {
+                       ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) => { ui.ShowItemInfo(this.animalData, null); });
+                    }
                 }
             });
         }
@@ -92,7 +103,7 @@ public partial class UIMainWindow : UIWindow
         {
             quality_img = FindChild<RawImage>("quality_img");
             icon_img = FindChild<RawImage>("icon_img");
-            btn_icon = icon_img.GetComponent<Button>();
+            btn_icon = FindChild<Button>("Button");
             lv_text = FindChild<TextMeshProUGUI>("lv_text");
             btn_icon.onClick.AddListener(() =>
            {
@@ -138,7 +149,7 @@ public partial class UIMainWindow : UIWindow
         {
             quality_img = FindChild<RawImage>("quality_img");
             icon_img = FindChild<RawImage>("icon_img");
-            btn_icon = icon_img.GetComponent<Button>();
+            btn_icon = FindChild<Button>("Button");
             lv_text = FindChild<TextMeshProUGUI>("lv_text");
             btn_icon.onClick.AddListener(() =>
            {
@@ -150,7 +161,8 @@ public partial class UIMainWindow : UIWindow
         }
 
         public void RefreshUI(ItemData homeData)
-        {
+        {    
+            this.homeData = homeData;
             if (homeData.ItemId == 0)
             {
                 quality_img.gameObject.SetActive(false);
@@ -273,6 +285,7 @@ public partial class UIMainWindow : UIWindow
     {
         btn_task.onClick.AddListener(()=>
         {
+            UniLogger.Log("on btn_task");
             if (UserDataManager.Instance.Task.state == (int)TaskStatus.Completed)
             {
                 NetMessageHandler.SendGetTaskReward();
@@ -294,7 +307,7 @@ public partial class UIMainWindow : UIWindow
         tips.gameObject.SetActive(false);
         SpriteLoaderUtils.GetSprite("head_icon", UserDataManager.Instance.HeadHostUrl, Application.streamingAssetsPath, OnLoadSprite);
         avator_name.text = UserDataManager.Instance.NickName;
-        user_level.text = $"{UserDataManager.Instance.Level}";
+        user_level.text = $"Lv.{UserDataManager.Instance.Level}";
         user_level_slider.maxValue = UserDataManager.Instance.MaxExperience;
         user_level_slider.value = UserDataManager.Instance.Experience;
         coin_text.text = $"{UserDataManager.Instance.Coin}";
@@ -308,7 +321,7 @@ public partial class UIMainWindow : UIWindow
         //任务
         var task = UserDataManager.Instance.Task;
         var taskCfg = ConfigLoader.Instance.Tables.Task.Get(task.taskId);
-        task_desc.text = taskCfg.Text;
+        task_desc.text = string.Format(taskCfg.Text,taskCfg.TargetNum);
         task_needCount.text = $"{task.targetNum}/{taskCfg.TargetNum}";
         //颜色改变todo
     }

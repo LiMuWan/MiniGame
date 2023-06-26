@@ -1,20 +1,28 @@
 ManifestFileVersion: 0
-CRC: 3953813739
+CRC: 1885554176
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: de5ce262568b97f1fc3fccca0be1272e
+    Hash: c7d21671fc0401efc036a86ee4c38245
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f267fd2d8bcb1179236b6179ac5313bc
+    Hash: 0d677c6dec2405a43fe6dd294cca7c3e
 HashAppended: 0
 ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/HotfixAssets/Sprites/UICommon/animal_slot.png
+- Assets/HotfixAssets/Sprites/UICommon/btn_sell.png
+- Assets/HotfixAssets/Sprites/UICommon/frame_bg.png
+- Assets/HotfixAssets/Sprites/UICommon/btn_get.png
+- Assets/HotfixAssets/Sprites/UICommon/icn_coin.png
 - Assets/HotfixAssets/Sprites/UICommon/btn_menu.png
+- Assets/HotfixAssets/Sprites/UICommon/icon_egg.png
+- Assets/HotfixAssets/Sprites/UICommon/btn_add.png
 Dependencies: []

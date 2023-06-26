@@ -67,7 +67,7 @@ Material:
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _OutlineShininess: 0
-    - _OutlineSoftness: 0
+    - _OutlineSoftness: 0.005
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
     - _OutlineWidth: 0.09

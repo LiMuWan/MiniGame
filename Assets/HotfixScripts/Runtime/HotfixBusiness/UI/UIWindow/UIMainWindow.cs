@@ -63,14 +63,48 @@ public partial class UIMainWindow
     protected override void InitModel()
     {
         RefreshBag();
-        btn_egg.onClick.AddListener(()=>{NetMessageHandler.SendOpenTreasureBox();});
+        btn_egg.onClick.AddListener(()=>
+        {
+            if (UserDataManager.Instance.EquipList.tempEquip != null)
+            {
+                OpenTreasureBox();
+            }
+            else
+            {
+                NetMessageHandler.SendOpenTreasureBox();
+            }
+        });
     }
 
     private void RefreshBag()
-    {
+    {   UniLogger.Log("item_animal_bagTableManager.Each(EachAnimalSlot);");
         item_animal_bagTableManager.Each(EachAnimalSlot);
+        UniLogger.Log(" item_food_bagTableManager.Each(EachFoodSlot);");
         item_food_bagTableManager.Each(EachFoodSlot);
+        UniLogger.Log(" item_home_bagTableManager.Each(EachHomeSlot);");
         item_home_bagTableManager.Each(EachHomeSlot);
+    }
+
+    private void OpenTreasureBox()
+    {
+        var tuple = UserDataManager.Instance.GetEquipStatus();
+        if (tuple.Item1 == (int)EEquipGetStatus.FirstGet)
+        {
+            UniLogger.Log($"UserOpenTreasureBox = {"第一次获得装备"}");
+            //第一次获取
+            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
+            {
+                ui.ShowItemInfo(null, tuple.Item2);
+            });
+        }
+        else
+        {
+            //装备比较
+            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
+            {
+                ui.ShowItemInfo(tuple.Item2, UserDataManager.Instance.GetTempEquipData());
+            });
+        }
     }
 
     private void InitEvent()
@@ -90,24 +124,7 @@ public partial class UIMainWindow
     {
         if(message is UserEventDefine.UserOpenTreasureBox uotb)
         {
-            var tuple = UserDataManager.Instance.GetEquipStatus();
-            if (tuple.Item1 == 0)
-            {
-                UniLogger.Log($"UserOpenTreasureBox = {"第一次获得装备"}");
-                //第一次获取
-                ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
-                {
-                    ui.ShowItemInfo(null, tuple.Item2);
-                });
-            }
-            else
-            {
-                //装备比较
-                ApplicationStatusManager.s_currentAppStatus.OpenUI<UIItemInfo>((ui) =>
-                {
-                    ui.ShowItemInfo(tuple.Item2, UserDataManager.Instance.GetTempEquipData());
-                });
-            }
+            OpenTreasureBox();
         }
         else if(message is UserEventDefine.UserEquipRefresh uer)
         {
@@ -146,7 +163,7 @@ public partial class UIMainWindow
     
     private bool EachHomeSlot(AutoGenTableItem<item_home_bagTableTemplate, item_home_bagTableModel> item, int index)
     {
-        UniLogger.Log($"index = {index}");
+        UniLogger.Log($"EachHomeSlot index = {index}");
         item.Model.RefreshData(homeDatas[index]);
         item.Template.RefreshUI(homeDatas[index]);
         if (index >= homeDatas.Count - 1) return true;
@@ -155,7 +172,7 @@ public partial class UIMainWindow
 
     private bool EachFoodSlot(AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel> item, int index)
     {
-        UniLogger.Log($"index = {index}");
+        UniLogger.Log($"EachFoodSlot index = {index}");
         item.Model.RefreshData(foodDatas[index]);
         item.Template.RefreshUI(foodDatas[index]);
         if (index >= foodDatas.Count - 1) return true;
@@ -169,7 +186,7 @@ public partial class UIMainWindow
 
     private bool EachAnimalSlot(AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel> item, int index)
     {
-        UniLogger.Log($"index = {index}");
+        UniLogger.Log($"EachAnimalSlot index = {index}");
         item.Model.RefreshData(animalDatas[index]);
         item.Template.RefreshUI(animalDatas[index]);
         if (index >= animalDatas.Count - 1) return true;

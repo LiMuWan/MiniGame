@@ -1,0 +1,51 @@
+ManifestFileVersion: 0
+CRC: 3235489474
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 93a602269f28c39a7aacbbd4de1bea0e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c92f7b27467cac68f8fffb0c54e86b07
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FaceInfo_Legacy
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FontAssetCreationSettings
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.KerningTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Character
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontFeatureTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontWeightPair
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.FaceInfo
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.Glyph
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphMetrics
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphRect
+Assets:
+- Assets/Resources/Fonts&Materials/FZ_zh_outline_1.mat
+- Assets/Resources/Fonts&Materials/FZ_en.asset
+- Assets/Resources/Fonts&Materials/FZ_pun.asset
+- Assets/Resources/Fonts&Materials/FZ_zh.asset
+- Assets/Resources/Fonts&Materials/FZ_zh_outline_2.mat
+Dependencies:
+- D:/WxMiniGamework/MiniGame/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_share_assets_gameart_uifont_fz.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

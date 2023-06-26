@@ -39,9 +39,8 @@ namespace UniFramework.Window
                 _driver.AddComponent<UniWindowDriver>();
                 UnityEngine.Object.DontDestroyOnLoad(_driver);
                 UniLogger.Log($"{nameof(UniWindow)} initalize !");
-
                 Desktop = desktop;
-                desktop.gameObject.AddComponent<SafeAreaAdapter>();
+                SimulateIPhoneXNotchScreen();
             }
         }
 

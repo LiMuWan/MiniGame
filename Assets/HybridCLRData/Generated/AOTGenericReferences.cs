@@ -16,27 +16,31 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// }} 
 
 	// {{ AOT generic types
-	// System.Action<UnityEngine.Quaternion>
-	// System.Action<object>
-	// System.Action<int>
-	// System.Action<UnityEngine.Color>
 	// System.Action<UnityEngine.Vector4>
+	// System.Action<object>
+	// System.Action<UnityEngine.Color>
+	// System.Action<UnityEngine.Quaternion>
 	// System.Action<UnityEngine.Vector3>
 	// System.Action<UnityEngine.Vector2>
 	// System.Action<float>
-	// System.Collections.Generic.Dictionary<int,object>
+	// System.Action<int>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.Dictionary<object,UnityEngine.SceneManagement.Scene>
+	// System.Collections.Generic.Dictionary<object,byte>
+	// System.Collections.Generic.Dictionary<object,int>
+	// System.Collections.Generic.Dictionary<int,object>
+	// System.Collections.Generic.Dictionary<ushort,ushort>
 	// System.Collections.Generic.HashSet<object>
 	// System.Collections.Generic.ICollection<object>
+	// System.Collections.Generic.IDictionary<ushort,ushort>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerator<object>
 	// System.Collections.Generic.IList<object>
 	// System.Collections.Generic.List<float>
 	// System.Collections.Generic.List<UnityEngine.Vector2>
 	// System.Collections.Generic.List<byte>
-	// System.Collections.Generic.List<UniFramework.Window.UniWindow.WindowInfo>
 	// System.Collections.Generic.List<object>
+	// System.Collections.Generic.List<UniFramework.Window.UniWindow.WindowInfo>
 	// System.Collections.Generic.List<int>
 	// System.Collections.Generic.List.Enumerator<object>
 	// System.Collections.Generic.Queue<object>
@@ -45,11 +49,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<System.ValueTuple<float,float>>
 	// System.Func<int>
 	// System.Func<float>
+	// System.Func<object,float>
 	// System.Func<int,object>
 	// System.Func<object,object>
-	// System.Func<object,float>
+	// System.Func<int,ushort>
 	// System.Func<object,int,byte>
-	// System.Nullable<double>
 	// System.Predicate<object>
 	// System.Threading.Tasks.TaskCompletionSource<object>
 	// System.Tuple<int,object>

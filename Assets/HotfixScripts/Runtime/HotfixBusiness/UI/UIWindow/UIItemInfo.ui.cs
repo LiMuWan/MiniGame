@@ -26,31 +26,36 @@ public partial class UIItemInfo : UIWindow
             compare_icon = FindChild<Image>("compare_icon");
         }
         
-        public void InitOrRefresh(ItemData itemData,int index)
+        public void InitOrRefresh(ItemData itemData,int index,bool isNew = false)
         {
-            bool isShowCompareIcon = itemData.CompareData.Count == 0;
+            bool isShowCompareIcon = itemData.CompareData.Count > 0 && isNew;
             compare_icon.gameObject.SetActive(isShowCompareIcon);
             if(isShowCompareIcon)
             {
-               var icon_name = itemData.CompareData[index] == true ? UIDefine.arrow_up_icon:UIDefine.arrow_down_icon;
-               ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(icon_name,(sprite)=>{compare_icon.sprite = sprite;});
+                var value = itemData.CompareData[index];
+                if ((ECompareResult)value == ECompareResult.Equals) compare_icon.gameObject.SetActive(false);
+                else
+                {
+                    var icon_name = (ECompareResult)value == ECompareResult.MoreThan ? UIDefine.arrow_up_icon : UIDefine.arrow_down_icon;
+                    ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(icon_name, (sprite) => { compare_icon.sprite = sprite; });
+                }
             }
-            if (index == 1)
+            if (index == 0)
             {
                 title_text.text = "血量";
                 value_text.text = itemData.Hp.ToString();
             }
-            else if (index == 2)
+            else if (index == 1)
             {
                 title_text.text = "速度";
                 value_text.text = itemData.Spd.ToString();
             }
-            else if (index == 3)
+            else if (index == 2)
             {
                 title_text.text = "攻击";
                 value_text.text = itemData.Atk.ToString();
             }
-            else if (index == 4)
+            else if (index == 3)
             {
                 title_text.text = "防御";
                 value_text.text = itemData.Def.ToString();
@@ -82,6 +87,7 @@ public partial class UIItemInfo : UIWindow
 
     protected Button btn_sell;
     protected Button btn_get;
+    protected Button btn_mask;
 
     protected AutoUITableManager<AutoGenTableItem<PropertiesTableTemplate, PropertiesTableModel>> old_PropertiesTableManager = new AutoUITableManager<AutoGenTableItem<PropertiesTableTemplate, PropertiesTableModel>>();
     
@@ -102,6 +108,7 @@ public partial class UIItemInfo : UIWindow
 
         //new
         newGo = Find<Transform>("new").gameObject;
+        new_title  = Find<TextMeshProUGUI>("new/title");
         new_quality_icon = Find<RawImage>("new/left/quality_icon");
         new_item_icon = Find<RawImage>("new/left/item_icon");
         new_sex_icon = Find<Image>("new/left/sex_icon");
@@ -112,6 +119,7 @@ public partial class UIItemInfo : UIWindow
         new_Properties = Find<VerticalLayoutGroup>("new/right/Properties");
         btn_sell = FindChild<Button>("btn_sell");
         btn_get = FindChild<Button>("btn_get");
+        btn_mask = FindChild<Button>("btn_mask");
         new_PropertiesTableManager.InitFromLayout(new_Properties);
     }
 
@@ -124,6 +132,7 @@ public partial class UIItemInfo : UIWindow
     {
        btn_sell.onClick.RemoveAllListeners();
        btn_get.onClick.RemoveAllListeners();
+       btn_mask.onClick.RemoveAllListeners();
     }
 
     public override void OnRefresh()

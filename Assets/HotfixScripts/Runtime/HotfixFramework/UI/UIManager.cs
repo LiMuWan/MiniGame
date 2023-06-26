@@ -50,6 +50,7 @@ public static class UIManager
         // Debug.LogWarning($"screen.width = {Screen.width},screen.height = {Screen.height} , ratio = {(Screen.height/Screen.width).ToString("F2")}");
         UniWindow.Initalize(desktop);
         s_EventSystem = uiCanvas.GetComponentInChildren<EventSystem>();
+        UniSingleton.StopCoroutine(InitAsync());
     }
 
     public static void OnDestroy()

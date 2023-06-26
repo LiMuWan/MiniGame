@@ -22,6 +22,7 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
       "UniFramework.Singleton.dll",
       "UnityEngine.CoreModule.dll",
       "mscorlib.dll",
+      "YooAsset.dll"
     };
 
 
@@ -52,17 +53,27 @@ public class LoadDll : SingletonInstance<LoadDll>, ISingleton
     {
         
     }
-
-    public IEnumerator LoadDllAsset()
+    
+    public void LoadDllAssets()
     {
-        yield return LoadMetadataForAOTAssemblies();
-        yield return LoadHotfixAssemblies();
-        UniLogger.Log("LoadHotfixAssemblies Finish!!!");
-        Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
-        UniLogger.Log("Assembly.Load(Hotfix.dll)) Finish!!!");
-        Type type = hotUpdateAss.GetType("Main");
+        UniSingleton.StartCoroutine(LoadDllAssetsCo());
+    }
+
+    private IEnumerator LoadDllAssetsCo()
+    {
+        #if !UNITY_EDITOR
+             yield return LoadMetadataForAOTAssemblies();
+             yield return LoadHotfixAssemblies();
+             Assembly hotUpdateAss = Assembly.Load(GetAssetData("Hotfix.dll"));
+             Type type = hotUpdateAss.GetType("Main");
+        #else
+             yield return new WaitForEndOfFrame();
+             Assembly hotUpdateAss = Assembly.Load("Hotfix");
+             Type type = hotUpdateAss.GetType("Main");
+        #endif
         type.GetMethod("Run").Invoke(null, null);
         UniLogger.Log("Main Run Finish!!!");
+        UniSingleton.StopCoroutine(LoadDllAssetsCo());
     }
 
     /// <summary>

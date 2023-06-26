@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_WEBGL
 using WeChatWASM;
+#endif
 using System;
 using UniFramework.Utility;
 using Hotfix.EventDefine;
@@ -8,14 +10,15 @@ using UniFramework.Singleton;
 
 public class LoginStatus : IApplicationStatus
 {
+    #if UNITY_WEBGL
     public WXRewardedVideoAd ad;
     private WXUserInfoButton infoButton;
-
+    #endif
     //Status的进入逻辑请放在这里
     public override void OnEnterStatus()
     {
         ApplicationStatusManager.s_currentAppStatus.OpenUI<UILoginWindow>();
-#if !UNITY_EDITOR
+#if UNITY_WEBGL
         WX.InitSDK((code) =>
         {
 

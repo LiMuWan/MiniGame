@@ -217,9 +217,9 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         get { return task; }
         set
         {
-            if (task.targetNum != value.targetNum || task.state != value.state || task.taskId != value.taskId)
+            if (task == null || task.targetNum != value.targetNum || task.state != value.state || task.taskId != value.taskId)
             {
-                value = task;
+                task = value;
                 UserEventDefine.TaskRefresh.SendEventMessage();
             }
         }
@@ -252,47 +252,54 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         //称号 ToDo
     }
 
+    private void InitDefaultSlotDatas()
+    {
+        animalDatas = new List<ItemData>(16);
+        //动物数据
+        animalDatas.Add(new ItemData() { Type = 1, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 1, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 2, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 2, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 3, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 3, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 4, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 4, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 5, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 5, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 6, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 6, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 7, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 7, Sex = 2 });
+        animalDatas.Add(new ItemData() { Type = 8, Sex = 1 });
+        animalDatas.Add(new ItemData() { Type = 8, Sex = 2 });
+        //食物数据
+        foodDatas = new List<ItemData>(4);
+        foodDatas.Add(new ItemData() { Type = 9 });
+        foodDatas.Add(new ItemData() { Type = 9 });
+        foodDatas.Add(new ItemData() { Type = 9 });
+        foodDatas.Add(new ItemData() { Type = 9 });
+        //爱巢数据
+        homeDatas = new List<ItemData>(2);
+        homeDatas.Add(new ItemData() { Type = 10 });
+        homeDatas.Add(new ItemData() { Type = 10 });
+    }
+
     public void InitEquipData(JEquipDataList equipDataList)
     {
         UniLogger.Log($"equipDataList = {equipDataList}");
-        if ((equipDataList == null || equipDataList.equipList == null || equipDataList.equipList.Length == 0) && animalDatas == null)
+        if (animalDatas == null)
         {
-            animalDatas = new List<ItemData>(16);
-            //动物数据
-            animalDatas.Add(new ItemData() { Type = 1, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 1, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 2, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 2, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 3, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 3, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 4, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 4, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 5, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 5, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 6, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 6, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 7, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 7, Sex = 2 });
-            animalDatas.Add(new ItemData() { Type = 8, Sex = 1 });
-            animalDatas.Add(new ItemData() { Type = 8, Sex = 2 });
-            //食物数据
-            foodDatas = new List<ItemData>(4);
-            foodDatas.Add(new ItemData() { Type = 9 });
-            foodDatas.Add(new ItemData() { Type = 9 });
-            foodDatas.Add(new ItemData() { Type = 9 });
-            foodDatas.Add(new ItemData() { Type = 9 });
-            //爱巢数据
-            homeDatas = new List<ItemData>(2);
-            homeDatas.Add(new ItemData() { Type = 10 });
-            homeDatas.Add(new ItemData() { Type = 10 });
+            InitDefaultSlotDatas();
         }
-        else
+
+        if (equipDataList != null && equipDataList.equipList != null && equipDataList.equipList.Length > 0)
         {
-            for (int i = 0; i < EquipList.equipList.Length; i++)
+            for (int i = 0; i < equipDataList.equipList.Length; i++)
             {
-                InitItemData(EquipList.equipList[i]);
+                InitItemData(equipDataList.equipList[i]);
             }
             UserEventDefine.UserEquipRefresh.SendEventMessage();
+            UniLogger.Log($"UserEventDefine.UserEquipRefresh.SendEventMessage();");
         }
     }
 
@@ -301,13 +308,16 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         var itemBasePropertyCfg = ConfigLoader.Tables.ItemBaseProperty.DataList[0];
         var itemQualityCfg = ConfigLoader.Tables.ItemQuality;
         var itemConfig = ConfigLoader.Tables.Item.Get(equipData.itemId);
+        UniLogger.Log($"itemConfig = {itemConfig.Atk}");
         int type = itemConfig.Type;
         var itemData = animalDatas.Find((item) => { return item.Type == type && item.Sex == equipData.sex; });
         itemData.ItemId = equipData.itemId;
         itemData.Level = equipData.lv;
         itemData.Quality = equipData.quality;
         itemData.Name = ConfigLoader.Tables.Item.Get(equipData.itemId).Name;
+        UniLogger.Log($"itemData.Name = {itemData.Name}");
         var itemTypeCfg = ConfigLoader.Tables.ItemType.Get(type);
+        UniLogger.Log($"itemTypeCfg.Hp = {itemTypeCfg.Hp}");
         itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * 10 * itemConfig.Hp).RoundToOneDecimal();
         itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
         itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * 10 * itemConfig.Atk).RoundToOneDecimal();
@@ -338,12 +348,12 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         if (itemData.ItemId == 0)
         {
             //第一次获取
-            return new Tuple<int, ItemData>(0, GetTempEquipData());
+            return new Tuple<int, ItemData>((int)EEquipGetStatus.FirstGet, GetTempEquipData());
         }
         else
         {
             //已经获取,旧的数据返回
-            return new Tuple<int, ItemData>(0, itemData);
+            return new Tuple<int, ItemData>((int)EEquipGetStatus.RepeatedGet, itemData);
         }
     }
 

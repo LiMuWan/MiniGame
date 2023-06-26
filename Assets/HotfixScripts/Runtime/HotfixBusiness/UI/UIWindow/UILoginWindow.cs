@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UniFramework.Window;
 using UnityEngine.UI;
 using Hotfix.EventDefine;
+#if UNITY_WEBGL
 using WeChatWASM;
+#endif
 using UniFramework.Singleton;
 using UniFramework.Utility;
 
@@ -17,30 +19,31 @@ public class UILoginWindow : UIWindow
         btnLogin = this.transform.Find("btnLogin").GetComponent<Button>();
         btnLogin.onClick.AddListener(() =>
         {
-#if UNITY_EDITOR
-            LoginOption loginOption = new LoginOption();
-            loginOption.success = (result) =>
-           {
-                 //NetMessageHandler.SendLogin(result.code);
-             };
+#if UNITY_EDITOR||UNITY_STANDALONE_WIN|| PLATFORM_STANDALONE_WIN
+        //     LoginOption loginOption = new LoginOption();
+        //     loginOption.success = (result) =>
+        //    {
+        //          //NetMessageHandler.SendLogin(result.code);
+        //    };
 
-            loginOption.fail = (result) =>
-           {
-                 ShowToastOption showToastOption = new ShowToastOption()
-                 {
-                     title = result.errMsg,
-                     duration = 0.2f,
-                 };
-                 showToastOption.title = result.errMsg;
-                 WX.ShowToast(showToastOption);
-             };
-            WX.Login(loginOption);
+        //     loginOption.fail = (result) =>
+        //    {
+        //          ShowToastOption showToastOption = new ShowToastOption()
+        //          {
+        //              title = result.errMsg,
+        //              duration = 0.2f,
+        //          };
+        //          showToastOption.title = result.errMsg;
+        //          WX.ShowToast(showToastOption);
+        //      };
+        //     WX.Login(loginOption);
+        NetMessageHandler.SendLogin(null,null);
 #else
             //编辑器运行测试
             // NetMessageHandler.SendLogin("1");
 #endif
         });
-#if UNITY_EDITOR
+#if UNITY_EDITOR||UNITY_STANDALONE_WIN|| PLATFORM_STANDALONE_WIN
         btnBattle = this.transform.Find("btnBattle").GetComponent<Button>();
         btnBattle.onClick.AddListener(() =>
         {

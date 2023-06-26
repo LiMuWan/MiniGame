@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public static class UnityExtensiton 
@@ -7,5 +8,13 @@ public static class UnityExtensiton
         transform.localPosition = Vector3.zero;
         transform.localScale = Vector3.one;
         transform.localRotation = Quaternion.identity;
+   }
+
+   public static void SetColor(this TextMeshProUGUI text , Color color)
+   {
+      text.faceColor = color;
+      text.ForceMeshUpdate();
+      text.UpdateVertexData();
+      text.SetAllDirty();
    }
 }

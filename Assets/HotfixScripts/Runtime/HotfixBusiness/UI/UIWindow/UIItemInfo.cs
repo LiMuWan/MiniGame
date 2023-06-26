@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine.UI;
 using GameFramework.Resource;
 using UnityEngine;
 using UniFramework.Utility;
@@ -32,6 +27,10 @@ public partial class UIItemInfo
              NetMessageHandler.SendWearTempEquip();
              ApplicationStatusManager.s_currentAppStatus.CloseUI<UIItemInfo>();
          });
+        btn_mask.onClick.AddListener(() =>
+        {
+            ApplicationStatusManager.s_currentAppStatus.CloseUI<UIItemInfo>();
+        });
     }
 
     protected override void OnSetVisible(bool visible)
@@ -39,8 +38,8 @@ public partial class UIItemInfo
 
     }
 
-    private ItemData itemData;
-
+    private ItemData oldItemData;
+    private ItemData newItemData;
     public void ShowItemInfo(ItemData oldItem, ItemData newItem)
     {
         UniLogger.Log($"UserOpenTreasureBox = ShowItemInfo");
@@ -73,18 +72,18 @@ public partial class UIItemInfo
 
     private void ShowOld(ItemData itemData, string title)
     {
-        this.itemData = itemData;
+        this.oldItemData = itemData;
         var qualityConfig = ConfigLoader.Instance.Tables.ItemQuality.Get(itemData.Quality);
         var item_icon = ConfigLoader.Instance.Tables.Item.Get(itemData.ItemId).Icon;
         old_PropertiesTableManager.Count = 4;
-        old_PropertiesTableManager.Each(OnEachProperties);
+        old_PropertiesTableManager.Each(OnOldEachProperties);
         old_title.text = title;
         old_item_name.text = itemData.Name;
         old_item_lv.text = $"Lv.{itemData.Level}";
         old_quality_text.text = qualityConfig.Title;
         Color color = ColorTool.HtmlStringToColor(qualityConfig.Color);
-        old_item_name.color = color;
-        old_quality_text.color = color;
+        old_item_name.SetColor(color);
+        old_quality_text.SetColor(color);
         ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { old_quality_icon.texture = texture; });
         ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { old_item_icon.texture = texture; });
         if (itemData.Type < 9)
@@ -102,8 +101,8 @@ public partial class UIItemInfo
 
     private void ShowNew(ItemData itemData, ItemData oldItemData, string title)
     {
-        this.itemData = itemData;
-        this.itemData.CompareOther(oldItemData);
+        this.newItemData = itemData;
+        itemData.CompareOther(oldItemData);
         var qualityConfig = ConfigLoader.Instance.Tables.ItemQuality.Get(itemData.Quality);
         var item_icon = ConfigLoader.Instance.Tables.Item.Get(itemData.ItemId).Icon;
         new_title.text = title;
@@ -113,10 +112,10 @@ public partial class UIItemInfo
         new_item_lv.text = $"Lv.{itemData.Level}";
         new_quality_text.text = qualityConfig.Title;
         Color color = ColorTool.HtmlStringToColor(qualityConfig.Color);
-        new_item_name.color = color;
-        old_quality_text.color = color;
+        old_quality_text.SetColor(color);
+        new_item_name.SetColor(color);
         new_PropertiesTableManager.Count = 4;
-        new_PropertiesTableManager.Each(OnEachProperties);
+        new_PropertiesTableManager.Each(OnNewEachProperties);
         if (itemData.Type < 9)
         {
             if (itemData.Sex == (int)ItemSex.Female)
@@ -138,9 +137,16 @@ public partial class UIItemInfo
         }
     }
 
-    private bool OnEachProperties(AutoGenTableItem<PropertiesTableTemplate, PropertiesTableModel> item, int index)
+    private bool OnOldEachProperties(AutoGenTableItem<PropertiesTableTemplate, PropertiesTableModel> item, int index)
     {
-        item.Template.InitOrRefresh(this.itemData, index);
+        item.Template.InitOrRefresh(this.oldItemData, index);
+        if (index >= 3) return true;
+        return false;
+    }
+
+    private bool OnNewEachProperties(AutoGenTableItem<PropertiesTableTemplate, PropertiesTableModel> item, int index)
+    {
+        item.Template.InitOrRefresh(this.newItemData, index,true);
         if (index >= 3) return true;
         return false;
     }

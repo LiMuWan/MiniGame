@@ -19,8 +19,8 @@ public class ItemData
     public float CurHp;
 
     //属性变化值
-    private List<bool> compareData = new List<bool>();
-    public List<bool> CompareData
+    private List<int> compareData = new List<int>();
+    public List<int> CompareData
     {
         get { return compareData; }
         private set { }
@@ -34,11 +34,18 @@ public class ItemData
         }
         else
         {
-            compareData.Add(Hp > otherItemData.Hp);
-            compareData.Add(Spd > otherItemData.Spd);
-            compareData.Add(Atk > otherItemData.Atk);
-            compareData.Add(Def > otherItemData.Def);
+            compareData.Add(Compare(Hp,otherItemData.Hp));
+            compareData.Add(Compare(Spd,otherItemData.Spd));
+            compareData.Add(Compare(Atk,otherItemData.Atk));
+            compareData.Add(Compare(Def,otherItemData.Def));
         }
+    }
+
+    private int Compare(float value1,float value2)
+    {
+        if(value1 == value2) return 0;
+        else if(value1 < value2) return 1;
+        else return 2;
     }
 
     public bool TakeDamage(float atk, float def)

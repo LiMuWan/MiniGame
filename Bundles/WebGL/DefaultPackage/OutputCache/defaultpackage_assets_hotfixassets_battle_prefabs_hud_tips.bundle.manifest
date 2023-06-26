@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 3671024833
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b7ad73dda2d4322fd830c4ec85ac0e8a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: adda3dccf1f7358b2e99b4f83ca96597
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.VertexGradient
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/HotfixAssets/Battle/Prefabs/hud_tips.prefab
+Dependencies:
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_resources_fonts&materials.bundle

@@ -3,7 +3,7 @@ D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_itembaseproperty.bytes
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_itemquality.bytes,1299EABBCF8B582DF9134B5F87675E,298,1685527921341
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_itemtype.bytes,27313B74DAF2CFCAF2324D641848B,411,1685679799331
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_playerlevelup.bytes,BFF4A75AB38C25235B498AD3CDB344,39,1685416013792
-D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_task.bytes,CDDBF4E01287EF8B33C8B57BF218F433,854,1685416013793
+D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_task.bytes,785F0966CCF573D10F65521992F6F48,890,1687323054968
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_treasurechest.bytes,4FCA53964C80965C712C3A541B761B,178,1685416013793
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Battle/ActorAttrAddType.cs,AFEDABDD90D0AB999EED311C7258472D,881,1685416645915
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Battle/ActorAttrDataType.cs,C25A40C8F24199396C4EC779D750AA1B,2121,1685416645915
@@ -34,7 +34,7 @@ D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/__beans__.xlsx,33E7F
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/__enums__.xlsx,3E96958722FD88DD254AF36633F21DE,10645,1683703103826
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/__tables__.xlsx,777E394488D2E46F47FDA72C6FA9D0C9,9952,1685416281780
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/宝箱配置表.xlsx,EC7CA898568DBDF1256637A883D54DAC,11156,1685014026893
-D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/任务表.xlsx,F95A17E55EFFCA6ADB9C1E4CBCBB7A7,14204,1685013142750
+D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/任务表.xlsx,1710769A7F62E88E2274F431DB5D54ED,14152,1686654490479
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/玩家配置表.xlsx,7F9CDCCDF2403C404EE0B36AAB9976E,11991,1685415785195
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/物品配置表.xlsx,844D5556EE11AAD0BB2AA873F1C57857,21676,1685679786028
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Defines/Actor.xml,913B8733138ADD3954576634AC57FA4,1648,1683703103863

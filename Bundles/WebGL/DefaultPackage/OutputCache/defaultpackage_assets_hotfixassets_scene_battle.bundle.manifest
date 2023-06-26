@@ -1,0 +1,85 @@
+ManifestFileVersion: 0
+CRC: 4194454537
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3b93a0b6b503b18ac6f0fd1ee9164524
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3cbebe58327ee7b4430322700493bd4d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b3c2a7a09e8160c43b77264376b39f72, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 48901f7dcf9708c4e8268296fbee2b1b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0097503f1f07bd14d81e81203ef9fa4d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 08a8aa9cdc3c60d40b6c0563d9c92430, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dff1e37fd984f344996b600d0f022dda, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3eeaeaac2680403478bc7b7263f6f579, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6a0b7ae6d1c27ae4bad89e31a2149b7c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 196
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotfixAssets/Scene/Battle.unity
+Dependencies:
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_assets_hotfixassets_textures_battle_battle_bg.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_hotfixassets_sprites_uicommon.bundle
+- D:/WxMiniGamework/MiniGame/Bundles/WebGL/DefaultPackage/OutputCache/defaultpackage_share_assets_resources_fonts&materials.bundle

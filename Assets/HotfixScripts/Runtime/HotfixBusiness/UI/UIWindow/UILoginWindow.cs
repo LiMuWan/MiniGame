@@ -37,7 +37,7 @@ public class UILoginWindow : UIWindow
         //          WX.ShowToast(showToastOption);
         //      };
         //     WX.Login(loginOption);
-        NetMessageHandler.SendLogin(null,null);
+        NetMessageHandler.SendLogin(null);
 #else
             //编辑器运行测试
             // NetMessageHandler.SendLogin("1");

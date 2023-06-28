@@ -159,5 +159,53 @@ namespace Hotfix.EventDefine
                  UniEvent.SendMessage(msg);
             }
         }
+
+        /// <summary>
+        /// 获取PVP玩家列表
+        /// </summary>
+        public class UserGetPVPEnemy:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                var msg = new UserGetPVPEnemy();
+                UniEvent.SendMessage(msg);
+            }
+        }
+
+        /// <summary>
+        /// 获取PVP开始
+        /// </summary>
+        public class UserPVPStart:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                var msg = new UserPVPStart();
+                UniEvent.SendMessage(msg);
+            }
+        }
+
+        /// <summary>
+        /// PVP结算
+        /// </summary>
+        public class UserPVPComplete:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                var msg = new UserPVPComplete();
+                UniEvent.SendMessage(msg);
+            }
+        }
+
+        /// <summary>
+        /// 获取排行榜列表
+        /// </summary>
+        public class UserGetRankList:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                var msg = new UserGetRankList();
+                UniEvent.SendMessage(msg);
+            }
+        }
     }
 }

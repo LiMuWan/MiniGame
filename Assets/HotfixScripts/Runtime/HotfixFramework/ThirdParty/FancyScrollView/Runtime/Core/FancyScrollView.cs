@@ -178,7 +178,7 @@ namespace FancyScrollView
                     cell.SetVisible(true);
                     cell.UpdateContent(ItemsSource[index]);
                 }
-
+                cell.transform.position = new Vector3(cell.transform.position.x, -position * cellInterval,cell.transform.position.z);
                 cell.UpdatePosition(position);
             }
         }

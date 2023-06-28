@@ -5,39 +5,37 @@ using UnityEngine.UI;
 using FancyScrollView;
 using GameFramework.Resource;
 using TMPro;
+using Hotfix;
 
 namespace Rank
 {
-    class Cell : FancyCell<ItemData, Context>
+    class Cell : FancyScrollRectCell<JPlayerRankInfo, Context>
     {
         [SerializeField] Animator animator = default;
         [SerializeField] Image rank_img = default;
         [SerializeField] Image head_icon = default;
         [SerializeField] TextMeshProUGUI avator_name = default;
         [SerializeField] TextMeshProUGUI level_text = default;
-        [SerializeField] Button button = default;
+        [SerializeField] Button button;
         [SerializeField] TextMeshProUGUI title_level_text = default;
         [SerializeField] TextMeshProUGUI title_text = default;
         [SerializeField] TextMeshProUGUI reward_count_text = default;
-        static class AnimatorHash
-        {
-            public static readonly int Scroll = Animator.StringToHash("scroll");
-        }
         
         private List<string> rank_num_names = new List<string>(){"gd","sv","bz","other"};
 
         void Start()
         {
-            button.onClick.AddListener(() => Context.OnCellClicked?.Invoke(Index));
+            // button.onClick.AddListener(() => Context.OnCellClicked?.Invoke(Index));
         }
-
-        public override void UpdateContent(ItemData itemData)
+        
+        public void UpdateData(int rankNum,string playerId,string headUrl,string playerName,int lv,int pvpScore)
         {
-            if(itemData.RankNum <= 3)
+            if (rankNum <= 3)
             {
-                ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(rank_num_names[itemData.RankNum - 1],(sprite)=>
+                ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(rank_num_names[rankNum - 1], (sprite) =>
                 {
-                   rank_img.sprite = sprite;
+                    rank_img.sprite = sprite;
+                    rank_img.SetNativeSize();
                 });
             }
             else
@@ -45,33 +43,30 @@ namespace Rank
                 ResourcesManager.Instance.LoadSubAssetsAsync<Sprite>(rank_num_names[3], (sprite) =>
                {
                    rank_img.sprite = sprite;
+                   rank_img.SetNativeSize();
                });
             }
-            SpriteLoaderUtils.GetSprite($"head_icon_{itemData.RankNum}", itemData.HeadURL, Application.streamingAssetsPath, (sprite)=>{head_icon.sprite = sprite;});
-            avator_name.text = itemData.AvatorName;
-            level_text.text = $"lv.{itemData.Level}";
+            SpriteLoaderUtils.GetSprite($"head_icon_{LZString.CompressToBase64(playerId)}", LZString.DecompressFromBase64(headUrl), Application.streamingAssetsPath, (sprite) => { head_icon.sprite = sprite; });
+            avator_name.text = playerName;
+            level_text.text = $"lv.{lv}";
             // title_text.text = itemData.TitleLevel;//TODO
-            title_level_text.text = itemData.TitleLevel.ToString();
-            reward_count_text.text = itemData.Score.ToString();
+            // title_level_text.text = itemData.TitleLevel.ToString();
+            reward_count_text.text = pvpScore.ToString();
+        }
+
+        public override void UpdateContent(JPlayerRankInfo itemData)
+        {
+            var rankNum = Index + 1;
+            UpdateData(rankNum,itemData.playerId,itemData.headUrl,itemData.playerName,itemData.lv,itemData.pvpScore);
             var selected = Context.SelectedIndex == Index;
         }
 
-        public override void UpdatePosition(float position)
+        protected override void UpdatePosition(float normalizedPosition, float localPosition)
         {
-            currentPosition = position;
+            base.UpdatePosition(normalizedPosition, localPosition);
 
-            if (animator.isActiveAndEnabled)
-            {
-                animator.Play(AnimatorHash.Scroll, -1, position);
-            }
-
-            animator.speed = 0;
+            // var wave = Mathf.Sin(normalizedPosition * Mathf.PI * 2) * 65;
+            // transform.localPosition += Vector3.right * wave;
         }
-
-        // GameObject が非アクティブになると Animator がリセットされてしまうため
-        // 現在位置を保持しておいて OnEnable のタイミングで現在位置を再設定します
-        float currentPosition = 0;
-
-        void OnEnable() => UpdatePosition(currentPosition);
     }
 }

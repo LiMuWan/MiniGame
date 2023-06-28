@@ -139,10 +139,12 @@ public class BattleSystem : MonoBehaviour
     {
        if(battleState == EBattleState.Win)
        {
+          NetMessageHandler.SendPVPComplete(UserDataManager.Instance.EnemyID,true);
           battleResultUI?.ShowResult(true);
        }
        else if(battleState == EBattleState.Lost)
        {
+          NetMessageHandler.SendPVPComplete(UserDataManager.Instance.EnemyID,false);
           battleResultUI?.ShowResult(false);
        }
     }

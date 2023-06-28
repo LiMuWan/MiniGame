@@ -9,6 +9,10 @@ using UniFramework.Utility;
 public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
 {   
     public static JUserLoginData LoginData = default;
+    //排行榜
+    public JRankInfo RankInfo = default; 
+    //竞技场
+    public List<JPlayerRankInfo> EnemyInfos = default;
     //金币
     private int coin;
     //钻石
@@ -224,6 +228,11 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
             }
         }
     }
+    
+    public int PvpScore{get;set;}
+    public int PvpCount{get;set;}
+    //当前挑战玩家ID
+    public string EnemyID{get;set;}
 
     private List<ItemData> animalDatas;
     public List<ItemData> AnimalDatas => animalDatas;
@@ -238,6 +247,8 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         UniLogger.Log($"playerData = {playerData}");
         PlayerId = playerData.playerId;
         OpenId = playerData.openId;
+        NickName = playerData.playerName;
+        HeadHostUrl = playerData.headUrl;
         CreateTime = playerData.createTime;
         Coin = playerData.coin;
         Level = playerData.lv;
@@ -247,6 +258,8 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         EggNum = playerData.boxNum;
         EquipList = playerData.equipList;
         Task = playerData.task;
+        PvpScore = playerData.pvpScore;
+        PvpCount = playerData.pvpCount;
         //读配置
 
         //称号 ToDo

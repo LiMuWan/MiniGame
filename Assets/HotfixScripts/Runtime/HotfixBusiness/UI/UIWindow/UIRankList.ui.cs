@@ -14,39 +14,32 @@ public partial class UIRankList : UIWindow
 {
 
     private ScrollView ScrollView;
-    protected Image head_icon;
-    protected TextMeshProUGUI avator_name;
-    protected TextMeshProUGUI level_title;
-    protected TextMeshProUGUI level_text;
     protected Button btn_challenge;
-    private Cell select;
+    private Cell myData;
 
 
     protected override void InitTemplate()
     {
         ScrollView = FindChild<ScrollView>("ScrollView");
-        // head_icon = FindChild<Image>("head_icon");
-        // avator_name = FindChild<TextMeshProUGUI>("avator_name");
-        // level_title = FindChild<TextMeshProUGUI>("level_title");
-        // level_text = FindChild<TextMeshProUGUI>("level_text");
 
         btn_challenge = FindChild<Button>("btn_challenge");
-        select = FindChild<Cell>("select");
+        myData = FindChild<Cell>("select");
     }
 
     public override void OnCreate()
     {
         base.OnCreate();
-        //请求排行榜数据 TODO
-        //  var items = Enumerable.Range(0, 20)
-        //         .Select(i => new ItemData($"Cell {i}"))
-        //         .ToArray();
-
-            // ScrollView.UpdateData(items);
-            // ScrollView.SelectCell(0);
-        ScrollView.OnSelectHandle = OnSelctHandler;
+        GenerateCell();
+        // ScrollView.OnSelectHandle = OnSelctHandler;
     }
     
+    private void GenerateCell()
+    {
+        Debug.Log("rankList.count = " + UserDataManager.Instance.RankInfo.rankInfoList.Count);
+        ScrollView.UpdateData(UserDataManager.Instance.RankInfo.rankInfoList);
+        // ScrollView.SelectCell(0);
+    }
+
     private void OnSelctHandler(int index)
     {
        //TODO

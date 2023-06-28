@@ -117,6 +117,10 @@ public partial class UIMainWindow
         eventGroup.AddListener<UserEventDefine.UserEggLevelUp>(Handler);
         eventGroup.AddListener<UserEventDefine.UserEquipRefresh>(Handler);
         eventGroup.AddListener<UserEventDefine.UserEggNumRefresh>(Handler);
+        eventGroup.AddListener<UserEventDefine.UserGetPVPEnemy>(Handler);
+        eventGroup.AddListener<UserEventDefine.UserPVPStart>(Handler);
+        eventGroup.AddListener<UserEventDefine.UserPVPComplete>(Handler);
+        eventGroup.AddListener<UserEventDefine.UserGetRankList>(Handler);
     }
     
     
@@ -158,6 +162,22 @@ public partial class UIMainWindow
         else if (message is UserEventDefine.UserEggNumRefresh uenr)
         {
             egg_count_text.text = $"{uenr.egg_num}";
+        }
+        else if (message is UserEventDefine.UserGetPVPEnemy ugpvp)
+        {
+            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIChallengeOpponent>();
+        }
+        else if (message is UserEventDefine.UserPVPStart upvpstart)
+        {   
+            //进入战斗
+        }
+        else if (message is UserEventDefine.UserPVPComplete upvpend)
+        {   
+            //退出战斗
+        }
+        else if (message is UserEventDefine.UserGetRankList getRank)
+        {   
+            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIRankList>();
         }
     }
     

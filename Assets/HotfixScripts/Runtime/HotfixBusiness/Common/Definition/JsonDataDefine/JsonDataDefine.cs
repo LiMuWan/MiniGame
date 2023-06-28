@@ -1,11 +1,10 @@
-using System;
+using System.Collections.Generic;
 
 //登录数据
 public class JUser
 {
     public string userId;
     public string openId;
-    public string headUrl;
     public int[] serverIdList;
     public int lastServerId;
 }
@@ -42,10 +41,28 @@ public class JUserData
     public JPlayerData data;
 }
 
+public class JRankData
+{
+    public int code;
+    public string message;
+
+    public JRankInfo data;
+}
+
+public class JEnemyData
+{
+    public int code;
+    public string message;
+
+    public List<JPlayerRankInfo> data;
+}
+
 public class JPlayerData
 {
     public string playerId;
     public string openId;
+    public string playerName;
+    public string headUrl;
     public string createTime;
     public int coin;
     public int boxLv;
@@ -56,6 +73,9 @@ public class JPlayerData
 
     public JEquipDataList equipList;
     public JTask task;
+
+    public int pvpScore;
+    public int pvpCount;
 
 }
 
@@ -78,6 +98,22 @@ public class JTask
     public int taskId;
     public int targetNum;
     public int state;
+}
+
+//排行榜
+public class JRankInfo
+{
+    public List<JPlayerRankInfo> rankInfoList;
+    public long ownRank;
+}
+
+public class JPlayerRankInfo
+{
+    public string playerId;
+    public string playerName;
+    public string headUrl;
+    public int lv;
+    public int pvpScore;
 }
 
 public enum TaskStatus

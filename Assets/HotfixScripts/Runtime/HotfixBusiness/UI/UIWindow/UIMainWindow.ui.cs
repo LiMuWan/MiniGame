@@ -5,6 +5,7 @@ using UniFramework.Window;
 using GameFramework.Resource;
 using UniFramework.Singleton;
 using UniFramework.Utility;
+using Hotfix;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -232,7 +233,7 @@ public partial class UIMainWindow : UIWindow
         btn_battle = FindChild<Button>("btn_battle");
         btn_other = FindChild<Button>("btn_other");
         btn_rank = FindChild<Button>("btn_rank");
-        btn_breeding = FindChild<Button>("btn_ breeding");
+        btn_breeding = FindChild<Button>("btn_breeding");
         btn_egg_level = FindChild<Image>("btn_egg_level");
         egg_level = FindChild<TextMeshProUGUI>("egg_level");
         egg_count_text = FindChild<TextMeshProUGUI>("egg_count_text");
@@ -285,9 +286,10 @@ public partial class UIMainWindow : UIWindow
     {
         btn_task.onClick.AddListener(()=>
         {
-            UniLogger.Log("on btn_task");
+            UniLogger.Log("on btn_task" + UserDataManager.Instance.Task.state);
             if (UserDataManager.Instance.Task.state == (int)TaskStatus.Completed)
             {
+                UniLogger.Log("SendGetTaskReward");
                 NetMessageHandler.SendGetTaskReward();
             }
         });
@@ -299,13 +301,23 @@ public partial class UIMainWindow : UIWindow
         });
         btn_battle.onClick.AddListener(()=>
         { 
-             SceneLoaderManager.LoadBattle(() =>
-                {
-               UIManager.UICanvas.SetActive(false);
-           });
+            NetMessageHandler.SendGetPVPEnemy();
+            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIChallengeOpponent>();
+        //      SceneLoaderManager.LoadBattle(() =>
+        //     {
+        //        UIManager.UICanvas.SetActive(false);
+        //    });
+        });
+        btn_rank.onClick.AddListener(()=>
+        { 
+            NetMessageHandler.SendGetRankList();
+        //      SceneLoaderManager.LoadBattle(() =>
+        //     {
+        //        UIManager.UICanvas.SetActive(false);
+        //    });
         });
         tips.gameObject.SetActive(false);
-        SpriteLoaderUtils.GetSprite("head_icon", UserDataManager.Instance.HeadHostUrl, Application.streamingAssetsPath, OnLoadSprite);
+        SpriteLoaderUtils.GetSprite($"head_icon_{LZString.CompressToBase64(UserDataManager.Instance.PlayerId)}", LZString.DecompressFromBase64(UserDataManager.Instance.HeadHostUrl), Application.streamingAssetsPath, OnLoadSprite);
         avator_name.text = UserDataManager.Instance.NickName;
         user_level.text = $"Lv.{UserDataManager.Instance.Level}";
         user_level_slider.maxValue = UserDataManager.Instance.MaxExperience;

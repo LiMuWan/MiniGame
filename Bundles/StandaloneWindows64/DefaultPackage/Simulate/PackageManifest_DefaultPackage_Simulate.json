@@ -524,6 +524,13 @@
             "DependIDs": []
         },
         {
+            "Address": "head_bg",
+            "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/head_bg.png",
+            "AssetTags": [],
+            "BundleID": 60,
+            "DependIDs": []
+        },
+        {
             "Address": "icn_coin",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/icn_coin.png",
             "AssetTags": [],
@@ -617,13 +624,6 @@
         {
             "Address": "food_slot",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/food_slot.png",
-            "AssetTags": [],
-            "BundleID": 62,
-            "DependIDs": []
-        },
-        {
-            "Address": "head_bg",
-            "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/head_bg.png",
             "AssetTags": [],
             "BundleID": 62,
             "DependIDs": []

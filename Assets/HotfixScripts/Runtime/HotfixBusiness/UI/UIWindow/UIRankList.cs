@@ -10,7 +10,9 @@ public partial class UIRankList
     
     protected override void InitModel()
     {
-           //To do: init
+        var userData = UserDataManager.Instance;
+        //To do: init
+        myData.UpdateData((int)userData.RankInfo.ownRank+1,userData.PlayerId,userData.HeadHostUrl,userData.NickName,userData.Level,userData.PvpScore);
     }
 
     protected override void OnSetVisible(bool visible) 

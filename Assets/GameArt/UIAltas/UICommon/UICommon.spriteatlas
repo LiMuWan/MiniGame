@@ -52,6 +52,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: f5f1d8015f9a539458b72523c861c62e, type: 3}
+  - {fileID: 21300000, guid: 3aa04c33516f9a54eb88061e1e0e6a2a, type: 3}
   - {fileID: 21300000, guid: 83df44f3c4cd4514c864029932d515b3, type: 3}
   - {fileID: 21300000, guid: d23af03476750614eb8105766d2bd506, type: 3}
   - {fileID: 21300000, guid: 3a60d0669cf81144a9a97013bfac60be, type: 3}
@@ -62,6 +63,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5c1601dfa6bb4c64fb790e8a520505a8, type: 3}
   m_PackedSpriteNamesToIndex:
   - btn_sell
+  - head_bg
   - animal_slot
   - icn_coin
   - frame_bg

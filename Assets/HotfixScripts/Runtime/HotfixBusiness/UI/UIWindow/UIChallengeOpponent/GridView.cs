@@ -1,20 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using FancyScrollView;
 using EasingCore;
-using System;
+using FancyScrollView;
 
-namespace Rank
+namespace Arena
 {
-    class ScrollView : FancyScrollRect<JPlayerRankInfo, Context>
+    class GridView : FancyGridView<JPlayerRankInfo, Context>
     {
-        [SerializeField] float cellSize = 100f;
-        [SerializeField] GameObject cellPrefab = default;
+        class CellGroup : DefaultCellGroup { }
 
-        protected override float CellSize => cellSize;
-        protected override GameObject CellPrefab => cellPrefab;
-        public int DataCount => ItemsSource.Count;
+        [SerializeField] Cell cellPrefab = default;
+
+        protected override void SetupCellTemplate() => Setup<CellGroup>(cellPrefab);
 
         public float PaddingTop
         {
@@ -36,7 +33,7 @@ namespace Rank
             }
         }
 
-        public float Spacing
+        public float SpacingY
         {
             get => spacing;
             set
@@ -46,14 +43,30 @@ namespace Rank
             }
         }
 
+        public float SpacingX
+        {
+            get => startAxisSpacing;
+            set
+            {
+                startAxisSpacing = value;
+                Relayout();
+            }
+        }
+
+        public void UpdateSelection(int index)
+        {
+            if (Context.SelectedIndex == index)
+            {
+                return;
+            }
+
+            Context.SelectedIndex = index;
+            Refresh();
+        }
+
         public void OnCellClicked(Action<int> callback)
         {
             Context.OnCellClicked = callback;
-        }
-
-        public void UpdateData(IList<JPlayerRankInfo> items)
-        {
-            UpdateContents(items);
         }
 
         public void ScrollTo(int index, float duration, Ease easing, Alignment alignment = Alignment.Middle)
@@ -77,17 +90,6 @@ namespace Rank
                 case Alignment.Lower: return 1.0f;
                 default: return GetAlignment(Alignment.Middle);
             }
-        }
-
-        void UpdateSelection(int index)
-        {
-            if (Context.SelectedIndex == index)
-            {
-                return;
-            }
-
-            Context.SelectedIndex = index;
-            Refresh();
         }
     }
 }

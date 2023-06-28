@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using FancyScrollView;
 
-namespace Rank
+namespace Arena
 {
-    class Context:FancyScrollRectContext
+    class Context : FancyGridViewContext
     {
         public int SelectedIndex = -1;
         public Action<int> OnCellClicked;

@@ -48,7 +48,7 @@ public static class NetMessageHandler
     public static void SendLoginGameServer(int serverId,string openId,string playerName,string headUrl)
     {
          #if UNITY_EDITOR || UNITY_STANDALONE_WIN || PLATFORM_STANDALONE_WIN
-              UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{"123"}/{"笔圣"}/{"BYFxAcGcC4HpZMAlgJwCYHcAeA6AjgDYD2A5kTgMYB2sAtrUeAKY0BuSA+gMwBMsAigAYAVgBYAKhgDi4gGbiAMgEYAguDxIKSgJ4YAqrQCaALQBytAOoAFNAA4LADQBsWbQHYpASSlIAhgBFBACMnAGkAUSU0FVtBEn5wCwVwzwBlUwBOACEAMWBQpCC8NFNPAAlwh20ANQB5TR4CJjc9ILKSAFkSWCVeIA"}", OnSendLoginCallback);
+              UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{"211"}/{"笔圣"}/{"BYFxAcGcC4HpZMAlgJwCYHcAeA6AjgDYD2A5kTgMYB2sAtrUeAKY0BuSA+gMwBMsAigAYAVgBYAKhgDi4gGbiAMgEYAguDxIKSgJ4YAqrQCaALQBytAOoAFNAA4LADQBsWbQHYpASSlIAhgBFBACMnAGkAUSU0FVtBEn5wCwVwzwBlUwBOACEAMWBQpCC8NFNPAAlwh20ANQB5TR4CJjc9ILKSAFkSWCVeIA"}", OnSendLoginCallback);
          #else
               UnityWebRequestTool.Get($"http://{SettingDefine.GameServerUrl}/server-box/login/{serverId}/{openId}/{playerName}/{headUrl}", OnSendLoginCallback);
          #endif

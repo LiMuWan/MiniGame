@@ -14,6 +14,7 @@ public partial class UIRankList : UIWindow
 {
 
     private ScrollView ScrollView;
+    protected Button btn_mask;
     protected Button btn_challenge;
     private Cell myData;
 
@@ -21,7 +22,7 @@ public partial class UIRankList : UIWindow
     protected override void InitTemplate()
     {
         ScrollView = FindChild<ScrollView>("ScrollView");
-
+        btn_mask = FindChild<Button>("btn_mask");
         btn_challenge = FindChild<Button>("btn_challenge");
         myData = FindChild<Cell>("select");
     }
@@ -48,7 +49,7 @@ public partial class UIRankList : UIWindow
 
     public override void OnDestroy()
     {
-       
+        btn_mask.onClick.RemoveAllListeners();
     }
 
     public override void OnRefresh()

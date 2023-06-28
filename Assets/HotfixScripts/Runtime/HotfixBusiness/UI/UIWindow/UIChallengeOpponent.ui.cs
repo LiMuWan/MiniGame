@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.UI;
 using UniFramework.Window;
 using Arena;
+using EasingCore;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -39,6 +40,7 @@ public partial class UIChallengeOpponent : UIWindow
             return;
         }
         gridView.UpdateSelection(0);
+        gridView.ScrollTo(0, 0.4f, Ease.InOutQuint, Alignment.Middle);
         // TryParseValue(selectIndexInputField, 0, gridView.DataCount - 1, index =>
         // {
             

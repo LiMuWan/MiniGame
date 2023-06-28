@@ -5,7 +5,7 @@ using FancyScrollView;
 
 namespace Arena
 {
-    class GridView : FancyGridView<JPlayerRankInfo, Context>
+   class GridView : FancyGridView<JPlayerRankInfo, Context>
     {
         class CellGroup : DefaultCellGroup { }
 

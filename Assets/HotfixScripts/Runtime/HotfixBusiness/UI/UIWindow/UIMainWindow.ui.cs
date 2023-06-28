@@ -301,8 +301,9 @@ public partial class UIMainWindow : UIWindow
         });
         btn_battle.onClick.AddListener(()=>
         { 
-            NetMessageHandler.SendGetPVPEnemy();
-            ApplicationStatusManager.s_currentAppStatus.OpenUI<UIChallengeOpponent>();
+            // UniLogger.Log("OnBtnBattle");
+            // NetMessageHandler.SendGetPVPEnemy();
+            // ApplicationStatusManager.s_currentAppStatus.OpenUI<UIChallengeOpponent>();
         //      SceneLoaderManager.LoadBattle(() =>
         //     {
         //        UIManager.UICanvas.SetActive(false);

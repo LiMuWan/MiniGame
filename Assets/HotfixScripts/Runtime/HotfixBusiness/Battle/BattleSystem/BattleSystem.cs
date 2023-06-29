@@ -135,10 +135,10 @@ public class BattleSystem : MonoBehaviour
         UniLogger.Log($"itemData.Name = {itemData.Name}");
         var itemTypeCfg = configLoader.Tables.ItemType.Get(type);
         UniLogger.Log($"itemTypeCfg.Hp = {itemTypeCfg.Hp}");
-        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * 10 * itemConfig.Hp).RoundToOneDecimal();
+        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * itemConfig.Hp).RoundToOneDecimal();
         itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
-        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * 10 * itemConfig.Atk).RoundToOneDecimal();
-        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * 10 * itemConfig.Def).RoundToOneDecimal();
+        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * itemConfig.Atk).RoundToOneDecimal();
+        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * itemConfig.Def).RoundToOneDecimal();
         itemData.CurHp = itemData.Hp;
         return itemData;
     }
@@ -550,7 +550,7 @@ public class BattleSystem : MonoBehaviour
 
         void TurnPlayer()
         {
-            float damage = cur_player_battle_info.Atk - cur_enemy_battle_info.Def;
+            float damage = (cur_player_battle_info.Atk - cur_enemy_battle_info.Def).RoundToOneDecimal();
             bool isDefeated = cur_enemy_battle_info.TakeDamage(cur_player_battle_info.Atk, cur_enemy_battle_info.Def);
             bool isEndBattle = right_battle_index + 1 >= team_right_items.Count && isDefeated;
             BattleRound battleRound = new BattleRound()
@@ -590,7 +590,7 @@ public class BattleSystem : MonoBehaviour
 
         void TurnEnemy()
         {
-            float damage = cur_enemy_battle_info.Atk - cur_player_battle_info.Def;
+            float damage = (cur_enemy_battle_info.Atk - cur_player_battle_info.Def).RoundToOneDecimal();
             bool isDefeated = cur_player_battle_info.TakeDamage(cur_enemy_battle_info.Atk, cur_player_battle_info.Def);
             bool isEndBattle = left_battle_index + 1 >= team_left_items.Count && isDefeated;
             BattleRound battleRound = new BattleRound()

@@ -332,10 +332,10 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         UniLogger.Log($"itemData.Name = {itemData.Name}");
         var itemTypeCfg = ConfigLoader.Tables.ItemType.Get(type);
         UniLogger.Log($"itemTypeCfg.Hp = {itemTypeCfg.Hp}");
-        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * 10 * itemConfig.Hp).RoundToOneDecimal();
+        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * itemConfig.Hp).RoundToOneDecimal();
         itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
-        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * 10 * itemConfig.Atk).RoundToOneDecimal();
-        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * 10 * itemConfig.Def).RoundToOneDecimal();
+        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * itemConfig.Atk).RoundToOneDecimal();
+        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * itemConfig.Def).RoundToOneDecimal();
         itemData.CurHp = itemData.Hp;
         return itemData;
     }

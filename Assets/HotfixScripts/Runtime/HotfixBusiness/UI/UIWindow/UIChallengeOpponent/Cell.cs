@@ -41,7 +41,7 @@ namespace Arena
             level_text.text = $"lv.{itemData.lv}";
             reward_count_text.text = itemData.pvpScore.ToString();
             var selected = Context.SelectedIndex == Index;
-            coin_count_text.text = "8000";
+            coin_count_text.text = "200";
         }
 
         protected override void UpdatePosition(float normalizedPosition, float localPosition)

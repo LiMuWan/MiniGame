@@ -15,15 +15,17 @@ public partial class UIChallengeOpponent : UIWindow
 {
 
     private GridView gridView;
-    protected Button btn_add;
-    protected Button btn_refresh;
-
+    private Button btn_add;
+    private Button btn_refresh;
+    private TextMeshProUGUI count_text;
+    private Button btn_mask;
 
     protected override void InitTemplate()
     {
         gridView = FindChild<GridView>("Grid View");
         btn_add = FindChild<Button>("btn_add");
         btn_refresh = FindChild<Button>("btn_refresh"); 
+        count_text = FindChild<TextMeshProUGUI>("count_text");
     }
 
     public override void OnCreate()
@@ -41,11 +43,6 @@ public partial class UIChallengeOpponent : UIWindow
         }
         gridView.UpdateSelection(0);
         gridView.ScrollTo(0, 0.4f, Ease.InOutQuint, Alignment.Middle);
-        // TryParseValue(selectIndexInputField, 0, gridView.DataCount - 1, index =>
-        // {
-            
-        //     gridView.ScrollTo(index, 0.4f, Ease.InOutQuint, (Alignment)alignmentDropdown.value);
-        // });
     }
 
     private void GenerateCells(int dataCount)
@@ -62,7 +59,7 @@ public partial class UIChallengeOpponent : UIWindow
 
     public override void OnDestroy()
     {
-       
+        btn_mask.onClick.RemoveAllListeners();
     }
 
     public override void OnRefresh()

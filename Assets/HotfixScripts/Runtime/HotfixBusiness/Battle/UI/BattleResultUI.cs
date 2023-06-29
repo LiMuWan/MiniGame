@@ -23,6 +23,8 @@ public class BattleResultUI : MonoBehaviour
             SceneLoaderManager.UnLoadScene("Battle",()=>
             {
                 UIManager.UICanvas.SetActive(true);
+                UserDataManager.Instance.EnemyEquipDatas = null;
+                UserDataManager.Instance.EnemyID = string.Empty;
             });
         });
     }

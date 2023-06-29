@@ -67,7 +67,7 @@ public class ItemData
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.AppendLine($"Name = {Name} , ItemId = {ItemId} , Level = {Level} , Hp = {Hp} , Speed = {Spd} , Atk = {Atk} , Def = {Def}");
+        sb.AppendLine($"Name = {Name} , ItemId = {ItemId} , Quality = {Quality} , Level = {Level} , Hp = {Hp} , Speed = {Spd} , Atk = {Atk} , Def = {Def}");
         return sb.ToString();
     }
 }

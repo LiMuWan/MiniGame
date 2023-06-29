@@ -302,20 +302,10 @@ public partial class UIMainWindow : UIWindow
         btn_battle.onClick.AddListener(()=>
         { 
             // UniLogger.Log("OnBtnBattle");
-            // NetMessageHandler.SendGetPVPEnemy();
-            // ApplicationStatusManager.s_currentAppStatus.OpenUI<UIChallengeOpponent>();
-        //      SceneLoaderManager.LoadBattle(() =>
-        //     {
-        //        UIManager.UICanvas.SetActive(false);
-        //    });
         });
         btn_rank.onClick.AddListener(()=>
         { 
             NetMessageHandler.SendGetRankList();
-        //      SceneLoaderManager.LoadBattle(() =>
-        //     {
-        //        UIManager.UICanvas.SetActive(false);
-        //    });
         });
         tips.gameObject.SetActive(false);
         SpriteLoaderUtils.GetSprite($"head_icon_{LZString.CompressToBase64(UserDataManager.Instance.PlayerId)}", LZString.DecompressFromBase64(UserDataManager.Instance.HeadHostUrl), Application.streamingAssetsPath, OnLoadSprite);

@@ -1,4 +1,4 @@
-﻿D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_item.bytes,7D50AD9C4E302DF977F37CF37ADA3579,2797,1685416013793
+﻿D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_item.bytes,4491333B65E6BA33E2F8E22C4C2D707F,3969,1688012400469
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_itembaseproperty.bytes,B59F7F71976EE7EDA223DE370AF17D0,5,1685416375311
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_itemquality.bytes,1299EABBCF8B582DF9134B5F87675E,298,1685527921341
 D:/WxMiniGamework/MiniGame/Assets/HotfixAssets/Config/cfg_itemtype.bytes,27313B74DAF2CFCAF2324D641848B,411,1685679799331
@@ -16,7 +16,7 @@ D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/Lu
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/Item.cs,145D8847886AA2857E83E965E895AA2E,1784,1685416645915
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemBaseProperty.cs,53B13A496F925CE19C8F5357B3F29E94,1956,1685416645915
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemBasePropertyConfig.cs,2128831A98CDB3D224E4E12DD73AB2A,1900,1685416645915
-D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemConfig.cs,478FE058EDFA7D1C2DC66B622C54F540,2389,1685416645915
+D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemConfig.cs,335923DCA455E380C9D3D615FB3F36F7,2405,1688012400469
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemQuality.cs,6DD3ABCF35FCFCDB55AA8AC6F19726,1887,1685420560178
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemQualityConfig.cs,B7D88E9CF5ABF3F91EBC43B90294C94,2002,1685527921341
 D:/WxMiniGamework/MiniGame/Assets/HotfixScripts/Runtime/HotfixBusiness/Common/LubanConfig/Cfg/ItemType.cs,8AE9E62F436C2069902E1ED93B67F0E4,1842,1685416645915
@@ -34,9 +34,9 @@ D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/__beans__.xlsx,33E7F
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/__enums__.xlsx,3E96958722FD88DD254AF36633F21DE,10645,1683703103826
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/__tables__.xlsx,777E394488D2E46F47FDA72C6FA9D0C9,9952,1685416281780
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/宝箱配置表.xlsx,EC7CA898568DBDF1256637A883D54DAC,11156,1685014026893
-D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/任务表.xlsx,1710769A7F62E88E2274F431DB5D54ED,14152,1686654490479
+D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/任务表.xlsx,C9FF8CBBEE631DE55B61531C5E1E647,14151,1687768916371
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/玩家配置表.xlsx,7F9CDCCDF2403C404EE0B36AAB9976E,11991,1685415785195
-D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/物品配置表.xlsx,844D5556EE11AAD0BB2AA873F1C57857,21676,1685679786028
+D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Datas/物品配置表.xlsx,F1C9A648F5D3BFAAE929AFFB135BDFE,21703,1688012380526
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Defines/Actor.xml,913B8733138ADD3954576634AC57FA4,1648,1683703103863
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Defines/BuffConfig.xml,A09FBE131C10E6BFE4F4671C76AC871,3436,1683703103873
 D:/WxMiniGamework/MiniGame/LubanTools/DesignerConfigs/Defines/SkillConfig.xml,98B436101430B2574ECECCC9B7ECD4AE,1359,1683703103884

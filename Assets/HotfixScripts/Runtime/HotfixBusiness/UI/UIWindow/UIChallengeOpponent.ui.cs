@@ -1,31 +1,30 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UniFramework.Window;
 using Arena;
 using EasingCore;
+using UniFramework.Event;
+using Hotfix.EventDefine;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
 public partial class UIChallengeOpponent : UIWindow
 {
-
     private GridView gridView;
     private Button btn_add;
     private Button btn_refresh;
     private TextMeshProUGUI count_text;
     private Button btn_mask;
 
+    private EventGroup eventGroup = new EventGroup();
+
     protected override void InitTemplate()
     {
         gridView = FindChild<GridView>("Grid View");
         btn_add = FindChild<Button>("btn_add");
-        btn_refresh = FindChild<Button>("btn_refresh"); 
-        count_text = FindChild<TextMeshProUGUI>("count_text");
+        btn_refresh = FindChild<Button>("btn_refresh");
+        count_text = FindChild<TextMeshProUGUI>("challenge_count_text");
+        btn_mask = FindChild<Button>("btn_mask");
     }
 
     public override void OnCreate()
@@ -33,6 +32,15 @@ public partial class UIChallengeOpponent : UIWindow
         base.OnCreate();
         GenerateCells(8);
         gridView.OnCellClicked(OnSelctHandler);
+        eventGroup.AddListener<UserEventDefine.UserRefreshPVPCount>(Handler);
+    }
+
+    private void Handler(IEventMessage message)
+    {
+        if(message is UserEventDefine.UserRefreshPVPCount)
+        {
+           RefreshPVPCount();
+        }
     }
 
     private void SelectCell()
@@ -60,6 +68,7 @@ public partial class UIChallengeOpponent : UIWindow
     public override void OnDestroy()
     {
         btn_mask.onClick.RemoveAllListeners();
+        eventGroup.RemoveAllListener();
     }
 
     public override void OnRefresh()

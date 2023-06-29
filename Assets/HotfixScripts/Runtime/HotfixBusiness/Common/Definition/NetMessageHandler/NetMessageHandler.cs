@@ -171,6 +171,7 @@ public static class NetMessageHandler
         UniLogger.Log(jPVPStartData.ToStringFormat());
         UserDataManager.Instance.EnemyEquipDatas = jPVPStartData.data;
         UserDataManager.Instance.PvpCount -= 1;
+        UserEventDefine.UserRefreshPVPCount.SendEventMessage();
     }
 
     private static void OnRankCallback(string error, string jsonData)

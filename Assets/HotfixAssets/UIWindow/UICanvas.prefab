@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 7638418495296184103}
   - component: {fileID: 7638418495296184104}
   - component: {fileID: 7638418495296184105}
+  - component: {fileID: 8776971566485908854}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -361,3 +362,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8776971566485908854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638418495296184106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c7c76387c2264429c783046a6afd63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UICamera: {fileID: 7638418494247750329}
+  designWidth: 1080
+  designHeight: 1920

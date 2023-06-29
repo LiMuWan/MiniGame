@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 57274906}
   - component: {fileID: 57274905}
   m_Layer: 5
-  m_Name: challeng_count
+  m_Name: challenge_count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 512374067}
   - component: {fileID: 512374066}
   m_Layer: 5
-  m_Name: count_text
+  m_Name: challenge_count_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 1330783587}
   - component: {fileID: 1330783586}
   m_Layer: 5
-  m_Name: Content
+  m_Name: Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

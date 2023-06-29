@@ -185,16 +185,19 @@ public class BattleSystem : MonoBehaviour
 
     private void Update() 
     {
-       if(battleState == EBattleState.Win)
-       {
-          NetMessageHandler.SendPVPComplete(UserDataManager.Instance.EnemyID,true);
-          battleResultUI?.ShowResult(true);
-       }
-       else if(battleState == EBattleState.Lost)
-       {
-          NetMessageHandler.SendPVPComplete(UserDataManager.Instance.EnemyID,false);
-          battleResultUI?.ShowResult(false);
-       }
+        if (battleState == EBattleState.Exit) return;
+        if (battleState == EBattleState.Win)
+        {
+            NetMessageHandler.SendPVPComplete(UserDataManager.Instance.EnemyID, true);
+            battleResultUI?.ShowResult(true);
+            battleState = EBattleState.Exit;
+        }
+        else if (battleState == EBattleState.Lost)
+        {
+            NetMessageHandler.SendPVPComplete(UserDataManager.Instance.EnemyID, false);
+            battleResultUI?.ShowResult(false);
+            battleState = EBattleState.Exit;
+        }
     }
 
     private void SetupBattle()

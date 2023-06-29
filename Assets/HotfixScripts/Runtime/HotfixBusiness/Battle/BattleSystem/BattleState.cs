@@ -8,5 +8,6 @@ public enum EBattleState
    PlayerTurn,
    EnemyTurn,
    Win,
-   Lost
+   Lost,
+   Exit,
 }

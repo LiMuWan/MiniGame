@@ -207,5 +207,17 @@ namespace Hotfix.EventDefine
                 UniEvent.SendMessage(msg);
             }
         }
+
+        /// <summary>
+        /// s刷新竞技场挑战次数
+        /// </summary>
+        public class UserRefreshPVPCount:IEventMessage
+        {
+            public static void SendEventMessage()
+            {
+                var msg = new UserRefreshPVPCount();
+                UniEvent.SendMessage(msg);
+            }
+        }
     }
 }

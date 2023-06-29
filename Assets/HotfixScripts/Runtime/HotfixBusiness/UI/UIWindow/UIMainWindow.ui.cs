@@ -210,6 +210,7 @@ public partial class UIMainWindow : UIWindow
     protected TextMeshProUGUI egg_level;
     protected TextMeshProUGUI egg_count_text;
     protected Transform tips;
+    protected HorizontalLayoutGroup avator_horizontalLayoutGroup;
 
     protected AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>> item_animal_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>>();
     protected AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>> item_food_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>>();
@@ -218,6 +219,7 @@ public partial class UIMainWindow : UIWindow
     {
         head_icon = FindChild<Image>("head_icon");
         avator_name = FindChild<TextMeshProUGUI>("avator_name");
+        avator_horizontalLayoutGroup = FindChild<HorizontalLayoutGroup>("avator");
         level_title = FindChild<TextMeshProUGUI>("level_title");
         title_level_text = FindChild<TextMeshProUGUI>("title_level_text");
         coin_text = FindChild<TextMeshProUGUI>("coin_text");

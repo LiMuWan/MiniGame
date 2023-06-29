@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using Hotfix.EventDefine;
 using UniFramework.Event;
 using UniFramework.Utility;
+using UnityEngine;
+using UnityEngine.UI;
+using UniFramework.Singleton;
 
 //Donot use base.[MethodName] 
 public partial class UIMainWindow
@@ -74,6 +77,14 @@ public partial class UIMainWindow
                 NetMessageHandler.SendOpenTreasureBox();
             }
         });
+
+        ForceRefreshLayout(avator_horizontalLayoutGroup);
+    }
+
+    private void ForceRefreshLayout(HorizontalLayoutGroup layoutGroup)
+    {
+        layoutGroup.enabled = false;
+        UniSingleton.Delay(0.1f,()=>{ layoutGroup.enabled = true;});
     }
 
     private void RefreshBag()

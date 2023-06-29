@@ -13,6 +13,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
     public JRankInfo RankInfo = default; 
     //竞技场
     public List<JPlayerRankInfo> EnemyInfos = default;
+    public List<JEquipData> EnemyEquipDatas = default;
     //金币
     private int coin;
     //钻石
@@ -335,6 +336,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
         itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * 10 * itemConfig.Atk).RoundToOneDecimal();
         itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * 10 * itemConfig.Def).RoundToOneDecimal();
+        itemData.CurHp = itemData.Hp;
         return itemData;
     }
     public void OnCreate(object createParam)

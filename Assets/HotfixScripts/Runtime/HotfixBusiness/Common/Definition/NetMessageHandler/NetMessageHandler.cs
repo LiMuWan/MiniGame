@@ -144,7 +144,7 @@ public static class NetMessageHandler
 
     private static void OnSendPVPStart(string error, string jsonData)
     {
-       OnCallback(error,jsonData);
+       OnPVPStartCallback(error,jsonData);
        UserEventDefine.UserPVPStart.SendEventMessage();
     }
 
@@ -162,6 +162,17 @@ public static class NetMessageHandler
        UserEventDefine.UserPVPComplete.SendEventMessage();
     }
     
+    private static void OnPVPStartCallback(string error, string jsonData)
+    {   
+        UniLogger.Log($"OnPVPStartCallback jsonData = {jsonData}");
+        if (!string.IsNullOrEmpty(error)) UniLogger.Error(error);
+        var jPVPStartData = JsonMapper.ToObject<JPVPStartData>(jsonData);
+        OnErrorCode(jPVPStartData.code);
+        UniLogger.Log(jPVPStartData.ToStringFormat());
+        UserDataManager.Instance.EnemyEquipDatas = jPVPStartData.data;
+        UserDataManager.Instance.PvpCount -= 1;
+    }
+
     private static void OnRankCallback(string error, string jsonData)
     {   
         UniLogger.Log($"OnRankCallback jsonData = {jsonData}");

@@ -57,6 +57,14 @@ public class JEnemyData
     public List<JPlayerRankInfo> data;
 }
 
+public class JPVPStartData
+{
+    public int code;
+    public string message;
+
+    public List<JEquipData> data;
+}
+
 public class JPlayerData
 {
     public string playerId;

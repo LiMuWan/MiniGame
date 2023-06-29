@@ -9,6 +9,7 @@ using UniFramework.Pooling;
 using UniFramework.Singleton;
 using UniFramework.Event;
 using Hotfix.EventDefine;
+using Hotfix;
 
 public class BattleSystem : MonoBehaviour
 {  
@@ -16,7 +17,7 @@ public class BattleSystem : MonoBehaviour
     public Camera camera;
     public EBattleState battleState;
     #region 战斗UI
-    [SerializeField]
+    [SerializeField][HideInInspector]
     public GameObject hud_tips;
     [SerializeField]
     public Transform hud_parent;
@@ -77,23 +78,70 @@ public class BattleSystem : MonoBehaviour
         //监听事件
         eventGroup.AddListener<UserEventDefine.UserSkipBattle>(Handler);
 
-        List<ItemData> team_left = new List<ItemData>()
-        {
-            new ItemData(){Hp = 100,Atk = 10,Spd = 1,Def = 5,CurHp = 100},
-            new ItemData(){Hp = 200,Atk = 20,Spd = 3,Def = 7,CurHp = 200},
-            new ItemData(){Hp = 300,Atk = 30,Spd = 5,Def = 9,CurHp = 300},
-        };
-        List<ItemData> team_right = new List<ItemData>()
-        {
-            new ItemData(){Hp = 300,Atk = 30,Spd = 5,Def = 9,CurHp = 300},
-            new ItemData(){Hp = 200,Atk = 20,Spd = 3,Def = 7,CurHp = 200},
-            new ItemData(){Hp = 100,Atk = 10,Spd = 1,Def = 5,CurHp = 100},
-        };
+        List<ItemData> team_left = RandomTeamDatas(UserDataManager.Instance.AnimalDatas);
+        List<ItemData> team_right = RandomTeamDatas(GetEnemyItemDatas(UserDataManager.Instance.EnemyEquipDatas));
         teamManager.SetUp(team_left, team_right);
         battleState = EBattleState.Start;
         SetupBattle();
     }
+    
+    private List<ItemData> RandomTeamDatas(List<ItemData> sourceDatas)
+    {
+        List<ItemData> teamDatas = new List<ItemData>();
+        List<int> types = new List<int>(){1,2,3,4,5,6,7,8};
+        foreach(int type in types)
+        {
+           var datas = sourceDatas.FindAll((p)=>{return p.Type == type && p.ItemId != 0;});
+           if(datas == null || datas.Count == 0) continue;
+           if(datas.Count == 2)
+           {
+               int index = UnityEngine.Random.Range(0,2);
+               teamDatas.Add(datas[index]);
+           }
+           else
+           {
+                teamDatas.Add(datas[0]);
+           }
+        }
+        return teamDatas;
+    }
 
+    private  List<ItemData> GetEnemyItemDatas(List<JEquipData> equipDatas)
+    {
+        List<ItemData> enemyItemDatas = new List<ItemData>();
+        foreach(var equipData in equipDatas)
+        {
+            ItemData itemData = ConvertItemDataByEquipData(equipData);
+            enemyItemDatas.Add(itemData);
+        }
+        return enemyItemDatas;
+    }
+   
+    private ItemData ConvertItemDataByEquipData(JEquipData equipData)
+    {
+        var configLoader = ConfigLoader.Instance;
+        var itemBasePropertyCfg = configLoader.Tables.ItemBaseProperty.DataList[0];
+        var itemQualityCfg = configLoader.Tables.ItemQuality;
+        var itemConfig = configLoader.Tables.Item.Get(equipData.itemId);
+        UniLogger.Log($"itemConfig = {itemConfig.Atk}");
+        int type = itemConfig.Type;
+        var itemData = new ItemData();
+        itemData.Type = type;
+        itemData.Sex = equipData.sex;
+        itemData.ItemId = equipData.itemId;
+        itemData.Level = equipData.lv;
+        itemData.Quality = equipData.quality;
+        itemData.Name = configLoader.Tables.Item.Get(equipData.itemId).Name;
+        UniLogger.Log($"itemData.Name = {itemData.Name}");
+        var itemTypeCfg = configLoader.Tables.ItemType.Get(type);
+        UniLogger.Log($"itemTypeCfg.Hp = {itemTypeCfg.Hp}");
+        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * 10 * itemConfig.Hp).RoundToOneDecimal();
+        itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
+        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * 10 * itemConfig.Atk).RoundToOneDecimal();
+        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * 10 * itemConfig.Def).RoundToOneDecimal();
+        itemData.CurHp = itemData.Hp;
+        return itemData;
+    }
     private void Handler(IEventMessage message)
     {
         if(message is UserEventDefine.UserSkipBattle)
@@ -162,7 +210,7 @@ public class BattleSystem : MonoBehaviour
         cur_enemy_battle_info = team_right_items[0];
         cur_player_battle_entity = team_left_entities[0];
         cur_enemy_battle_entity = team_right_entities[0];
-
+        UniLogger.Log($"team_left_items.count = {team_left_items.Count} , team_right_items.count = {team_right_items.Count}");
         battleRounds = GetBattleRoundData(team_left_items, team_right_items);
         TestBattleRounds(battleRounds);
         if (battleRounds[battleRoundIndex].AttackTeam == EBatteTeam.LeftTeam)
@@ -467,7 +515,8 @@ public class BattleSystem : MonoBehaviour
         int right_battle_index = 0;
         var cur_player_battle_info = team_left_items[left_battle_index];
         var cur_enemy_battle_info = team_right_items[right_battle_index];
-
+        UniLogger.Log($"cur_player_battle_info : {cur_player_battle_info.ToString()}");
+        UniLogger.Log($"cur_enemy_battle_info : {cur_enemy_battle_info.ToString()}");
         while (cur_player_battle_info.CurHp > 0 && cur_enemy_battle_info.CurHp > 0)
         {
             if (cur_player_battle_info.Spd > cur_enemy_battle_info.Spd)
@@ -516,14 +565,20 @@ public class BattleSystem : MonoBehaviour
                 IsDefeated = isDefeated,
                 IsEndBattle = isEndBattle
             };
+            UniLogger.Log($"回合{battleRound.RoundIndex} : 攻击方：{battleRound.AttackTeam.ToString()} 造成伤害 {battleRound.Damage}");
             battleRounds.Add(battleRound);
             if (!isEndBattle)
             {
                 roundIndex += 1;
             }
-            else return;
+            else 
+            {
+                UniLogger.Log($"回合{battleRound.RoundIndex} : 攻击方：{battleRound.AttackTeam.ToString()} 击败对手！！！");
+                return;
+            }
             if (isDefeated)
             {
+                UniLogger.Log($"回合{battleRound.RoundIndex} : 攻击方：{battleRound.AttackTeam.ToString()} 击败对手第{right_battle_index}个宠物");
                 right_battle_index += 1;
                 cur_enemy_battle_info = team_right_items[right_battle_index];
             }
@@ -550,14 +605,20 @@ public class BattleSystem : MonoBehaviour
                 IsDefeated = isDefeated,
                 IsEndBattle = isEndBattle
             };
+            UniLogger.Log($"回合{battleRound.RoundIndex} : 攻击方：{battleRound.AttackTeam.ToString()} 造成伤害 {battleRound.Damage}");
             battleRounds.Add(battleRound);
             if (!isEndBattle)
             {
                 roundIndex += 1;
             }
-            else return;
+            else 
+            {
+                UniLogger.Log($"回合{battleRound.RoundIndex} : 攻击方：{battleRound.AttackTeam.ToString()} 击败对手！！！");
+                return;
+            }
             if (isDefeated)
             {
+                UniLogger.Log($"回合{battleRound.RoundIndex} : 攻击方：{battleRound.AttackTeam.ToString()} 击败对手第{right_battle_index}个宠物");
                 left_battle_index += 1;
                 cur_player_battle_info = team_left_items[left_battle_index];
             }

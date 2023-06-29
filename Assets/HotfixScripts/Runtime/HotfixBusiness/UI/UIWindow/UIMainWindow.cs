@@ -170,6 +170,10 @@ public partial class UIMainWindow
         else if (message is UserEventDefine.UserPVPStart upvpstart)
         {   
             //进入战斗
+                  SceneLoaderManager.LoadBattle(() =>
+            {
+               UIManager.UICanvas.SetActive(false);
+           });
         }
         else if (message is UserEventDefine.UserPVPComplete upvpend)
         {   

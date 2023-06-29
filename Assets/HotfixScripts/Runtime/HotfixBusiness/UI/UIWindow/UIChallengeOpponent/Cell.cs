@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Hotfix;
+using UniFramework.Utility;
 
 namespace Arena
 {
@@ -21,7 +22,14 @@ namespace Arena
             button.onClick.AddListener(()=>
             {
                 UserDataManager.Instance.EnemyID = this.itemData.playerId;
-                NetMessageHandler.SendPVPStart(this.itemData.playerId);
+                if(UserDataManager.Instance.PvpCount > 0)
+                {
+                   NetMessageHandler.SendPVPStart(this.itemData.playerId);
+                }
+                else
+                {
+                    UniLogger.Log("没有挑战次数了!!!");
+                }
             });
         }
 

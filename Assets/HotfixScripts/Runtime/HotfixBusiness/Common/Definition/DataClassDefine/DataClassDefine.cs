@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 //物品数据
@@ -61,6 +62,13 @@ public class ItemData
         {
             return false;
         }
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine($"Name = {Name} , ItemId = {ItemId} , Level = {Level} , Hp = {Hp} , Speed = {Spd} , Atk = {Atk} , Def = {Def}");
+        return sb.ToString();
     }
 }
 

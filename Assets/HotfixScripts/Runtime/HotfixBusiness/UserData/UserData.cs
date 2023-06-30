@@ -326,6 +326,7 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
         int type = itemConfig.Type;
         var itemData = animalDatas.Find((item) => { return item.Type == type && item.Sex == equipData.sex; });
         itemData.ItemId = equipData.itemId;
+        UniLogger.Log($"itemData.ItemId = {itemData.ItemId} , type = {type}");
         itemData.Level = equipData.lv;
         itemData.Quality = equipData.quality;
         itemData.Name = ConfigLoader.Tables.Item.Get(equipData.itemId).Name;
@@ -375,6 +376,32 @@ public class UserDataManager : SingletonInstance<UserDataManager>, ISingleton
     //获取临时装备的数据
     public ItemData GetTempEquipData()
     {
-        return InitItemData(EquipList.tempEquip);
+        return ConvertItemDataByEquipData(EquipList.tempEquip);
+    }
+
+    public ItemData ConvertItemDataByEquipData(JEquipData equipData)
+    {
+        var configLoader = ConfigLoader.Instance;
+        var itemBasePropertyCfg = configLoader.Tables.ItemBaseProperty.DataList[0];
+        var itemQualityCfg = configLoader.Tables.ItemQuality;
+        var itemConfig = configLoader.Tables.Item.Get(equipData.itemId);
+        UniLogger.Log($"itemConfig = {itemConfig.Atk}");
+        int type = itemConfig.Type;
+        var itemData = new ItemData();
+        itemData.Type = type;
+        itemData.Sex = equipData.sex;
+        itemData.ItemId = equipData.itemId;
+        itemData.Level = equipData.lv;
+        itemData.Quality = equipData.quality;
+        itemData.Name = configLoader.Tables.Item.Get(equipData.itemId).Name;
+        UniLogger.Log($"itemData.Name = {itemData.Name}");
+        var itemTypeCfg = configLoader.Tables.ItemType.Get(type);
+        UniLogger.Log($"itemTypeCfg.Hp = {itemTypeCfg.Hp}");
+        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * itemConfig.Hp).RoundToOneDecimal();
+        itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
+        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * itemConfig.Atk).RoundToOneDecimal();
+        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * itemConfig.Def).RoundToOneDecimal();
+        itemData.CurHp = itemData.Hp;
+        return itemData;
     }
 }

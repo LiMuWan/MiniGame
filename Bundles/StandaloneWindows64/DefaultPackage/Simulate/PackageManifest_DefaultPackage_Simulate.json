@@ -181,535 +181,997 @@
             "DependIDs": []
         },
         {
-            "Address": "img_101002",
-            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101002.png",
-            "AssetTags": [],
-            "BundleID": 25,
-            "DependIDs": []
-        },
-        {
-            "Address": "img_101003",
-            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101003.png",
-            "AssetTags": [],
-            "BundleID": 26,
-            "DependIDs": []
-        },
-        {
-            "Address": "img_101004",
-            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101004.png",
-            "AssetTags": [],
-            "BundleID": 27,
-            "DependIDs": []
-        },
-        {
-            "Address": "img_101005",
-            "AssetPath": "Assets/HotfixAssets/Textures/AnimalIcon/img_101005.png",
-            "AssetTags": [],
-            "BundleID": 28,
-            "DependIDs": []
-        },
-        {
             "Address": "battle_bg",
             "AssetPath": "Assets/HotfixAssets/Textures/Battle/battle_bg.png",
             "AssetTags": [],
-            "BundleID": 29,
+            "BundleID": 25,
             "DependIDs": []
         },
         {
             "Address": "blur_bg_t",
             "AssetPath": "Assets/HotfixAssets/Textures/Common/blur_bg_t.png",
             "AssetTags": [],
-            "BundleID": 30,
+            "BundleID": 26,
             "DependIDs": []
         },
         {
             "Address": "icon_type_alien",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_alien.png",
             "AssetTags": [],
-            "BundleID": 31,
+            "BundleID": 27,
             "DependIDs": []
         },
         {
             "Address": "icon_type_bear",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_bear.png",
             "AssetTags": [],
-            "BundleID": 32,
+            "BundleID": 28,
             "DependIDs": []
         },
         {
             "Address": "icon_type_big",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_big.png",
             "AssetTags": [],
-            "BundleID": 33,
+            "BundleID": 29,
             "DependIDs": []
         },
         {
             "Address": "icon_type_bird",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_bird.png",
             "AssetTags": [],
-            "BundleID": 34,
+            "BundleID": 30,
             "DependIDs": []
         },
         {
             "Address": "icon_type_cat",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_cat.png",
             "AssetTags": [],
-            "BundleID": 35,
+            "BundleID": 31,
             "DependIDs": []
         },
         {
             "Address": "icon_type_dog",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_dog.png",
             "AssetTags": [],
-            "BundleID": 36,
+            "BundleID": 32,
             "DependIDs": []
         },
         {
             "Address": "icon_type_fish",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_fish.png",
             "AssetTags": [],
-            "BundleID": 37,
+            "BundleID": 33,
             "DependIDs": []
         },
         {
             "Address": "icon_type_foodA",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodA.png",
             "AssetTags": [],
-            "BundleID": 38,
+            "BundleID": 34,
             "DependIDs": []
         },
         {
             "Address": "icon_type_foodB",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodB.png",
             "AssetTags": [],
-            "BundleID": 39,
+            "BundleID": 35,
             "DependIDs": []
         },
         {
             "Address": "icon_type_foodC",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodC.png",
             "AssetTags": [],
-            "BundleID": 40,
+            "BundleID": 36,
             "DependIDs": []
         },
         {
             "Address": "icon_type_foodD",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_foodD.png",
             "AssetTags": [],
-            "BundleID": 41,
+            "BundleID": 37,
             "DependIDs": []
         },
         {
             "Address": "icon_type_nestA",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestA.png",
             "AssetTags": [],
-            "BundleID": 42,
+            "BundleID": 38,
             "DependIDs": []
         },
         {
             "Address": "icon_type_nestB",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_nestB.png",
             "AssetTags": [],
-            "BundleID": 43,
+            "BundleID": 39,
             "DependIDs": []
         },
         {
             "Address": "icon_type_small",
             "AssetPath": "Assets/HotfixAssets/Textures/ItemTypeIcon/icon_type_small.png",
             "AssetTags": [],
-            "BundleID": 44,
+            "BundleID": 40,
             "DependIDs": []
         },
         {
             "Address": "quality_1",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_1.png",
             "AssetTags": [],
-            "BundleID": 45,
+            "BundleID": 41,
             "DependIDs": []
         },
         {
             "Address": "quality_2",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_2.png",
             "AssetTags": [],
-            "BundleID": 46,
+            "BundleID": 42,
             "DependIDs": []
         },
         {
             "Address": "quality_3",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_3.png",
             "AssetTags": [],
-            "BundleID": 47,
+            "BundleID": 43,
             "DependIDs": []
         },
         {
             "Address": "quality_4",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_4.png",
             "AssetTags": [],
-            "BundleID": 48,
+            "BundleID": 44,
             "DependIDs": []
         },
         {
             "Address": "quality_5",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_5.png",
             "AssetTags": [],
-            "BundleID": 49,
+            "BundleID": 45,
             "DependIDs": []
         },
         {
             "Address": "quality_6",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_6.png",
             "AssetTags": [],
-            "BundleID": 50,
+            "BundleID": 46,
             "DependIDs": []
         },
         {
             "Address": "quality_7",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_7.png",
             "AssetTags": [],
-            "BundleID": 51,
+            "BundleID": 47,
             "DependIDs": []
         },
         {
             "Address": "quality_8",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_8.png",
             "AssetTags": [],
-            "BundleID": 52,
+            "BundleID": 48,
             "DependIDs": []
         },
         {
             "Address": "quality_9",
             "AssetPath": "Assets/HotfixAssets/Textures/QualityIcon/quality_9.png",
             "AssetTags": [],
-            "BundleID": 53,
+            "BundleID": 49,
             "DependIDs": []
         },
         {
             "Address": "bg_t",
             "AssetPath": "Assets/HotfixAssets/Textures/UIMainWindow/bg_t.png",
             "AssetTags": [],
-            "BundleID": 54,
+            "BundleID": 50,
             "DependIDs": []
         },
         {
             "Address": "egg",
             "AssetPath": "Assets/HotfixAssets/Textures/UIMainWindow/egg.png",
             "AssetTags": [],
-            "BundleID": 55,
+            "BundleID": 51,
             "DependIDs": []
         },
         {
             "Address": "hud_tips",
             "AssetPath": "Assets/HotfixAssets/Battle/Prefabs/hud_tips.prefab",
             "AssetTags": [],
-            "BundleID": 56,
+            "BundleID": 52,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_101010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_101010.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_102010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_102010.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_103010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_103010.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_104010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_104010.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_105010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_105010.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_106010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_106010.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107001",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107001.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107002",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107002.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107003",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107003.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107004",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107004.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107005",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107005.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107006",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107006.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107007",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107007.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107008",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107008.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107009",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107009.png",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependIDs": []
+        },
+        {
+            "Address": "img_107010",
+            "AssetPath": "Assets/HotfixAssets/Sprites/AnimalIcon/img_107010.png",
+            "AssetTags": [],
+            "BundleID": 53,
             "DependIDs": []
         },
         {
             "Address": "battle_hp_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattle/battle_hp_bg.png",
             "AssetTags": [],
-            "BundleID": 57,
+            "BundleID": 54,
             "DependIDs": []
         },
         {
             "Address": "battle_hp_gauge",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattle/battle_hp_gauge.png",
             "AssetTags": [],
-            "BundleID": 57,
+            "BundleID": 54,
             "DependIDs": []
         },
         {
             "Address": "battle_skip",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattle/battle_skip.png",
             "AssetTags": [],
-            "BundleID": 57,
+            "BundleID": 54,
             "DependIDs": []
         },
         {
             "Address": "blur_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattle/blur_bg.png",
             "AssetTags": [],
-            "BundleID": 57,
+            "BundleID": 54,
             "DependIDs": []
         },
         {
             "Address": "line_01",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattle/line_01.png",
             "AssetTags": [],
-            "BundleID": 57,
+            "BundleID": 54,
             "DependIDs": []
         },
         {
             "Address": "arrow_01",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattleLost/arrow_01.png",
             "AssetTags": [],
-            "BundleID": 58,
+            "BundleID": 55,
             "DependIDs": []
         },
         {
             "Address": "light_fail",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattleLost/light_fail.png",
             "AssetTags": [],
-            "BundleID": 58,
+            "BundleID": 55,
             "DependIDs": []
         },
         {
             "Address": "link_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattleLost/link_bg.png",
             "AssetTags": [],
-            "BundleID": 58,
+            "BundleID": 55,
             "DependIDs": []
         },
         {
             "Address": "ribbon_fail",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattleLost/ribbon_fail.png",
             "AssetTags": [],
-            "BundleID": 58,
+            "BundleID": 55,
             "DependIDs": []
         },
         {
             "Address": "light_succes",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattleWin/light_succes.png",
             "AssetTags": [],
-            "BundleID": 59,
+            "BundleID": 56,
             "DependIDs": []
         },
         {
             "Address": "ribbon_success",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIBattleWin/ribbon_success.png",
             "AssetTags": [],
-            "BundleID": 59,
+            "BundleID": 56,
             "DependIDs": []
         },
         {
             "Address": "animal_slot",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/animal_slot.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "btn_add",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/btn_add.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "btn_get",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/btn_get.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "btn_menu",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/btn_menu.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "btn_sell",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/btn_sell.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "frame_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/frame_bg.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "head_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/head_bg.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "icn_coin",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/icn_coin.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "icon_egg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/icon_egg.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "ticket",
             "AssetPath": "Assets/HotfixAssets/Sprites/UICommon/ticket.png",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 57,
             "DependIDs": []
         },
         {
             "Address": "arrow_down",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIItemInfo/arrow_down.png",
             "AssetTags": [],
-            "BundleID": 61,
+            "BundleID": 58,
             "DependIDs": []
         },
         {
             "Address": "arrow_up",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIItemInfo/arrow_up.png",
             "AssetTags": [],
-            "BundleID": 61,
+            "BundleID": 58,
             "DependIDs": []
         },
         {
             "Address": "icon_female",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIItemInfo/icon_female.png",
             "AssetTags": [],
-            "BundleID": 61,
+            "BundleID": 58,
             "DependIDs": []
         },
         {
             "Address": "icon_male",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIItemInfo/icon_male.png",
             "AssetTags": [],
-            "BundleID": 61,
+            "BundleID": 58,
             "DependIDs": []
         },
         {
             "Address": "bag_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/bag_bg.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "btn_eggLv",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/btn_eggLv.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "curency_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/curency_bg.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "eggNum_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/eggNum_bg.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "exp_bar_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/exp_bar_bg.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "exp_bar_gague",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/exp_bar_gague.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "food_slot",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/food_slot.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "icon_diamond",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/icon_diamond.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "nest_slot",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/nest_slot.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "New Sprite Atlas",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/New Sprite Atlas.spriteatlasv2",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "task_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/task_bg.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "title_bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/title_bg.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "title_star",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIMainWindow/title_star.png",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 59,
             "DependIDs": []
         },
         {
             "Address": "bg",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIRankList/bg.png",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 60,
             "DependIDs": []
         },
         {
             "Address": "bz",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIRankList/bz.png",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 60,
             "DependIDs": []
         },
         {
             "Address": "gd",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIRankList/gd.png",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 60,
             "DependIDs": []
         },
         {
             "Address": "other",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIRankList/other.png",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 60,
             "DependIDs": []
         },
         {
             "Address": "reward_count",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIRankList/reward_count.png",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 60,
             "DependIDs": []
         },
         {
             "Address": "sv",
             "AssetPath": "Assets/HotfixAssets/Sprites/UIRankList/sv.png",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 60,
             "DependIDs": []
         }
     ],
@@ -956,46 +1418,6 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_uiwindow_uiranklist.bundle",
-            "FileHash": "00000000000000000000000000000000",
-            "FileCRC": "00000000",
-            "FileSize": 0,
-            "IsRawFile": false,
-            "LoadMethod": 0,
-            "Tags": [],
-            "ReferenceIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101002.bundle",
-            "FileHash": "00000000000000000000000000000000",
-            "FileCRC": "00000000",
-            "FileSize": 0,
-            "IsRawFile": false,
-            "LoadMethod": 0,
-            "Tags": [],
-            "ReferenceIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101003.bundle",
-            "FileHash": "00000000000000000000000000000000",
-            "FileCRC": "00000000",
-            "FileSize": 0,
-            "IsRawFile": false,
-            "LoadMethod": 0,
-            "Tags": [],
-            "ReferenceIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101004.bundle",
-            "FileHash": "00000000000000000000000000000000",
-            "FileCRC": "00000000",
-            "FileSize": 0,
-            "IsRawFile": false,
-            "LoadMethod": 0,
-            "Tags": [],
-            "ReferenceIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_assets_hotfixassets_textures_animalicon_img_101005.bundle",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,
@@ -1276,6 +1698,16 @@
         },
         {
             "BundleName": "defaultpackage_assets_hotfixassets_battle_prefabs_hud_tips.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_hotfixassets_sprites_animalicon.bundle",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,

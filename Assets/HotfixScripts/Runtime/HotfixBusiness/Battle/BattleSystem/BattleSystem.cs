@@ -9,7 +9,6 @@ using UniFramework.Pooling;
 using UniFramework.Singleton;
 using UniFramework.Event;
 using Hotfix.EventDefine;
-using Hotfix;
 
 public class BattleSystem : MonoBehaviour
 {  
@@ -111,37 +110,12 @@ public class BattleSystem : MonoBehaviour
         List<ItemData> enemyItemDatas = new List<ItemData>();
         foreach(var equipData in equipDatas)
         {
-            ItemData itemData = ConvertItemDataByEquipData(equipData);
+            ItemData itemData = UserDataManager.Instance.ConvertItemDataByEquipData(equipData);
             enemyItemDatas.Add(itemData);
         }
         return enemyItemDatas;
     }
    
-    private ItemData ConvertItemDataByEquipData(JEquipData equipData)
-    {
-        var configLoader = ConfigLoader.Instance;
-        var itemBasePropertyCfg = configLoader.Tables.ItemBaseProperty.DataList[0];
-        var itemQualityCfg = configLoader.Tables.ItemQuality;
-        var itemConfig = configLoader.Tables.Item.Get(equipData.itemId);
-        UniLogger.Log($"itemConfig = {itemConfig.Atk}");
-        int type = itemConfig.Type;
-        var itemData = new ItemData();
-        itemData.Type = type;
-        itemData.Sex = equipData.sex;
-        itemData.ItemId = equipData.itemId;
-        itemData.Level = equipData.lv;
-        itemData.Quality = equipData.quality;
-        itemData.Name = configLoader.Tables.Item.Get(equipData.itemId).Name;
-        UniLogger.Log($"itemData.Name = {itemData.Name}");
-        var itemTypeCfg = configLoader.Tables.ItemType.Get(type);
-        UniLogger.Log($"itemTypeCfg.Hp = {itemTypeCfg.Hp}");
-        itemData.Hp = (itemBasePropertyCfg.HpBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Hp * itemConfig.Hp).RoundToOneDecimal();
-        itemData.Spd = itemBasePropertyCfg.SpdBase * itemTypeCfg.Spd * itemConfig.Spd;
-        itemData.Atk = (itemBasePropertyCfg.AtkBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Atk * itemConfig.Atk).RoundToOneDecimal();
-        itemData.Def = (itemBasePropertyCfg.DefBase * itemData.Level * itemQualityCfg.Get(itemData.Quality).Ratio * itemTypeCfg.Def * itemConfig.Def).RoundToOneDecimal();
-        itemData.CurHp = itemData.Hp;
-        return itemData;
-    }
     private void Handler(IEventMessage message)
     {
         if(message is UserEventDefine.UserSkipBattle)

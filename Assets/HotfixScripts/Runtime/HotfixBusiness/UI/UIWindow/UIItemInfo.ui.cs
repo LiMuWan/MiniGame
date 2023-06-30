@@ -67,7 +67,7 @@ public partial class UIItemInfo : UIWindow
     protected GameObject oldGo;
     protected TextMeshProUGUI old_title;
     protected RawImage old_quality_icon;
-    protected RawImage old_item_icon;
+    protected Image old_item_icon;
     protected Image old_sex_icon;
     protected TextMeshProUGUI old_quality_text;
     protected TextMeshProUGUI old_item_name;
@@ -78,7 +78,7 @@ public partial class UIItemInfo : UIWindow
     protected GameObject newGo;
     protected TextMeshProUGUI new_title;
     protected RawImage new_quality_icon;
-    protected RawImage new_item_icon;
+    protected Image new_item_icon;
     protected Image new_sex_icon;
     protected TextMeshProUGUI new_quality_text;
     protected TextMeshProUGUI new_item_name;
@@ -98,7 +98,7 @@ public partial class UIItemInfo : UIWindow
         oldGo = Find<Transform>("old").gameObject;
         old_title = Find<TextMeshProUGUI>("old/title");
         old_quality_icon = Find<RawImage>("old/left/quality_icon");
-        old_item_icon = Find<RawImage>("old/left/item_icon");
+        old_item_icon = Find<Image>("old/left/item_icon");
         old_sex_icon = Find<Image>("old/left/sex_icon");
         old_item_lv = Find<TextMeshProUGUI>("old/left/lv_text");
         old_quality_text = Find<TextMeshProUGUI>("old/right/quality_text");
@@ -110,7 +110,7 @@ public partial class UIItemInfo : UIWindow
         newGo = Find<Transform>("new").gameObject;
         new_title  = Find<TextMeshProUGUI>("new/title");
         new_quality_icon = Find<RawImage>("new/left/quality_icon");
-        new_item_icon = Find<RawImage>("new/left/item_icon");
+        new_item_icon = Find<Image>("new/left/item_icon");
         new_sex_icon = Find<Image>("new/left/sex_icon");
         new_item_lv = Find<TextMeshProUGUI>("new/left/lv_text");
         new_quality_text = Find<TextMeshProUGUI>("new/right/quality_text");

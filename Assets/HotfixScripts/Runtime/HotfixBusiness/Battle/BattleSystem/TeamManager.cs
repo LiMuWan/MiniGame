@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using GameFramework.Resource;
 
 public class TeamManager : MonoBehaviour
 {
@@ -82,6 +83,8 @@ public class TeamManager : MonoBehaviour
             item_entity.transform.SetTRSNormalize();
             item_entity.SetActive(true);
             var spriteRenderer = item_entity.GetComponent<SpriteRenderer>();
+            var item_icon = ConfigLoader.Instance.Tables.Item.Get(team_items[i].ItemId).Icon;
+            ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { spriteRenderer.sprite = sprite; });
             if (i < 4)
             {
                 spriteRenderer.sortingLayerName = LayerDefine.SecondRow;

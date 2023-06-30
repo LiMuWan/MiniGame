@@ -42,7 +42,6 @@ public partial class UIItemInfo
     private ItemData newItemData;
     public void ShowItemInfo(ItemData oldItem, ItemData newItem)
     {
-        UniLogger.Log($"UserOpenTreasureBox = ShowItemInfo");
         if (oldItem != null && newItem != null)
         {
             ShowOld(oldItem, "已拥有");
@@ -85,7 +84,7 @@ public partial class UIItemInfo
         old_item_name.SetColor(color);
         old_quality_text.SetColor(color);
         ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { old_quality_icon.texture = texture; });
-        ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { old_item_icon.texture = texture; });
+        ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { old_item_icon.sprite = sprite; });
         if (itemData.Type < 9)
         {
             if (itemData.Sex == (int)ItemSex.Female)
@@ -107,7 +106,7 @@ public partial class UIItemInfo
         var item_icon = ConfigLoader.Instance.Tables.Item.Get(itemData.ItemId).Icon;
         new_title.text = title;
         ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { new_quality_icon.texture = texture; });
-        ResourcesManager.Instance.LoadAssetAsync<Texture>(item_icon, (texture) => { new_item_icon.texture = texture; });
+        ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { new_item_icon.sprite = sprite; });
         new_item_name.text = itemData.Name;
         new_item_lv.text = $"Lv.{itemData.Level}";
         new_quality_text.text = qualityConfig.Title;

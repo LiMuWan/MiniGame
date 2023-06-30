@@ -964,7 +964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1805516543303659532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -984,10 +984,10 @@ RectTransform:
   m_Father: {fileID: 4469293769783889137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 78, y: -89}
-  m_SizeDelta: {x: 156, y: 178}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &161034129413124891
 CanvasRenderer:
@@ -4686,7 +4686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -135, y: -427}
+  m_AnchoredPosition: {x: -135, y: -333}
   m_SizeDelta: {x: 270, y: 147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8817492241780086235
@@ -5037,8 +5037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 439}
-  m_SizeDelta: {x: 1080, y: 877.99994}
+  m_AnchoredPosition: {x: 0, y: 354.2744}
+  m_SizeDelta: {x: 1080, y: 708.5488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &496647607177769211
 CanvasRenderer:
@@ -5797,8 +5797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.474}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 277}
-  m_SizeDelta: {x: 1080, y: 1041.9183}
+  m_AnchoredPosition: {x: 1.5257, y: 219.7172}
+  m_SizeDelta: {x: 1080, y: 704.1754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8761033695076780174
 CanvasRenderer:
@@ -7027,7 +7027,7 @@ MonoBehaviour:
   m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 026ca5d038b3f0346805a8f74aaf5574, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 0c55cdbb717733b44bcb2ec0af59e72b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 0c6b2be45f5778d45ac16b2c6dd78bba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

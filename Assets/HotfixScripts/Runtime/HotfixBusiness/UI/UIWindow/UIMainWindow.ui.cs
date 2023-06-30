@@ -75,7 +75,7 @@ public partial class UIMainWindow : UIWindow
             {
                 quality_img.gameObject.SetActive(true);
                 lv_text.gameObject.SetActive(true);
-                lv_text.text = animalData.Level.ToString();
+                lv_text.text = $"Lv.{animalData.Level}";
                 var quality_icon = ConfigLoader.Instance.Tables.ItemQuality.Get(animalData.Quality).Icon;
                 var item_icon = ConfigLoader.Instance.Tables.Item.Get(animalData.ItemId).Icon;
                 ResourcesManager.Instance.LoadAssetAsync<Texture>(quality_icon, (texture) => { quality_img.texture = texture; });

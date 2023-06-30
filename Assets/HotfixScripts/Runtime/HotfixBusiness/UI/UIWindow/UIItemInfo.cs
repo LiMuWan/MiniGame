@@ -68,6 +68,11 @@ public partial class UIItemInfo
             ShowNew(newItem, oldItem, "新获得");
         }
     }
+   
+    private string NamesFormat(string name,string quality)
+    {
+        return $"[{quality}]{name}";
+    }
 
     private void ShowOld(ItemData itemData, string title)
     {
@@ -77,14 +82,13 @@ public partial class UIItemInfo
         old_PropertiesTableManager.Count = 4;
         old_PropertiesTableManager.Each(OnOldEachProperties);
         old_title.text = title;
-        old_item_name.text = itemData.Name;
+        old_item_name.text = NamesFormat(itemData.Name,qualityConfig.Title);
         old_item_lv.text = $"Lv.{itemData.Level}";
-        old_quality_text.text = qualityConfig.Title;
+        // old_quality_text.text = qualityConfig.Title;
         Color color = ColorTool.HtmlStringToColor(qualityConfig.Color);
         old_item_name.SetColor(color);
-        old_quality_text.SetColor(color);
         ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { old_quality_icon.texture = texture; });
-        ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { old_item_icon.sprite = sprite; });
+        ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { old_item_icon.sprite = sprite; old_item_icon.SetNativeSize();});
         if (itemData.Type < 9)
         {
             if (itemData.Sex == (int)ItemSex.Female)
@@ -106,12 +110,11 @@ public partial class UIItemInfo
         var item_icon = ConfigLoader.Instance.Tables.Item.Get(itemData.ItemId).Icon;
         new_title.text = title;
         ResourcesManager.Instance.LoadAssetAsync<Texture>(qualityConfig.Icon, (texture) => { new_quality_icon.texture = texture; });
-        ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { new_item_icon.sprite = sprite; });
-        new_item_name.text = itemData.Name;
+        ResourcesManager.Instance.LoadAssetAsync<Sprite>(item_icon, (sprite) => { new_item_icon.sprite = sprite; new_item_icon.SetNativeSize();});
+        new_item_name.text = NamesFormat(itemData.Name,qualityConfig.Title);
         new_item_lv.text = $"Lv.{itemData.Level}";
-        new_quality_text.text = qualityConfig.Title;
+        // new_quality_text.text = qualityConfig.Title;
         Color color = ColorTool.HtmlStringToColor(qualityConfig.Color);
-        old_quality_text.SetColor(color);
         new_item_name.SetColor(color);
         new_PropertiesTableManager.Count = 4;
         new_PropertiesTableManager.Each(OnNewEachProperties);

@@ -68,14 +68,21 @@ public partial class UIMainWindow
         RefreshBag();
         btn_egg.onClick.AddListener(()=>
         {
-            if (UserDataManager.Instance.EquipList.tempEquip != null)
+            UniSingleton.Delay(3f,()=>
             {
-                OpenTreasureBox();
-            }
-            else
-            {
-                NetMessageHandler.SendOpenTreasureBox();
-            }
+                if (UserDataManager.Instance.EquipList.tempEquip != null)
+                {
+                    OpenTreasureBox();
+                }
+                else
+                {
+                    NetMessageHandler.SendOpenTreasureBox();
+                }
+                egg_UIParticle.Stop();
+            });
+            // egg_UIParticle.gameObject.SetActive(true);
+            egg_UIParticle.Play();
+           
         });
 
         ForceRefreshLayout(avator_horizontalLayoutGroup);

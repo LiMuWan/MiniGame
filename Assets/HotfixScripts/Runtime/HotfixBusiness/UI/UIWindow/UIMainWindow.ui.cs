@@ -6,6 +6,7 @@ using GameFramework.Resource;
 using UniFramework.Singleton;
 using UniFramework.Utility;
 using Hotfix;
+using Coffee;
 
 //AUTO GenCode Don't edit it.
 [WindowAttribute(100, false)]
@@ -211,6 +212,7 @@ public partial class UIMainWindow : UIWindow
     protected TextMeshProUGUI egg_count_text;
     protected Transform tips;
     protected HorizontalLayoutGroup avator_horizontalLayoutGroup;
+    protected Coffee.UIExtensions.UIParticle egg_UIParticle;
 
     protected AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>> item_animal_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_animal_bagTableTemplate, item_animal_bagTableModel>>();
     protected AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>> item_food_bagTableManager = new AutoUITableManager<AutoGenTableItem<item_food_bagTableTemplate, item_food_bagTableModel>>();
@@ -243,6 +245,7 @@ public partial class UIMainWindow : UIWindow
         task_needCount = FindChild<TextMeshProUGUI>("task_needCount");
         btn_animal = FindChild<Button>("btn_animal");
         tips = FindChild<Transform>("tips");
+        egg_UIParticle = FindChild<Coffee.UIExtensions.UIParticle>("Effects");
         item_animal_bagTableManager.InitFromLayout(animal_bag);
         item_food_bagTableManager.InitFromLayout(food_bag);
         item_home_bagTableManager.InitFromLayout(home_bag);
@@ -286,6 +289,7 @@ public partial class UIMainWindow : UIWindow
 
     private void InitUI()
     {
+        egg_UIParticle.Stop();
         btn_task.onClick.AddListener(()=>
         {
             UniLogger.Log("on btn_task" + UserDataManager.Instance.Task.state);

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.focus-creative-games.hybridclr_unity": "https://gitee.com/focus-creative-games/hybridclr_unity.git",
     "com.tuyoogame.yooasset": "1.4.16",
     "com.unity.2d.sprite": "1.0.0",
@@ -14,6 +15,7 @@
     "com.unity.modules.audio": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0",
     "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.particlesystem": "1.0.0",
     "com.unity.modules.ui": "1.0.0",
     "com.unity.modules.unityanalytics": "1.0.0",
     "com.unity.modules.unitywebrequest": "1.0.0",
